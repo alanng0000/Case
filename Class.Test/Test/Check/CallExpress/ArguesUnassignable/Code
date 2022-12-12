@@ -1,0 +1,11 @@
+class Ff : Object
+{
+    public Int G()
+    {
+        this.H(1);
+    }
+
+    private Bool H(Bool m)
+    {
+    }
+}

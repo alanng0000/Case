@@ -1,0 +1,26 @@
+CallExpress
+{
+    This : GetExpress
+           {
+               This : VarExpress
+                      {
+                          Var : VarName
+                                {
+                                    Value : "m",
+                                },
+                      },
+               Field : FieldName
+                       {
+                           Value : "H",
+                       },
+           },
+    Method : MethodName
+             {
+                 Value : "G",
+             },
+    Argues : Argues
+             {
+                 Values : [
+                          ],
+             },
+},

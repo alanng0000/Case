@@ -1,0 +1,30 @@
+namespace Class.Infra;
+
+
+
+public class Delimiters
+{
+    public static Delimiters This { get; } = CreateGlobal();
+
+
+
+
+    private static Delimiters CreateGlobal()
+    {
+        Delimiters global;
+
+
+        global = new Delimiters();
+
+
+
+        global.Init();
+
+
+
+        return global;
+    }
+
+
+
+#HOLD#}

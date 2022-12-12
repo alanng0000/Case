@@ -1,0 +1,11 @@
+Var
+{
+    Class : ClassName
+            {
+                Value : "D",
+            },
+    Name : VarName
+           {
+               Value : "a",
+           },
+},

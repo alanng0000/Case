@@ -1,0 +1,10 @@
+Argue
+{
+    Express : ConstantExpress
+              {
+                  Constant : IntConstant
+                             {
+                                 Value : 1,
+                             },
+              },
+},

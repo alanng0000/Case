@@ -1,0 +1,27 @@
+EqualExpress
+{
+    Left : LessExpress
+           {
+               Left : ConstantExpress
+                      {
+                          Constant : IntConstant
+                                     {
+                                         Value : 1,
+                                     },
+                      },
+               Right : ConstantExpress
+                       {
+                           Constant : IntConstant
+                                      {
+                                          Value : 2,
+                                      },
+                       },
+           },
+    Right : ConstantExpress
+            {
+                Constant : BoolConstant
+                           {
+                               Value : true,
+                           },
+            },
+},

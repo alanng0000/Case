@@ -1,0 +1,31 @@
+namespace #NAMESPACE#;
+
+
+
+
+public class ErrorKinds : #BASECLASS#
+{
+    public static ErrorKinds This { get; } = CreateGlobal();
+
+
+
+
+    private static ErrorKinds CreateGlobal()
+    {
+        ErrorKinds global;
+
+
+        global = new ErrorKinds();
+
+
+
+        global.Init();
+
+
+
+        return global;
+    }
+
+
+
+#MEMBERS#}

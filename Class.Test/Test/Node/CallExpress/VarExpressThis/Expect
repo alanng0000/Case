@@ -1,0 +1,19 @@
+CallExpress
+{
+    This : VarExpress
+           {
+               Var : VarName
+                     {
+                         Value : "h",
+                     },
+           },
+    Method : MethodName
+             {
+                 Value : "Gg",
+             },
+    Argues : Argues
+             {
+                 Values : [
+                          ],
+             },
+},

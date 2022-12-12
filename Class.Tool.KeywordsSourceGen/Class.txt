@@ -1,0 +1,30 @@
+namespace Class.Infra;
+
+
+
+public class Keywords
+{
+    public static Keywords Instance { get; } = CreateGlobal();
+
+
+
+
+    private static Keywords CreateGlobal()
+    {
+        Keywords global;
+
+
+        global = new Keywords();
+
+
+
+        global.Init();
+
+
+
+        return global;
+    }
+
+
+
+#HOLD#}

@@ -1,0 +1,19 @@
+Code
+{
+    Tokens : [
+             ],
+    Comments : [
+                   Comment
+                   {
+                       Range : Range
+                               {
+                                   Pos : Pos
+                                         {
+                                             Row : 0,
+                                             Col : 0,
+                                         },
+                                   Count : 3,
+                               },
+                   },
+               ],
+},

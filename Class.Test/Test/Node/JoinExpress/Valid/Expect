@@ -1,0 +1,17 @@
+JoinExpress
+{
+    Left : ConstantExpress
+           {
+               Constant : StringConstant
+                          {
+                              Value : "Ggg",
+                          },
+           },
+    Right : ConstantExpress
+            {
+                Constant : StringConstant
+                           {
+                               Value : "Kk",
+                           },
+            },
+},

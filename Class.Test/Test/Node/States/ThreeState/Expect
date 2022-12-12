@@ -1,0 +1,40 @@
+States
+{
+    Values : [
+                 ExpressState
+                 {
+                     Express : VarExpress
+                               {
+                                   Var : VarName
+                                         {
+                                             Value : "o",
+                                         },
+                               },
+                 },
+                 IfState
+                 {
+                     Cond : VarExpress
+                            {
+                                Var : VarName
+                                      {
+                                          Value : "t",
+                                      },
+                            },
+                     Body : States
+                            {
+                                Values : [
+                                         ],
+                            },
+                 },
+                 ReturnState
+                 {
+                     Result : VarExpress
+                              {
+                                  Var : VarName
+                                        {
+                                            Value : "n",
+                                        },
+                              },
+                 },
+             ],
+},

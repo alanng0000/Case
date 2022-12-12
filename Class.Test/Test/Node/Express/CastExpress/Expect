@@ -1,0 +1,14 @@
+CastExpress
+{
+    Class : ClassName
+            {
+                Value : "I",
+            },
+    Object : ConstantExpress
+             {
+                 Constant : IntConstant
+                            {
+                                Value : 1,
+                            },
+             },
+},

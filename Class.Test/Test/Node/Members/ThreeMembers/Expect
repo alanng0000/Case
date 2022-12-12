@@ -1,0 +1,77 @@
+Members
+{
+    Values : [
+                 Field
+                 {
+                     Name : FieldName
+                            {
+                                Value : "Hh",
+                            },
+                     Class : ClassName
+                             {
+                                 Value : "Bool",
+                             },
+                     Get : States
+                           {
+                               Values : [
+                                        ],
+                           },
+                     Set : States
+                           {
+                               Values : [
+                                        ],
+                           },
+                     Access : PublicAccess
+                              {
+                              },
+                 },
+                 Field
+                 {
+                     Name : FieldName
+                            {
+                                Value : "Kk",
+                            },
+                     Class : ClassName
+                             {
+                                 Value : "Int",
+                             },
+                     Get : States
+                           {
+                               Values : [
+                                        ],
+                           },
+                     Set : States
+                           {
+                               Values : [
+                                        ],
+                           },
+                     Access : PublicAccess
+                              {
+                              },
+                 },
+                 Method
+                 {
+                     Name : MethodName
+                            {
+                                Value : "Dy",
+                            },
+                     Class : ClassName
+                             {
+                                 Value : "String",
+                             },
+                     Params : Params
+                              {
+                                  Values : [
+                                           ],
+                              },
+                     Call : States
+                            {
+                                Values : [
+                                         ],
+                            },
+                     Access : PublicAccess
+                              {
+                              },
+                 },
+             ],
+},

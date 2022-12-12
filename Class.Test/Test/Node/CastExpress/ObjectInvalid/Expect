@@ -1,0 +1,13 @@
+--------------------------------------------------
+Kind: ObjectInvalid
+Range: (0, 4)
+Source: Code
+--------------------------------------------------
+CastExpress
+{
+    Class : ClassName
+            {
+                Value : "F",
+            },
+    Object : null,
+},

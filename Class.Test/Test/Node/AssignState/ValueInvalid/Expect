@@ -1,0 +1,16 @@
+--------------------------------------------------
+Kind: ValueInvalid
+Range: (0, 3)
+Source: Code
+--------------------------------------------------
+AssignState
+{
+    Target : VarTarget
+             {
+                 Var : VarName
+                       {
+                           Value : "i",
+                       },
+             },
+    Value : null,
+},

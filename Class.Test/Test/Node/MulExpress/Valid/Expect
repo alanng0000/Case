@@ -1,0 +1,17 @@
+MulExpress
+{
+    Left : ConstantExpress
+           {
+               Constant : IntConstant
+                          {
+                              Value : 1,
+                          },
+           },
+    Right : ConstantExpress
+            {
+                Constant : IntConstant
+                           {
+                               Value : 2,
+                           },
+            },
+},

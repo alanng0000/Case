@@ -1,0 +1,17 @@
+class Ff : Object
+{
+    public Int G()
+    {
+        this.H : 1;
+    }
+
+    private Int H
+    {
+        get
+        {
+        }
+        set
+        {
+        }
+    }
+}

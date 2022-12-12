@@ -1,0 +1,12 @@
+class G : Object
+{
+    public Bool F
+    {
+        get
+        {
+        }
+        set
+        {
+        }
+    }
+}

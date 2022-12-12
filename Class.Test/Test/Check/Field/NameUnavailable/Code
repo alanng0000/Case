@@ -1,0 +1,22 @@
+class G : Object
+{
+    public Bool F
+    {
+        get
+        {
+        }
+        set
+        {
+        }
+    }
+
+    private Int F
+    {
+        get
+        {
+        }
+        set
+        {
+        }
+    }
+}

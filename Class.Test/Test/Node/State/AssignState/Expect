@@ -1,0 +1,17 @@
+AssignState
+{
+    Target : VarTarget
+             {
+                 Var : VarName
+                       {
+                           Value : "i",
+                       },
+             },
+    Value : ConstantExpress
+            {
+                Constant : IntConstant
+                           {
+                               Value : 1,
+                           },
+            },
+},

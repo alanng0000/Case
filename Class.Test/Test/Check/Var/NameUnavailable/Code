@@ -1,0 +1,6 @@
+class Ff : Object
+{
+    public Int G(Int i, Bool i)
+    {
+    }
+}

@@ -1,0 +1,24 @@
+Method
+{
+    Name : MethodName
+           {
+               Value : "Ff",
+           },
+    Class : ClassName
+            {
+                Value : "Int",
+            },
+    Params : Params
+             {
+                 Values : [
+                          ],
+             },
+    Call : States
+           {
+               Values : [
+                        ],
+           },
+    Access : PublicAccess
+             {
+             },
+},

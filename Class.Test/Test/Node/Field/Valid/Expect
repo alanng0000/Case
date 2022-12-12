@@ -1,0 +1,24 @@
+Field
+{
+    Name : FieldName
+           {
+               Value : "Gg",
+           },
+    Class : ClassName
+            {
+                Value : "Int",
+            },
+    Get : States
+          {
+              Values : [
+                       ],
+          },
+    Set : States
+          {
+              Values : [
+                       ],
+          },
+    Access : PublicAccess
+             {
+             },
+},

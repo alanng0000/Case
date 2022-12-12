@@ -1,0 +1,9 @@
+class Ff : Object
+{
+    public Int G()
+    {
+        if ()
+        {
+        }
+    }
+}

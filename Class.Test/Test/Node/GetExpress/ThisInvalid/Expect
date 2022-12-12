@@ -1,0 +1,13 @@
+--------------------------------------------------
+Kind: ThisInvalid
+Range: (0, 2)
+Source: Code
+--------------------------------------------------
+GetExpress
+{
+    This : null,
+    Field : FieldName
+            {
+                Value : "F",
+            },
+},

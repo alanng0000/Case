@@ -1,0 +1,7 @@
+class Ff : Object
+{
+    public Int G()
+    {
+        true * 1;
+    }
+}

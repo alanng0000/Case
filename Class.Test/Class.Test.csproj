@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../System/System.Infra/System.Infra.csproj" />
+        <ProjectReference Include="../../System/System.List/System.List.csproj" />
+        <ProjectReference Include="../Class.Infra/Class.Infra.csproj" />
+        <ProjectReference Include="../Class.Info/Class.Info.csproj" />
+        <ProjectReference Include="../Class.Module/Class.Module.csproj" />
+        <ProjectReference Include="../Class/Class.csproj" />
+    </ItemGroup>
+
+</Project>

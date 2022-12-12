@@ -1,0 +1,15 @@
+IfState
+{
+    Cond : ConstantExpress
+           {
+               Constant : BoolConstant
+                          {
+                              Value : true,
+                          },
+           },
+    Body : States
+           {
+               Values : [
+                        ],
+           },
+},

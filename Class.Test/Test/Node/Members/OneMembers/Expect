@@ -1,0 +1,29 @@
+Members
+{
+    Values : [
+                 Field
+                 {
+                     Name : FieldName
+                            {
+                                Value : "Hh",
+                            },
+                     Class : ClassName
+                             {
+                                 Value : "Gg",
+                             },
+                     Get : States
+                           {
+                               Values : [
+                                        ],
+                           },
+                     Set : States
+                           {
+                               Values : [
+                                        ],
+                           },
+                     Access : PublicAccess
+                              {
+                              },
+                 },
+             ],
+},

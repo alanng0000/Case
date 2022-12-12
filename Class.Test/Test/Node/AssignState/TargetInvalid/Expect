@@ -1,0 +1,16 @@
+--------------------------------------------------
+Kind: TargetInvalid
+Range: (0, 3)
+Source: Code
+--------------------------------------------------
+AssignState
+{
+    Target : null,
+    Value : ConstantExpress
+            {
+                Constant : IntConstant
+                           {
+                               Value : 1,
+                           },
+            },
+},

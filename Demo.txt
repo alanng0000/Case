@@ -1,0 +1,102 @@
+class F : N
+{
+    public Bool A()
+    {
+        this.D : new D;
+
+
+        this.D.Init();
+
+
+
+
+
+        this.D : a;
+
+
+
+
+
+        Color c;
+
+
+
+        this.Color : c;
+
+
+
+
+        Int gg;
+
+
+
+        gg : gg + 1;
+
+
+
+
+        D a;
+
+
+
+
+        N n;
+
+
+        n : new F;
+
+
+
+
+        F f;
+        
+        
+        f : cast F(this.M);
+        
+
+
+
+
+        if (this.Color = c)
+        {
+            
+        }
+
+
+
+
+
+
+        return true;
+    }
+
+
+
+
+    private Color Color
+    {
+        get
+        {
+
+        }
+        set
+        {
+
+        }
+    }
+
+
+
+
+    public D D
+    {
+        get
+        {
+            return data;
+        }
+        set
+        {
+            data = value;
+        }
+    }
+}

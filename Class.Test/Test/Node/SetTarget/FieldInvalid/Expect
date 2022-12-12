@@ -1,0 +1,16 @@
+--------------------------------------------------
+Kind: FieldInvalid
+Range: (0, 2)
+Source: Code
+--------------------------------------------------
+SetTarget
+{
+    This : VarExpress
+           {
+               Var : VarName
+                     {
+                         Value : "i",
+                     },
+           },
+    Field : null,
+},

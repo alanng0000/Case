@@ -1,0 +1,10 @@
+NotExpress
+{
+    Bool : ConstantExpress
+           {
+               Constant : BoolConstant
+                          {
+                              Value : true,
+                          },
+           },
+},

@@ -1,0 +1,6 @@
+class G : Object
+{
+    public O F()
+    {
+    }
+}

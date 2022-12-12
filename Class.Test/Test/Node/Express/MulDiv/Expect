@@ -1,0 +1,27 @@
+MulExpress
+{
+    Left : DivExpress
+           {
+               Left : ConstantExpress
+                      {
+                          Constant : IntConstant
+                                     {
+                                         Value : 4,
+                                     },
+                      },
+               Right : ConstantExpress
+                       {
+                           Constant : IntConstant
+                                      {
+                                          Value : 2,
+                                      },
+                       },
+           },
+    Right : ConstantExpress
+            {
+                Constant : IntConstant
+                           {
+                               Value : 3,
+                           },
+            },
+},

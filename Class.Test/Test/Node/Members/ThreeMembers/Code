@@ -1,0 +1,23 @@
+public Bool Hh
+{
+    get
+    {
+    }
+    set
+    {
+    }
+}
+
+public Int Kk
+{
+    get
+    {
+    }
+    set
+    {
+    }
+}
+
+public String Dy()
+{
+}

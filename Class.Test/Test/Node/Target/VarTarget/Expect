@@ -1,0 +1,7 @@
+VarTarget
+{
+    Var : VarName
+          {
+              Value : "i",
+          },
+},

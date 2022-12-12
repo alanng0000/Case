@@ -1,0 +1,20 @@
+OrnExpress
+{
+    Left : NotExpress
+           {
+               Bool : ConstantExpress
+                      {
+                          Constant : BoolConstant
+                                     {
+                                         Value : false,
+                                     },
+                      },
+           },
+    Right : ConstantExpress
+            {
+                Constant : BoolConstant
+                           {
+                               Value : true,
+                           },
+            },
+},

@@ -1,0 +1,14 @@
+CastExpress
+{
+    Class : ClassName
+            {
+                Value : "F",
+            },
+    Object : VarExpress
+             {
+                 Var : VarName
+                       {
+                           Value : "i",
+                       },
+             },
+},

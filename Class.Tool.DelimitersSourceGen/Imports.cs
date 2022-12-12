@@ -1,0 +1,9 @@
+global using Range = System.Infra.Range;
+global using RangeInfra = System.Infra.RangeInfra;
+global using StringCompare = System.Infra.StringCompare;
+global using List = System.List.List;
+global using ListIter = System.List.ListIter;
+global using Map = System.List.Map;
+global using Pair = System.List.Pair;
+global using StringBuilder = System.Text.StringBuilder;
+global using File = System.IO.File;

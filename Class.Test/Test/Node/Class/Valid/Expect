@@ -1,0 +1,16 @@
+Class
+{
+    Name : ClassName
+           {
+               Value : "Gg",
+           },
+    Base : ClassName
+           {
+               Value : "H",
+           },
+    Members : Members
+              {
+                  Values : [
+                           ],
+              },
+},

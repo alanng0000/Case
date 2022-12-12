@@ -1,0 +1,16 @@
+--------------------------------------------------
+Kind: OperandInvalid
+Range: (0, 2)
+Source: Code
+--------------------------------------------------
+EqualExpress
+{
+    Left : ConstantExpress
+           {
+               Constant : IntConstant
+                          {
+                              Value : 1,
+                          },
+           },
+    Right : null,
+},

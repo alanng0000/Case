@@ -1,0 +1,14 @@
+--------------------------------------------------
+Kind: CondInvalid
+Range: (0, 5)
+Source: Code
+--------------------------------------------------
+WhileState
+{
+    Cond : null,
+    Body : States
+           {
+               Values : [
+                        ],
+           },
+},

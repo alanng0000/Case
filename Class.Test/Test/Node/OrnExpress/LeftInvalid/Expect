@@ -1,0 +1,16 @@
+--------------------------------------------------
+Kind: OperandInvalid
+Range: (0, 2)
+Source: Code
+--------------------------------------------------
+OrnExpress
+{
+    Left : null,
+    Right : ConstantExpress
+            {
+                Constant : BoolConstant
+                           {
+                               Value : true,
+                           },
+            },
+},

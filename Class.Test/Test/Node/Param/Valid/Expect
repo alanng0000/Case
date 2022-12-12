@@ -1,0 +1,14 @@
+Param
+{
+    Var : Var
+          {
+              Class : ClassName
+                      {
+                          Value : "Gg",
+                      },
+              Name : VarName
+                     {
+                         Value : "hh",
+                     },
+          },
+},

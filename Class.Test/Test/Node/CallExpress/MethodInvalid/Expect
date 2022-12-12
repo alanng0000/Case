@@ -1,0 +1,21 @@
+--------------------------------------------------
+Kind: MethodInvalid
+Range: (0, 4)
+Source: Code
+--------------------------------------------------
+CallExpress
+{
+    This : VarExpress
+           {
+               Var : VarName
+                     {
+                         Value : "i",
+                     },
+           },
+    Method : null,
+    Argues : Argues
+             {
+                 Values : [
+                          ],
+             },
+},

@@ -1,0 +1,10 @@
+--------------------------------------------------
+Kind: OperandInvalid
+Range: (0, 1)
+Source: Code
+--------------------------------------------------
+AndExpress
+{
+    Left : null,
+    Right : null,
+},

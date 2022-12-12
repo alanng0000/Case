@@ -1,0 +1,15 @@
+global using Range = System.Infra.Range;
+global using RangeInfra = System.Infra.RangeInfra;
+global using List = System.List.List;
+global using IIter = System.List.IIter;
+global using TextInfra = System.Text.Infra;
+global using InfoRead = Class.Info.Read;
+global using InfoInfo = Class.Info.Info;
+global using InfoObject = Class.Info.Object;
+global using InfoField = Class.Info.Field;
+global using InfoClassName = Class.Info.ClassName;
+global using InfoBoolConstant = Class.Info.BoolConstant;
+global using InfoIntConstant = Class.Info.IntConstant;
+global using InfoStringConstant = Class.Info.StringConstant;
+global using InfoListConstant = Class.Info.ListConstant;
+global using InfoNull = Class.Info.Null;

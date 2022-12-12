@@ -1,0 +1,16 @@
+--------------------------------------------------
+Kind: OperandInvalid
+Range: (0, 2)
+Source: Code
+--------------------------------------------------
+JoinExpress
+{
+    Left : ConstantExpress
+           {
+               Constant : StringConstant
+                          {
+                              Value : "g",
+                          },
+           },
+    Right : null,
+},

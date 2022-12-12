@@ -1,0 +1,47 @@
+Params
+{
+    Values : [
+                 Param
+                 {
+                     Var : Var
+                           {
+                               Class : ClassName
+                                       {
+                                           Value : "Gg",
+                                       },
+                               Name : VarName
+                                      {
+                                          Value : "hh",
+                                      },
+                           },
+                 },
+                 Param
+                 {
+                     Var : Var
+                           {
+                               Class : ClassName
+                                       {
+                                           Value : "Jj",
+                                       },
+                               Name : VarName
+                                      {
+                                          Value : "ff",
+                                      },
+                           },
+                 },
+                 Param
+                 {
+                     Var : Var
+                           {
+                               Class : ClassName
+                                       {
+                                           Value : "Ee",
+                                       },
+                               Name : VarName
+                                      {
+                                          Value : "rr",
+                                      },
+                           },
+                 },
+             ],
+},

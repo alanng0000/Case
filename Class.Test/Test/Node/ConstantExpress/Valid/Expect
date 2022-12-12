@@ -1,0 +1,7 @@
+ConstantExpress
+{
+    Constant : IntConstant
+               {
+                   Value : 1,
+               },
+},

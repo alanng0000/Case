@@ -1,0 +1,18 @@
+--------------------------------------------------
+Kind: ThisInvalid
+Range: (0, 4)
+Source: Code
+--------------------------------------------------
+CallExpress
+{
+    This : null,
+    Method : MethodName
+             {
+                 Value : "F",
+             },
+    Argues : Argues
+             {
+                 Values : [
+                          ],
+             },
+},

@@ -1,0 +1,21 @@
+Port
+{
+    Module = "Hh.Beds:0.0.0.0",
+    Imports = [
+                  Import
+                  {
+                      Class = "Gg.Doors:0.0.0.0:Object",
+                      Name = "Object",
+                  },
+              ],
+    Exports = [
+                  Export
+                  {
+                      Class = "Bed",
+                  },
+                  Export
+                  {
+                      Class = "Chair",
+                  },
+              ],
+},

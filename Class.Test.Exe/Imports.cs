@@ -1,0 +1,1 @@
+global using TestTest = Class.Test.Test;

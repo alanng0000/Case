@@ -1,0 +1,27 @@
+AndExpress
+{
+    Left : OrnExpress
+           {
+               Left : ConstantExpress
+                      {
+                          Constant : BoolConstant
+                                     {
+                                         Value : true,
+                                     },
+                      },
+               Right : ConstantExpress
+                       {
+                           Constant : BoolConstant
+                                      {
+                                          Value : false,
+                                      },
+                       },
+           },
+    Right : ConstantExpress
+            {
+                Constant : BoolConstant
+                           {
+                               Value : true,
+                           },
+            },
+},

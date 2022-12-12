@@ -1,0 +1,14 @@
+SetTarget
+{
+    This : VarExpress
+           {
+               Var : VarName
+                     {
+                         Value : "i",
+                     },
+           },
+    Field : FieldName
+            {
+                Value : "Kk",
+            },
+},

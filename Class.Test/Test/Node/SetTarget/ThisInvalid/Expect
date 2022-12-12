@@ -1,0 +1,13 @@
+--------------------------------------------------
+Kind: ThisInvalid
+Range: (0, 2)
+Source: Code
+--------------------------------------------------
+SetTarget
+{
+    This : null,
+    Field : FieldName
+            {
+                Value : "F",
+            },
+},

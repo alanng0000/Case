@@ -1,0 +1,12 @@
+class G : Object
+{
+    public O F
+    {
+        get
+        {
+        }
+        set
+        {
+        }
+    }
+}

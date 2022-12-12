@@ -1,0 +1,8 @@
+class Ff : Object
+{
+    public Int G()
+    {
+        Int i;
+        i : 1;
+    }
+}
