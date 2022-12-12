@@ -148,9 +148,6 @@ public class Test
 
 
 
-        this.AddSet(new Info.Set());
-
-
 
         return true;
     }
