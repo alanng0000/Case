@@ -4854,13 +4854,6 @@ public class Compile : InfraCompile
 
 
 
-        bool isHex;
-
-
-        isHex = false;
-
-
-
 
         TextRange s;
 
@@ -4871,7 +4864,7 @@ public class Compile : InfraCompile
 
 
 
-        if (!this.IsIntValue(s, ref isHex))
+        if (!this.IsIntValue(s))
         {
             return null;
         }
@@ -4884,7 +4877,7 @@ public class Compile : InfraCompile
 
         
 
-        value = this.IntValue(s, isHex);
+        value = this.IntValue(s);
 
 
 
@@ -6866,30 +6859,12 @@ public class Compile : InfraCompile
 
 
 
-    private ulong IntValue(TextRange s, bool isHex)
+    private ulong IntValue(TextRange s)
     {
-        int prefixLength;
-
-
-        prefixLength = 0;
-
-
-
-
         ulong m;
 
 
         m = 10;
-
-
-
-        if (isHex)
-        {
-            m = 16;
-
-
-            prefixLength = this.HexPrefix.Length;
-        }
 
 
 
@@ -6898,7 +6873,7 @@ public class Compile : InfraCompile
 
 
 
-        count = s.Count - prefixLength;
+        count = s.Count;
 
 
 
@@ -6919,7 +6894,7 @@ public class Compile : InfraCompile
         int start;
 
 
-        start = s.Pos.Col + prefixLength;
+        start = s.Pos.Col;
 
 
         
@@ -6990,7 +6965,7 @@ public class Compile : InfraCompile
 
 
             
-            digit = this.DigitValue(code, isHex);
+            digit = this.DigitValue(code);
 
 
             
@@ -7028,7 +7003,7 @@ public class Compile : InfraCompile
 
 
 
-    private ulong DigitValue(char oc, bool isHex)
+    private ulong DigitValue(char oc)
     {
         ulong k;
 
@@ -7036,41 +7011,12 @@ public class Compile : InfraCompile
 
 
 
+        ulong t;
 
-        bool b;
-
-        b = false;
-
-        
+        t = oc;
 
 
-        if (isHex)
-        {
-            if (this.TextInfra.IsLetter(oc))
-            {
-                ulong code;
-
-                code = oc;
-
-
-                k = code - 'a' + 10;
-
-
-                b = true;
-            }
-        }
-
-
-
-        if (!b)
-        {
-            ulong t;
-
-            t = oc;
-
-
-            k = t - '0';
-        }
+        k = t - '0';
 
 
 
