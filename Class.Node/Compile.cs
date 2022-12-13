@@ -6652,18 +6652,105 @@ public class Compile : InfraCompile
 
     private bool IsIntValue(TextRange s)
     {
-        int count;
+        int charCount;
 
 
-        count = s.Count;
+        charCount = s.Count;
 
+
+
+
+
+        string hexPrefix;
+
+        hexPrefix = "0x";
+
+
+
+
+        bool isHex;
+
+        isHex = false;
+
+
+
+
+        if (!(charCount < hexPrefix.Length))
+        {
+            TextRange textRange;
+
+            textRange = new TextRange();
+
+            textRange.Pos = s.Pos;
+
+            textRange.Count = hexPrefix.Length;
+
+            
+            
+            if (this.TextInfra.Equal(textRange, hexPrefix))
+            {
+                isHex = true;
+            }
+        }
+
+
+
+
+        int digitStart;
+
+        digitStart = 0;
+
+
+
+
+        int digitCount;
+
+        digitCount = charCount;
+
+
+
+        int digitCountMax;
+
+
+        digitCountMax = 18;
+        
+
+
+
+        if (isHex)
+        {
+            digitStart = hexPrefix.Length;
+
+
+
+            digitCount = charCount - hexPrefix.Length;
+
+
+
+            digitCountMax = 15;
+        }
+
+
+
+
+
+        bool ba;
+
+
+        ba = !(digitCount < 1);
+
+
+
+        bool bb;
+
+        bb = (digitCount < digitCountMax + 1);
 
 
 
         bool b;
 
 
-        b = (count < 19);
+        b = ba & bb;
 
 
 
@@ -6671,6 +6758,7 @@ public class Compile : InfraCompile
         {
             return false;
         }
+
 
 
 
@@ -6686,14 +6774,21 @@ public class Compile : InfraCompile
 
 
 
-
         int start;
 
+        
+        start = s.Pos.Col + digitStart;
 
-        start = s.Pos.Col;
 
 
 
+        int count;
+
+        count = digitCount;
+
+
+
+        
 
         int index;
 
@@ -6723,6 +6818,12 @@ public class Compile : InfraCompile
 
 
 
+
+            if (isHex)
+            {
+
+            }
+            
 
             if (!this.TextInfra.IsDigit(oc))
             {
