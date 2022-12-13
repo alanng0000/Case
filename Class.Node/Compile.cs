@@ -6920,7 +6920,7 @@ public class Compile : InfraCompile
 
 
         start = s.Pos.Col + prefixLength;
-        
+
 
         
 
@@ -7035,6 +7035,15 @@ public class Compile : InfraCompile
         k = 0;
 
 
+
+
+        bool b;
+
+        b = false;
+
+        
+
+
         if (isHex)
         {
             if (this.TextInfra.IsLetter(oc))
@@ -7045,11 +7054,15 @@ public class Compile : InfraCompile
 
 
                 k = code - 'a' + 10;
+
+
+                b = true;
             }
         }
 
 
-        if (!isHex)
+
+        if (!b)
         {
             ulong t;
 
