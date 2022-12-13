@@ -6668,38 +6668,12 @@ public class Compile : InfraCompile
 
 
 
-    private bool IsIntValue(TextRange s, ref bool isHex)
+    private bool IsIntValue(TextRange s)
     {
         int charCount;
 
 
         charCount = s.Count;
-
-
-
-
-        isHex = false;
-
-
-
-
-        if (!(charCount < this.HexPrefix.Length))
-        {
-            TextRange textRange;
-
-            textRange = new TextRange();
-
-            textRange.Pos = s.Pos;
-
-            textRange.Count = this.HexPrefix.Length;
-
-            
-            
-            if (this.TextInfra.Equal(textRange, this.HexPrefix))
-            {
-                isHex = true;
-            }
-        }
 
 
 
@@ -6721,22 +6695,6 @@ public class Compile : InfraCompile
 
 
         digitCountMax = 18;
-        
-
-
-
-        if (isHex)
-        {
-            digitStart = this.HexPrefix.Length;
-
-
-
-            digitCount = charCount - this.HexPrefix.Length;
-
-
-
-            digitCountMax = 15;
-        }
 
 
 
@@ -6826,23 +6784,9 @@ public class Compile : InfraCompile
 
 
 
-
-            if (isHex)
+            if (!this.TextInfra.IsDigit(oc))
             {
-                if (!this.TextInfra.IsHexDigit(oc))
-                {
-                    return false;
-                }
-            }
-
-
-
-            if (!isHex)
-            {
-                if (!this.TextInfra.IsDigit(oc))
-                {
-                    return false;
-                }
+                return false;
             }
 
 
