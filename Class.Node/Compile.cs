@@ -6821,13 +6821,20 @@ public class Compile : InfraCompile
 
             if (isHex)
             {
-
+                if (!this.TextInfra.IsHexDigit(oc))
+                {
+                    return false;
+                }
             }
-            
 
-            if (!this.TextInfra.IsDigit(oc))
+
+
+            if (!isHex)
             {
-                return false;
+                if (!this.TextInfra.IsDigit(oc))
+                {
+                    return false;
+                }
             }
 
 
