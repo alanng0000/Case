@@ -4854,6 +4854,14 @@ public class Compile : InfraCompile
 
 
 
+        bool isHex;
+
+
+        isHex = false;
+
+
+
+
         TextRange s;
 
         
@@ -4863,7 +4871,7 @@ public class Compile : InfraCompile
 
 
 
-        if (!this.IsIntValue(s))
+        if (!this.IsIntValue(s, ref isHex))
         {
             return null;
         }
@@ -4876,7 +4884,7 @@ public class Compile : InfraCompile
 
         
 
-        value = this.IntValue(s);
+        value = this.IntValue(s, isHex);
 
 
 
@@ -6650,7 +6658,7 @@ public class Compile : InfraCompile
 
 
 
-    private bool IsIntValue(TextRange s)
+    private bool IsIntValue(TextRange s, ref bool isHex)
     {
         int charCount;
 
@@ -6667,8 +6675,6 @@ public class Compile : InfraCompile
 
 
 
-
-        bool isHex;
 
         isHex = false;
 
@@ -6851,10 +6857,24 @@ public class Compile : InfraCompile
 
 
 
-
-
-    private ulong IntValue(TextRange s)
+    private ulong IntValue(TextRange s, bool isHex)
     {
+        ulong m;
+
+
+        m = 10;
+
+
+
+        if (isHex)
+        {
+            m = 16;
+        }
+
+
+
+
+
         int count;
 
 
@@ -6916,10 +6936,6 @@ public class Compile : InfraCompile
 
 
 
-        ulong k;
-
-
-
         ulong digit;
 
 
@@ -6937,7 +6953,7 @@ public class Compile : InfraCompile
 
         while (i < count)
         {
-            h = count - i - 1;
+            h = count - 1 - i;
 
 
             
@@ -6954,11 +6970,8 @@ public class Compile : InfraCompile
 
 
 
-            k = code;
-
-
-
-            digit = k - '0';
+            
+            digit = this.DigitValue(code, isHex);
 
 
             
@@ -6971,7 +6984,7 @@ public class Compile : InfraCompile
 
 
 
-            n = n * 10;
+            n = n * m;
 
 
 
@@ -6992,6 +7005,50 @@ public class Compile : InfraCompile
 
 
 
+
+
+
+
+    private ulong DigitValue(char oc, bool isHex)
+    {
+        ulong k;
+
+        k = 0;
+
+
+        if (isHex)
+        {
+            if (this.TextInfra.IsLetter(oc))
+            {
+                ulong code;
+
+                code = oc;
+
+
+                k = code - 'a' + 10;
+            }
+        }
+
+
+        if (!isHex)
+        {
+            ulong t;
+
+            t = oc;
+
+
+            k = t - '0';
+        }
+
+
+
+        ulong ret;
+
+        ret = k;
+
+
+        return ret;
+    }
 
 
 
