@@ -6657,6 +6657,23 @@ public class Compile : InfraCompile
 
 
 
+    
+    private string HexPrefix
+    {
+        get
+        {
+            return "0x";
+        }
+
+        set
+        {
+        }
+    }
+
+        
+
+
+
 
     private bool IsIntValue(TextRange s, ref bool isHex)
     {
@@ -6668,20 +6685,12 @@ public class Compile : InfraCompile
 
 
 
-
-        string hexPrefix;
-
-        hexPrefix = "0x";
-
-
-
-
         isHex = false;
 
 
 
 
-        if (!(charCount < hexPrefix.Length))
+        if (!(charCount < this.HexPrefix.Length))
         {
             TextRange textRange;
 
@@ -6689,11 +6698,11 @@ public class Compile : InfraCompile
 
             textRange.Pos = s.Pos;
 
-            textRange.Count = hexPrefix.Length;
+            textRange.Count = this.HexPrefix.Length;
 
             
             
-            if (this.TextInfra.Equal(textRange, hexPrefix))
+            if (this.TextInfra.Equal(textRange, this.HexPrefix))
             {
                 isHex = true;
             }
@@ -6725,11 +6734,11 @@ public class Compile : InfraCompile
 
         if (isHex)
         {
-            digitStart = hexPrefix.Length;
+            digitStart = this.HexPrefix.Length;
 
 
 
-            digitCount = charCount - hexPrefix.Length;
+            digitCount = charCount - this.HexPrefix.Length;
 
 
 
@@ -6859,6 +6868,14 @@ public class Compile : InfraCompile
 
     private ulong IntValue(TextRange s, bool isHex)
     {
+        int prefixLength;
+
+
+        prefixLength = 0;
+
+
+
+
         ulong m;
 
 
@@ -6869,8 +6886,10 @@ public class Compile : InfraCompile
         if (isHex)
         {
             m = 16;
-        }
 
+
+            prefixLength = this.HexPrefix.Length;
+        }
 
 
 
@@ -6879,7 +6898,7 @@ public class Compile : InfraCompile
 
 
 
-        count = s.Count;
+        count = s.Count - prefixLength;
 
 
 
@@ -6900,8 +6919,8 @@ public class Compile : InfraCompile
         int start;
 
 
-        start = s.Pos.Col;
-
+        start = s.Pos.Col + prefixLength;
+        
 
         
 
