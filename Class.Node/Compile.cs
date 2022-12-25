@@ -6673,7 +6673,7 @@ public class Compile : InfraCompile
         int charCount;
 
 
-        charCount = s.Count;
+        charCount = this.Count(s.Range);
 
 
 
@@ -6735,7 +6735,10 @@ public class Compile : InfraCompile
         pos = new TextPos();
 
 
-        pos.Row = s.Pos.Row;
+        pos.Init();
+
+
+        pos.Row = s.Row;
 
 
 
@@ -6743,7 +6746,7 @@ public class Compile : InfraCompile
         int start;
 
         
-        start = s.Pos.Col + digitStart;
+        start = s.Range.Start + digitStart;
 
 
 
