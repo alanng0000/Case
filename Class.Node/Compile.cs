@@ -7607,6 +7607,9 @@ public class Compile : InfraCompile
 
 
 
+
+
+
     private int BackwardSkipBrackets(int index, Range range)
     {
         int ret;
@@ -7623,7 +7626,7 @@ public class Compile : InfraCompile
         s = this.Text(t);
 
 
-        if (this.TextInfra.Equal(s, this.Delimiters.RightBracket))
+        if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.RightBracket))
         {
             Token leftBracket;
 
@@ -7638,7 +7641,7 @@ public class Compile : InfraCompile
 
             ret = leftBracket.Range.Start;
         }
-        else if (this.TextInfra.Equal(s, this.Delimiters.RightBrace))
+        else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.RightBrace))
         {
             Token leftBrace;
 
