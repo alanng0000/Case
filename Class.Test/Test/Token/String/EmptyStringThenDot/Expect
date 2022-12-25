@@ -3,26 +3,26 @@ Code
     Tokens : [
                  Token
                  {
-                     Range : Range
+                     Range : TextRange
                              {
-                                 Pos : Pos
-                                       {
-                                           Row : 0,
-                                           Col : 0,
-                                       },
-                                 Count : 2,
+                                 Row : 0,
+                                 Range : Range
+                                         {
+                                             Start : 0,
+                                             End : 2,
+                                         },
                              },
                  },
                  Token
                  {
-                     Range : Range
+                     Range : TextRange
                              {
-                                 Pos : Pos
-                                       {
-                                           Row : 0,
-                                           Col : 2,
-                                       },
-                                 Count : 1,
+                                 Row : 0,
+                                 Range : Range
+                                         {
+                                             Start : 2,
+                                             End : 3,
+                                         },
                              },
                  },
              ],
