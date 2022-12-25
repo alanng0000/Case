@@ -4788,7 +4788,7 @@ public class Compile : InfraCompile
 
         if (!o.HasValue)
         {
-            if (this.TextInfra.Equal(s, this.Keywords.True))
+            if (this.TextInfra.Equal(s.Row, s.Range, this.Keywords.True))
             {
                 o = true;
             }
@@ -4797,7 +4797,7 @@ public class Compile : InfraCompile
         
         if (!o.HasValue)
         {
-            if (this.TextInfra.Equal(s, this.Keywords.False))
+            if (this.TextInfra.Equal(s.Row, s.Range, this.Keywords.False))
             {
                 o = false;
             }
@@ -4927,7 +4927,7 @@ public class Compile : InfraCompile
 
 
 
-        value = this.TextInfra.Value(s);
+        value = this.TextInfra.Value(s.Row, s.Range);
 
 
 
