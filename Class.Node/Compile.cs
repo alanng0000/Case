@@ -7030,6 +7030,16 @@ public class Compile : InfraCompile
 
 
 
+        TextPos u;
+
+        u = new TextPos();
+
+        u.Init();
+
+        u.Row = s.Row;
+
+        u.Col = s.Range.Start;
+
 
 
 
@@ -7037,7 +7047,7 @@ public class Compile : InfraCompile
         char oc;
 
 
-        oc = this.TextInfra.Char(s.Pos);
+        oc = this.TextInfra.Char(u);
 
 
 
@@ -7067,7 +7077,7 @@ public class Compile : InfraCompile
 
 
 
-        k = s.Count;
+        k = this.Count(s.Range);
 
 
 
@@ -7090,16 +7100,11 @@ public class Compile : InfraCompile
         int start;
 
 
-        start = s.Pos.Col;
+        start = s.Range.Start;
 
 
-        
+        start = start + 1;
 
-
-        int index;
-
-
-        index = start + 1;
 
 
 
@@ -7110,7 +7115,10 @@ public class Compile : InfraCompile
         pos = new TextPos();
 
 
-        pos.Row = s.Pos.Row;
+        pos.Init();
+
+
+        pos.Row = s.Row;
 
 
 
@@ -7124,7 +7132,7 @@ public class Compile : InfraCompile
 
         while (valid & i < count)
         {
-            pos.Col = index + i;
+            pos.Col = start + i;
 
 
 
