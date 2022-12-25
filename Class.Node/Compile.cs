@@ -7181,7 +7181,7 @@ public class Compile : InfraCompile
 
 
 
-            if (this.TextInfra.Equal(text, s))
+            if (this.TextInfra.Equal(text.Row, text.Range, s))
             {
                 return true;
             }
@@ -7569,7 +7569,7 @@ public class Compile : InfraCompile
         s = this.Text(index);
 
 
-        if (this.TextInfra.Equal(s, this.Delimiters.LeftBracket))
+        if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.LeftBracket))
         {
             Token rightBracket;
 
@@ -7584,7 +7584,7 @@ public class Compile : InfraCompile
 
             ret = rightBracket.Range.End;
         }
-        else if (this.TextInfra.Equal(s, this.Delimiters.LeftBrace))
+        else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.LeftBrace))
         {
             Token rightBrace;
 
