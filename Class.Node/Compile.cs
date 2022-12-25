@@ -6820,7 +6820,7 @@ public class Compile : InfraCompile
 
 
 
-        count = s.Count;
+        count = this.Count(s.Range);
 
 
 
@@ -6832,7 +6832,10 @@ public class Compile : InfraCompile
         pos = new TextPos();
 
 
-        pos.Row = s.Pos.Row;
+        pos.Init();
+
+
+        pos.Row = s.Row;
 
 
 
@@ -6841,7 +6844,7 @@ public class Compile : InfraCompile
         int start;
 
 
-        start = s.Pos.Col;
+        start = s.Range.Start;
 
 
         
