@@ -5,14 +5,14 @@ Code
     Comments : [
                    Comment
                    {
-                       Range : Range
+                       Range : TextRange
                                {
-                                   Pos : Pos
-                                         {
-                                             Row : 0,
-                                             Col : 0,
-                                         },
-                                   Count : 5,
+                                   Row : 0,
+                                   Range : Range
+                                           {
+                                               Start : 0,
+                                               End : 5,
+                                           },
                                },
                    },
                ],
