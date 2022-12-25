@@ -3,40 +3,40 @@ Code
     Tokens : [
                  Token
                  {
-                     Range : Range
+                     Range : TextRange
                              {
-                                 Pos : Pos
-                                       {
-                                           Row : 1,
-                                           Col : 0,
-                                       },
-                                 Count : 1,
+                                 Row : 1,
+                                 Range : Range
+                                         {
+                                             Start : 0,
+                                             End : 1,
+                                         },
                              },
                  },
              ],
     Comments : [
                    Comment
                    {
-                       Range : Range
+                       Range : TextRange
                                {
-                                   Pos : Pos
-                                         {
-                                             Row : 0,
-                                             Col : 0,
-                                         },
-                                   Count : 2,
+                                   Row : 0,
+                                   Range : Range
+                                           {
+                                               Start : 0,
+                                               End : 2,
+                                           },
                                },
                    },
                    Comment
                    {
-                       Range : Range
+                       Range : TextRange
                                {
-                                   Pos : Pos
-                                         {
-                                             Row : 2,
-                                             Col : 0,
-                                         },
-                                   Count : 2,
+                                   Row : 2,
+                                   Range : Range
+                                           {
+                                               Start : 0,
+                                               End : 2,
+                                           },
                                },
                    },
                ],
