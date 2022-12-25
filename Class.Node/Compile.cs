@@ -7239,7 +7239,7 @@ public class Compile : InfraCompile
 
         bool b;
 
-        b = this.TextInfra.Equal(t, value);
+        b = this.TextInfra.Equal(t.Row, t.Range, value);
 
 
 
@@ -7709,7 +7709,7 @@ public class Compile : InfraCompile
             s = this.Text(i);
 
 
-            if (this.TextInfra.Equal(s, rightToken))
+            if (this.TextInfra.Equal(s.Row, s.Range, rightToken))
             {
                 openCount = openCount - 1;
 
@@ -7720,7 +7720,7 @@ public class Compile : InfraCompile
                     varContinue = false;
                 }
             }
-            else if (this.TextInfra.Equal(s, leftToken))
+            else if (this.TextInfra.Equal(s.Row, s.Range, leftToken))
             {
                 openCount = openCount + 1;
             }
@@ -7750,10 +7750,14 @@ public class Compile : InfraCompile
 
         ret = new Token();
 
+        ret.Init();
+
         ret.Range = this.IndexRange(index);
 
         return ret;
     }
+
+
 
 
     private Token TokenMatchRightToken(string leftToken, string rightToken, Range range)
@@ -7783,7 +7787,7 @@ public class Compile : InfraCompile
             s = this.Text(t);
 
 
-            if (this.TextInfra.Equal(s, leftToken))
+            if (this.TextInfra.Equal(s.Row, s.Range, leftToken))
             {
                 openCount = openCount - 1;
 
@@ -7794,7 +7798,7 @@ public class Compile : InfraCompile
                     varContinue = false;
                 }
             }
-            else if (this.TextInfra.Equal(s, rightToken))
+            else if (this.TextInfra.Equal(s.Row, s.Range, rightToken))
             {
                 openCount = openCount + 1;
             }
@@ -7823,6 +7827,8 @@ public class Compile : InfraCompile
         Token ret;
             
         ret = new Token();
+
+        ret.Init();
 
         ret.Range = this.IndexRange(index);
 
