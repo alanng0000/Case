@@ -541,7 +541,8 @@ public class Compile : InfraCompile
                 {
                     if (this.NullRange())
                     {
-                        this.Range.Pos = this.Pos;
+                        this.Range.Row = this.Pos.Row;
+                        this.Range.Range.Start = this.Pos.Col;
                     }
 
 
@@ -559,10 +560,13 @@ public class Compile : InfraCompile
 
 
 
-                    this.Range.Pos = this.Pos;
+                    this.Range.Row = this.Pos.Row;
 
 
-                    this.Range.Count = 1;
+                    this.Range.Range.Start = this.Pos.Col;
+
+
+                    this.Range.Range.End = this.Range.Range.Start + 1;
                     
                     
 
@@ -570,7 +574,7 @@ public class Compile : InfraCompile
 
 
 
-                    this.Pos.Col = this.Range.Pos.Col + this.Range.Count;
+                    this.Pos.Col = this.Range.Range.End;
 
 
 
@@ -668,7 +672,7 @@ public class Compile : InfraCompile
             //"this.Range.Pos.Col" + ": " + this.Range.Pos.Col + "\n");
 
 
-            this.Range.Count = this.Pos.Col - this.Range.Pos.Col;
+            this.Range.Range.End = this.Pos.Col;
 
 
 
