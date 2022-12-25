@@ -25,6 +25,12 @@ public class Compile : InfraCompile
 
 
 
+        this.RangeNull = new TextRange();
+
+
+        this.RangeNull.Init();
+
+
 
         this.RangeNull.Row = IntNull;
 
