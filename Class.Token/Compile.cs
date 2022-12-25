@@ -389,20 +389,13 @@ public class Compile : InfraCompile
 
 
 
-                    this.Range.Pos = this.Pos;
+                    this.Range.Row = this.Pos.Row;
 
 
+                    this.Range.Range.Start = this.Pos.Col;
 
 
-                    int k;
-
-
-                    k = line.Chars.Count - this.Pos.Col;
-
-
-
-
-                    this.Range.Count = k;
+                    this.Range.Range.End = line.Chars.Count;
 
 
 
