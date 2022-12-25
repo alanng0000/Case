@@ -3,14 +3,14 @@ Code
     Tokens : [
                  Token
                  {
-                     Range : Range
+                     Range : TextRange
                              {
-                                 Pos : Pos
-                                       {
-                                           Row : 0,
-                                           Col : 0,
-                                       },
-                                 Count : 3,
+                                 Row : 0,
+                                 Range : Range
+                                         {
+                                             Start : 0,
+                                             End : 3,
+                                         },
                              },
                  },
              ],
