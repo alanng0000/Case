@@ -26,13 +26,13 @@ public class Compile : InfraCompile
 
 
 
-        this.RangeNull.Pos.Row = IntNull;
+        this.RangeNull.Row = IntNull;
 
 
-        this.RangeNull.Pos.Col = IntNull;
+        this.RangeNull.Range.Start = IntNull;
 
 
-        this.RangeNull.Count = IntNull;
+        this.RangeNull.Range.End = IntNull;
 
 
 
@@ -295,7 +295,7 @@ public class Compile : InfraCompile
 
 
 
-    internal Range Range;
+    internal TextRange Range;
     
 
 
@@ -305,7 +305,7 @@ public class Compile : InfraCompile
 
 
 
-    private Range RangeNull;
+    private TextRange RangeNull;
 
 
 
@@ -685,7 +685,7 @@ public class Compile : InfraCompile
 
     private bool NullRange()
     {
-        return this.Range.Pos.Row == IntNull;
+        return this.Range.Row == IntNull;
     }
 
 

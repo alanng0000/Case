@@ -1,5 +1,5 @@
 global using Object = System.Infra.Object;
-global using Range = System.Infra.Range;
+global using InfraRange = System.Infra.Range;
 global using List = System.List.List;
 global using Array = System.List.Array;
 global using ListIter = System.List.ListIter;
