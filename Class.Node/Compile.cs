@@ -6648,21 +6648,6 @@ public class Compile : InfraCompile
     }
 
 
-
-
-    
-    private string HexPrefix
-    {
-        get
-        {
-            return "0x";
-        }
-
-        set
-        {
-        }
-    }
-
         
 
 
