@@ -6635,7 +6635,7 @@ public class Compile : InfraCompile
 
         string t;
 
-        t = this.TextInfra.Substring(s);
+        t = this.TextInfra.Substring(s.Row, s.Range);
 
 
 
