@@ -1,7 +1,6 @@
 global using Object = System.Infra.Object;
 global using Range = System.Infra.Range;
 global using StringCompare = System.Infra.StringCompare;
-global using TextRange = System.Text.Range;
 global using TextPos = System.Text.Pos;
 global using Keywords = Class.Infra.Keywords;
 global using Delimiters = Class.Infra.Delimiters;
@@ -21,6 +20,7 @@ global using ErrorList = Class.Infra.ErrorList;
 global using Code = Class.Token.Code;
 global using CodeArray = Class.Token.CodeArray;
 global using TokenToken = Class.Token.Token;
+global using TextRange = Class.Token.TextRange;
 global using Exception = System.Exception;
 global using NullableBool = System.Nullable<bool>;
 global using ListNode = System.Collections.Generic.List<Class.Node.Node>;
