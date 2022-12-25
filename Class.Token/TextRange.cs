@@ -15,7 +15,7 @@ public struct TextRange
 
 
 
-    public int Row { get; set; }
+    public int Row;
 
 
 
