@@ -403,7 +403,7 @@ public class Compile : InfraCompile
 
 
 
-                    this.Pos.Col = this.Range.Pos.Col + this.Range.Count;
+                    this.Pos.Col = this.Range.Range.End;
 
 
 
