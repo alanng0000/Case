@@ -667,11 +667,6 @@ public class Compile : InfraCompile
     {
         if (!this.NullRange())
         {
-            //global::System.Console.Write("Class.Token:Compile EndToken() NullRange, " + 
-            //"this.Pos.Col" + ": " + this.Pos.Col + ", " + 
-            //"this.Range.Pos.Col" + ": " + this.Range.Pos.Col + "\n");
-
-
             this.Range.Range.End = this.Pos.Col;
 
 
