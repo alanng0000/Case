@@ -441,9 +441,14 @@ public class Compile : InfraCompile
                     this.EndToken();
                     
 
-                    this.Range.Pos = this.Pos;
+                    this.Range.Row = this.Pos.Row;
 
-                    this.Range.Count = IntNull;
+
+                    this.Range.Range.Start = this.Pos.Col;
+
+
+                    this.Range.Range.End = IntNull;
+                    
 
 
 
@@ -510,7 +515,7 @@ public class Compile : InfraCompile
 
 
                     
-                    this.Range.Count = col - this.Pos.Col;
+                    this.Range.Range.End = col;
 
                     
 
@@ -518,7 +523,7 @@ public class Compile : InfraCompile
                     this.AddToken();
 
 
-                    this.Pos.Col = this.Range.Pos.Col + this.Range.Count;
+                    this.Pos.Col = this.Range.Range.End;
 
 
                     this.Reset();
