@@ -16,7 +16,7 @@ public class Method : Member
 
 
 
-    public States Call { get; set; }
+    public StateList Call { get; set; }
 
 
 
