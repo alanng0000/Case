@@ -847,7 +847,7 @@ class SizeCompile
 
 
 
-            this.ExecuteStatesClass(varClass);
+            this.ExecuteStateClass(varClass);
         }
 
 
@@ -861,14 +861,14 @@ class SizeCompile
 
 
 
-    private bool ExecuteStatesClass(CheckClass varClass)
+    private bool ExecuteStateClass(CheckClass varClass)
     {
-        this.ExecuteStatesFields(varClass.Field);
+        this.ExecuteStateFieldList(varClass.Field);
 
 
 
 
-        this.ExecuteStatesMethods(varClass.Method);
+        this.ExecuteStateMethodList(varClass.Method);
 
 
 
@@ -880,7 +880,7 @@ class SizeCompile
 
 
 
-    private bool ExecuteStatesFields(CheckFieldMap fields)
+    private bool ExecuteStateFieldList(CheckFieldMap fields)
     {
         MapIter iter;
 
@@ -911,7 +911,7 @@ class SizeCompile
 
 
 
-            this.ExecuteStatesField(field);
+            this.ExecuteStateField(field);
         }
 
 
@@ -923,7 +923,7 @@ class SizeCompile
 
 
 
-    private bool ExecuteStatesField(CheckField field)
+    private bool ExecuteStateField(CheckField field)
     {
         NodeField nodeField;
 
@@ -934,11 +934,11 @@ class SizeCompile
 
 
 
-        this.ExecuteStatesTraverse(nodeField.Get);
+        this.ExecuteStateTraverse(nodeField.Get);
 
 
 
-        this.ExecuteStatesTraverse(nodeField.Set);
+        this.ExecuteStateTraverse(nodeField.Set);
 
 
 
@@ -950,7 +950,7 @@ class SizeCompile
 
 
 
-    private bool ExecuteStatesMethods(CheckMethodMap methods)
+    private bool ExecuteStateMethodList(CheckMethodMap methods)
     {
         MapIter iter;
 
@@ -981,7 +981,7 @@ class SizeCompile
 
 
 
-            this.ExecuteStatesMethod(method);
+            this.ExecuteStateMethod(method);
         }
 
 
@@ -994,7 +994,7 @@ class SizeCompile
 
 
 
-    private bool ExecuteStatesMethod(CheckMethod method)
+    private bool ExecuteStateMethod(CheckMethod method)
     {
         NodeMethod nodeMethod;
 
@@ -1013,7 +1013,7 @@ class SizeCompile
 
 
 
-        this.ExecuteStatesTraverse(nodeMethod.Call);
+        this.ExecuteStateTraverse(nodeMethod.Call);
 
 
 
@@ -1028,9 +1028,9 @@ class SizeCompile
 
 
 
-    private bool ExecuteStatesTraverse(States states)
+    private bool ExecuteStateTraverse(StateList stateList)
     {
-        this.SizeTraverse.ExecuteStates(states);
+        this.SizeTraverse.ExecuteStateList(stateList);
 
 
 
