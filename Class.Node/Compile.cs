@@ -157,7 +157,7 @@ public class Compile : InfraCompile
         this.AddNodeMethod(nameof(this.Class), this.Class);
 
 
-        this.AddNodeMethod(nameof(this.Members), this.Members);
+        this.AddNodeMethod(nameof(this.MemberList), this.MemberList);
 
 
         this.AddNodeMethod(nameof(this.Member), this.Member);
@@ -169,7 +169,7 @@ public class Compile : InfraCompile
         this.AddNodeMethod(nameof(this.Method), this.Method);
 
 
-        this.AddNodeMethod(nameof(this.Params), this.Params);
+        this.AddNodeMethod(nameof(this.ParamList), this.ParamList);
 
 
         this.AddNodeMethod(nameof(this.Param), this.Param);
@@ -193,7 +193,7 @@ public class Compile : InfraCompile
         this.AddNodeMethod(nameof(this.PrivateAccess), this.PrivateAccess);
 
 
-        this.AddNodeMethod(nameof(this.States), this.States);
+        this.AddNodeMethod(nameof(this.StateList), this.StateList);
 
 
         this.AddNodeMethod(nameof(this.State), this.State);
@@ -283,7 +283,7 @@ public class Compile : InfraCompile
         this.AddNodeMethod(nameof(this.NullExpress), this.NullExpress);
 
 
-        this.AddNodeMethod(nameof(this.Argues), this.Argues);
+        this.AddNodeMethod(nameof(this.ArgueList), this.ArgueList);
 
 
         this.AddNodeMethod(nameof(this.Argue), this.Argue);
