@@ -4488,13 +4488,13 @@ public class Compile : InfraCompile
 
 
 
-    protected Argues Argues(Range range)
+    protected ArgueList ArgueList(Range range)
     {
-        NodeList list;
+        List list;
 
 
 
-        list = this.NodeList(this.Argue, this.ArgueRange, range, this.Delimiters.PauseSign);
+        list = this.List(this.Argue, this.ArgueRange, range, this.Delimiters.PauseSign);
 
 
 
@@ -4507,10 +4507,10 @@ public class Compile : InfraCompile
 
 
 
-        Argues ret;
+        ArgueList ret;
 
 
-        ret = new Argues();
+        ret = new ArgueList();
 
 
         ret.Init();
@@ -5083,14 +5083,16 @@ public class Compile : InfraCompile
 
 
 
-    protected NodeList NodeList(NodeMethod nodeMethod, RangeMethod rangeMethod, Range range, string delimiter)
+    protected List List(NodeMethod nodeMethod, RangeMethod rangeMethod, Range range, string delimiter)
     {
-        NodeList nodeList;
+        List list;
 
 
 
-        nodeList = new NodeList();
+        list = new List();
 
+
+        list.Init();
 
 
 
@@ -5108,9 +5110,9 @@ public class Compile : InfraCompile
 
 
 
-        if (this.Count(range) == 0)
+        if (this.Zero(this.Count(range)))
         {
-            return nodeList;
+            return list;
         }
 
 
@@ -5151,7 +5153,7 @@ public class Compile : InfraCompile
 
 
 
-        if (this.Count(nodeRange) == 0)
+        if (this.Zero(this.Count(nodeRange)))
         {
             this.UniqueError(this.ErrorKinds.Invalid, range, ref hasInvalid);
 
@@ -5174,7 +5176,7 @@ public class Compile : InfraCompile
 
 
 
-            nodeList.Add(node);
+            list.Add(node);
         }
 
 
@@ -5260,7 +5262,7 @@ public class Compile : InfraCompile
 
 
                         
-                    nodeList.Add(node);
+                    list.Add(node);
                 }
 
 
@@ -5280,9 +5282,9 @@ public class Compile : InfraCompile
 
 
 
-        NodeList ret;
+        List ret;
 
-        ret = nodeList;
+        ret = list;
             
             
         return ret;
