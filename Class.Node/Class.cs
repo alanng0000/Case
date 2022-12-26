@@ -13,5 +13,5 @@ public class Class : Node
 
 
 
-    public Members Members { get; set; }
+    public MemberList Member { get; set; }
 }

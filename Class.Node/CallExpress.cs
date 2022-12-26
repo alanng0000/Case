@@ -10,5 +10,5 @@ public class CallExpress : Express
     public MethodName Method { get; set; }
 
 
-    public Argues Argues { get; set; }
+    public ArgueList Argue { get; set; }
 }
