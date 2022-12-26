@@ -3,31 +3,7 @@ namespace Class.Node;
 
 
 
-public class NodeList : ListNode
+public class NodeList : Node
 {
-    public NodeListIter Iter()
-    {
-        NodeListIter iter;
-
-
-
-        iter = new NodeListIter();
-
-
-
-
-        iter.Init(this);
-
-
-
-
-        NodeListIter ret;
-
-
-        ret = iter;
-
-
-
-        return ret;
-    }
+    public List Values { get; set; }
 }
