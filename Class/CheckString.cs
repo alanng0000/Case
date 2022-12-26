@@ -126,7 +126,7 @@ public class CheckString
 
 
 
-        trees = this.NodeResult.Trees;
+        trees = this.NodeResult.Tree;
 
 
 

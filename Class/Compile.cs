@@ -354,7 +354,7 @@ public class Compile : Object
 
 
 
-        this.Check.Trees = this.Result.Node.Trees;
+        this.Check.Trees = this.Result.Node.Tree;
 
 
 

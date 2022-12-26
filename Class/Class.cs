@@ -850,7 +850,7 @@ public class Class : Object
 
 
 
-        treeIter = this.Result.Node.Trees.Iter();
+        treeIter = this.Result.Node.Tree.Iter();
 
 
 

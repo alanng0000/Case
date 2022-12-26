@@ -405,12 +405,12 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Trees = new TreeList();
+        this.Result.Tree = new TreeList();
 
 
 
 
-        this.Result.Trees.Init();
+        this.Result.Tree.Init();
 
 
 
@@ -506,7 +506,7 @@ public class Compile : InfraCompile
 
 
 
-            this.Result.Trees.Add(tree);
+            this.Result.Tree.Add(tree);
         }
 
 
