@@ -26,7 +26,7 @@ public class Compile : InfraCompile
 
 
 
-    protected Keywords Keywords { get; set; }
+    protected Keyword Keyword { get; set; }
 
 
 
@@ -71,7 +71,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Keywords = this.CreateKeywords();
+        this.Keyword = this.CreateKeyword();
 
 
 
@@ -126,9 +126,9 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Keywords CreateKeywords()
+    protected virtual Keyword CreateKeyword()
     {
-        return Keywords.Instance;
+        return Keyword.Instance;
     }
 
 
@@ -610,7 +610,7 @@ public class Compile : InfraCompile
         Token classToken;
         
         
-        classToken = this.Token(this.Keywords.Class, this.IndexRange(range.Start));
+        classToken = this.Token(this.Keyword.Class, this.IndexRange(range.Start));
 
 
 
@@ -1046,7 +1046,7 @@ public class Compile : InfraCompile
 
 
 
-        getToken = this.Token(this.Keywords.Get, this.IndexRange(leftBrace.Range.End));
+        getToken = this.Token(this.Keyword.Get, this.IndexRange(leftBrace.Range.End));
 
 
 
@@ -1121,7 +1121,7 @@ public class Compile : InfraCompile
 
 
 
-        setToken = this.Token(this.Keywords.Set, this.IndexRange(getRightBrace.Range.End));
+        setToken = this.Token(this.Keyword.Set, this.IndexRange(getRightBrace.Range.End));
 
 
 
@@ -1896,7 +1896,7 @@ public class Compile : InfraCompile
 
 
 
-        publicToken = this.Token(this.Keywords.Public, range);
+        publicToken = this.Token(this.Keyword.Public, range);
 
 
 
@@ -1935,7 +1935,7 @@ public class Compile : InfraCompile
 
 
 
-        localToken = this.Token(this.Keywords.Local, range);
+        localToken = this.Token(this.Keyword.Local, range);
 
 
 
@@ -1975,7 +1975,7 @@ public class Compile : InfraCompile
 
 
 
-        deriveToken = this.Token(this.Keywords.Derive, range);
+        deriveToken = this.Token(this.Keyword.Derive, range);
 
 
 
@@ -2017,7 +2017,7 @@ public class Compile : InfraCompile
 
 
 
-        privateToken = this.Token(this.Keywords.Private, range);
+        privateToken = this.Token(this.Keyword.Private, range);
 
 
 
@@ -2355,7 +2355,7 @@ public class Compile : InfraCompile
 
 
 
-        thisToken = this.Token(this.Keywords.This, range);
+        thisToken = this.Token(this.Keyword.This, range);
 
 
 
@@ -2396,7 +2396,7 @@ public class Compile : InfraCompile
 
 
 
-        baseToken = this.Token(this.Keywords.Base, range);
+        baseToken = this.Token(this.Keyword.Base, range);
 
 
 
@@ -2630,7 +2630,7 @@ public class Compile : InfraCompile
         Token newToken;
 
 
-        newToken = this.Token(this.Keywords.New, this.IndexRange(range.Start));
+        newToken = this.Token(this.Keyword.New, this.IndexRange(range.Start));
 
         
 
@@ -2694,7 +2694,7 @@ public class Compile : InfraCompile
         Token globalToken;
 
 
-        globalToken = this.Token(this.Keywords.Global, this.IndexRange(range.Start));
+        globalToken = this.Token(this.Keyword.Global, this.IndexRange(range.Start));
 
         
 
@@ -3737,7 +3737,7 @@ public class Compile : InfraCompile
         Token ifToken;
         
         
-        ifToken = this.Token(this.Keywords.If, this.IndexRange(range.Start));
+        ifToken = this.Token(this.Keyword.If, this.IndexRange(range.Start));
 
 
 
@@ -3908,7 +3908,7 @@ public class Compile : InfraCompile
         Token whileToken;
         
 
-        whileToken = this.Token(this.Keywords.While, this.IndexRange(range.Start));
+        whileToken = this.Token(this.Keyword.While, this.IndexRange(range.Start));
 
 
 
@@ -4062,7 +4062,7 @@ public class Compile : InfraCompile
         Token returnToken;
         
 
-        returnToken = this.Token(this.Keywords.Return, this.IndexRange(range.Start));
+        returnToken = this.Token(this.Keyword.Return, this.IndexRange(range.Start));
 
 
 
@@ -4155,7 +4155,7 @@ public class Compile : InfraCompile
         Token castToken;
 
 
-        castToken = this.Token(this.Keywords.Cast, this.IndexRange(range.Start));
+        castToken = this.Token(this.Keyword.Cast, this.IndexRange(range.Start));
 
 
 
@@ -4460,7 +4460,7 @@ public class Compile : InfraCompile
         
 
 
-        nullToken = this.Token(this.Keywords.Null, range);
+        nullToken = this.Token(this.Keyword.Null, range);
 
 
 
@@ -4792,7 +4792,7 @@ public class Compile : InfraCompile
 
         if (!o.HasValue)
         {
-            if (this.TextInfra.Equal(s.Row, s.Range, this.Keywords.True))
+            if (this.TextInfra.Equal(s.Row, s.Range, this.Keyword.True))
             {
                 o = true;
             }
@@ -4801,7 +4801,7 @@ public class Compile : InfraCompile
         
         if (!o.HasValue)
         {
-            if (this.TextInfra.Equal(s.Row, s.Range, this.Keywords.False))
+            if (this.TextInfra.Equal(s.Row, s.Range, this.Keyword.False))
             {
                 o = false;
             }
@@ -5488,7 +5488,7 @@ public class Compile : InfraCompile
         Token returnToken;
         
 
-        returnToken = this.Token(this.Keywords.Return, this.IndexRange(range.Start));
+        returnToken = this.Token(this.Keyword.Return, this.IndexRange(range.Start));
 
 
 
@@ -5556,7 +5556,7 @@ public class Compile : InfraCompile
         Token ifToken;
         
         
-        ifToken = this.Token(this.Keywords.If, this.IndexRange(range.Start));
+        ifToken = this.Token(this.Keyword.If, this.IndexRange(range.Start));
 
 
 
@@ -5683,7 +5683,7 @@ public class Compile : InfraCompile
         Token whileToken;
         
         
-        whileToken = this.Token(this.Keywords.While, this.IndexRange(range.Start));
+        whileToken = this.Token(this.Keyword.While, this.IndexRange(range.Start));
 
 
 
@@ -6063,7 +6063,7 @@ public class Compile : InfraCompile
 
 
         
-        accessWord = this.StringListContain(this.Keywords.Access, s);
+        accessWord = this.StringListContain(this.Keyword.Access, s);
 
 
 
@@ -6261,7 +6261,7 @@ public class Compile : InfraCompile
 
 
 
-        getToken = this.Token(this.Keywords.Get, this.IndexRange(leftBrace.Range.End));
+        getToken = this.Token(this.Keyword.Get, this.IndexRange(leftBrace.Range.End));
 
 
 
@@ -6336,7 +6336,7 @@ public class Compile : InfraCompile
 
 
 
-        setToken = this.Token(this.Keywords.Set, this.IndexRange(getRightBrace.Range.End));
+        setToken = this.Token(this.Keyword.Set, this.IndexRange(getRightBrace.Range.End));
 
 
 
@@ -7013,7 +7013,7 @@ public class Compile : InfraCompile
 
 
 
-        keyword = this.StringListContain(this.Keywords.All, s);
+        keyword = this.StringListContain(this.Keyword.All, s);
 
 
 
