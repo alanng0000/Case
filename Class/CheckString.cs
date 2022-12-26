@@ -64,7 +64,7 @@ public class CheckString
 
 
 
-        this.Check = (CheckCheck)this.CheckResult.Checks.Get(this.Node);
+        this.Check = (CheckCheck)this.CheckResult.Check.Get(this.Node);
 
 
 

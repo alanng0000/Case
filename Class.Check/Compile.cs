@@ -195,7 +195,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Checks = this.Checks;
+        this.Result.Check = this.Checks;
 
 
 

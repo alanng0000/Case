@@ -4,7 +4,7 @@ namespace Class.Check;
 
 public class Result : Object
 {
-    public CheckMap Checks { get; set; }
+    public CheckMap Check { get; set; }
 
 
 
