@@ -56,7 +56,7 @@ public class StateTraverse : Traverse
         c.Base = null;
 
 
-        c.Fields = null;
+        c.Field = null;
 
 
         c.Methods = null;
@@ -3553,7 +3553,7 @@ public class StateTraverse : Traverse
         Field field;
 
 
-        field = (Field)varClass.Fields.Get(name);
+        field = (Field)varClass.Field.Get(name);
 
 
 

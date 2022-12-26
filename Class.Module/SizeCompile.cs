@@ -516,7 +516,7 @@ class SizeCompile
 
 
 
-        iter = varClass.Fields.Iter();
+        iter = varClass.Field.Iter();
 
 
 
@@ -863,7 +863,7 @@ class SizeCompile
 
     private bool ExecuteStatesClass(CheckClass varClass)
     {
-        this.ExecuteStatesFields(varClass.Fields);
+        this.ExecuteStatesFields(varClass.Field);
 
 
 

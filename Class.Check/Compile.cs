@@ -495,11 +495,11 @@ public class Compile : InfraCompile
 
 
 
-        varClass.Fields = new FieldMap();
+        varClass.Field = new FieldMap();
 
 
 
-        varClass.Fields.Init();
+        varClass.Field.Init();
 
 
 
@@ -621,11 +621,11 @@ public class Compile : InfraCompile
 
 
 
-        varClass.Fields = new FieldMap();
+        varClass.Field = new FieldMap();
 
 
 
-        varClass.Fields.Init();
+        varClass.Field.Init();
 
 
 

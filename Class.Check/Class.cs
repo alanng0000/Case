@@ -13,7 +13,7 @@ public class Class : Object
 
 
 
-    public FieldMap Fields { get; set; }
+    public FieldMap Field { get; set; }
 
 
 

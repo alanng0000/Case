@@ -731,7 +731,7 @@ class DataCompile
 
 
 
-        fields = varClass.Fields;
+        fields = varClass.Field;
 
 
 

@@ -78,11 +78,11 @@ class ClassTraverse : Traverse
 
 
 
-        varClass.Fields = new FieldMap();
+        varClass.Field = new FieldMap();
 
 
 
-        varClass.Fields.Init();
+        varClass.Field.Init();
 
 
 

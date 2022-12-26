@@ -234,7 +234,7 @@ class MemberTraverse : Traverse
 
 
 
-        field.Index = this.CurrentClass.Fields.Count;
+        field.Index = this.CurrentClass.Field.Count;
 
 
 
@@ -256,7 +256,7 @@ class MemberTraverse : Traverse
 
 
 
-        this.CurrentClass.Fields.Add(pair);
+        this.CurrentClass.Field.Add(pair);
 
 
 
@@ -708,7 +708,7 @@ class MemberTraverse : Traverse
         bool ba;
 
 
-        ba = ! this.Null(this.CurrentClass.Fields.Get(name));
+        ba = ! this.Null(this.CurrentClass.Field.Get(name));
 
 
 
