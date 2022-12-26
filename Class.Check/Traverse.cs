@@ -319,9 +319,9 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteParams(Params nodeParams)
+    public virtual bool ExecuteParamList(ParamList paramList)
     {
-        if (this.Null(nodeParams))
+        if (this.Null(paramList))
         {
             return true;
         }
@@ -329,16 +329,16 @@ public class Traverse
 
 
 
-        this.ExecuteNode(nodeParams);
+        this.ExecuteNode(paramList);
 
 
 
 
 
-        NodeListIter iter;
+        ListIter iter;
 
 
-        iter = nodeParams.Values.Iter();
+        iter = paramList.Values.Iter();
 
 
 
@@ -1411,7 +1411,7 @@ public class Traverse
 
 
 
-        this.ExecuteArgues(callExpress.Argues);
+        this.ExecuteArgueList(callExpress.Argue);
 
 
 
@@ -1448,7 +1448,7 @@ public class Traverse
 
 
 
-        this.ExecuteStates(ifState.Body);
+        this.ExecuteStateList(ifState.Body);
 
 
 
@@ -1485,7 +1485,7 @@ public class Traverse
 
 
 
-        this.ExecuteStates(whileState.Body);
+        this.ExecuteStateList(whileState.Body);
 
 
 
@@ -1652,9 +1652,9 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteArgues(Argues argues)
+    public virtual bool ExecuteArgueList(ArgueList argueList)
     {
-        if (this.Null(argues))
+        if (this.Null(argueList))
         {
             return true;
         }
@@ -1663,16 +1663,16 @@ public class Traverse
 
 
 
-        this.ExecuteNode(argues);
+        this.ExecuteNode(argueList);
 
 
 
 
 
-        NodeListIter iter;
+        ListIter iter;
 
 
-        iter = argues.Values.Iter();
+        iter = argueList.Values.Iter();
 
 
 
