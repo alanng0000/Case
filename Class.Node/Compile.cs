@@ -3849,10 +3849,10 @@ public class Compile : InfraCompile
 
 
 
-        States body;
+        StateList body;
 
 
-        body = this.States(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
+        body = this.StateList(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
             
 
         if (this.Null(body))
@@ -4015,7 +4015,7 @@ public class Compile : InfraCompile
         StateList body;
         
 
-        body = this.States(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
+        body = this.StateList(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
         
 
 
