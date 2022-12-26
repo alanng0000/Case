@@ -52,7 +52,7 @@ class Module : Object
         List lines;
 
 
-        lines = this.GetLines("Keywords.txt");
+        lines = this.GetLines("Keyword.txt");
 
 
 
@@ -244,6 +244,27 @@ class Module : Object
 
 
 
+
+
+        this.AppendIndents(2)
+            .Append("base").Append(".").Append("Init").Append("(").Append(")").Append(";");
+
+
+
+
+        this.AppendLine();
+
+
+
+        this.AppendLine();
+
+
+
+        this.AppendLine();
+
+
+
+
         this.AppendSetKeywords();
 
 
@@ -324,7 +345,7 @@ class Module : Object
         string outputFilePath;
         
         
-        outputFilePath = "../Class.Infra/Keywords.cs";
+        outputFilePath = "../Class.Infra/Keyword.cs";
             
 
 
