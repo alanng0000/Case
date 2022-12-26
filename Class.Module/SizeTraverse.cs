@@ -26,9 +26,9 @@ class SizeTraverse : Traverse
 
 
 
-    public override bool ExecuteStates(States states)
+    public override bool ExecuteStateList(StateList stateList)
     {
-        if (this.Null(states))
+        if (this.Null(stateList))
         {
             return true;
         }
@@ -47,7 +47,7 @@ class SizeTraverse : Traverse
 
 
 
-        base.ExecuteStates(states);
+        base.ExecuteStateList(stateList);
 
 
 
@@ -968,9 +968,9 @@ class SizeTraverse : Traverse
 
 
 
-    public override bool ExecuteArgues(Argues argues)
+    public override bool ExecuteArgueList(ArgueList argueList)
     {
-        if (this.Null(argues))
+        if (this.Null(argueList))
         {
             return true;
         }
@@ -992,7 +992,7 @@ class SizeTraverse : Traverse
 
 
 
-        base.ExecuteArgues(argues);
+        base.ExecuteArgueList(argueList);
 
 
 
