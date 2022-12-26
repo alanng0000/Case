@@ -12,7 +12,7 @@ public class Method : Member
 
 
 
-    public ParamList Params { get; set; }
+    public ParamList Param { get; set; }
 
 
 
