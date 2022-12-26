@@ -157,10 +157,10 @@ public class Test
 
     protected virtual bool AddFoldSets()
     {
-        TaskKinds kinds;
+        TaskKindList kinds;
 
 
-        kinds = TaskKinds.This;
+        kinds = TaskKindList.This;
 
 
 
@@ -1211,7 +1211,7 @@ public class Test
         TaskKind kind;
 
 
-        kind = TaskKinds.This.Module;
+        kind = TaskKindList.This.Module;
 
 
 
@@ -1248,7 +1248,7 @@ public class Test
 
             if (!ba)
             {
-                if (!(task.Kind == TaskKinds.This.Token))
+                if (!(task.Kind == TaskKindList.This.Token))
                 {
                     task.Node = "Class";
                 }

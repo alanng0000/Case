@@ -52,7 +52,7 @@ public class Class : Object
 
 
 
-    public TaskKinds TaskKinds { get; set; }
+    public TaskKindList TaskKindList { get; set; }
 
 
 
@@ -98,7 +98,7 @@ public class Class : Object
 
 
 
-        this.TaskKinds = TaskKinds.This;
+        this.TaskKindList = TaskKindList.This;
 
 
 
@@ -151,7 +151,7 @@ public class Class : Object
 
 
 
-        taskModule = (this.Task.Kind == this.TaskKinds.Module);
+        taskModule = (this.Task.Kind == this.TaskKindList.Module);
 
 
 
@@ -293,10 +293,10 @@ public class Class : Object
 
 
 
-            TaskKinds k;
+            TaskKindList k;
 
 
-            k = this.TaskKinds;
+            k = this.TaskKindList;
 
 
 
@@ -417,7 +417,7 @@ public class Class : Object
         task.Init();
 
 
-        task.Kind = this.TaskKinds.Check;
+        task.Kind = this.TaskKindList.Check;
 
 
         task.Node = "Class";
@@ -618,11 +618,11 @@ public class Class : Object
         bool kindModule;
 
 
-        kindModule = this.Kind(this.TaskKinds.Module);
+        kindModule = this.Kind(this.TaskKindList.Module);
 
 
 
-        if (kindModule | this.Kind(this.TaskKinds.Token))
+        if (kindModule | this.Kind(this.TaskKindList.Token))
         {
             if (!(this.Result.Token == null))
             {
@@ -632,7 +632,7 @@ public class Class : Object
 
 
 
-        if (kindModule | this.Kind(this.TaskKinds.Node))
+        if (kindModule | this.Kind(this.TaskKindList.Node))
         {
             if (!(this.Result.Node == null))
             {
@@ -642,7 +642,7 @@ public class Class : Object
 
 
 
-        if (kindModule | this.Kind(this.TaskKinds.Check))
+        if (kindModule | this.Kind(this.TaskKindList.Check))
         {
             if (!(this.Result.Check == null))
             {

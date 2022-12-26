@@ -3,19 +3,19 @@ namespace Class;
 
 
 
-public class TaskKinds : Object
+public class TaskKindList : Object
 {
-    public static TaskKinds This { get; } = CreateGlobal();
+    public static TaskKindList This { get; } = CreateGlobal();
 
 
 
 
-    private static TaskKinds CreateGlobal()
+    private static TaskKindList CreateGlobal()
     {
-        TaskKinds global;
+        TaskKindList global;
 
 
-        global = new TaskKinds();
+        global = new TaskKindList();
 
 
 

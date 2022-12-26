@@ -236,10 +236,10 @@ public class Compile : Object
 
 
 
-        TaskKinds kinds;
+        TaskKindList kinds;
             
 
-        kinds = this.Class.TaskKinds;
+        kinds = this.Class.TaskKindList;
 
         
 
