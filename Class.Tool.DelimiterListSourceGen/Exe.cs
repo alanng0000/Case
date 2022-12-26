@@ -1,4 +1,4 @@
-namespace Class.Tool.DelimitersSourceGen;
+namespace Class.Tool.DelimiterListSourceGen;
 
 
 
@@ -16,6 +16,6 @@ class Exe
         module.Init();
 
 
-        module.Main();
+        module.Execute();
     }
 }

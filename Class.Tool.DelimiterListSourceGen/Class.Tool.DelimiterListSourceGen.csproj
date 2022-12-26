@@ -12,7 +12,7 @@
 
     <ItemGroup>
         <Content Include="Class.txt" CopyToOutputDirectory="PreserveNewest" />
-        <Content Include="Delimiters.txt" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="DelimiterList.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 
 </Project>

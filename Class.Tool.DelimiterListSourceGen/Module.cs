@@ -1,9 +1,9 @@
-namespace Class.Tool.DelimitersSourceGen;
+namespace Class.Tool.DelimiterListSourceGen;
 
 
 
 
-class Module
+class Module : Object
 {
     private StringBuilder StringBuilder { get; set; }
 
@@ -32,8 +32,12 @@ class Module
 
 
 
-    public bool Init()
+    public override bool Init()
     {
+        base.Init();
+
+
+
         char c;
 
 
@@ -52,7 +56,7 @@ class Module
 
 
 
-    public bool Main()
+    public bool Execute()
     {
         this.StringBuilder = new StringBuilder();
 
@@ -68,7 +72,7 @@ class Module
         List lines;
         
         
-        lines = this.GetLines("Delimiters.txt");
+        lines = this.GetLines("DelimiterList.txt");
 
 
 
@@ -90,15 +94,15 @@ class Module
 
 
 
-        List delimiters;
+        List delimiterList;
 
 
 
-        delimiters = new List();
+        delimiterList = new List();
 
 
 
-        delimiters.Init();
+        delimiterList.Init();
 
 
 
@@ -218,14 +222,14 @@ class Module
 
 
 
-            if (delimiters.Contain(delimiter))
+            if (delimiterList.Contain(delimiter))
             {
                 continue;
             }
 
 
 
-            delimiters.Add(delimiter);
+            delimiterList.Add(delimiter);
 
 
 
@@ -331,7 +335,7 @@ class Module
 
 
 
-        this.AppendSetDelimiters();
+        this.AppendSetDelimiterList();
 
 
 
@@ -410,7 +414,7 @@ class Module
         
         
         
-        outputFilePath = "../../../../Class.Infra/Delimiters.cs";
+        outputFilePath = "../../../../Class.Infra/DelimiterList.cs";
 
 
 
@@ -426,7 +430,7 @@ class Module
 
 
 
-    private bool AppendSetDelimiters()
+    private bool AppendSetDelimiterList()
     {
         ListIter iter;
         

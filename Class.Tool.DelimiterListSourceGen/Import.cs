@@ -1,3 +1,4 @@
+global using Object = System.Infra.Object;
 global using Range = System.Infra.Range;
 global using RangeInfra = System.Infra.RangeInfra;
 global using StringCompare = System.Infra.StringCompare;
