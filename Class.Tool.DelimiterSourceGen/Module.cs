@@ -1,4 +1,4 @@
-namespace Class.Tool.DelimiterListSourceGen;
+namespace Class.Tool.DelimiterSourceGen;
 
 
 
@@ -72,7 +72,7 @@ class Module : Object
         List lines;
         
         
-        lines = this.GetLines("DelimiterList.txt");
+        lines = this.GetLines("Delimiter.txt");
 
 
 
@@ -438,7 +438,7 @@ class Module : Object
         
         
         
-        outputFilePath = "../../../../Class.Infra/DelimiterList.cs";
+        outputFilePath = "../../../../Class.Infra/Delimiter.cs";
 
 
 
