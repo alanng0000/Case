@@ -230,7 +230,7 @@ public class Compile : InfraCompile
 
 
 
-            this.Code.Tokens = tokenArray;
+            this.Code.Token = tokenArray;
 
 
             this.Code.Comments = commentArray;

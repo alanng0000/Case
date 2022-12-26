@@ -44,7 +44,7 @@ class AddNew : New
 
 
 
-        this.Compile.Code.Tokens.Set(this.TokenCount, token);
+        this.Compile.Code.Token.Set(this.TokenCount, token);
 
 
 

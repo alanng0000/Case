@@ -553,7 +553,7 @@ public class Compile : InfraCompile
         int rangeEnd;
 
 
-        rangeEnd = this.Code.Tokens.Count;
+        rangeEnd = this.Code.Token.Count;
 
 
 
@@ -6976,7 +6976,7 @@ public class Compile : InfraCompile
         TokenToken token;
 
 
-        token = this.Code.Tokens.Get(index);
+        token = this.Code.Token.Get(index);
             
 
         return token.Range;
