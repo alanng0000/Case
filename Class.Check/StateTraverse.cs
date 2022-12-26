@@ -323,7 +323,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.ExecuteStates(nodeGet);
+        this.ExecuteStateList(nodeGet);
 
 
 
@@ -2869,7 +2869,7 @@ public class StateTraverse : Traverse
 
 
 
-        States body;
+        StateList body;
         
         body = ifState.Body;
 
@@ -2945,7 +2945,7 @@ public class StateTraverse : Traverse
 
 
 
-        States body;
+        StateList body;
 
         body = whileState.Body;
 
