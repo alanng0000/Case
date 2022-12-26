@@ -776,15 +776,15 @@ public class Compile : InfraCompile
 
 
 
-        Members members;
+        MemberList member;
 
 
 
-        members = this.Members(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
+        member = this.MemberList(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
 
 
 
-        if (this.Null(members))
+        if (this.Null(member))
         {
             this.Error(this.ErrorKinds.MembersInvalid, range);
         }
@@ -809,7 +809,7 @@ public class Compile : InfraCompile
         ret.Base = varBase;
 
 
-        ret.Members = members;
+        ret.Member = member;
 
 
 
