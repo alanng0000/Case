@@ -424,7 +424,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Errors = this.ErrorList;
+        this.Result.Error = this.ErrorList;
 
 
 

@@ -335,7 +335,7 @@ public class Compile : InfraCompile
         bool ba;
 
 
-        ba = this.Zero(this.NodeResult.Errors.Count);
+        ba = this.Zero(this.NodeResult.Error.Count);
 
 
 

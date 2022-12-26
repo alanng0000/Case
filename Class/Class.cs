@@ -636,7 +636,7 @@ public class Class : Object
         {
             if (!(this.Result.Node == null))
             {
-                this.WriteErrors(this.Result.Node.Errors);
+                this.WriteErrors(this.Result.Node.Error);
             }
         }
 
