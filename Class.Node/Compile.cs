@@ -1547,7 +1547,7 @@ public class Compile : InfraCompile
 
 
 
-        Params varParams;
+        ParamList varParams;
 
 
         varParams = this.Params(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
@@ -1617,13 +1617,13 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Params Params(Range range)
+    protected virtual ParamList ParamList(Range range)
     {
-        NodeList list;
+        List list;
         
 
 
-        list = this.NodeList(this.Param, this.ParamRange, range, this.Delimiters.PauseSign);
+        list = this.List(this.Param, this.ParamRange, range, this.Delimiters.PauseSign);
 
 
 
@@ -1636,10 +1636,10 @@ public class Compile : InfraCompile
 
 
 
-        Params ret;
+        ParamList ret;
 
 
-        ret = new Params();
+        ret = new ParamList();
 
 
         ret.Init();
