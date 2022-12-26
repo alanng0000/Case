@@ -1547,15 +1547,15 @@ public class Compile : InfraCompile
 
 
 
-        ParamList varParams;
+        ParamList param;
 
 
-        varParams = this.Params(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
+        param = this.ParamList(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
 
 
 
 
-        if (this.Null(varParams))
+        if (this.Null(param))
         {
             this.Error(this.ErrorKinds.ParamsInvalid, range);
         }
@@ -1565,10 +1565,10 @@ public class Compile : InfraCompile
 
 
 
-        States call;
+        StateList call;
 
 
-        call = this.States(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
+        call = this.StateList(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
 
 
 
@@ -1598,7 +1598,7 @@ public class Compile : InfraCompile
         ret.Class = varClass;
 
 
-        ret.Params = varParams;
+        ret.Param = param;
 
 
         ret.Call = call;
