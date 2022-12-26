@@ -83,14 +83,14 @@ class MemberTraverse : Traverse
 
 
 
-        States nodeGet;
+        StateList nodeGet;
 
         nodeGet = nodeField.Get;
 
 
 
 
-        States nodeSet;
+        StateList nodeSet;
 
         nodeSet = nodeField.Set;
 
@@ -306,14 +306,14 @@ class MemberTraverse : Traverse
 
 
 
-        Params varParams;
+        ParamList paramList;
 
-        varParams = nodeMethod.Params;
-
-
+        paramList = nodeMethod.Param;
 
 
-        States call;
+
+
+        StateList call;
 
         call = nodeMethod.Call;
 
@@ -426,7 +426,7 @@ class MemberTraverse : Traverse
 
 
 
-        this.ExecuteParams(varParams);
+        this.ExecuteParamList(paramList);
 
 
 
