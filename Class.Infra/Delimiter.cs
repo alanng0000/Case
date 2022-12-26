@@ -2,19 +2,19 @@ namespace Class.Infra;
 
 
 
-public class DelimiterList : Object
+public class Delimiter : Object
 {
-    public static DelimiterList This { get; } = CreateGlobal();
+    public static Delimiter This { get; } = CreateGlobal();
 
 
 
 
-    private static DelimiterList CreateGlobal()
+    private static Delimiter CreateGlobal()
     {
-        DelimiterList global;
+        Delimiter global;
 
 
-        global = new DelimiterList();
+        global = new Delimiter();
 
 
 
