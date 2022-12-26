@@ -292,7 +292,7 @@ public class Compile : Object
 
     public bool ExecuteToken()
     {
-        this.Token.Sources = this.Source;
+        this.Token.SourceList = this.Source;
 
         
 

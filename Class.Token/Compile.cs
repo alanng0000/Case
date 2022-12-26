@@ -4,7 +4,7 @@ namespace Class.Token;
 
 public class Compile : InfraCompile
 {
-    public SourceArray Sources { get; set; }
+    public SourceArray SourceList { get; set; }
 
 
 
@@ -98,7 +98,7 @@ public class Compile : InfraCompile
 
 
 
-        codes.Count = this.Sources.Count;
+        codes.Count = this.SourceList.Count;
 
 
 
@@ -177,7 +177,7 @@ public class Compile : InfraCompile
 
 
 
-            this.Source = (Source)this.Sources.Get(i);
+            this.Source = (Source)this.SourceList.Get(i);
             
 
         
