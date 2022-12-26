@@ -2047,13 +2047,13 @@ public class Compile : InfraCompile
 
 
 
-    protected States States(Range range)
+    protected StateList StateList(Range range)
     {
-        NodeList list;
+        List list;
         
 
 
-        list = this.NodeList(this.State, this.StateRange, range, null);
+        list = this.List(this.State, this.StateRange, range, null);
 
 
 
@@ -2068,10 +2068,10 @@ public class Compile : InfraCompile
 
 
 
-        States ret;
+        StateList ret;
 
 
-        ret = new States();
+        ret = new StateList();
 
 
         ret.Init();
@@ -4012,7 +4012,7 @@ public class Compile : InfraCompile
 
 
 
-        States body;
+        StateList body;
         
 
         body = this.States(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
