@@ -3680,16 +3680,16 @@ public class Compile : InfraCompile
 
 
 
-        Argues argues;
+        ArgueList argue;
 
 
 
-        argues = this.Argues(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
+        argue = this.ArgueList(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
             
 
 
 
-        if (this.Null(argues))
+        if (this.Null(argue))
         {
             this.Error(this.ErrorKinds.ArguesInvalid, range);
         }
@@ -3702,15 +3702,15 @@ public class Compile : InfraCompile
         ret = new CallExpress();
 
         ret.Init();
-            
+        
         ret.This = varThis;
-            
+        
         ret.Method = method;
-            
-        ret.Argues = argues;
-            
+        
+        ret.Argue = argue;
+        
         this.NodeInfo(ret, range);
-            
+        
         return ret;
     }
 
