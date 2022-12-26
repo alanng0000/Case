@@ -23,4 +23,3 @@ global using TokenToken = Class.Token.Token;
 global using TextRange = Class.Token.TextRange;
 global using Exception = System.Exception;
 global using NullableBool = System.Nullable<bool>;
-global using ListNode = System.Collections.Generic.List<Class.Node.Node>;
