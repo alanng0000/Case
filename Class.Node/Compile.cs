@@ -399,6 +399,10 @@ public class Compile : InfraCompile
 
 
 
+        this.Result.Init();
+
+
+
 
 
         this.Result.Trees = new TreeList();

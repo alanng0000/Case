@@ -2,7 +2,7 @@ namespace Class.Node;
 
 
 
-public class Result
+public class Result : Object
 {
     public TreeList Trees { get; set; }
 
