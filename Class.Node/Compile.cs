@@ -6,7 +6,7 @@ namespace Class.Node;
 
 public class Compile : InfraCompile
 {
-    public SourceArray Sources { get; set; }
+    public SourceArray SourceList { get; set; }
 
 
 
@@ -472,7 +472,7 @@ public class Compile : InfraCompile
         ArrayIter sourceIter;
 
 
-        sourceIter = this.Sources.Iter();
+        sourceIter = this.SourceList.Iter();
 
 
 

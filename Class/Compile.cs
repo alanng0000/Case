@@ -15,7 +15,7 @@ public class Compile : Object
 
 
 
-    public SourceArray Sources { get; set; }
+    public SourceArray Source { get; set; }
 
 
 
@@ -224,7 +224,7 @@ public class Compile : Object
 
 
 
-        this.Sources = this.Class.Sources;
+        this.Source = this.Class.Sources;
 
 
 
@@ -292,7 +292,7 @@ public class Compile : Object
 
     public bool ExecuteToken()
     {
-        this.Token.Sources = this.Sources;
+        this.Token.Sources = this.Source;
 
         
 
@@ -312,7 +312,7 @@ public class Compile : Object
 
     public bool ExecuteNode()
     {
-        this.Node.Sources = this.Sources;
+        this.Node.SourceList = this.Source;
 
 
 
@@ -340,7 +340,7 @@ public class Compile : Object
 
     public bool ExecuteCheck()
     {
-        this.Check.Sources = this.Sources;
+        this.Check.Sources = this.Source;
 
 
 
@@ -382,7 +382,7 @@ public class Compile : Object
 
     public bool ExecuteModule()
     {
-        this.Module.Sources = this.Sources;
+        this.Module.Sources = this.Source;
 
 
 
