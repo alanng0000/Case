@@ -1,4 +1,4 @@
-namespace Class.Tool.KeywordsSourceGen;
+namespace Class.Tool.KeywordSourceGen;
 
 
 
@@ -8,8 +8,15 @@ class Exe
     static void Main(string[] args)
     {
         Module module;
+
+
         module = new Module();
 
-        module.Main();
+
+        module.Init();
+
+
+
+        module.Execute();
     }
 }

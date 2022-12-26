@@ -1,9 +1,9 @@
-namespace Class.Tool.KeywordsSourceGen;
+namespace Class.Tool.KeywordSourceGen;
 
 
 
 
-class Module
+class Module : Object
 {
     private StringBuilder StringBuilder { get; set; }
 
@@ -26,7 +26,7 @@ class Module
 
 
 
-    public bool Main()
+    public bool Execute()
     {
         this.StringBuilder = new StringBuilder();
 
