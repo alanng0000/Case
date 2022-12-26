@@ -6,7 +6,7 @@ namespace Class;
 
 public class Class : Object
 {
-    public SourceArray Sources { get; set; }
+    public SourceArray Source { get; set; }
 
 
 
@@ -450,11 +450,11 @@ public class Class : Object
 
 
 
-        this.Sources = new SourceArray();
+        this.Source = new SourceArray();
 
 
 
-        this.Sources.Init();
+        this.Source.Init();
 
 
 
@@ -503,7 +503,7 @@ public class Class : Object
 
 
 
-        this.Sources = null;
+        this.Source = null;
 
 
 
@@ -840,7 +840,7 @@ public class Class : Object
 
 
 
-        sourceIter = this.Sources.Iter();
+        sourceIter = this.Source.Iter();
 
 
 
@@ -945,7 +945,7 @@ public class Class : Object
         ArrayIter sourceIter;
 
 
-        sourceIter = this.Sources.Iter();
+        sourceIter = this.Source.Iter();
 
 
 
@@ -1277,7 +1277,7 @@ public class Class : Object
 
 
 
-        this.Sources = t;
+        this.Source = t;
 
 
 
@@ -1292,7 +1292,7 @@ public class Class : Object
         ArrayIter iter;
 
 
-        iter = this.Sources.Iter();
+        iter = this.Source.Iter();
 
 
 

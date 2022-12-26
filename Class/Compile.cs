@@ -224,7 +224,7 @@ public class Compile : Object
 
 
 
-        this.Source = this.Class.Sources;
+        this.Source = this.Class.Source;
 
 
 
