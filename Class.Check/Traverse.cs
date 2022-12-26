@@ -219,12 +219,12 @@ public class Traverse
 
 
 
-        this.ExecuteStates(field.Get);
+        this.ExecuteStateList(field.Get);
 
 
 
 
-        this.ExecuteStates(field.Set);
+        this.ExecuteStateList(field.Set);
 
 
 
@@ -282,10 +282,10 @@ public class Traverse
         this.ExecuteMethodName(method.Name);
 
 
-        this.ExecuteParams(method.Params);
+        this.ExecuteParamList(method.Param);
 
 
-        this.ExecuteStates(method.Call);
+        this.ExecuteStateList(method.Call);
 
 
 
