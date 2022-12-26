@@ -84,7 +84,7 @@ public class Traverse
 
 
 
-        this.ExecuteMembers(nodeClass.Members);
+        this.ExecuteMemberList(nodeClass.Member);
 
 
 
@@ -114,24 +114,24 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteMembers(Members members)
+    public virtual bool ExecuteMemberList(MemberList memberList)
     {
-        if (this.Null(members))
+        if (this.Null(memberList))
         {
             return true;
         }
 
 
 
-        this.ExecuteNode(members);
+        this.ExecuteNode(memberList);
 
 
 
 
-        NodeListIter iter;
+        ListIter iter;
 
 
-        iter = members.Values.Iter();
+        iter = memberList.Values.Iter();
 
 
 
@@ -526,9 +526,9 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteStates(States states)
+    public virtual bool ExecuteStateList(StateList stateList)
     {
-        if (this.Null(states))
+        if (this.Null(stateList))
         {
             return true;
         }
@@ -537,17 +537,17 @@ public class Traverse
 
 
 
-        this.ExecuteNode(states);
+        this.ExecuteNode(stateList);
 
 
 
 
 
 
-        NodeListIter iter;
+        ListIter iter;
 
 
-        iter = states.Values.Iter();
+        iter = stateList.Values.Iter();
 
 
 
