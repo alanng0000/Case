@@ -193,7 +193,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Module = (CheckModule)this.CheckResult.Refer.Modules.Get(this.TaskModule);
+        this.Module = (CheckModule)this.CheckResult.Refer.Module.Get(this.TaskModule);
 
 
 
@@ -238,7 +238,7 @@ public class Compile : InfraCompile
 
 
 
-        m = (CheckModule)this.CheckResult.Refer.Modules.Get("System");
+        m = (CheckModule)this.CheckResult.Refer.Module.Get("System");
 
 
 

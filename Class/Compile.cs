@@ -360,7 +360,7 @@ public class Compile : Object
 
         if (this.Class.SystemResult != null)
         {
-            this.Check.SystemModules = this.Class.SystemResult.Check.Refer.Modules;
+            this.Check.SystemModules = this.Class.SystemResult.Check.Refer.Module;
         }
         
 
