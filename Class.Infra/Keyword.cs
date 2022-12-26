@@ -2,7 +2,7 @@ namespace Class.Infra;
 
 
 
-public class Keyword
+public class Keyword : Object
 {
     public static Keyword Instance { get; } = CreateGlobal();
 
@@ -53,7 +53,7 @@ public class Keyword
     public List Access { get; protected set; }
 
 
-    public virtual bool Init()
+    public override bool Init()
     {
         base.Init();
 
