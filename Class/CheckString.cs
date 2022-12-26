@@ -737,12 +737,19 @@ public class CheckString
 
 
 
+            List list;
+
+            list = t.Values;
+
+
+
+
 
             ulong k;
 
 
 
-            k = (ulong)t.Count;
+            k = (ulong)list.Count;
 
 
 
@@ -789,7 +796,7 @@ public class CheckString
 
 
 
-            g = t[f];
+            g = this.NodeAtIndex(list, f);
 
 
 
@@ -803,6 +810,61 @@ public class CheckString
 
         return true;
     }
+
+
+
+
+
+    private NodeNode NodeAtIndex(List list, int index)
+    {
+        int count;
+
+
+        count = index;
+
+
+
+
+        ListIter iter;
+
+
+        iter = list.Iter();
+
+
+
+
+        int i;
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            iter.Next();
+
+
+            i = i + 1;
+        }
+
+
+
+        NodeNode node;
+
+
+        node = (NodeNode)iter.Value;
+
+
+        
+
+        NodeNode ret;
+
+        ret = node;
+
+
+
+        return ret;
+    }
+
 
 
 
