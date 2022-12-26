@@ -178,14 +178,14 @@ public class StateTraverse : Traverse
 
 
 
-        States nodeGet;
+        StateList nodeGet;
 
         nodeGet = nodeField.Get;
 
 
 
 
-        States nodeSet;
+        StateList nodeSet;
 
         nodeSet = nodeField.Set;
 
@@ -228,7 +228,7 @@ public class StateTraverse : Traverse
 
 
 
-    private bool FieldGet(Field field, States nodeGet)
+    private bool FieldGet(Field field, StateList nodeGet)
     {
         if (this.Null(nodeGet))
         {
@@ -359,7 +359,7 @@ public class StateTraverse : Traverse
 
 
 
-    private bool FieldSet(Field field, States nodeSet)
+    private bool FieldSet(Field field, StateList nodeSet)
     {
         if (this.Null(nodeSet))
         {
@@ -477,7 +477,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.ExecuteStates(nodeSet);
+        this.ExecuteStateList(nodeSet);
 
 
 
@@ -528,16 +528,16 @@ public class StateTraverse : Traverse
 
 
 
-        Params varParams;
+        ParamList paramList;
 
 
-        varParams = nodeMethod.Params;
+        paramList = nodeMethod.Param;
 
 
 
 
 
-        States call;
+        StateList call;
 
 
         call = nodeMethod.Call;
@@ -630,7 +630,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.ExecuteStates(call);
+        this.ExecuteStateList(call);
 
 
 
@@ -807,9 +807,9 @@ public class StateTraverse : Traverse
 
 
 
-    public override bool ExecuteStates(States states)
+    public override bool ExecuteStateList(StateList stateList)
     {
-        if (this.Null(states))
+        if (this.Null(stateList))
         {
             return true;
         }
@@ -839,7 +839,7 @@ public class StateTraverse : Traverse
 
 
 
-        base.ExecuteStates(states);
+        base.ExecuteStateList(stateList);
 
 
 
@@ -2617,9 +2617,9 @@ public class StateTraverse : Traverse
 
 
 
-        Argues argues;
+        ArgueList argueList;
 
-        argues = callExpress.Argues;
+        argueList = callExpress.Argue;
 
 
 
@@ -2700,7 +2700,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(method))
         {
-            if (! this.ArguesMatch(method, argues))
+            if (! this.ArgueListMatch(method, argueList))
             {
                 this.Error(this.ErrorKinds.ArguesUnassignable, callExpress);
             }
@@ -3650,7 +3650,7 @@ public class StateTraverse : Traverse
 
 
 
-    protected bool ArguesMatch(Method method, Argues argues)
+    protected bool ArgueListMatch(Method method, ArgueList argueList)
     {
         int count;
 
@@ -3666,7 +3666,7 @@ public class StateTraverse : Traverse
 
 
 
-        countEqual = (count == argues.Values.Count);
+        countEqual = (count == argueList.Values.Count);
 
 
 
@@ -3687,10 +3687,10 @@ public class StateTraverse : Traverse
 
 
 
-        NodeListIter argueIter;
+        ListIter argueIter;
 
 
-        argueIter = argues.Values.Iter();
+        argueIter = argueList.Values.Iter();
 
 
 
@@ -3727,7 +3727,7 @@ public class StateTraverse : Traverse
 
 
 
-            if (argue == null)
+            if (this.Null(argue))
             {
                 return false;
             }
@@ -3759,7 +3759,7 @@ public class StateTraverse : Traverse
 
 
 
-            if (expressClass == null)
+            if (this.Null(expressClass))
             {
                 return false;
             }
