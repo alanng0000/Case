@@ -74,7 +74,7 @@ class AddNew : New
 
         
         
-        this.Compile.Code.Comments.Set(this.CommentCount, comment);
+        this.Compile.Code.Comment.Set(this.CommentCount, comment);
 
 
 
