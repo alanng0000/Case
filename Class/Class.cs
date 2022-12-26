@@ -626,7 +626,7 @@ public class Class : Object
         {
             if (!(this.Result.Token == null))
             {
-                this.WriteErrors(this.Result.Token.Errors);
+                this.WriteErrors(this.Result.Token.Error);
             }
         }
 

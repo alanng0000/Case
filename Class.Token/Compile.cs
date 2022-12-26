@@ -128,7 +128,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Errors = this.Errors;
+        this.Result.Error = this.Errors;
 
 
 
