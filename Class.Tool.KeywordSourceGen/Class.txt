@@ -2,7 +2,7 @@ namespace Class.Infra;
 
 
 
-public class Keyword
+public class Keyword : Object
 {
     public static Keyword Instance { get; } = CreateGlobal();
 
