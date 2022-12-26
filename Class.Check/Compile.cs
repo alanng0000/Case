@@ -182,13 +182,13 @@ public class Compile : InfraCompile
 
 
 
-        this.Errors = new ErrorList();
+        this.ErrorList = new ErrorList();
 
 
 
 
 
-        this.Errors.Init();
+        this.ErrorList.Init();
 
 
 
@@ -205,7 +205,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Errors = this.Errors;
+        this.Result.Errors = this.ErrorList;
 
 
 

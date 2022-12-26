@@ -7,7 +7,7 @@ namespace Class.Infra;
 
 public class Compile : Object
 {
-    protected ErrorList Errors { get; set; }
+    protected ErrorList ErrorList { get; set; }
 
     
 
