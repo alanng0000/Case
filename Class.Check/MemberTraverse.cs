@@ -464,7 +464,7 @@ class MemberTraverse : Traverse
 
 
 
-        method.Index = this.CurrentClass.Methods.Count;
+        method.Index = this.CurrentClass.Method.Count;
         
 
 
@@ -488,7 +488,7 @@ class MemberTraverse : Traverse
 
 
 
-        this.CurrentClass.Methods.Add(pair);
+        this.CurrentClass.Method.Add(pair);
 
 
 
@@ -715,7 +715,7 @@ class MemberTraverse : Traverse
 
         bool bb;
 
-        bb = ! this.Null(this.CurrentClass.Methods.Get(name));
+        bb = ! this.Null(this.CurrentClass.Method.Get(name));
 
 
 

@@ -607,7 +607,7 @@ class SizeCompile
 
 
 
-        iter = varClass.Methods.Iter();
+        iter = varClass.Method.Iter();
 
 
 
@@ -868,7 +868,7 @@ class SizeCompile
 
 
 
-        this.ExecuteStatesMethods(varClass.Methods);
+        this.ExecuteStatesMethods(varClass.Method);
 
 
 

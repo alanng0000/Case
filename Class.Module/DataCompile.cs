@@ -862,7 +862,7 @@ class DataCompile
 
 
 
-        methods = varClass.Methods;
+        methods = varClass.Method;
 
 
 

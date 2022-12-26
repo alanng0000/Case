@@ -17,7 +17,7 @@ public class Class : Object
 
 
 
-    public MethodMap Methods { get; set; }
+    public MethodMap Method { get; set; }
 
 
 

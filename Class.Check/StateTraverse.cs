@@ -59,7 +59,7 @@ public class StateTraverse : Traverse
         c.Field = null;
 
 
-        c.Methods = null;
+        c.Method = null;
 
 
         c.Module = null;
@@ -3604,7 +3604,7 @@ public class StateTraverse : Traverse
         Method method;
 
 
-        method = (Method)varClass.Methods.Get(name);
+        method = (Method)varClass.Method.Get(name);
 
 
 

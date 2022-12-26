@@ -503,11 +503,11 @@ public class Compile : InfraCompile
 
 
 
-        varClass.Methods = new MethodMap();
+        varClass.Method = new MethodMap();
 
 
 
-        varClass.Methods.Init();
+        varClass.Method.Init();
 
 
 
@@ -629,11 +629,11 @@ public class Compile : InfraCompile
 
 
 
-        varClass.Methods = new MethodMap();
+        varClass.Method = new MethodMap();
 
 
 
-        varClass.Methods.Init();
+        varClass.Method.Init();
 
 
 
@@ -958,7 +958,7 @@ public class Compile : InfraCompile
         method.Parent = this.ObjectClass;
 
 
-        method.Index = this.ObjectClass.Methods.Count;
+        method.Index = this.ObjectClass.Method.Count;
 
 
 
@@ -982,7 +982,7 @@ public class Compile : InfraCompile
 
 
 
-        this.ObjectClass.Methods.Add(pair);
+        this.ObjectClass.Method.Add(pair);
 
 
 

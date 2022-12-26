@@ -86,11 +86,11 @@ class ClassTraverse : Traverse
 
 
 
-        varClass.Methods = new MethodMap();
+        varClass.Method = new MethodMap();
 
 
 
-        varClass.Methods.Init();
+        varClass.Method.Init();
 
 
 
