@@ -326,12 +326,31 @@ class Module : Object
 
         this.AppendIndents(1)
             .Append("public").Append(" ")
+            .Append("override").Append(" ")
             .Append("bool").Append(" ")
             .Append("Init")
             .Append("(").Append(")").AppendLine();
 
         this.AppendIndents(1)
             .Append("{").AppendLine();
+
+
+
+        
+
+        this.AppendIndents(2)
+            .Append("base").Append(".").Append("Init").Append("(").Append(")").Append(";");
+
+
+
+        this.AppendLine();
+
+
+
+        this.AppendLine();
+        
+
+
 
 
 

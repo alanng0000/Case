@@ -2,7 +2,7 @@ namespace Class.Infra;
 
 
 
-public class DelimiterList
+public class DelimiterList : Object
 {
     public static DelimiterList This { get; } = CreateGlobal();
 
