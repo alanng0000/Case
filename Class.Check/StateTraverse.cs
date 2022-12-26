@@ -3884,7 +3884,7 @@ public class StateTraverse : Traverse
 
 
 
-            if (! this.Null(varVar))
+            if (!this.Null(varVar))
             {
                 return varVar;
             }
