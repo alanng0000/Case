@@ -4,7 +4,7 @@ namespace Class.Check;
 
 
 
-public class SystemModule
+public class SystemModule : Object
 {
     public Module Module { get; set; }
 
@@ -28,8 +28,13 @@ public class SystemModule
 
 
 
-    public bool Init()
+    public override bool Init()
     {
+        base.Init();
+
+        
+
+
         this.Bool = this.NewClass("Bool");
 
 
