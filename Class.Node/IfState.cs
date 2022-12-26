@@ -8,5 +8,5 @@ public class IfState : State
 
 
 
-    public States Body { get; set; }
+    public StateList Body { get; set; }
 }

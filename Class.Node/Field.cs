@@ -12,11 +12,11 @@ public class Field : Member
 
 
 
-    public States Get { get; set; }
+    public StateList Get { get; set; }
 
 
 
-    public States Set { get; set; }
+    public StateList Set { get; set; }
 
 
 
