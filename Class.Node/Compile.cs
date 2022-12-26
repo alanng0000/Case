@@ -824,11 +824,11 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Members Members(Range range)
+    protected virtual MemberList MemberList(Range range)
     {
-        NodeList list;
+        List list;
         
-        list = this.NodeList(this.Member, this.MemberRange, range, null);
+        list = this.List(this.Member, this.MemberRange, range, null);
 
 
 
@@ -842,10 +842,10 @@ public class Compile : InfraCompile
 
 
 
-        Members ret;
+        MemberList ret;
 
 
-        ret = new Members();
+        ret = new MemberList();
 
 
         ret.Init();
@@ -1244,11 +1244,11 @@ public class Compile : InfraCompile
 
 
 
-        States varGet;
+        StateList varGet;
 
 
 
-        varGet = this.States(this.Range(getLeftBrace.Range.End, getRightBrace.Range.Start));
+        varGet = this.StateList(this.Range(getLeftBrace.Range.End, getRightBrace.Range.Start));
 
 
 
@@ -1264,11 +1264,11 @@ public class Compile : InfraCompile
 
 
 
-        States varSet;
+        StateList varSet;
 
 
 
-        varSet = this.States(this.Range(setLeftBrace.Range.End, setRightBrace.Range.Start));
+        varSet = this.StateList(this.Range(setLeftBrace.Range.End, setRightBrace.Range.Start));
 
 
 
