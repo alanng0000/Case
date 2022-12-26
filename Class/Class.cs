@@ -646,7 +646,7 @@ public class Class : Object
         {
             if (!(this.Result.Check == null))
             {
-                this.WriteErrors(this.Result.Check.Errors);
+                this.WriteErrors(this.Result.Check.Error);
             }
         }
 

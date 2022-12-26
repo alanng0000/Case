@@ -344,7 +344,7 @@ public class Compile : InfraCompile
         bool bb;
 
 
-        bb = this.Zero(this.CheckResult.Errors.Count);
+        bb = this.Zero(this.CheckResult.Error.Count);
 
 
 

@@ -14,5 +14,5 @@ public class Result : Object
 
 
 
-    public ErrorList Errors { get; set; }
+    public ErrorList Error { get; set; }
 }

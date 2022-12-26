@@ -205,7 +205,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Errors = this.ErrorList;
+        this.Result.Error = this.ErrorList;
 
 
 
@@ -1630,7 +1630,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Errors.Add(error);
+        this.Result.Error.Add(error);
 
 
 
