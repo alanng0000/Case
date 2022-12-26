@@ -231,7 +231,7 @@ class Module : Object
 
         this.AppendIndents(1)
             .Append("public").Append(" ")
-            .Append("virtual").Append(" ")
+            .Append("override").Append(" ")
             .Append("bool").Append(" ")
             .Append("Init")
             .Append("(").Append(")").AppendLine();
