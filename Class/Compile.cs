@@ -320,7 +320,7 @@ public class Compile : Object
 
 
 
-        this.Node.Codes = this.Result.Token.Codes;
+        this.Node.Codes = this.Result.Token.Code;
 
 
 

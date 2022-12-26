@@ -953,7 +953,7 @@ public class Class : Object
         ArrayIter codeIter;
 
 
-        codeIter = this.Result.Token.Codes.Iter();
+        codeIter = this.Result.Token.Code.Iter();
 
 
 

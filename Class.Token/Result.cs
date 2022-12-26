@@ -4,7 +4,7 @@ namespace Class.Token;
 
 public class Result : Object
 {
-    public CodeArray Codes { get; set; }
+    public CodeArray Code { get; set; }
 
 
 

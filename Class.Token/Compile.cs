@@ -124,7 +124,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Codes = this.Codes;
+        this.Result.Code = this.Codes;
 
 
 
