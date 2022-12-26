@@ -31,7 +31,7 @@ public class Compile : InfraCompile
 
 
 
-    protected Delimiters Delimiters { get; set; }
+    protected Delimiter Delimiter { get; set; }
 
 
 
@@ -76,7 +76,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Delimiters = Delimiters.This;
+        this.Delimiter = Delimiter.This;
 
 
 
@@ -660,7 +660,7 @@ public class Compile : InfraCompile
         Token colon;
 
 
-        colon = this.Token(this.Delimiters.BaseSign, this.IndexRange(nameRange.End));
+        colon = this.Token(this.Delimiter.BaseSign, this.IndexRange(nameRange.End));
 
 
 
@@ -706,7 +706,7 @@ public class Compile : InfraCompile
         Token leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(baseRange.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(baseRange.End));
 
 
 
@@ -987,7 +987,7 @@ public class Compile : InfraCompile
 
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(nameRange.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
 
 
 
@@ -1073,7 +1073,7 @@ public class Compile : InfraCompile
 
 
 
-        getLeftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(getToken.Range.End));
+        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getToken.Range.End));
 
 
 
@@ -1149,7 +1149,7 @@ public class Compile : InfraCompile
 
 
 
-        setLeftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(setToken.Range.End));
+        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(setToken.Range.End));
 
 
 
@@ -1407,7 +1407,7 @@ public class Compile : InfraCompile
 
 
 
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(nameRange.End));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
 
 
 
@@ -1454,7 +1454,7 @@ public class Compile : InfraCompile
 
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
@@ -1627,7 +1627,7 @@ public class Compile : InfraCompile
         
 
 
-        list = this.List(this.Param, this.ParamRange, range, this.Delimiters.PauseSign);
+        list = this.List(this.Param, this.ParamRange, range, this.Delimiter.PauseSign);
 
 
 
@@ -2188,7 +2188,7 @@ public class Compile : InfraCompile
         Token semicolon;
 
 
-        semicolon = this.Token(this.Delimiters.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
@@ -2451,7 +2451,7 @@ public class Compile : InfraCompile
         Token semicolon;
 
 
-        semicolon = this.Token(this.Delimiters.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
@@ -2528,7 +2528,7 @@ public class Compile : InfraCompile
         Token semicolon;
 
 
-        semicolon = this.Token(this.Delimiters.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
@@ -2546,7 +2546,7 @@ public class Compile : InfraCompile
 
 
 
-        colon = this.TokenForward(this.Delimiters.BaseSign, this.Range(range.Start, semicolon.Range.Start));
+        colon = this.TokenForward(this.Delimiter.BaseSign, this.Range(range.Start, semicolon.Range.Start));
 
 
 
@@ -2751,7 +2751,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.TokenBackward(this.Delimiters.AndSign, range);
+        op = this.TokenBackward(this.Delimiter.AndSign, range);
 
 
 
@@ -2833,7 +2833,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.TokenBackward(this.Delimiters.OrnSign, range);
+        op = this.TokenBackward(this.Delimiter.OrnSign, range);
 
 
 
@@ -2925,7 +2925,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.Token(this.Delimiters.NotSign, this.IndexRange(range.Start));
+        op = this.Token(this.Delimiter.NotSign, this.IndexRange(range.Start));
 
 
 
@@ -2976,7 +2976,7 @@ public class Compile : InfraCompile
         
 
 
-        op = this.TokenBackward(this.Delimiters.AddSign, range);
+        op = this.TokenBackward(this.Delimiter.AddSign, range);
 
 
 
@@ -3059,7 +3059,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.TokenBackward(this.Delimiters.SubSign, range);
+        op = this.TokenBackward(this.Delimiter.SubSign, range);
 
 
 
@@ -3144,7 +3144,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.TokenBackward(this.Delimiters.MulSign, range);
+        op = this.TokenBackward(this.Delimiter.MulSign, range);
 
 
 
@@ -3230,7 +3230,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.TokenBackward(this.Delimiters.DivSign, range);
+        op = this.TokenBackward(this.Delimiter.DivSign, range);
 
 
 
@@ -3297,7 +3297,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.TokenBackward(this.Delimiters.EqualSign, range);
+        op = this.TokenBackward(this.Delimiter.EqualSign, range);
 
 
 
@@ -3364,7 +3364,7 @@ public class Compile : InfraCompile
         Token op;
         
 
-        op = this.TokenBackward(this.Delimiters.LessSign, range);
+        op = this.TokenBackward(this.Delimiter.LessSign, range);
 
 
 
@@ -3443,7 +3443,7 @@ public class Compile : InfraCompile
 
 
 
-        op = this.TokenBackward(this.Delimiters.JoinSign, range);
+        op = this.TokenBackward(this.Delimiter.JoinSign, range);
 
 
 
@@ -3512,7 +3512,7 @@ public class Compile : InfraCompile
         
 
 
-        dot = this.TokenBackward(this.Delimiters.StopSign, range);
+        dot = this.TokenBackward(this.Delimiter.StopSign, range);
 
 
 
@@ -3599,7 +3599,7 @@ public class Compile : InfraCompile
         
 
 
-        rightBracket = this.Token(this.Delimiters.RightBracket, this.IndexRange(range.End - 1));
+        rightBracket = this.Token(this.Delimiter.RightBracket, this.IndexRange(range.End - 1));
 
 
 
@@ -3634,7 +3634,7 @@ public class Compile : InfraCompile
         
 
 
-        dot = this.TokenBackward(this.Delimiters.StopSign, this.Range(range.Start, leftBracket.Range.Start));
+        dot = this.TokenBackward(this.Delimiter.StopSign, this.Range(range.Start, leftBracket.Range.Start));
             
 
 
@@ -3761,7 +3761,7 @@ public class Compile : InfraCompile
         
         
 
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(ifToken.Range.End));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(ifToken.Range.End));
 
 
 
@@ -3803,7 +3803,7 @@ public class Compile : InfraCompile
         Token leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
@@ -3931,7 +3931,7 @@ public class Compile : InfraCompile
         Token leftBracket;
         
         
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(whileToken.Range.End));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(whileToken.Range.End));
 
 
 
@@ -3967,7 +3967,7 @@ public class Compile : InfraCompile
         Token leftBrace;
         
         
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
@@ -4094,7 +4094,7 @@ public class Compile : InfraCompile
         Token semicolon;
 
 
-        semicolon = this.Token(this.Delimiters.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
@@ -4199,7 +4199,7 @@ public class Compile : InfraCompile
         Token leftBracket;
 
 
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(classRange.End));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(classRange.End));
 
 
 
@@ -4311,7 +4311,7 @@ public class Compile : InfraCompile
         Token leftBracket;
         
         
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(range.Start));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(range.Start));
 
 
 
@@ -4498,7 +4498,7 @@ public class Compile : InfraCompile
 
 
 
-        list = this.List(this.Argue, this.ArgueRange, range, this.Delimiters.PauseSign);
+        list = this.List(this.Argue, this.ArgueRange, range, this.Delimiter.PauseSign);
 
 
 
@@ -4646,7 +4646,7 @@ public class Compile : InfraCompile
         
 
 
-        dot = this.TokenBackward(this.Delimiters.StopSign, range);
+        dot = this.TokenBackward(this.Delimiter.StopSign, range);
 
 
 
@@ -5505,7 +5505,7 @@ public class Compile : InfraCompile
 
 
 
-        semicolon = this.TokenForward(this.Delimiters.StateSign, this.Range(returnToken.Range.End, range.End));
+        semicolon = this.TokenForward(this.Delimiter.StateSign, this.Range(returnToken.Range.End, range.End));
 
 
 
@@ -5580,7 +5580,7 @@ public class Compile : InfraCompile
         
         
 
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(ifToken.Range.End));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(ifToken.Range.End));
 
 
 
@@ -5622,7 +5622,7 @@ public class Compile : InfraCompile
         Token leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
@@ -5707,7 +5707,7 @@ public class Compile : InfraCompile
         
         
 
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(whileToken.Range.End));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(whileToken.Range.End));
 
 
 
@@ -5749,7 +5749,7 @@ public class Compile : InfraCompile
         Token leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
@@ -5827,7 +5827,7 @@ public class Compile : InfraCompile
         Token semicolon;
 
 
-        semicolon = this.Token(this.Delimiters.StateSign, this.IndexRange(varRange.End));
+        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(varRange.End));
 
 
 
@@ -5869,7 +5869,7 @@ public class Compile : InfraCompile
 
 
 
-        semicolon = this.TokenForward(this.Delimiters.StateSign, range);
+        semicolon = this.TokenForward(this.Delimiter.StateSign, range);
 
 
 
@@ -5887,7 +5887,7 @@ public class Compile : InfraCompile
 
 
 
-        colon = this.TokenForward(this.Delimiters.BaseSign, this.Range(range.Start, semicolon.Range.Start));
+        colon = this.TokenForward(this.Delimiter.BaseSign, this.Range(range.Start, semicolon.Range.Start));
 
 
 
@@ -5928,7 +5928,7 @@ public class Compile : InfraCompile
         Token semicolon;
         
 
-        semicolon = this.TokenForward(this.Delimiters.StateSign, range);
+        semicolon = this.TokenForward(this.Delimiter.StateSign, range);
         
 
 
@@ -6022,7 +6022,7 @@ public class Compile : InfraCompile
         Token comma;
             
 
-        comma = this.TokenForward(this.Delimiters.PauseSign, range);
+        comma = this.TokenForward(this.Delimiter.PauseSign, range);
         
         
 
@@ -6211,7 +6211,7 @@ public class Compile : InfraCompile
 
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(nameRange.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
 
 
 
@@ -6288,7 +6288,7 @@ public class Compile : InfraCompile
 
 
 
-        getLeftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(getToken.Range.End));
+        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getToken.Range.End));
 
 
 
@@ -6364,7 +6364,7 @@ public class Compile : InfraCompile
 
 
 
-        setLeftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(setToken.Range.End));
+        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(setToken.Range.End));
 
 
 
@@ -6509,7 +6509,7 @@ public class Compile : InfraCompile
 
 
 
-        leftBracket = this.Token(this.Delimiters.LeftBracket, this.IndexRange(nameRange.End));
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
 
 
 
@@ -6556,7 +6556,7 @@ public class Compile : InfraCompile
 
 
 
-        leftBrace = this.Token(this.Delimiters.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
@@ -7574,7 +7574,7 @@ public class Compile : InfraCompile
         s = this.Text(index);
 
 
-        if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.LeftBracket))
+        if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.LeftBracket))
         {
             Token rightBracket;
 
@@ -7589,7 +7589,7 @@ public class Compile : InfraCompile
 
             ret = rightBracket.Range.End;
         }
-        else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.LeftBrace))
+        else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.LeftBrace))
         {
             Token rightBrace;
 
@@ -7631,7 +7631,7 @@ public class Compile : InfraCompile
         s = this.Text(t);
 
 
-        if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.RightBracket))
+        if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.RightBracket))
         {
             Token leftBracket;
 
@@ -7646,7 +7646,7 @@ public class Compile : InfraCompile
 
             ret = leftBracket.Range.Start;
         }
-        else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiters.RightBrace))
+        else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.RightBrace))
         {
             Token leftBrace;
 
@@ -7671,25 +7671,25 @@ public class Compile : InfraCompile
 
     protected Token TokenMatchLeftBrace(Range range)
     {   
-        return this.TokenMatchLeftToken(this.Delimiters.LeftBrace, this.Delimiters.RightBrace, range);
+        return this.TokenMatchLeftToken(this.Delimiter.LeftBrace, this.Delimiter.RightBrace, range);
     }
 
 
     protected Token TokenMatchRightBrace(Range range)
     {
-        return this.TokenMatchRightToken(this.Delimiters.LeftBrace, this.Delimiters.RightBrace, range);
+        return this.TokenMatchRightToken(this.Delimiter.LeftBrace, this.Delimiter.RightBrace, range);
     }
 
 
     protected Token TokenMatchLeftBracket(Range range)
     {
-        return this.TokenMatchLeftToken(this.Delimiters.LeftBracket, this.Delimiters.RightBracket, range);
+        return this.TokenMatchLeftToken(this.Delimiter.LeftBracket, this.Delimiter.RightBracket, range);
     }
 
 
     protected Token TokenMatchRightBracket(Range range)
     {
-        return this.TokenMatchRightToken(this.Delimiters.LeftBracket, this.Delimiters.RightBracket, range);
+        return this.TokenMatchRightToken(this.Delimiter.LeftBracket, this.Delimiter.RightBracket, range);
     }
 
 
