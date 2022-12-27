@@ -8,12 +8,12 @@ Field
             {
                 Value : "Int",
             },
-    Get : States
+    Get : StateList
           {
               Values : [
                        ],
           },
-    Set : States
+    Set : StateList
           {
               Values : [
                        ],
