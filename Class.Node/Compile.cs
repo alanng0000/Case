@@ -579,7 +579,7 @@ public class Compile : InfraCompile
 
 
 
-        if (node == null)
+        if (this.Null(node))
         {
             this.Error(this.ErrorKinds.Invalid, range);
         }
