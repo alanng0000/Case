@@ -1,19 +1,19 @@
 ParamList
 {
-    Values : [
-                 Param
-                 {
-                     Var : Var
-                           {
-                               Class : ClassName
-                                       {
-                                           Value : "Gg",
-                                       },
-                               Name : VarName
+    Value : [
+                Param
+                {
+                    Var : Var
+                          {
+                              Class : ClassName
                                       {
-                                          Value : "hh",
+                                          Value : "Gg",
                                       },
-                           },
-                 },
-             ],
+                              Name : VarName
+                                     {
+                                         Value : "hh",
+                                     },
+                          },
+                },
+            ],
 },

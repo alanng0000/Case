@@ -1,47 +1,47 @@
 ParamList
 {
-    Values : [
-                 Param
-                 {
-                     Var : Var
-                           {
-                               Class : ClassName
-                                       {
-                                           Value : "Gg",
-                                       },
-                               Name : VarName
+    Value : [
+                Param
+                {
+                    Var : Var
+                          {
+                              Class : ClassName
                                       {
-                                          Value : "hh",
+                                          Value : "Gg",
                                       },
-                           },
-                 },
-                 Param
-                 {
-                     Var : Var
-                           {
-                               Class : ClassName
-                                       {
-                                           Value : "Jj",
-                                       },
-                               Name : VarName
+                              Name : VarName
+                                     {
+                                         Value : "hh",
+                                     },
+                          },
+                },
+                Param
+                {
+                    Var : Var
+                          {
+                              Class : ClassName
                                       {
-                                          Value : "ff",
+                                          Value : "Jj",
                                       },
-                           },
-                 },
-                 Param
-                 {
-                     Var : Var
-                           {
-                               Class : ClassName
-                                       {
-                                           Value : "Ee",
-                                       },
-                               Name : VarName
+                              Name : VarName
+                                     {
+                                         Value : "ff",
+                                     },
+                          },
+                },
+                Param
+                {
+                    Var : Var
+                          {
+                              Class : ClassName
                                       {
-                                          Value : "rr",
+                                          Value : "Ee",
                                       },
-                           },
-                 },
-             ],
+                              Name : VarName
+                                     {
+                                         Value : "rr",
+                                     },
+                          },
+                },
+            ],
 },
