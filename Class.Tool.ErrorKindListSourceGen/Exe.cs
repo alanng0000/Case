@@ -13,6 +13,9 @@ class Exe
         module = new Module();
 
 
-        module.Main(args);
+        module.Init();
+
+
+        module.Execute(args);
     }
 }
