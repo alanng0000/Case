@@ -51,6 +51,9 @@ public class StateTraverse : Traverse
         c = new Class();
 
 
+        c.Init();
+
+
         c.Name = null;
 
 
