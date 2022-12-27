@@ -13,7 +13,7 @@ public class Traverse
 
 
 
-        this.ErrorKinds = this.Compile.ErrorKinds;
+        this.ErrorKind = this.Compile.ErrorKind;
 
 
 
@@ -43,7 +43,7 @@ public class Traverse
 
 
 
-    protected ErrorKinds ErrorKinds { get; set; }
+    protected ErrorKindList ErrorKind { get; set; }
 
 
 
