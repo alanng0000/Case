@@ -72,7 +72,7 @@ public class Compile : InfraCompile
 
 
 
-    public ErrorKinds ErrorKinds { get; set; }
+    public ErrorKindList ErrorKind { get; set; }
 
 
 
@@ -91,12 +91,12 @@ public class Compile : InfraCompile
 
 
 
-        this.ErrorKinds = this.CreateErrorKinds();
+        this.ErrorKind = this.CreateErrorKind();
 
 
 
 
-        this.Access = this.CreateAccessList();
+        this.Access = this.CreateAccess();
 
 
 
@@ -268,15 +268,15 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual ErrorKinds CreateErrorKinds()
+    protected virtual ErrorKindList CreateErrorKind()
     {
-        return ErrorKinds.This;
+        return ErrorKindList.This;
     }
 
 
 
 
-    protected virtual AccessList CreateAccessList()
+    protected virtual AccessList CreateAccess()
     {
         return AccessList.This;
     }
@@ -1275,7 +1275,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varBase))
         {
-            this.Error(this.ErrorKinds.BaseUndefined, nodeClass, varClass.Source);
+            this.Error(this.ErrorKind.BaseUndefined, nodeClass, varClass.Source);
 
 
             b = true;
@@ -1288,7 +1288,7 @@ public class Compile : InfraCompile
         {
             if (!this.CheckBase(varBase))
             {
-                this.Error(this.ErrorKinds.BaseUndefined, nodeClass, varClass.Source);
+                this.Error(this.ErrorKind.BaseUndefined, nodeClass, varClass.Source);
 
 
                 b = true;
@@ -1398,7 +1398,7 @@ public class Compile : InfraCompile
 
             if (!b)
             {
-                this.Error(this.ErrorKinds.BaseUndefined, varClass.Node, varClass.Source);
+                this.Error(this.ErrorKind.BaseUndefined, varClass.Node, varClass.Source);
             }
 
 
