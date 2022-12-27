@@ -9,7 +9,7 @@ OperandUnassignable
 ThisUndefined
 FieldUndefined
 MethodUndefined
-ArguesUnassignable
+ArgueUnassignable
 ObjectUndefined
 CondUndefined
 CondUnassignable
