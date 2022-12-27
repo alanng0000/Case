@@ -1,15 +1,15 @@
 ArgueList
 {
-    Values : [
-                 Argue
-                 {
-                     Express : ConstantExpress
-                               {
-                                   Constant : IntConstant
-                                              {
-                                                  Value : 1,
-                                              },
-                               },
-                 },
-             ],
+    Value : [
+                Argue
+                {
+                    Express : ConstantExpress
+                              {
+                                  Constant : IntConstant
+                                             {
+                                                 Value : 1,
+                                             },
+                              },
+                },
+            ],
 },

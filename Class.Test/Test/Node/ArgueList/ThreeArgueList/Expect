@@ -1,35 +1,35 @@
 ArgueList
 {
-    Values : [
-                 Argue
-                 {
-                     Express : ConstantExpress
-                               {
-                                   Constant : IntConstant
-                                              {
-                                                  Value : 1,
-                                              },
-                               },
-                 },
-                 Argue
-                 {
-                     Express : ConstantExpress
-                               {
-                                   Constant : BoolConstant
-                                              {
-                                                  Value : true,
-                                              },
-                               },
-                 },
-                 Argue
-                 {
-                     Express : ConstantExpress
-                               {
-                                   Constant : StringConstant
-                                              {
-                                                  Value : "Oo",
-                                              },
-                               },
-                 },
-             ],
+    Value : [
+                Argue
+                {
+                    Express : ConstantExpress
+                              {
+                                  Constant : IntConstant
+                                             {
+                                                 Value : 1,
+                                             },
+                              },
+                },
+                Argue
+                {
+                    Express : ConstantExpress
+                              {
+                                  Constant : BoolConstant
+                                             {
+                                                 Value : true,
+                                             },
+                              },
+                },
+                Argue
+                {
+                    Express : ConstantExpress
+                              {
+                                  Constant : StringConstant
+                                             {
+                                                 Value : "Oo",
+                                             },
+                              },
+                },
+            ],
 },
