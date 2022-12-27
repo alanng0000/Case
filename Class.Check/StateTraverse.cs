@@ -298,6 +298,9 @@ public class StateTraverse : Traverse
         dataVar = new Var();
 
 
+        dataVar.Init();
+
+
         dataVar.Name = "data";
 
 
@@ -432,6 +435,9 @@ public class StateTraverse : Traverse
         dataVar = new Var();
 
 
+        dataVar.Init();
+
+
         dataVar.Name = "data";
 
 
@@ -446,6 +452,9 @@ public class StateTraverse : Traverse
 
 
         valueVar = new Var();
+
+
+        valueVar.Init();
 
 
         valueVar.Name = "value";
@@ -766,6 +775,9 @@ public class StateTraverse : Traverse
 
 
         varVar = new Var();
+
+
+        varVar.Init();
 
 
         varVar.Name = varName;

@@ -2,7 +2,7 @@ namespace Class.Check;
 
 
 
-public class Var
+public class Var : Object
 {
     public string Name { get; set; }
 

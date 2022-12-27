@@ -603,6 +603,9 @@ class MemberTraverse : Traverse
         varVar = new Var();
 
 
+        varVar.Init();
+
+
         varVar.Name = varName;
 
 
