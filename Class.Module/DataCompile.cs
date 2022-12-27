@@ -25,7 +25,7 @@ class DataCompile
 
 
 
-    private CheckAccesss Accesss { get; set; }
+    private CheckAccessList Access { get; set; }
 
 
 
@@ -64,7 +64,7 @@ class DataCompile
 
 
 
-        this.Accesss = CheckAccesss.This;
+        this.Access = CheckAccessList.This;
 
 
 
@@ -1187,28 +1187,28 @@ class DataCompile
 
 
 
-        if (access == this.Accesss.Public)
+        if (access == this.Access.Public)
         {
             o = 0;
         }
 
 
 
-        if (access == this.Accesss.Local)
+        if (access == this.Access.Local)
         {
             o = 1;
         }
 
 
 
-        if (access == this.Accesss.Derive)
+        if (access == this.Access.Derive)
         {
             o = 2;
         }
 
 
 
-        if (access == this.Accesss.Private)
+        if (access == this.Access.Private)
         {
             o = 3;
         }
