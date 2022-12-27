@@ -1448,7 +1448,7 @@ public class Traverse
 
 
 
-        this.ExecuteStateList(ifState.Body);
+        this.ExecuteStateList(ifState.Loop);
 
 
 

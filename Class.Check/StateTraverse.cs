@@ -2872,9 +2872,9 @@ public class StateTraverse : Traverse
 
 
 
-        StateList body;
+        StateList loop;
         
-        body = ifState.Body;
+        loop = ifState.Loop;
 
 
 
@@ -2893,7 +2893,7 @@ public class StateTraverse : Traverse
 
 
 
-        if (! this.Null(cond))
+        if (!this.Null(cond))
         {
             condClass = this.Check(cond).ExpressClass;
         }
@@ -2911,9 +2911,9 @@ public class StateTraverse : Traverse
 
 
 
-        if (! this.Null(condClass))
+        if (!this.Null(condClass))
         {
-            if (! this.CheckClass(condClass, this.System.Bool))
+            if (!this.CheckClass(condClass, this.System.Bool))
             {
                 this.Error(this.ErrorKinds.CondUnassignable, ifState);
             }
