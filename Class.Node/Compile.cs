@@ -535,6 +535,9 @@ public class Compile : InfraCompile
         tree = new Tree();
 
 
+        tree.Init();
+
+
         tree.Root = root;
 
 
