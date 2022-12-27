@@ -1,43 +1,43 @@
 Code
 {
     Token : [
-                 Token
-                 {
-                     Range : TextRange
-                             {
-                                 Row : 1,
-                                 Range : Range
-                                         {
-                                             Start : 0,
-                                             End : 1,
-                                         },
-                             },
-                 },
-             ],
+                Token
+                {
+                    Range : TextRange
+                            {
+                                Row : 1,
+                                Range : Range
+                                        {
+                                            Start : 0,
+                                            End : 1,
+                                        },
+                            },
+                },
+            ],
     Comment : [
-                   Comment
-                   {
-                       Range : TextRange
-                               {
-                                   Row : 0,
-                                   Range : Range
-                                           {
-                                               Start : 0,
-                                               End : 2,
-                                           },
-                               },
-                   },
-                   Comment
-                   {
-                       Range : TextRange
-                               {
-                                   Row : 2,
-                                   Range : Range
-                                           {
-                                               Start : 0,
-                                               End : 2,
-                                           },
-                               },
-                   },
-               ],
+                  Comment
+                  {
+                      Range : TextRange
+                              {
+                                  Row : 0,
+                                  Range : Range
+                                          {
+                                              Start : 0,
+                                              End : 2,
+                                          },
+                              },
+                  },
+                  Comment
+                  {
+                      Range : TextRange
+                              {
+                                  Row : 2,
+                                  Range : Range
+                                          {
+                                              Start : 0,
+                                              End : 2,
+                                          },
+                              },
+                  },
+              ],
 },

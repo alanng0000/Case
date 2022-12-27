@@ -1,31 +1,31 @@
 Code
 {
     Token : [
-             ],
+            ],
     Comment : [
-                   Comment
-                   {
-                       Range : TextRange
-                               {
-                                   Row : 0,
-                                   Range : Range
-                                           {
-                                               Start : 0,
-                                               End : 2,
-                                           },
-                               },
-                   },
-                   Comment
-                   {
-                       Range : TextRange
-                               {
-                                   Row : 2,
-                                   Range : Range
-                                           {
-                                               Start : 0,
-                                               End : 2,
-                                           },
-                               },
-                   },
-               ],
+                  Comment
+                  {
+                      Range : TextRange
+                              {
+                                  Row : 0,
+                                  Range : Range
+                                          {
+                                              Start : 0,
+                                              End : 2,
+                                          },
+                              },
+                  },
+                  Comment
+                  {
+                      Range : TextRange
+                              {
+                                  Row : 2,
+                                  Range : Range
+                                          {
+                                              Start : 0,
+                                              End : 2,
+                                          },
+                              },
+                  },
+              ],
 },

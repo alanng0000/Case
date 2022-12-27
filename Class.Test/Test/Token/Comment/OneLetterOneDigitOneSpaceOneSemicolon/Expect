@@ -1,19 +1,19 @@
 Code
 {
     Token : [
-             ],
+            ],
     Comment : [
-                   Comment
-                   {
-                       Range : TextRange
-                               {
-                                   Row : 0,
-                                   Range : Range
-                                           {
-                                               Start : 0,
-                                               End : 5,
-                                           },
-                               },
-                   },
-               ],
+                  Comment
+                  {
+                      Range : TextRange
+                              {
+                                  Row : 0,
+                                  Range : Range
+                                          {
+                                              Start : 0,
+                                              End : 5,
+                                          },
+                              },
+                  },
+              ],
 },

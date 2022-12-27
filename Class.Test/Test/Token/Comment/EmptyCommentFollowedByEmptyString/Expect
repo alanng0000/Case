@@ -1,31 +1,31 @@
 Code
 {
     Token : [
-                 Token
-                 {
-                     Range : TextRange
-                             {
-                                 Row : 1,
-                                 Range : Range
-                                         {
-                                             Start : 0,
-                                             End : 2,
-                                         },
-                             },
-                 },
-             ],
+                Token
+                {
+                    Range : TextRange
+                            {
+                                Row : 1,
+                                Range : Range
+                                        {
+                                            Start : 0,
+                                            End : 2,
+                                        },
+                            },
+                },
+            ],
     Comment : [
-                   Comment
-                   {
-                       Range : TextRange
-                               {
-                                   Row : 0,
-                                   Range : Range
-                                           {
-                                               Start : 0,
-                                               End : 1,
-                                           },
-                               },
-                   },
-               ],
+                  Comment
+                  {
+                      Range : TextRange
+                              {
+                                  Row : 0,
+                                  Range : Range
+                                          {
+                                              Start : 0,
+                                              End : 1,
+                                          },
+                              },
+                  },
+              ],
 },
