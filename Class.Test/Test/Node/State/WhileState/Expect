@@ -9,7 +9,7 @@ WhileState
            },
     Body : StateList
            {
-               Values : [
-                        ],
+               Value : [
+                       ],
            },
 },
