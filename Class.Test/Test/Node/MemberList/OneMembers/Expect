@@ -1,29 +1,29 @@
 MemberList
 {
-    Values : [
-                 Field
-                 {
-                     Name : FieldName
+    Value : [
+                Field
+                {
+                    Name : FieldName
+                           {
+                               Value : "Hh",
+                           },
+                    Class : ClassName
                             {
-                                Value : "Hh",
+                                Value : "Gg",
                             },
-                     Class : ClassName
+                    Get : StateList
+                          {
+                              Value : [
+                                      ],
+                          },
+                    Set : StateList
+                          {
+                              Value : [
+                                      ],
+                          },
+                    Access : PublicAccess
                              {
-                                 Value : "Gg",
                              },
-                     Get : StateList
-                           {
-                               Values : [
-                                        ],
-                           },
-                     Set : StateList
-                           {
-                               Values : [
-                                        ],
-                           },
-                     Access : PublicAccess
-                              {
-                              },
-                 },
-             ],
+                },
+            ],
 },

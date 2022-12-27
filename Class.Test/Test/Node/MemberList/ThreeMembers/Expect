@@ -1,77 +1,77 @@
 MemberList
 {
-    Values : [
-                 Field
-                 {
-                     Name : FieldName
-                            {
-                                Value : "Hh",
-                            },
-                     Class : ClassName
-                             {
-                                 Value : "Bool",
-                             },
-                     Get : StateList
+    Value : [
+                Field
+                {
+                    Name : FieldName
                            {
-                               Values : [
-                                        ],
+                               Value : "Hh",
                            },
-                     Set : StateList
-                           {
-                               Values : [
-                                        ],
-                           },
-                     Access : PublicAccess
-                              {
-                              },
-                 },
-                 Field
-                 {
-                     Name : FieldName
+                    Class : ClassName
                             {
-                                Value : "Kk",
+                                Value : "Bool",
                             },
-                     Class : ClassName
+                    Get : StateList
+                          {
+                              Value : [
+                                      ],
+                          },
+                    Set : StateList
+                          {
+                              Value : [
+                                      ],
+                          },
+                    Access : PublicAccess
                              {
-                                 Value : "Int",
                              },
-                     Get : StateList
+                },
+                Field
+                {
+                    Name : FieldName
                            {
-                               Values : [
-                                        ],
+                               Value : "Kk",
                            },
-                     Set : StateList
+                    Class : ClassName
+                            {
+                                Value : "Int",
+                            },
+                    Get : StateList
+                          {
+                              Value : [
+                                      ],
+                          },
+                    Set : StateList
+                          {
+                              Value : [
+                                      ],
+                          },
+                    Access : PublicAccess
+                             {
+                             },
+                },
+                Method
+                {
+                    Name : MethodName
                            {
-                               Values : [
-                                        ],
+                               Value : "Dy",
                            },
-                     Access : PublicAccess
-                              {
-                              },
-                 },
-                 Method
-                 {
-                     Name : MethodName
+                    Class : ClassName
                             {
-                                Value : "Dy",
+                                Value : "String",
                             },
-                     Class : ClassName
-                             {
-                                 Value : "String",
-                             },
-                     Param : ParamList
-                             {
-                                 Values : [
-                                          ],
-                             },
-                     Call : StateList
+                    Param : ParamList
                             {
-                                Values : [
-                                         ],
+                                Value : [
+                                        ],
                             },
-                     Access : PublicAccess
-                              {
-                              },
-                 },
-             ],
+                    Call : StateList
+                           {
+                               Value : [
+                                       ],
+                           },
+                    Access : PublicAccess
+                             {
+                             },
+                },
+            ],
 },
