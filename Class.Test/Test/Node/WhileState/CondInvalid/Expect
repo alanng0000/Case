@@ -6,7 +6,7 @@ Source: Code
 WhileState
 {
     Cond : null,
-    Body : States
+    Body : StateList
            {
                Values : [
                         ],
