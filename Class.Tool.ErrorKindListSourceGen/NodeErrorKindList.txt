@@ -20,4 +20,5 @@ ObjectInvalid
 CondInvalid
 ResultInvalid
 ArgueInvalid
-BodyInvalid
+ThenInvalid
+LoopInvalid
