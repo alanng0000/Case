@@ -10,13 +10,13 @@ Field
             },
     Get : StateList
           {
-              Values : [
-                       ],
+              Value : [
+                      ],
           },
     Set : StateList
           {
-              Values : [
-                       ],
+              Value : [
+                      ],
           },
     Access : PublicAccess
              {

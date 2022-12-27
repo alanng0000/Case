@@ -10,13 +10,13 @@ Method
             },
     Param : ParamList
             {
-                Values : [
-                         ],
+                Value : [
+                        ],
             },
     Call : StateList
            {
-               Values : [
-                        ],
+               Value : [
+                       ],
            },
     Access : PublicAccess
              {
