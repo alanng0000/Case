@@ -821,7 +821,7 @@ public class CheckString
         int count;
 
 
-        count = index;
+        count = index + 1;
 
 
 
