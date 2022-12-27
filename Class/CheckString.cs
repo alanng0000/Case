@@ -739,7 +739,7 @@ public class CheckString
 
             List list;
 
-            list = t.Values;
+            list = t.Value;
 
 
 
