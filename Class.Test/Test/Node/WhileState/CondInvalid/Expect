@@ -8,7 +8,7 @@ WhileState
     Cond : null,
     Body : StateList
            {
-               Values : [
-                        ],
+               Value : [
+                       ],
            },
 },
