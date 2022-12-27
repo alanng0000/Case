@@ -2701,9 +2701,9 @@ public class StateTraverse : Traverse
 
 
 
-        if (! this.Null(method))
+        if (!this.Null(method))
         {
-            if (! this.ArgueListMatch(method, argueList))
+            if (!this.ArgueListMatch(method, argueList))
             {
                 this.Error(this.ErrorKind.ArgueUnassignable, callExpress);
             }
