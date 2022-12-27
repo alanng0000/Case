@@ -3,16 +3,16 @@ namespace #NAMESPACE#;
 
 
 
-public class ErrorKinds : #BASECLASS#
+public class ErrorKindList : #BASECLASS#
 {
-    public static ErrorKinds This { get; } = CreateGlobal();
+    public static ErrorKindList This { get; } = CreateGlobal();
 
 
 
 
-    private static ErrorKinds CreateGlobal()
+    private static ErrorKindList CreateGlobal()
     {
-        ErrorKinds global;
+        ErrorKindList global;
 
 
         global = new ErrorKinds();
