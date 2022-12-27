@@ -33,6 +33,11 @@ public class StateTraverse : Traverse
 
 
 
+        this.Access = this.Compile.Access;
+
+
+
+
 
         return true;
     }
@@ -127,6 +132,9 @@ public class StateTraverse : Traverse
 
 
 
+
+
+    private AccessList Access { get; set; }
 
 
 
@@ -3506,14 +3514,14 @@ public class StateTraverse : Traverse
 
 
 
-        if (access == AccessList.This.Public)
+        if (access == this.Access.Public)
         {
             return true;
         }
 
 
 
-        if (access == AccessList.This.Local)
+        if (access == this.Access.Local)
         {
             if (this.Compile.Module == varClass.Module)
             {
@@ -3526,14 +3534,20 @@ public class StateTraverse : Traverse
 
 
  
-        if (access == AccessList.This.Derive)
+        if (access == this.Access.Derive)
         {
-            return true;
+            if (this.CheckClass(this.CurrentClass, varClass))
+            {
+                return true;
+            }
+
+
+            return false;
         }
 
 
 
-        if (access == AccessList.This.Private)
+        if (access == this.Access.Private)
         {
             return false;
         }
