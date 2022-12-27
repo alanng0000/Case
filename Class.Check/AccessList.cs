@@ -2,19 +2,19 @@ namespace Class.Check;
 
 
 
-public class Accesss : Object
+public class AccessList : Object
 {
-    public static Accesss This { get; } = CreateGlobal();
+    public static AccessList This { get; } = CreateGlobal();
 
 
 
 
-    private static Accesss CreateGlobal()
+    private static AccessList CreateGlobal()
     {
-        Accesss global;
+        AccessList global;
 
 
-        global = new Accesss();
+        global = new AccessList();
 
 
 

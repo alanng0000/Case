@@ -17,7 +17,7 @@ public class Traverse
 
 
 
-        this.Accesss = this.Compile.Accesss;
+        this.Access = this.Compile.Access;
 
 
 
@@ -49,7 +49,7 @@ public class Traverse
 
 
 
-    protected Accesss Accesss { get; set; }
+    protected AccessList Access { get; set; }
 
 
 
@@ -2055,25 +2055,25 @@ public class Traverse
 
         if (nodeAccess is PublicAccess)
         {
-            t = this.Accesss.Public;
+            t = this.Access.Public;
         }
 
 
         if (nodeAccess is LocalAccess)
         {
-            t = this.Accesss.Local;
+            t = this.Access.Local;
         }
 
 
         if (nodeAccess is DeriveAccess)
         {
-            t = this.Accesss.Derive;
+            t = this.Access.Derive;
         }
 
 
         if (nodeAccess is PrivateAccess)
         {
-            t = this.Accesss.Private;
+            t = this.Access.Private;
         }
 
 

@@ -3506,14 +3506,14 @@ public class StateTraverse : Traverse
 
 
 
-        if (access == Accesss.Public)
+        if (access == AccessList.This.Public)
         {
             return true;
         }
 
 
 
-        if (access == Accesss.Local)
+        if (access == AccessList.This.Local)
         {
             if (this.Compile.Module == varClass.Module)
             {
@@ -3526,14 +3526,14 @@ public class StateTraverse : Traverse
 
 
  
-        if (access == Accesss.Derive)
+        if (access == AccessList.This.Derive)
         {
             return true;
         }
 
 
 
-        if (access == Accesss.Private)
+        if (access == AccessList.This.Private)
         {
             return false;
         }

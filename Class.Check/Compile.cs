@@ -77,7 +77,7 @@ public class Compile : InfraCompile
 
 
 
-    public Accesss Accesss { get; set; }
+    public AccessList Access { get; set; }
 
 
 
@@ -96,7 +96,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Accesss = this.CreateAccesss();
+        this.Access = this.CreateAccessList();
 
 
 
@@ -276,9 +276,9 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Accesss CreateAccesss()
+    protected virtual AccessList CreateAccessList()
     {
-        return Accesss.This;
+        return AccessList.This;
     }
 
 
@@ -930,11 +930,6 @@ public class Compile : InfraCompile
 
     protected virtual bool SetObjectClassMembers()
     {
-        //global::System.Console.Write("Class.Check:Compile this.ObjectClass is null" + ":" + " " + this.Null(this.ObjectClass) + "\n");
-
-
-
-
         this.AddObjectClassMethod("Init");
 
 
@@ -952,7 +947,7 @@ public class Compile : InfraCompile
         Method method;
 
 
-        method = this.CreateMethod(this.SystemModule.Bool, name, Accesss.Public);
+        method = this.CreateMethod(this.SystemModule.Bool, name, this.Access.Public);
 
 
         method.Parent = this.ObjectClass;
