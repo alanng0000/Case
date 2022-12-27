@@ -1,4 +1,4 @@
-Members
+MemberList
 {
     Values : [
                  Field
@@ -11,12 +11,12 @@ Members
                              {
                                  Value : "Gg",
                              },
-                     Get : States
+                     Get : StateList
                            {
                                Values : [
                                         ],
                            },
-                     Set : States
+                     Set : StateList
                            {
                                Values : [
                                         ],

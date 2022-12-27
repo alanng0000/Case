@@ -1,4 +1,4 @@
-Members
+MemberList
 {
     Values : [
                  Field
@@ -11,12 +11,12 @@ Members
                              {
                                  Value : "Bool",
                              },
-                     Get : States
+                     Get : StateList
                            {
                                Values : [
                                         ],
                            },
-                     Set : States
+                     Set : StateList
                            {
                                Values : [
                                         ],
@@ -35,12 +35,12 @@ Members
                              {
                                  Value : "Int",
                              },
-                     Get : States
+                     Get : StateList
                            {
                                Values : [
                                         ],
                            },
-                     Set : States
+                     Set : StateList
                            {
                                Values : [
                                         ],
@@ -59,12 +59,12 @@ Members
                              {
                                  Value : "String",
                              },
-                     Params : Params
-                              {
-                                  Values : [
-                                           ],
-                              },
-                     Call : States
+                     Param : ParamList
+                             {
+                                 Values : [
+                                          ],
+                             },
+                     Call : StateList
                             {
                                 Values : [
                                          ],
