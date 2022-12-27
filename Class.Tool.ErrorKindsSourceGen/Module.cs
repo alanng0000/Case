@@ -3,7 +3,7 @@ namespace Class.Tool.ErrorKindsSourceGen;
 
 
 
-class Module
+class Module : Object
 {
     private StringBuilder StringBuffer { get; set; }
 
@@ -27,7 +27,7 @@ class Module
 
 
 
-    public bool Main(string[] args)
+    public bool Execute(string[] args)
     {
         string varNamespace;
 
