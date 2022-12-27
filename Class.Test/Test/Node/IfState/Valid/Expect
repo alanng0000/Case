@@ -9,7 +9,7 @@ IfState
            },
     Body : StateList
            {
-               Values : [
-                        ],
+               Value : [
+                       ],
            },
 },
