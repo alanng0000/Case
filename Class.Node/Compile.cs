@@ -113,7 +113,7 @@ public class Compile : InfraCompile
 
 
 
-        this.InitNodeMethods();
+        this.InitNodeMethodList();
 
 
 
@@ -143,7 +143,7 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual bool InitNodeMethods()
+    protected virtual bool InitNodeMethodList()
     {
         this.NodeMethodList = new NodeMethodMap();
 
