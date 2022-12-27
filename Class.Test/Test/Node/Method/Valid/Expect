@@ -8,12 +8,12 @@ Method
             {
                 Value : "Hh",
             },
-    Params : Params
-             {
-                 Values : [
-                          ],
-             },
-    Call : States
+    Param : ParamList
+            {
+                Values : [
+                         ],
+            },
+    Call : StateList
            {
                Values : [
                         ],
