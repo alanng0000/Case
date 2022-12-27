@@ -36,7 +36,7 @@ public class Compile : InfraCompile
 
 
 
-    protected ErrorKinds ErrorKinds { get; set; }
+    protected ErrorKindList ErrorKind { get; set; }
 
 
 
@@ -82,7 +82,7 @@ public class Compile : InfraCompile
 
 
 
-        this.ErrorKinds = this.CreateErrorKinds();
+        this.ErrorKind = this.CreateErrorKind();
 
 
 
@@ -134,9 +134,9 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual ErrorKinds CreateErrorKinds()
+    protected virtual ErrorKindList CreateErrorKind()
     {
-        return ErrorKinds.This;
+        return ErrorKindList.This;
     }
 
 
@@ -581,7 +581,7 @@ public class Compile : InfraCompile
 
         if (this.Null(node))
         {
-            this.Error(this.ErrorKinds.Invalid, range);
+            this.Error(this.ErrorKind.Invalid, range);
         }
 
 
@@ -758,7 +758,7 @@ public class Compile : InfraCompile
 
         if (this.Null(name))
         {
-            this.Error(this.ErrorKinds.NameInvalid, range);
+            this.Error(this.ErrorKind.NameInvalid, range);
         }
 
 
@@ -776,7 +776,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varBase))
         {
-            this.Error(this.ErrorKinds.BaseInvalid, range);
+            this.Error(this.ErrorKind.BaseInvalid, range);
         }
 
 
@@ -793,7 +793,7 @@ public class Compile : InfraCompile
 
         if (this.Null(member))
         {
-            this.Error(this.ErrorKinds.MembersInvalid, range);
+            this.Error(this.ErrorKind.MembersInvalid, range);
         }
 
 
@@ -1208,7 +1208,7 @@ public class Compile : InfraCompile
 
         if (this.Null(access))
         {
-            this.Error(this.ErrorKinds.AccessInvalid, range);
+            this.Error(this.ErrorKind.AccessInvalid, range);
         }
 
 
@@ -1226,7 +1226,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassInvalid, range);
+            this.Error(this.ErrorKind.ClassInvalid, range);
         }
 
 
@@ -1244,7 +1244,7 @@ public class Compile : InfraCompile
 
         if (this.Null(name))
         {
-            this.Error(this.ErrorKinds.NameInvalid, range);
+            this.Error(this.ErrorKind.NameInvalid, range);
         }
 
 
@@ -1263,7 +1263,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varGet))
         {
-            this.Error(this.ErrorKinds.GetInvalid, range);
+            this.Error(this.ErrorKind.GetInvalid, range);
         }
 
 
@@ -1283,7 +1283,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varSet))
         {
-            this.Error(this.ErrorKinds.SetInvalid, range);
+            this.Error(this.ErrorKind.SetInvalid, range);
         }
 
 
@@ -1510,7 +1510,7 @@ public class Compile : InfraCompile
 
         if (this.Null(access))
         {
-            this.Error(this.ErrorKinds.AccessInvalid, range);
+            this.Error(this.ErrorKind.AccessInvalid, range);
         }
 
 
@@ -1528,7 +1528,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassInvalid, range);
+            this.Error(this.ErrorKind.ClassInvalid, range);
         }
 
 
@@ -1546,7 +1546,7 @@ public class Compile : InfraCompile
 
         if (this.Null(name))
         {
-            this.Error(this.ErrorKinds.NameInvalid, range);
+            this.Error(this.ErrorKind.NameInvalid, range);
         }
 
 
@@ -1564,7 +1564,7 @@ public class Compile : InfraCompile
 
         if (this.Null(param))
         {
-            this.Error(this.ErrorKinds.ParamsInvalid, range);
+            this.Error(this.ErrorKind.ParamsInvalid, range);
         }
 
 
@@ -1582,7 +1582,7 @@ public class Compile : InfraCompile
 
         if (this.Null(call))
         {
-            this.Error(this.ErrorKinds.CallInvalid, range);
+            this.Error(this.ErrorKind.CallInvalid, range);
         }
 
 
@@ -1777,7 +1777,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassInvalid, range);
+            this.Error(this.ErrorKind.ClassInvalid, range);
         }
 
 
@@ -1798,7 +1798,7 @@ public class Compile : InfraCompile
 
         if (this.Null(name))
         {
-            this.Error(this.ErrorKinds.NameInvalid, range);
+            this.Error(this.ErrorKind.NameInvalid, range);
         }
         
 
@@ -2214,7 +2214,7 @@ public class Compile : InfraCompile
 
         if (this.Null(express))
         {
-            this.Error(this.ErrorKinds.ExpressInvalid, range);
+            this.Error(this.ErrorKind.ExpressInvalid, range);
         }
 
 
@@ -2573,7 +2573,7 @@ public class Compile : InfraCompile
 
         if (this.Null(target))
         {
-            this.Error(this.ErrorKinds.TargetInvalid, range);
+            this.Error(this.ErrorKind.TargetInvalid, range);
         }
 
 
@@ -2588,7 +2588,7 @@ public class Compile : InfraCompile
 
         if (this.Null(value))
         {
-            this.Error(this.ErrorKinds.ValueInvalid, range);
+            this.Error(this.ErrorKind.ValueInvalid, range);
         }
 
 
@@ -2654,7 +2654,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassInvalid, range);
+            this.Error(this.ErrorKind.ClassInvalid, range);
         }
 
 
@@ -2718,7 +2718,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassInvalid, range);
+            this.Error(this.ErrorKind.ClassInvalid, range);
         }
 
 
@@ -2787,7 +2787,7 @@ public class Compile : InfraCompile
 
         if (this.Null(left))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -2804,7 +2804,7 @@ public class Compile : InfraCompile
 
         if (this.Null(right))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -2871,7 +2871,7 @@ public class Compile : InfraCompile
 
         if (left == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -2889,7 +2889,7 @@ public class Compile : InfraCompile
 
         if (right == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -2952,7 +2952,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varBool))
         {
-            this.Error(this.ErrorKinds.OperandInvalid, range);
+            this.Error(this.ErrorKind.OperandInvalid, range);
         }
 
 
@@ -3012,7 +3012,7 @@ public class Compile : InfraCompile
 
         if (left == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3031,7 +3031,7 @@ public class Compile : InfraCompile
 
         if (right == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3098,7 +3098,7 @@ public class Compile : InfraCompile
 
         if (left == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3118,7 +3118,7 @@ public class Compile : InfraCompile
 
         if (right == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3183,7 +3183,7 @@ public class Compile : InfraCompile
 
         if (left == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3202,7 +3202,7 @@ public class Compile : InfraCompile
 
         if (right == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3260,7 +3260,7 @@ public class Compile : InfraCompile
 
         if (left == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3272,7 +3272,7 @@ public class Compile : InfraCompile
 
         if (right == null)
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
         
@@ -3327,7 +3327,7 @@ public class Compile : InfraCompile
 
         if (this.Null(left))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3339,7 +3339,7 @@ public class Compile : InfraCompile
 
         if (this.Null(right))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3395,7 +3395,7 @@ public class Compile : InfraCompile
 
         if (this.Null(left))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3408,7 +3408,7 @@ public class Compile : InfraCompile
 
         if (this.Null(right))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3473,7 +3473,7 @@ public class Compile : InfraCompile
 
         if (this.Null(left))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3485,7 +3485,7 @@ public class Compile : InfraCompile
 
         if (this.Null(right))
         {
-            this.UniqueError(this.ErrorKinds.OperandInvalid, range, ref hasOperandInvalid);
+            this.UniqueError(this.ErrorKind.OperandInvalid, range, ref hasOperandInvalid);
         }
 
 
@@ -3541,7 +3541,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varThis))
         {
-            this.Error(this.ErrorKinds.ThisInvalid, range);
+            this.Error(this.ErrorKind.ThisInvalid, range);
         }
         
 
@@ -3561,7 +3561,7 @@ public class Compile : InfraCompile
 
         if (this.Null(field))
         {
-            this.Error(this.ErrorKinds.FieldInvalid, range);
+            this.Error(this.ErrorKind.FieldInvalid, range);
         }
 
 
@@ -3662,7 +3662,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varThis))
         {
-            this.Error(this.ErrorKinds.ThisInvalid, range);
+            this.Error(this.ErrorKind.ThisInvalid, range);
         }
 
             
@@ -3680,7 +3680,7 @@ public class Compile : InfraCompile
 
         if (this.Null(method))
         {
-            this.Error(this.ErrorKinds.MethodInvalid, range);
+            this.Error(this.ErrorKind.MethodInvalid, range);
         }
 
             
@@ -3698,7 +3698,7 @@ public class Compile : InfraCompile
 
         if (this.Null(argue))
         {
-            this.Error(this.ErrorKinds.ArguesInvalid, range);
+            this.Error(this.ErrorKind.ArguesInvalid, range);
         }
 
 
@@ -3850,7 +3850,7 @@ public class Compile : InfraCompile
 
         if (this.Null(cond))
         {
-            this.Error(this.ErrorKinds.CondInvalid, range);
+            this.Error(this.ErrorKind.CondInvalid, range);
         }
 
 
@@ -3864,7 +3864,7 @@ public class Compile : InfraCompile
 
         if (this.Null(body))
         {
-            this.Error(this.ErrorKinds.BodyInvalid, range);
+            this.Error(this.ErrorKind.BodyInvalid, range);
         }
 
         
@@ -4013,7 +4013,7 @@ public class Compile : InfraCompile
 
         if (this.Null(cond))
         {
-            this.Error(this.ErrorKinds.CondInvalid, range);
+            this.Error(this.ErrorKind.CondInvalid, range);
         }
 
 
@@ -4028,7 +4028,7 @@ public class Compile : InfraCompile
 
         if (this.Null(body))
         {
-            this.Error(this.ErrorKinds.BodyInvalid, range);
+            this.Error(this.ErrorKind.BodyInvalid, range);
         }
 
 
@@ -4120,7 +4120,7 @@ public class Compile : InfraCompile
 
         if (this.Null(result))
         {
-            this.Error(this.ErrorKinds.ResultInvalid, range);
+            this.Error(this.ErrorKind.ResultInvalid, range);
         }
         
 
@@ -4253,7 +4253,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassInvalid, range);
+            this.Error(this.ErrorKind.ClassInvalid, range);
         }
 
 
@@ -4270,7 +4270,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varObject))
         {
-            this.Error(this.ErrorKinds.ObjectInvalid, range);
+            this.Error(this.ErrorKind.ObjectInvalid, range);
         }
 
 
@@ -4361,7 +4361,7 @@ public class Compile : InfraCompile
 
         if (this.Null(express))
         {
-            this.Error(this.ErrorKinds.ExpressInvalid, range);
+            this.Error(this.ErrorKind.ExpressInvalid, range);
         }
 
 
@@ -4676,7 +4676,7 @@ public class Compile : InfraCompile
 
         if (this.Null(varThis))
         {
-            this.Error(this.ErrorKinds.ThisInvalid, range);
+            this.Error(this.ErrorKind.ThisInvalid, range);
         }
 
 
@@ -4694,7 +4694,7 @@ public class Compile : InfraCompile
 
         if (this.Null(field))
         {
-            this.Error(this.ErrorKinds.FieldInvalid, range);
+            this.Error(this.ErrorKind.FieldInvalid, range);
         }
 
             
@@ -5166,7 +5166,7 @@ public class Compile : InfraCompile
 
         if (this.Zero(this.Count(nodeRange)))
         {
-            this.UniqueError(this.ErrorKinds.Invalid, range, ref hasInvalid);
+            this.UniqueError(this.ErrorKind.Invalid, range, ref hasInvalid);
 
 
 
@@ -5181,7 +5181,7 @@ public class Compile : InfraCompile
 
             if (node == null)
             {
-                this.Error(this.ErrorKinds.Invalid, nodeRange);
+                this.Error(this.ErrorKind.Invalid, nodeRange);
             }
 
 
@@ -5212,7 +5212,7 @@ public class Compile : InfraCompile
 
                     if (this.NullToken(delimiterToken))
                     {
-                        this.UniqueError(this.ErrorKinds.Invalid, range, ref hasInvalid);
+                        this.UniqueError(this.ErrorKind.Invalid, range, ref hasInvalid);
 
                         break;
                     }
@@ -5229,7 +5229,7 @@ public class Compile : InfraCompile
 
                     if (this.Count(o) == 0)
                     {
-                        this.UniqueError(this.ErrorKinds.Invalid, range, ref hasInvalid);
+                        this.UniqueError(this.ErrorKind.Invalid, range, ref hasInvalid);
 
                         break;
                     }
@@ -5252,7 +5252,7 @@ public class Compile : InfraCompile
 
                 if (this.Count(nodeRange) == 0)
                 {
-                    this.UniqueError(this.ErrorKinds.Invalid, range, ref hasInvalid);
+                    this.UniqueError(this.ErrorKind.Invalid, range, ref hasInvalid);
 
 
 
@@ -5267,7 +5267,7 @@ public class Compile : InfraCompile
 
                     if (node == null)
                     {
-                        this.Error(this.ErrorKinds.Invalid, nodeRange);
+                        this.Error(this.ErrorKind.Invalid, nodeRange);
                     }
 
 
