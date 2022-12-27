@@ -3666,7 +3666,7 @@ public class StateTraverse : Traverse
 
 
 
-        countEqual = (count == argueList.Values.Count);
+        countEqual = (count == argueList.Value.Count);
 
 
 
@@ -3690,7 +3690,7 @@ public class StateTraverse : Traverse
         ListIter argueIter;
 
 
-        argueIter = argueList.Values.Iter();
+        argueIter = argueList.Value.Iter();
 
 
 

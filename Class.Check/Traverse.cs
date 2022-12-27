@@ -131,7 +131,7 @@ public class Traverse
         ListIter iter;
 
 
-        iter = memberList.Values.Iter();
+        iter = memberList.Value.Iter();
 
 
 
@@ -338,7 +338,7 @@ public class Traverse
         ListIter iter;
 
 
-        iter = paramList.Values.Iter();
+        iter = paramList.Value.Iter();
 
 
 
@@ -547,7 +547,7 @@ public class Traverse
         ListIter iter;
 
 
-        iter = stateList.Values.Iter();
+        iter = stateList.Value.Iter();
 
 
 
@@ -1672,7 +1672,7 @@ public class Traverse
         ListIter iter;
 
 
-        iter = argueList.Values.Iter();
+        iter = argueList.Value.Iter();
 
 
 
