@@ -33,10 +33,6 @@ public class StateTraverse : Traverse
 
 
 
-        this.Access = this.Compile.Access;
-
-
-
 
 
         return true;
@@ -131,10 +127,6 @@ public class StateTraverse : Traverse
     public VarStack VarStack { get; set; }
 
 
-
-
-
-    private AccessList Access { get; set; }
 
 
 
