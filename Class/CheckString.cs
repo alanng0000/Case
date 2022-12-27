@@ -681,7 +681,7 @@ public class CheckString
 
 
 
-        if (!ba & !bb)
+        if (!ba)
         {
             return this.FailGetFieldValue();
         }
@@ -689,7 +689,7 @@ public class CheckString
 
 
 
-        if (ba)
+        if (!bb)
         {
             if (this.Index.HasValue)
             {
