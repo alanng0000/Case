@@ -8,5 +8,5 @@ public class IfState : State
 
 
 
-    public StateList Loop { get; set; }
+    public StateList Then { get; set; }
 }

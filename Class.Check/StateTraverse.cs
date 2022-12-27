@@ -2872,9 +2872,9 @@ public class StateTraverse : Traverse
 
 
 
-        StateList loop;
+        StateList then;
         
-        loop = ifState.Loop;
+        then = ifState.Then;
 
 
 

@@ -3856,13 +3856,13 @@ public class Compile : InfraCompile
 
 
 
-        StateList loop;
+        StateList then;
 
 
-        loop = this.StateList(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
+        then = this.StateList(this.Range(leftBrace.Range.End, rightBrace.Range.Start));
             
 
-        if (this.Null(loop))
+        if (this.Null(then))
         {
             this.Error(this.ErrorKind.BodyInvalid, range);
         }
@@ -3885,7 +3885,7 @@ public class Compile : InfraCompile
         ret.Cond = cond;
 
 
-        ret.Loop = loop;
+        ret.Then = then;
         
             
         this.NodeInfo(ret, range);
