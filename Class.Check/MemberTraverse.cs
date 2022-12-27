@@ -32,7 +32,7 @@ class MemberTraverse : Traverse
 
 
 
-        if (this.CurrentClass == null)
+        if (this.Null(this.CurrentClass))
         {
             return true;
         }
@@ -121,7 +121,7 @@ class MemberTraverse : Traverse
 
         if (this.IsMemberNameDefined(fieldName))
         {
-            this.Error(this.ErrorKinds.NameUnavailable, nodeField);
+            this.Error(this.ErrorKind.NameUnavailable, nodeField);
 
 
             return true;
@@ -145,7 +145,7 @@ class MemberTraverse : Traverse
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassUndefined, nodeField);
+            this.Error(this.ErrorKind.ClassUndefined, nodeField);
 
 
             return true;
@@ -345,7 +345,7 @@ class MemberTraverse : Traverse
         
         if (this.IsMemberNameDefined(methodName))
         {
-            this.Error(this.ErrorKinds.NameUnavailable, nodeMethod);
+            this.Error(this.ErrorKind.NameUnavailable, nodeMethod);
 
 
 
@@ -369,7 +369,7 @@ class MemberTraverse : Traverse
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassUndefined, nodeMethod);
+            this.Error(this.ErrorKind.ClassUndefined, nodeMethod);
 
 
 
@@ -559,7 +559,7 @@ class MemberTraverse : Traverse
 
         if (!this.Null(this.ParamVars.Get(varName)))
         {
-            this.Error(this.ErrorKinds.NameUnavailable, nodeVar);
+            this.Error(this.ErrorKind.NameUnavailable, nodeVar);
 
 
             return true;
@@ -587,7 +587,7 @@ class MemberTraverse : Traverse
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKinds.ClassUndefined, nodeVar);
+            this.Error(this.ErrorKind.ClassUndefined, nodeVar);
 
 
             return true;

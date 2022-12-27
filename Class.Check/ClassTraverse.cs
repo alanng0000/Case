@@ -45,9 +45,9 @@ class ClassTraverse : Traverse
 
 
         
-        if (! this.Null(map.Get(className)))
+        if (!this.Null(map.Get(className)))
         {
-            this.Error(this.ErrorKinds.NameUnavailable, nodeClass);
+            this.Error(this.ErrorKind.NameUnavailable, nodeClass);
 
 
             return true;
@@ -67,6 +67,10 @@ class ClassTraverse : Traverse
 
 
         varClass = new Class();
+
+
+
+        varClass.Init();
 
 
 
