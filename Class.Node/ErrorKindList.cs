@@ -31,12 +31,12 @@ public class ErrorKindList : InfraErrorKindList
     public ErrorKind Invalid { get; private set; }
     public ErrorKind NameInvalid { get; private set; }
     public ErrorKind BaseInvalid { get; private set; }
-    public ErrorKind MembersInvalid { get; private set; }
+    public ErrorKind MemberInvalid { get; private set; }
     public ErrorKind ClassInvalid { get; private set; }
     public ErrorKind AccessInvalid { get; private set; }
     public ErrorKind GetInvalid { get; private set; }
     public ErrorKind SetInvalid { get; private set; }
-    public ErrorKind ParamsInvalid { get; private set; }
+    public ErrorKind ParamInvalid { get; private set; }
     public ErrorKind CallInvalid { get; private set; }
     public ErrorKind ExpressInvalid { get; private set; }
     public ErrorKind FieldInvalid { get; private set; }
@@ -49,8 +49,9 @@ public class ErrorKindList : InfraErrorKindList
     public ErrorKind ObjectInvalid { get; private set; }
     public ErrorKind CondInvalid { get; private set; }
     public ErrorKind ResultInvalid { get; private set; }
-    public ErrorKind ArguesInvalid { get; private set; }
-    public ErrorKind BodyInvalid { get; private set; }
+    public ErrorKind ArgueInvalid { get; private set; }
+    public ErrorKind ThenInvalid { get; private set; }
+    public ErrorKind LoopInvalid { get; private set; }
 
 
 
@@ -67,7 +68,7 @@ public class ErrorKindList : InfraErrorKindList
 
         this.BaseInvalid = this.AddKind("BaseInvalid");
 
-        this.MembersInvalid = this.AddKind("MembersInvalid");
+        this.MemberInvalid = this.AddKind("MemberInvalid");
 
         this.ClassInvalid = this.AddKind("ClassInvalid");
 
@@ -77,7 +78,7 @@ public class ErrorKindList : InfraErrorKindList
 
         this.SetInvalid = this.AddKind("SetInvalid");
 
-        this.ParamsInvalid = this.AddKind("ParamsInvalid");
+        this.ParamInvalid = this.AddKind("ParamInvalid");
 
         this.CallInvalid = this.AddKind("CallInvalid");
 
@@ -103,9 +104,11 @@ public class ErrorKindList : InfraErrorKindList
 
         this.ResultInvalid = this.AddKind("ResultInvalid");
 
-        this.ArguesInvalid = this.AddKind("ArguesInvalid");
+        this.ArgueInvalid = this.AddKind("ArgueInvalid");
 
-        this.BodyInvalid = this.AddKind("BodyInvalid");
+        this.ThenInvalid = this.AddKind("ThenInvalid");
+
+        this.LoopInvalid = this.AddKind("LoopInvalid");
 
 
 
