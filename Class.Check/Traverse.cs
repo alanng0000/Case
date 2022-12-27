@@ -1485,7 +1485,7 @@ public class Traverse
 
 
 
-        this.ExecuteStateList(whileState.Body);
+        this.ExecuteStateList(whileState.Loop);
 
 
 
