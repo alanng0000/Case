@@ -793,7 +793,7 @@ public class Compile : InfraCompile
 
         if (this.Null(member))
         {
-            this.Error(this.ErrorKind.MembersInvalid, range);
+            this.Error(this.ErrorKind.MemberInvalid, range);
         }
 
 
@@ -1564,7 +1564,7 @@ public class Compile : InfraCompile
 
         if (this.Null(param))
         {
-            this.Error(this.ErrorKind.ParamsInvalid, range);
+            this.Error(this.ErrorKind.ParamInvalid, range);
         }
 
 
@@ -3698,7 +3698,7 @@ public class Compile : InfraCompile
 
         if (this.Null(argue))
         {
-            this.Error(this.ErrorKind.ArguesInvalid, range);
+            this.Error(this.ErrorKind.ArgueInvalid, range);
         }
 
 
@@ -3864,7 +3864,7 @@ public class Compile : InfraCompile
 
         if (this.Null(then))
         {
-            this.Error(this.ErrorKind.BodyInvalid, range);
+            this.Error(this.ErrorKind.ThenInvalid, range);
         }
 
         
@@ -4028,7 +4028,7 @@ public class Compile : InfraCompile
 
         if (this.Null(loop))
         {
-            this.Error(this.ErrorKind.BodyInvalid, range);
+            this.Error(this.ErrorKind.LoopInvalid, range);
         }
 
 
