@@ -1,6 +1,6 @@
 Code
 {
-    Tokens : [
+    Token : [
                  Token
                  {
                      Range : TextRange
@@ -26,6 +26,6 @@ Code
                              },
                  },
              ],
-    Comments : [
+    Comment : [
                ],
 },
