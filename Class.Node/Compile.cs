@@ -858,7 +858,7 @@ public class Compile : InfraCompile
         ret.Init();
 
         
-        ret.Values = list;
+        ret.Value = list;
         
 
         this.NodeInfo(ret, range);
@@ -1652,7 +1652,7 @@ public class Compile : InfraCompile
         ret.Init();
 
             
-        ret.Values = list;
+        ret.Value = list;
         
 
         this.NodeInfo(ret, range);
@@ -2084,7 +2084,7 @@ public class Compile : InfraCompile
         ret.Init();
 
 
-        ret.Values = list;
+        ret.Value = list;
         
         
         this.NodeInfo(ret, range);
@@ -4523,7 +4523,7 @@ public class Compile : InfraCompile
         ret.Init();
         
         
-        ret.Values = list;
+        ret.Value = list;
 
 
         this.NodeInfo(ret, range);
@@ -4531,6 +4531,10 @@ public class Compile : InfraCompile
 
         return ret;
     }
+
+
+
+    
 
 
 
