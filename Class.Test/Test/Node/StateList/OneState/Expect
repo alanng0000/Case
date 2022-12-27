@@ -1,15 +1,15 @@
 StateList
 {
-    Values : [
-                 ExpressState
-                 {
-                     Express : VarExpress
-                               {
-                                   Var : VarName
-                                         {
-                                             Value : "h",
-                                         },
-                               },
-                 },
-             ],
+    Value : [
+                ExpressState
+                {
+                    Express : VarExpress
+                              {
+                                  Var : VarName
+                                        {
+                                            Value : "h",
+                                        },
+                              },
+                },
+            ],
 },

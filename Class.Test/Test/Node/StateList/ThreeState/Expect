@@ -1,40 +1,40 @@
 StateList
 {
-    Values : [
-                 ExpressState
-                 {
-                     Express : VarExpress
-                               {
-                                   Var : VarName
-                                         {
-                                             Value : "o",
-                                         },
-                               },
-                 },
-                 IfState
-                 {
-                     Cond : VarExpress
-                            {
-                                Var : VarName
-                                      {
-                                          Value : "t",
-                                      },
-                            },
-                     Body : StateList
-                            {
-                                Values : [
-                                         ],
-                            },
-                 },
-                 ReturnState
-                 {
-                     Result : VarExpress
+    Value : [
+                ExpressState
+                {
+                    Express : VarExpress
                               {
                                   Var : VarName
                                         {
-                                            Value : "n",
+                                            Value : "o",
                                         },
                               },
-                 },
-             ],
+                },
+                IfState
+                {
+                    Cond : VarExpress
+                           {
+                               Var : VarName
+                                     {
+                                         Value : "t",
+                                     },
+                           },
+                    Body : StateList
+                           {
+                               Value : [
+                                       ],
+                           },
+                },
+                ReturnState
+                {
+                    Result : VarExpress
+                             {
+                                 Var : VarName
+                                       {
+                                           Value : "n",
+                                       },
+                             },
+                },
+            ],
 },
