@@ -3,19 +3,19 @@ namespace Class.Check;
 
 
 
-public class ErrorKinds : InfraErrorKinds
+public class ErrorKindList : InfraErrorKindList
 {
-    public static ErrorKinds This { get; } = CreateGlobal();
+    public static ErrorKindList This { get; } = CreateGlobal();
 
 
 
 
-    private static ErrorKinds CreateGlobal()
+    private static ErrorKindList CreateGlobal()
     {
-        ErrorKinds global;
+        ErrorKindList global;
 
 
-        global = new ErrorKinds();
+        global = new ErrorKindList();
 
 
 
@@ -39,7 +39,7 @@ public class ErrorKinds : InfraErrorKinds
     public ErrorKind ThisUndefined { get; private set; }
     public ErrorKind FieldUndefined { get; private set; }
     public ErrorKind MethodUndefined { get; private set; }
-    public ErrorKind ArguesUnassignable { get; private set; }
+    public ErrorKind ArgueUnassignable { get; private set; }
     public ErrorKind ObjectUndefined { get; private set; }
     public ErrorKind CondUndefined { get; private set; }
     public ErrorKind CondUnassignable { get; private set; }
@@ -78,7 +78,7 @@ public class ErrorKinds : InfraErrorKinds
 
         this.MethodUndefined = this.AddKind("MethodUndefined");
 
-        this.ArguesUnassignable = this.AddKind("ArguesUnassignable");
+        this.ArgueUnassignable = this.AddKind("ArgueUnassignable");
 
         this.ObjectUndefined = this.AddKind("ObjectUndefined");
 
