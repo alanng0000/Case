@@ -675,13 +675,13 @@ public class CheckString
 
 
 
-        bb = (o is NodeList);
+        bb = (o is List);
 
 
 
 
 
-        if (!ba)
+        if (!ba & !bb)
         {
             return this.FailGetFieldValue();
         }
@@ -689,7 +689,7 @@ public class CheckString
 
 
 
-        if (!bb)
+        if (ba)
         {
             if (this.Index.HasValue)
             {
@@ -727,19 +727,19 @@ public class CheckString
 
 
 
-            NodeList t;
+            List t;
 
 
 
 
-            t = (NodeList)o;
+            t = (List)o;
 
 
 
 
             List list;
 
-            list = t.Value;
+            list = t;
 
 
 
@@ -750,6 +750,7 @@ public class CheckString
 
 
             k = (ulong)list.Count;
+
 
 
 
