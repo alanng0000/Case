@@ -15,7 +15,7 @@ public class ErrorKindList : #BASECLASS#
         ErrorKindList global;
 
 
-        global = new ErrorKinds();
+        global = new ErrorKindList();
 
 
 
