@@ -41,7 +41,7 @@ public class Compile : InfraCompile
 
 
 
-    private NodeMethodMap NodeMethods { get; set; }
+    private NodeMethodMap NodeMethodList { get; set; }
 
 
 
@@ -145,11 +145,11 @@ public class Compile : InfraCompile
 
     protected virtual bool InitNodeMethods()
     {
-        this.NodeMethods = new NodeMethodMap();
+        this.NodeMethodList = new NodeMethodMap();
 
 
 
-        this.NodeMethods.Init();
+        this.NodeMethodList.Init();
 
 
 
@@ -353,7 +353,7 @@ public class Compile : InfraCompile
 
 
 
-        this.NodeMethods.Add(pair);
+        this.NodeMethodList.Add(pair);
 
 
 
@@ -366,7 +366,7 @@ public class Compile : InfraCompile
 
     protected bool RemoveNodeMethod(string name)
     {
-        this.NodeMethods.Remove(name);
+        this.NodeMethodList.Remove(name);
 
 
 
@@ -379,7 +379,7 @@ public class Compile : InfraCompile
 
     protected bool SetNodeMethod(string name, NodeMethod nodeMethod)
     {
-        this.NodeMethods.Set(name, nodeMethod);
+        this.NodeMethodList.Set(name, nodeMethod);
 
 
 
@@ -441,7 +441,7 @@ public class Compile : InfraCompile
 
 
 
-        nodeMethod = (NodeMethod)this.NodeMethods.Get(this.TaskNode);
+        nodeMethod = (NodeMethod)this.NodeMethodList.Get(this.TaskNode);
 
 
 
