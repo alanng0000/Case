@@ -11,9 +11,9 @@ CallExpress
              {
                  Value : "Gg",
              },
-    Argues : Argues
-             {
-                 Values : [
-                          ],
-             },
+    Argue : ArgueList
+            {
+                Values : [
+                         ],
+            },
 },
