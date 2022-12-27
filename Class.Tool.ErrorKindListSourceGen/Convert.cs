@@ -1,4 +1,4 @@
-namespace Class.Tool.ErrorKindsSourceGen;
+namespace Class.Tool.ErrorKindListSourceGen;
 
 
 
