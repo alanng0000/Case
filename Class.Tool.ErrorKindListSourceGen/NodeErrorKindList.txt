@@ -1,12 +1,12 @@
 Invalid
 NameInvalid
 BaseInvalid
-MembersInvalid
+MemberInvalid
 ClassInvalid
 AccessInvalid
 GetInvalid
 SetInvalid
-ParamsInvalid
+ParamInvalid
 CallInvalid
 ExpressInvalid
 FieldInvalid
@@ -19,5 +19,5 @@ ThisInvalid
 ObjectInvalid
 CondInvalid
 ResultInvalid
-ArguesInvalid
+ArgueInvalid
 BodyInvalid
