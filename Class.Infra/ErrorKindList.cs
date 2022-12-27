@@ -5,7 +5,7 @@ namespace Class.Infra;
 
 
 
-public class ErrorKinds : Object
+public class ErrorKindList : Object
 {
     protected ErrorKind AddKind(string text)
     {
