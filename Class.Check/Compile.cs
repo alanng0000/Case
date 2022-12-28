@@ -914,7 +914,7 @@ public class Compile : InfraCompile
 
 
 
-        this.ExecuteClassBases();
+        this.ExecuteClassBase();
         
 
 
@@ -990,7 +990,7 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual bool ExecuteClassBases()
+    protected virtual bool ExecuteClassBase()
     {
         this.SetBaseMap();
 
