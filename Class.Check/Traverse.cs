@@ -2023,7 +2023,7 @@ public class Traverse
 
     protected virtual Check Check(NodeNode node)
     {
-        return (Check)this.Compile.Checks.Get(node);
+        return (Check)this.Compile.Check.Get(node);
     }
 
 

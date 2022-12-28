@@ -32,7 +32,7 @@ public class Compile : InfraCompile
 
 
 
-    public CheckMap Checks { get; set; }
+    public CheckMap Check { get; set; }
 
 
 
@@ -159,13 +159,13 @@ public class Compile : InfraCompile
 
 
 
-        this.Checks = new CheckMap();
+        this.Check = new CheckMap();
 
 
 
 
 
-        this.Checks.Init();
+        this.Check.Init();
 
 
 
@@ -195,7 +195,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Check = this.Checks;
+        this.Result.Check = this.Check;
 
 
 
