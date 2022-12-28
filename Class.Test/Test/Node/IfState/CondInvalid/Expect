@@ -6,7 +6,7 @@ Source: Code
 IfState
 {
     Cond : null,
-    Body : StateList
+    Then : StateList
            {
                Value : [
                        ],

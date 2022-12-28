@@ -7,7 +7,7 @@ IfState
                               Value : true,
                           },
            },
-    Body : StateList
+    Then : StateList
            {
                Value : [
                        ],

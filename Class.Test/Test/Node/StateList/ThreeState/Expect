@@ -20,7 +20,7 @@ StateList
                                          Value : "t",
                                      },
                            },
-                    Body : StateList
+                    Then : StateList
                            {
                                Value : [
                                        ],
