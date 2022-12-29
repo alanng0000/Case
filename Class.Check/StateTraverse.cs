@@ -2802,7 +2802,7 @@ public class StateTraverse : Traverse
 
 
 
-        if (! this.Null(nodeObject))
+        if (!this.Null(nodeObject))
         {
             objectClass = this.Check(nodeObject).ExpressClass;
         }
@@ -2823,7 +2823,7 @@ public class StateTraverse : Traverse
 
 
 
-        if (! this.Null(nodeClass))
+        if (!this.Null(nodeClass))
         {
             className = nodeClass.Value;
         }
@@ -2836,7 +2836,7 @@ public class StateTraverse : Traverse
         varClass = null;
 
 
-        if (! this.Null(className))
+        if (!this.Null(className))
         {
             varClass = this.Class(className);
         }
