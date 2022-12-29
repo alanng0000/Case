@@ -5,3 +5,4 @@ global using List = System.List.List;
 global using Text = System.Text.Text;
 global using Line = System.Text.Line;
 global using TextInfra = System.Text.Infra;
+global using StringInfra = Class.Infra.StringInfra;

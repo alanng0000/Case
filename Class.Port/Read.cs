@@ -28,12 +28,24 @@ public class Read : Object
 
         this.RangeInfra.Init();
 
+
+
+
+
+        this.StringInfra = new StringInfra();
+
+
+
+        this.StringInfra.Init();
+
         
 
 
 
         return true;
     }
+
+
 
 
 
@@ -44,6 +56,12 @@ public class Read : Object
 
 
     private RangeInfra RangeInfra { get; set; }
+
+
+
+
+
+    private StringInfra StringInfra { get; set; }
 
 
 
@@ -80,6 +98,48 @@ public class Read : Object
 
 
 
+        Ver ver;
+
+        ver = this.Ver();
+
+
+
+        this.NextRow();
+
+
+
+
+        this.NextRow();
+        
+
+
+
+        ulong? o;
+
+
+        o = this.IntValue();
+
+
+
+        if (!o.HasValue)
+        {
+            return null;
+        }
+
+
+
+        ulong importCount;
+
+
+        importCount = o.Value;
+
+
+        
+        this.NextRow();
+        
+
+
+        this.NextRow();
 
 
 
@@ -87,6 +147,8 @@ public class Read : Object
 
         return null;
     }
+
+
 
 
 
@@ -128,6 +190,86 @@ public class Read : Object
         ret.Init();
 
         ret.Value = value;
+
+
+        return ret;
+    }
+
+
+
+
+
+    private Ver Ver()
+    {
+        ulong? o;
+
+        o = this.IntValue();
+
+
+
+        if (!o.HasValue)
+        {
+            return null;
+        }
+
+
+
+        ulong value;
+
+        value = o.Value;
+
+
+
+
+        Ver ret;
+
+        ret = new Ver();
+
+        ret.Init();
+
+        ret.Value = value;
+
+
+        return ret;
+    }
+
+
+
+
+    private ulong? IntValue()
+    {
+        string s;
+
+
+        s = this.LineText();
+
+
+
+        this.StringInfra.String = s;
+
+
+
+
+
+        Range range;
+
+
+        range = this.Range(0, s.Length);
+
+
+
+
+        ulong? o;
+
+
+        o = this.StringInfra.IntValue(range);
+
+
+
+
+        ulong? ret;
+
+        ret = o;
 
 
         return ret;
