@@ -91,6 +91,12 @@ public class Read : Object
         name = this.ModuleName();
 
 
+        if (this.Null(name))
+        {
+            return null;
+        }
+
+
 
 
         this.NextRow();
@@ -101,6 +107,13 @@ public class Read : Object
         Ver ver;
 
         ver = this.Ver();
+
+
+        if (this.Null(ver))
+        {
+            return null;
+        }
+
 
 
 
@@ -246,7 +259,109 @@ public class Read : Object
 
     private Import Import()
     {
-        return null;
+        ModuleName module;
+
+
+        module = this.ModuleName();
+
+
+
+        if (this.Null(module))
+        {
+            return null;
+        }
+
+
+
+        this.NextRow();
+
+
+
+
+
+        Ver ver;
+
+
+        ver = this.Ver();
+
+
+
+        if (this.Null(ver))
+        {
+            return null;
+        }
+
+
+
+        this.NextRow();
+
+
+
+
+
+
+        ClassName varClass;
+
+
+        varClass = this.ClassName();
+
+
+
+        if (this.Null(varClass))
+        {
+            return null;
+        }
+
+
+
+        this.NextRow();
+
+
+
+
+
+        ClassName name;
+
+
+        name = this.ClassName();
+
+
+
+        if (this.Null(name))
+        {
+            return null;
+        }
+
+
+
+        this.NextRow();
+
+
+
+
+
+        Import ret;
+
+
+        ret = new Import();
+
+
+        ret.Init();
+
+
+        ret.Module = module;
+
+
+        ret.Ver = ver;
+
+
+        ret.Class = varClass;
+
+
+        ret.Name = name;
+
+
+        return ret;
     }
 
 
@@ -275,11 +390,20 @@ public class Read : Object
 
 
 
+
     private ModuleName ModuleName()
     {
         string value;
 
+
         value = this.LineText();
+
+
+
+        if (this.Null(value))
+        {
+            return null;
+        }
 
 
 
@@ -287,6 +411,39 @@ public class Read : Object
         ModuleName ret;
 
         ret = new ModuleName();
+
+        ret.Init();
+
+        ret.Value = value;
+
+
+        return ret;
+    }
+
+
+
+
+
+    private ClassName ClassName()
+    {
+        string value;
+
+
+        value = this.LineText();
+
+
+
+        if (this.Null(value))
+        {
+            return null;
+        }
+
+
+
+
+        ClassName ret;
+
+        ret = new ClassName();
 
         ret.Init();
 
@@ -343,6 +500,13 @@ public class Read : Object
 
 
         s = this.LineText();
+
+
+        if (this.Null(s))
+        {
+            return null;
+        }
+
 
 
 
@@ -405,6 +569,13 @@ public class Read : Object
 
 
         s = this.TextInfra.Substring(this.Row, range);
+
+
+
+        if (this.Null(s))
+        {
+            return null;
+        }
 
 
 
