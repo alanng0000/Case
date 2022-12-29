@@ -205,7 +205,13 @@ public class Read : Object
 
 
 
+
         this.NextRow();
+
+
+
+
+
 
 
 
@@ -214,6 +220,21 @@ public class Read : Object
 
 
         entry = null;
+
+
+
+
+        if (this.Row < this.Text.Lines.Count)
+        {
+            entry = this.Entry();
+
+
+            if (this.Null(entry))
+            {
+                return null;
+            }
+        }
+        
 
 
 
@@ -599,6 +620,49 @@ public class Read : Object
 
 
         ret = new Export();
+
+
+        ret.Init();
+
+
+        ret.Class = varClass;
+
+
+        return ret;
+    }
+
+
+
+
+
+
+    private Entry Entry()
+    {
+        ClassName varClass;
+
+
+        varClass = this.ClassName();
+
+
+
+        if (this.Null(varClass))
+        {
+            return null;
+        }
+
+
+
+        this.NextRow();
+
+
+
+
+
+
+        Entry ret;
+
+
+        ret = new Entry();
 
 
         ret.Init();
