@@ -4,7 +4,7 @@ namespace Class.Port;
 
 
 
-public class ModuleVerse
+public class ModuleVer
 {
     public ulong Primary { get; set; }
 

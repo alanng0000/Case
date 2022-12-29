@@ -4,10 +4,15 @@ namespace Class.Port;
 
 
 
-public class Read
+public class Read : Object
 {
-    public bool Init()
+    public override bool Init()
     {
+        base.Init();
+
+
+
+
         this.TextInfra = new TextInfra();
 
 

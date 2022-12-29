@@ -4,7 +4,7 @@ namespace Class.Port;
 
 
 
-public class Import
+public class Import : Object
 {
     public ModuleName Module { get; set; }
 
