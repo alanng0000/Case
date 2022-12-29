@@ -5,7 +5,7 @@ namespace Class.Check;
 
 public class Module : Object
 {
-    public string Name { get; set; }
+    public PortPort Port { get; set; }
 
 
 
