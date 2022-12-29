@@ -83,6 +83,12 @@ public class Compile : InfraCompile
 
 
 
+    private bool IsSystem { get; set; }
+
+
+
+
+
 
     public override bool Init()
     {
@@ -416,10 +422,15 @@ public class Compile : InfraCompile
 
 
 
+        this.IsSystem = (moduleName == "System");
+
+
+
+
 
         if (this.Null(this.SystemModules))
         {
-            if (moduleName == "System")
+            if (this.IsSystem)
             {
                 Class varClass;
 
@@ -857,6 +868,7 @@ public class Compile : InfraCompile
 
 
 
+
     internal int ClassIndex(Source source)
     {
         int index;
@@ -866,15 +878,7 @@ public class Compile : InfraCompile
 
 
 
-
-        string name;
-
-
-        name = this.Module.Port.Name.Value;
-
-
-
-        if (name == "System")
+        if (this.IsSystem)
         {
             index = index + 1;
         }
