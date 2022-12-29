@@ -1,21 +1,26 @@
-Port
-{
-    Module = "Hh.Beds:0.0.0.0",
-    Imports = [
-                  Import
-                  {
-                      Class = "Gg.Doors:0.0.0.0:Object",
-                      Name = "Object",
-                  },
-              ],
-    Exports = [
-                  Export
-                  {
-                      Class = "Bed",
-                  },
-                  Export
-                  {
-                      Class = "Chair",
-                  },
-              ],
-},
+Hh.Bed
+111
+
+3
+
+Gg.Door
+10
+Door
+GgDoor
+
+A.B
+2
+Door
+AbDoor
+
+F.K
+58
+Kk
+Hk
+
+2
+
+O
+P
+
+P
