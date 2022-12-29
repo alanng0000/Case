@@ -80,21 +80,58 @@ public class Read : Object
 
 
 
+
     public Port Execute()
     {
         this.TextInfra.Text = this.Text;
 
 
 
-        ModuleName name;
-
-        name = this.ModuleName();
+        this.Row = 0;
 
 
-        if (this.Null(name))
+
+
+        Port port;
+
+        port = this.Port();
+
+
+        if (this.Null(port))
         {
             return null;
         }
+
+
+
+
+        Port ret;
+
+        ret = port;
+
+
+        return ret;
+    }
+
+
+
+
+
+
+    private Port Port()
+    {
+        ModuleName module;
+
+
+        module = this.ModuleName();
+
+
+
+        if (this.Null(module))
+        {
+            return null;
+        }
+
 
 
 
@@ -138,6 +175,13 @@ public class Read : Object
 
 
 
+        if (this.Null(importList))
+        {
+            return null;
+        }
+
+
+
 
         this.NextRow();
 
@@ -146,9 +190,61 @@ public class Read : Object
 
 
 
+        ExportList exportList;
 
-        return null;
+
+        exportList = this.ExportList();
+
+
+
+        if (this.Null(exportList))
+        {
+            return null;
+        }
+
+
+
+
+        this.NextRow();
+
+
+
+
+        Entry entry;
+
+
+        entry = null;
+
+
+
+
+        Port ret;
+
+
+        ret = new Port();
+
+
+        ret.Init();
+
+
+        ret.Module = module;
+
+
+        ret.Ver = ver;
+
+
+        ret.Import = importList;
+
+
+        ret.Export = exportList;
+
+
+        ret.Entry = entry;
+
+
+        return ret;
     }
+
 
 
 
@@ -363,6 +459,158 @@ public class Read : Object
 
         return ret;
     }
+
+
+
+
+
+
+
+    private ExportList ExportList()
+    {
+        ulong? o;
+
+
+        o = this.IntValue();
+
+
+
+        if (!o.HasValue)
+        {
+            return null;
+        }
+
+
+
+
+        ulong k;
+
+
+        k = o.Value;
+
+
+
+
+        int count;
+
+
+        count = (int)k;
+
+
+
+        
+        this.NextRow();
+
+
+
+
+        this.NextRow();
+
+
+
+
+
+
+        ExportList list;
+
+
+        list = new ExportList();
+
+
+        list.Init();
+
+
+
+
+
+        int i;
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            Export export;
+
+
+            export = this.Export();
+
+
+
+            if (this.Null(export))
+            {
+                return null;
+            }
+
+
+
+
+            list.Add(export);
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+
+        ExportList ret;
+
+
+        ret = list;
+
+
+        return ret;
+    }
+
+
+
+
+
+
+
+
+    private Export Export()
+    {
+        ClassName varClass;
+
+
+        varClass = this.ClassName();
+
+
+
+        if (this.Null(varClass))
+        {
+            return null;
+        }
+
+
+
+        this.NextRow();
+
+
+
+
+
+
+        Export ret;
+
+
+        ret = new Export();
+
+
+        ret.Init();
+
+
+        ret.Class = varClass;
+
+
+        return ret;
+    }
+
+
 
 
 
