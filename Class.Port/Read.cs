@@ -120,14 +120,14 @@ public class Read : Object
 
     private Port Port()
     {
-        ModuleName module;
+        ModuleName name;
 
 
-        module = this.ModuleName();
+        name = this.ModuleName();
 
 
 
-        if (this.Null(module))
+        if (this.Null(name))
         {
             return null;
         }
@@ -248,7 +248,7 @@ public class Read : Object
         ret.Init();
 
 
-        ret.Module = module;
+        ret.Name = name;
 
 
         ret.Ver = ver;

@@ -239,7 +239,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Module.Name = this.TaskModule;
+        this.Module.Port = this.Port;
 
 
 
@@ -387,6 +387,12 @@ public class Compile : InfraCompile
 
 
 
+        string moduleName;
+
+        moduleName = this.Module.Port.Name.Value;
+
+
+
 
         Pair t;
 
@@ -397,7 +403,7 @@ public class Compile : InfraCompile
         t.Init();
 
 
-        t.Key = this.Module.Name;
+        t.Key = moduleName;
 
 
         t.Value = this.Module;
@@ -413,7 +419,7 @@ public class Compile : InfraCompile
 
         if (this.Null(this.SystemModules))
         {
-            if (this.Module.Name == "System")
+            if (moduleName == "System")
             {
                 Class varClass;
 
@@ -860,10 +866,19 @@ public class Compile : InfraCompile
 
 
 
-        if (this.Module.Name == "System")
+
+        string name;
+
+
+        name = this.Module.Port.Name.Value;
+
+
+
+        if (name == "System")
         {
             index = index + 1;
         }
+
 
 
 

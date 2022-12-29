@@ -6,7 +6,7 @@ namespace Class.Port;
 
 public class Port : Object
 {
-    public ModuleName Module { get; set; }
+    public ModuleName Name { get; set; }
 
 
 
