@@ -109,11 +109,40 @@ public class Read : Object
 
 
 
+
+
         this.NextRow();
         
 
 
 
+
+
+        ImportList importList;
+
+
+        importList = this.ImportList();
+
+
+
+
+        this.NextRow();
+
+
+
+
+
+
+
+        return null;
+    }
+
+
+
+
+
+    private ImportList ImportList()
+    {
         ulong? o;
 
 
@@ -128,23 +157,95 @@ public class Read : Object
 
 
 
-        ulong importCount;
+
+        ulong k;
 
 
-        importCount = o.Value;
+        k = o.Value;
+
+
+
+
+        int count;
+
+
+        count = (int)k;
+
 
 
         
         this.NextRow();
-        
-
-
-        this.NextRow();
 
 
 
 
 
+
+
+        ImportList list;
+
+
+        list = new ImportList();
+
+
+        list.Init();
+
+
+
+
+
+        int i;
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            this.NextRow();
+
+
+
+            Import import;
+
+
+            import = this.Import();
+
+
+
+            if (this.Null(import))
+            {
+                return null;
+            }
+
+
+
+
+            list.Add(import);
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+
+        ImportList ret;
+
+
+        ret = list;
+
+
+        return ret;
+    }
+
+
+
+
+
+    private Import Import()
+    {
         return null;
     }
 
@@ -347,5 +448,13 @@ public class Read : Object
     private Line Line(int row)
     {
         return (Line)this.Text.Lines.Get(row);
+    }
+
+
+
+
+    private bool Null(object o)
+    {
+        return o == null;
     }
 }
