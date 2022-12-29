@@ -11,6 +11,10 @@ public class Port : Object
 
 
 
+    public Ver Ver { get; set; }
+
+
+
 
     public ImportList Import { get; set; }
 
@@ -19,4 +23,10 @@ public class Port : Object
 
 
     public ExportList Export { get; set; }
+
+
+
+
+
+    public Entry Entry { get; set; }
 }

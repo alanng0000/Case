@@ -12,6 +12,12 @@ public class Import : Object
 
 
 
+    public Ver Ver { get; set; }
+
+
+
+
+
     public ClassName Class { get; set; }
 
 
