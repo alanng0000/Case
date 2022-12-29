@@ -7444,7 +7444,7 @@ public class Compile : InfraCompile
         {
             int skipBracketIndex;
 
-            skipBracketIndex = this.BackwardSkipBrackets(i, range);
+            skipBracketIndex = this.BackwardSkipBracketList(i, range);
 
             if (!(skipBracketIndex == IntNull))
             {
@@ -7519,7 +7519,7 @@ public class Compile : InfraCompile
         {
             int skipBracketIndex;
 
-            skipBracketIndex = this.ForwardSkipBrackets(i, range);
+            skipBracketIndex = this.ForwardSkipBracketList(i, range);
 
 
             if (!(skipBracketIndex == IntNull))
@@ -7569,7 +7569,7 @@ public class Compile : InfraCompile
 
 
 
-    private int ForwardSkipBrackets(int index, Range range)
+    private int ForwardSkipBracketList(int index, Range range)
     {
         int ret;
             
@@ -7622,7 +7622,7 @@ public class Compile : InfraCompile
 
 
 
-    private int BackwardSkipBrackets(int index, Range range)
+    private int BackwardSkipBracketList(int index, Range range)
     {
         int ret;
 
