@@ -141,6 +141,23 @@ public class Read : Object
 
 
 
+        Ver ver;
+
+        ver = this.Ver();
+
+
+        if (this.Null(ver))
+        {
+            return null;
+        }
+
+
+
+
+        this.NextRow();
+
+
+
 
 
 
@@ -232,6 +249,9 @@ public class Read : Object
 
 
         ret.Name = name;
+
+
+        ret.Ver = ver;
 
 
         ret.Import = importList;
