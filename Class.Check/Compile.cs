@@ -12,11 +12,6 @@ public class Compile : InfraCompile
 
 
 
-    public string TaskModule { get; set; }
-
-
-
-
     public TreeList Trees { get; set; }
 
 

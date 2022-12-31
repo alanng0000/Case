@@ -18,12 +18,6 @@ public class Compile : InfraCompile
 
 
 
-    public string TaskModule { get; set; }
-
-
-
-
-
     public PortPort Port { get; set; }
     
 
@@ -193,7 +187,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Module = (CheckModule)this.CheckResult.Refer.Module.Get(this.TaskModule);
+        this.Module = (CheckModule)this.CheckResult.Refer.Module.Get(this.Port.Name.Value);
 
 
 
