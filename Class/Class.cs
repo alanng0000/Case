@@ -372,7 +372,7 @@ public class Class : Object
 
         
         
-        this.ModuleName = this.Port.Module.Value;
+        this.ModuleName = this.Port.Name.Value;
 
 
 
@@ -774,25 +774,6 @@ public class Class : Object
 
 
 
-
-        checkString.Path = this.Task.Check;
-
-
-
-
-
-        checkString.CheckResult = this.Result.Check;
-
-
-
-
-
-        checkString.NodeResult = this.Result.Node;
-
-
-
-
-
         checkString.Execute();
 
 
@@ -1027,6 +1008,11 @@ public class Class : Object
 
 
 
+        checkString.Class = this;
+
+
+
+
         checkString.Init();
 
 
@@ -1045,10 +1031,19 @@ public class Class : Object
 
 
 
-        string s;
+
+        string[] k;
 
 
-        s = File.ReadAllText(filePath);
+        k = File.ReadAllLines(filePath);
+
+
+
+
+        Text text;
+
+
+        text = this.CreateText(k);
 
 
 
@@ -1066,7 +1061,7 @@ public class Class : Object
 
 
 
-        read.Text = s;
+        read.Text = text;
 
 
 

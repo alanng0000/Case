@@ -3,33 +3,29 @@ namespace Class;
 
 
 
-public class CheckString
+public class CheckString : Object
 {
     private StringBuilder Builder { get; set; }
 
 
 
 
-    public CheckResult CheckResult { get; set; }
+    private CheckResult CheckResult { get; set; }
 
 
 
 
-    public NodeResult NodeResult { get; set; }
+    private NodeResult NodeResult { get; set; }
 
 
 
 
-    public string Path { get; set; }
+    private string Path { get; set; }
 
 
 
 
-
-    public virtual bool Init()
-    {
-        return true;
-    }
+    public Class Class { get; set; }
 
 
 
@@ -37,6 +33,27 @@ public class CheckString
 
     public bool Execute()
     {
+
+        this.Path = this.Class.Task.Check;
+
+
+
+
+
+        this.CheckResult = this.Class.Result.Check;
+
+
+
+
+
+        this.NodeResult = this.Class.Result.Node;
+
+
+
+
+
+
+
         this.Builder = new StringBuilder();
         
 
@@ -328,7 +345,7 @@ public class CheckString
 
 
 
-        this.Append(varClass.Module.Name);
+        this.Append(varClass.Module.Port.Name.Value);
 
 
 
