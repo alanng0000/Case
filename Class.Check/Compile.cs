@@ -381,7 +381,7 @@ public class Compile : InfraCompile
 
 
 
-        this.InitReferImports();
+        this.InitReferImport();
 
 
 
@@ -750,7 +750,59 @@ public class Compile : InfraCompile
 
 
 
-    private bool InitReferImports()
+    private bool ImportModule(string name, ulong ver)
+    {
+        return true;
+    }
+
+
+
+
+
+    private bool ImportModuleList(PortImportList importList)
+    {
+        ListIter iter;
+
+        iter = importList.Iter();
+
+
+
+        while (iter.Next())
+        {
+            PortImport import;
+
+            import = (PortImport)iter.Value;
+
+
+
+            string name;
+
+            name = import.Module.Value;
+
+
+
+            ulong ver;
+
+            ver = import.Ver.Value;
+
+
+
+            if (this.Null(this.Refer.Module.Get(name)))
+            {
+                this.ImportModule(name, ver);
+            }
+        }
+
+
+
+        return true;
+    }
+
+
+
+
+
+    private bool InitReferImport()
     {
         if (!this.Null(this.SystemModules))
         {
