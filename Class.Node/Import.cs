@@ -18,6 +18,7 @@ global using ErrorKind = Class.Infra.ErrorKind;
 global using InfraErrorKindList = Class.Infra.ErrorKindList;
 global using ErrorList = Class.Infra.ErrorList;
 global using Code = Class.Token.Code;
+global using TokenResult = Class.Token.Result;
 global using CodeArray = Class.Token.CodeArray;
 global using TokenToken = Class.Token.Token;
 global using TextRange = Class.Token.TextRange;

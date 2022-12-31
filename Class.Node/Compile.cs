@@ -11,7 +11,7 @@ public class Compile : InfraCompile
 
 
 
-    public CodeArray Codes { get; set; }
+    public TokenResult TokenResult { get; set; }
 
 
 
@@ -464,7 +464,7 @@ public class Compile : InfraCompile
         ArrayIter codeIter;
 
 
-        codeIter = this.Codes.Iter();
+        codeIter = this.TokenResult.Code.Iter();
 
 
 
