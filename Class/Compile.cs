@@ -340,7 +340,7 @@ public class Compile : Object
 
     public bool ExecuteCheck()
     {
-        this.Check.Sources = this.Source;
+        this.Check.SourceList = this.Source;
 
 
 
@@ -350,7 +350,8 @@ public class Compile : Object
 
 
 
-        this.Check.Trees = this.Result.Node.Tree;
+        this.Check.NodeResult = this.Result.Node;
+        
 
 
 

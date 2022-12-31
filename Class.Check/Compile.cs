@@ -7,12 +7,12 @@ namespace Class.Check;
 
 public class Compile : InfraCompile
 {
-    public SourceArray Sources { get; set; }
+    public SourceArray SourceList { get; set; }
 
 
 
 
-    public TreeList Trees { get; set; }
+    public NodeResult NodeResult { get; set; }
 
 
 
@@ -1813,7 +1813,7 @@ public class Compile : InfraCompile
         ListIter treeIter;
 
 
-        treeIter = this.Trees.Iter();
+        treeIter = this.NodeResult.Tree.Iter();
 
 
 
@@ -1821,7 +1821,7 @@ public class Compile : InfraCompile
         ArrayIter sourceIter;
 
 
-        sourceIter = this.Sources.Iter();
+        sourceIter = this.SourceList.Iter();
 
 
 
