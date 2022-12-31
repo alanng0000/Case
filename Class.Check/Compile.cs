@@ -751,7 +751,87 @@ public class Compile : InfraCompile
 
 
     private bool ImportModule(string name, ulong ver)
-    {
+    {   
+        PortModuleName a;
+
+        a = new PortModuleName();
+
+        a.Init();
+
+        a.Value = name;
+
+
+
+        PortVer k;
+
+        k = new PortVer();
+
+        k.Init();
+
+        k.Value = ver;
+
+
+
+
+        PortPort port;
+
+        port = new PortPort();
+
+        port.Init();
+
+        port.Name = a;
+
+        port.Ver = k;
+
+
+
+        port.Import = new PortImportList();
+
+        port.Import.Init();
+
+        
+
+        port.Export = new PortExportList();
+
+        port.Export.Init();
+
+
+
+
+        Module module;
+
+
+        module = new Module();
+
+        module.Init();
+
+        module.Port = port;
+
+
+        module.Class = new ClassMap();
+
+        module.Class.Init();
+
+
+
+
+        Pair pair;
+
+        pair = new Pair();
+
+        pair.Init();
+
+        pair.Key = name;
+
+        pair.Value = module;
+
+
+
+
+        this.Refer.Module.Add(pair);
+        
+
+
         return true;
     }
 
