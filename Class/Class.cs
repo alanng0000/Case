@@ -19,12 +19,6 @@ public class Class : Object
 
 
 
-    public string ModuleName { get; set; }
-
-
-
-
-
     public bool ErrorWrite { get; set; }
 
 
@@ -188,7 +182,14 @@ public class Class : Object
 
 
 
-            this.ModuleName = "Module";
+            string moduleName;
+
+
+            moduleName = "Module";
+
+
+
+            this.Port = this.CreatePortNonModule(moduleName);
 
 
 
@@ -370,11 +371,6 @@ public class Class : Object
 
 
 
-        
-        
-        this.ModuleName = this.Port.Name.Value;
-
-
 
         return true;
     }
@@ -443,7 +439,16 @@ public class Class : Object
 
 
 
-        this.ModuleName = "System";
+        string moduleName;
+
+
+
+        moduleName = "System";
+
+
+
+
+        this.Port = this.CreatePortNonModule(moduleName);
 
 
 
@@ -504,10 +509,6 @@ public class Class : Object
 
 
         this.Source = null;
-
-
-
-        this.ModuleName = null;
 
 
 
@@ -1087,6 +1088,86 @@ public class Class : Object
 
 
         return true;
+    }
+
+
+
+
+
+
+
+    private PortPort CreatePortNonModule(string moduleName)
+    {
+        PortModuleName name;
+
+        name = new PortModuleName();
+
+        name.Init();
+
+        name.Value = moduleName;
+
+
+
+
+        PortVer ver;
+
+        ver = new PortVer();
+
+        ver.Init();
+
+        
+
+
+        PortImportList import;
+
+        import = new PortImportList();
+
+        import.Init();
+
+
+
+
+        PortExportList export;
+
+        export = new PortExportList();
+
+        export.Init();
+
+
+
+
+
+
+
+        PortPort o;
+
+
+        o = new PortPort();
+
+
+        o.Init();
+
+
+        o.Name = name;
+
+
+        o.Ver = ver;
+
+
+        o.Import = import;
+
+
+        o.Export = export;
+
+
+
+
+        PortPort ret;
+
+        ret = o;
+
+
+        return ret;
     }
 
 

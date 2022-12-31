@@ -344,10 +344,6 @@ public class Compile : Object
 
 
 
-        this.Check.TaskModule = this.Class.ModuleName;
-
-
-
 
         this.Check.Port = this.Class.Port;
 
@@ -383,11 +379,6 @@ public class Compile : Object
     public bool ExecuteModule()
     {
         this.Module.Sources = this.Source;
-
-
-
-
-        this.Module.TaskModule = this.Class.ModuleName;
 
 
 
