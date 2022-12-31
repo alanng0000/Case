@@ -243,16 +243,8 @@ public class Class : Object
 
 
 
-            string classFold;
-                
-                
 
-            classFold = this.ClassFold();
-
-
-
-
-            files = this.GetClassFiles(classFold);
+            files = this.GetClassFiles(this.SourceFold);
         }
 
 
@@ -379,28 +371,6 @@ public class Class : Object
 
 
         return true;
-    }
-
-
-
-
-
-    protected virtual string ClassFold()
-    {
-        string s;
-        
-        
-        s = Path.Combine(this.SourceFold, "Class");
-
-
-
-        string ret;
-
-
-        ret = s;
-
-
-        return ret;
     }
 
 
