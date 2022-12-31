@@ -1792,9 +1792,6 @@ public class Compile : InfraCompile
 
 
 
-        //global::System.Console.Write("Class.Check:Compile m.Name" + ":" + " " + m.Name + "\n");
-
-
 
         this.SystemModule.Module = m;
 
