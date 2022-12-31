@@ -227,9 +227,9 @@ public class Class : Object
 
 
             bool ba;
-                
-            ba = this.ReadPort();
-                
+            
+            ba = this.GetPort();
+            
 
             if (!ba)
             {
@@ -339,13 +339,13 @@ public class Class : Object
 
 
 
-    protected virtual bool ReadPort()
+    protected virtual bool GetPort()
     {
         string portFile;
 
 
 
-        portFile = Path.Combine(this.SourceFold, "Port");
+        portFile = Path.Combine(this.SourceFold, "Module.Port");
 
 
 
@@ -358,16 +358,22 @@ public class Class : Object
 
 
 
-        bool ba;
+        PortPort port;
         
-        ba = this.GetPort(portFile);
+
+        port = this.ReadPort(portFile);
 
 
 
-        if (!ba)
+        if (this.Null(port))
         {
             return false;
         }
+
+
+
+
+        this.Port = port;
 
 
 
@@ -1023,13 +1029,8 @@ public class Class : Object
 
 
 
-    private bool GetPort(string filePath)
+    private PortPort ReadPort(string filePath)
     {
-        this.Port = null;
-
-
-
-
         string[] k;
 
 
@@ -1074,17 +1075,18 @@ public class Class : Object
 
         if (this.Null(port))
         {
-            return false;
+            return null;
         }
 
 
 
 
-        this.Port = port;
+        PortPort ret;
+
+        ret = port;
 
 
-
-        return true;
+        return ret;
     }
 
 
@@ -1525,27 +1527,6 @@ public class Class : Object
 
     private bool CheckPortFile(string portFile)
     {
-        string name;
-
-
-        name = Path.GetFileName(portFile);
-
-
-
-        bool b;
-
-
-        b = (name == "Port");
-
-
-
-        if (!b)
-        {
-            return false;
-        }
-
-
-
         if (!File.Exists(portFile))
         {
             return false;
