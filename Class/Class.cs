@@ -331,13 +331,25 @@ public class Class : Object
 
 
 
+    protected string PortFileName
+    {
+        get
+        {
+            return "_Port";
+        }
+    }
+
+
+
+
+
     protected virtual bool GetPort()
     {
         string portFile;
 
 
 
-        portFile = Path.Combine(this.SourceFold, "Module.Port");
+        portFile = Path.Combine(this.SourceFold, this.PortFileName);
 
 
 
@@ -1154,6 +1166,48 @@ public class Class : Object
 
 
 
+        string s;
+
+
+        string name;
+
+
+
+
+        int count;
+
+
+        count = u.Length;
+
+
+
+
+        int i;
+
+
+        i = 0;
+
+
+
+        while (i < count)
+        {
+            s = u[i];
+
+
+            name = Path.GetFileName(s);
+
+
+
+            u[i] = name;
+
+
+
+            i = i + 1;
+        }
+
+
+
+
         StringComparer comparer;
 
 
@@ -1184,6 +1238,7 @@ public class Class : Object
 
 
 
+
     private List GetClassFiles(string folderPath)
     {
         string[] u;
@@ -1207,11 +1262,43 @@ public class Class : Object
 
 
 
-        foreach (string s in u)
-        {
-            t.Add(s);
-        }
+
+        string s;
+
+
+
+
+        int count;
+
+
+        count = u.Length;
+
+
+
+
+        int i;
+
+        i = 0;
         
+
+        while (i < count)
+        {
+            s = u[i];
+
+
+
+            if (!(s == this.PortFileName))
+            {
+                t.Add(s);
+            }
+
+            
+
+
+            i = i + 1;
+        }
+
+
 
 
 
