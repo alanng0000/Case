@@ -185,7 +185,7 @@ class SizeCompile
 
 
 
-        name = this.Module.Name;
+        name = this.Module.Port.Name.Value;
 
 
 
@@ -257,7 +257,7 @@ class SizeCompile
 
 
 
-        iter = this.Compile.Port.Imports.Iter();
+        iter = this.Compile.Port.Import.Iter();
 
 
 
@@ -331,7 +331,7 @@ class SizeCompile
 
 
 
-        count = this.Compile.Port.Exports.Count;
+        count = this.Compile.Port.Export.Count;
 
 
 

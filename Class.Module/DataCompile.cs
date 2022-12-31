@@ -137,11 +137,11 @@ class DataCompile
 
 
 
-        Imports imports;
+        ImportList imports;
 
 
 
-        imports = this.Compile.Port.Imports;
+        imports = this.Compile.Port.Import;
 
 
 
@@ -233,7 +233,7 @@ class DataCompile
 
 
 
-        name = this.Module.Name;
+        name = this.Module.Port.Name.Value;
 
 
 
@@ -256,11 +256,11 @@ class DataCompile
 
     private bool ExecuteReferImports()
     {
-        Imports imports;
+        ImportList imports;
 
 
 
-        imports = this.Compile.Port.Imports;
+        imports = this.Compile.Port.Import;
 
 
 
@@ -407,11 +407,11 @@ class DataCompile
 
     private bool ExecuteReferExports()
     {
-        Exports exports;
+        ExportList exports;
 
 
 
-        exports = this.Compile.Port.Exports;
+        exports = this.Compile.Port.Export;
 
 
 
