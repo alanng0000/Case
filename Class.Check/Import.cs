@@ -6,19 +6,13 @@ namespace Class.Check;
 
 public class Import : Object
 {
-    public ModuleName Module { get; set; }
+    public Module Module { get; set; }
 
 
 
 
 
-    public ModuleVer Ver { get; set; }
-
-
-
-
-
-    public ClassName Class { get; set; }
+    public Class Class { get; set; }
 
 
 
