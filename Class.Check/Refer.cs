@@ -13,4 +13,19 @@ public class Refer : Object
 
 
     public ClassMap Class { get; set; }
+
+
+
+
+    public ImportList Import { get; set; }
+
+
+
+
+    public ExportList Export { get; set; }
+
+
+
+
+    public Entry Entry { get; set; }
 }

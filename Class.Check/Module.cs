@@ -17,22 +17,5 @@ public class Module : Object
 
 
 
-    public ImportList Import { get; set; }
-
-
-
-
-
-    public ExportList Export { get; set; }
-
-
-
-
-
-    public Entry Entry { get; set; }
-
-
-
-
     public ClassMap Class { get; set; }
 }
