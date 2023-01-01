@@ -5,7 +5,7 @@ namespace Class.Port;
 
 
 
-public class Ver : Object
+public class ModuleVer : Object
 {
     public ulong Value { get; set; }
 }

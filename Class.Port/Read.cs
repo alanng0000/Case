@@ -29,15 +29,6 @@ public class Read : Object
         this.RangeInfra.Init();
 
 
-
-
-
-        this.StringInfra = new StringInfra();
-
-
-
-        this.StringInfra.Init();
-
         
 
 
@@ -56,12 +47,6 @@ public class Read : Object
 
 
     private RangeInfra RangeInfra { get; set; }
-
-
-
-
-
-    private StringInfra StringInfra { get; set; }
 
 
 
@@ -92,12 +77,12 @@ public class Read : Object
 
 
 
-        Port port;
+        Port module;
 
-        port = this.Port();
+        module = this.Module();
 
 
-        if (this.Null(port))
+        if (this.Null(module))
         {
             return null;
         }
@@ -107,7 +92,7 @@ public class Read : Object
 
         Port ret;
 
-        ret = port;
+        ret = module;
 
 
         return ret;
@@ -118,7 +103,7 @@ public class Read : Object
 
 
 
-    private Port Port()
+    private Port Module()
     {
         ModuleName name;
 
@@ -141,9 +126,9 @@ public class Read : Object
 
 
 
-        Ver ver;
+        ModuleVer ver;
 
-        ver = this.Ver();
+        ver = this.ModuleVer();
 
 
         if (this.Null(ver))
@@ -219,20 +204,12 @@ public class Read : Object
         Entry entry;
 
 
-        entry = null;
+        entry = this.Entry();
 
 
-
-
-        if (this.Row < this.Text.Lines.Count)
+        if (this.Null(entry))
         {
-            entry = this.Entry();
-
-
-            if (this.Null(entry))
-            {
-                return null;
-            }
+            return null;
         }
         
 
@@ -396,10 +373,10 @@ public class Read : Object
 
 
 
-        Ver ver;
+        ModuleVer ver;
 
 
-        ver = this.Ver();
+        ver = this.ModuleVer();
 
 
 
@@ -645,12 +622,6 @@ public class Read : Object
 
 
 
-        if (this.Null(varClass))
-        {
-            return null;
-        }
-
-
 
         this.NextRow();
 
@@ -769,7 +740,7 @@ public class Read : Object
 
 
 
-    private Ver Ver()
+    private ModuleVer ModuleVer()
     {
         ulong? o;
 
@@ -791,9 +762,9 @@ public class Read : Object
 
 
 
-        Ver ret;
+        ModuleVer ret;
 
-        ret = new Ver();
+        ret = new ModuleVer();
 
         ret.Init();
 
@@ -814,6 +785,7 @@ public class Read : Object
         s = this.LineText();
 
 
+
         if (this.Null(s))
         {
             return null;
@@ -822,31 +794,29 @@ public class Read : Object
 
 
 
-        this.StringInfra.String = s;
+        ulong k;
 
 
 
 
+        bool b;
 
-        Range range;
 
-
-        range = this.Range(0, s.Length);
-
+        b = ulong.TryParse(s, out k);
 
 
 
-        ulong? o;
-
-
-        o = this.StringInfra.IntValue(range);
+        if (!b)
+        {
+            return null;
+        }
 
 
 
 
         ulong? ret;
 
-        ret = o;
+        ret = k;
 
 
         return ret;
