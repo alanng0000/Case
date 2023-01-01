@@ -200,6 +200,10 @@ public class Class : Object
 
 
 
+            this.Port = null;
+
+
+
             if (t == k.Check)
             {
                 string moduleName;
