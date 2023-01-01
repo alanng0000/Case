@@ -345,7 +345,7 @@ public class CheckString : Object
 
 
 
-        this.Append(varClass.Module.Port.Name.Value);
+        this.Append(varClass.Module.Name.Value);
 
 
 

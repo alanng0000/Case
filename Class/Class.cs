@@ -141,11 +141,28 @@ public class Class : Object
 
     public bool Execute()
     {
+        TaskKind t;
+
+
+        t = this.Task.Kind;
+
+
+
+
+        TaskKindList k;
+
+
+        k = this.TaskKindList;
+
+
+
+
+
         bool taskModule;
 
 
 
-        taskModule = (this.Task.Kind == this.TaskKindList.Module);
+        taskModule = (t == k.Module);
 
 
 
@@ -182,14 +199,20 @@ public class Class : Object
 
 
 
-            string moduleName;
+
+            if (t == k.Check)
+            {
+                string moduleName;
 
 
-            moduleName = "Module";
+                moduleName = "Module";
 
 
 
-            this.Port = this.CreatePortNonModule(moduleName);
+
+                this.Port = this.CreatePortNonModule(moduleName);
+            }
+            
 
 
 
@@ -279,21 +302,6 @@ public class Class : Object
 
         if (this.Task.Print)
         {
-            TaskKind t;
-
-
-            t = this.Task.Kind;
-
-
-
-            TaskKindList k;
-
-
-            k = this.TaskKindList;
-
-
-
-
             if (t == k.Token)
             {
                 this.PrintTokenResult();
@@ -1090,9 +1098,9 @@ public class Class : Object
 
 
 
-        PortVer ver;
+        PortModuleVer ver;
 
-        ver = new PortVer();
+        ver = new PortModuleVer();
 
         ver.Init();
 
@@ -1117,6 +1125,13 @@ public class Class : Object
 
 
 
+        PortEntry entry;
+
+        entry = new PortEntry();
+
+        entry.Init();
+
+
 
 
 
@@ -1139,6 +1154,9 @@ public class Class : Object
 
 
         o.Export = export;
+
+
+        o.Entry = entry;
 
 
 
