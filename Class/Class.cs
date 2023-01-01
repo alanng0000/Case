@@ -500,6 +500,11 @@ public class Class : Object
 
 
 
+        this.Port = null;
+
+
+
+
 
         this.Out = null;
 
