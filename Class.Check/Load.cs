@@ -87,7 +87,7 @@ public class Load : Object
 
 
 
-    public InfraData Result { get; set; }
+    public Data Result { get; set; }
 
 
 
@@ -111,10 +111,10 @@ public class Load : Object
 
 
 
-        InfraData data;
+        Data data;
 
 
-        data = new InfraData();
+        data = new Data();
 
 
         data.Value = u;

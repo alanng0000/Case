@@ -78,3 +78,5 @@ global using StringConstant = Class.Node.StringConstant;
 global using NodeNode = Class.Node.Node;
 global using NodeResult = Class.Node.Result;
 global using Tree = Class.Node.Tree;
+global using File = System.IO.File;
+global using Path = System.IO.Path;
