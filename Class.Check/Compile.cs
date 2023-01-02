@@ -415,11 +415,6 @@ public class Compile : InfraCompile
 
 
 
-        string moduleName;
-
-        moduleName = this.Module.Intent.Name.Value;
-
-
 
 
         Pair t;
@@ -431,7 +426,7 @@ public class Compile : InfraCompile
         t.Init();
 
 
-        t.Key = moduleName;
+        t.Key = this.Module.Intent;
 
 
         t.Value = this.Module;

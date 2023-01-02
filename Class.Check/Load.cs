@@ -216,13 +216,13 @@ public class Load : Object
     {
         string u;
 
-        u = this.Intent.Name.Value;
+        u = this.Intent.Name.Value.ToString("x15");
 
 
 
         string v;
 
-        v = this.Intent.Ver.Value.ToString();
+        v = this.Intent.Ver.Value.ToString("x15");
 
 
 
