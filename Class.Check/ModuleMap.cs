@@ -7,10 +7,10 @@ public class ModuleMap : Map
 {
     public override bool Init()
     {
-        StringCompare compare;
+        ModuleIntentCompare compare;
 
 
-        compare = new StringCompare();
+        compare = new ModuleIntentCompare();
 
 
         compare.Init();
