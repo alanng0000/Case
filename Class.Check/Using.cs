@@ -11,6 +11,7 @@ global using ListIter = System.List.ListIter;
 global using MapIter = System.List.MapIter;
 global using ArrayIter = System.List.ArrayIter;
 global using Text = System.Text.Text;
+global using TextLine = System.Text.Line;
 global using InfraCompile = Class.Infra.Compile;
 global using InfraConstant = Class.Infra.Constant;
 global using Convert = Class.Infra.Convert;
