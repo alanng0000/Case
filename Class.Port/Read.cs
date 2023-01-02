@@ -872,25 +872,11 @@ public class Read : Object
 
 
 
+
+
     private Range Range(int start, int end)
     {
-        Range range;
-
-        range = new Range();
-
-        range.Init();
-
-        range.Start = start;
-
-        range.End = end;
-
-
-        Range ret;
-
-        ret = range;
-
-
-        return ret;
+        return this.RangeInfra.Range(start, end);
     }
 
 
