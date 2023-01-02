@@ -5,14 +5,14 @@ namespace Class.Check;
 
 
 
-public class DataMap : Map
+public class ModuleDataMap : Map
 {
     public override bool Init()
     {
-        ModuleCompare compare;
+        ModuleIntentCompare compare;
 
 
-        compare = new ModuleCompare();
+        compare = new ModuleIntentCompare();
 
 
         compare.Init();
