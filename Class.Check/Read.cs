@@ -143,10 +143,6 @@ public class Read : Object
 
         ret = new Module();
 
-        ret.Name = name;
-
-        ret.Ver = ver;
-
         return ret;
     }
 
@@ -183,8 +179,6 @@ public class Read : Object
         ret = new ModuleName();
 
         ret.Init();
-
-        ret.Value = value;
 
 
         return ret;
