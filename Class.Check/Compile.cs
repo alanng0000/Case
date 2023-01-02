@@ -265,11 +265,43 @@ public class Compile : InfraCompile
 
 
 
+        ModuleIntent intent;
+
+
+        intent = new ModuleIntent();
+
+
+        intent.Init();
+
+
+        intent.Name = new ModuleName();
+
+        intent.Name.Init();
+
+
+        
+
+
+
+        intent.Ver = new ModuleVer();
+
+        intent.Ver.Init();
+
+        intent.Ver.Value = this.Port.Ver.Value;
+
+
+
+
+
         this.Module = new Module();
 
 
 
         this.Module.Init();
+
+
+
+        this.Module.Intent = intent;
 
 
 
