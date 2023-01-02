@@ -7,9 +7,9 @@ namespace Class.Check;
 
 class ModuleNameEntry : Object
 {
-    public ModuleName Name { get; set; }
+    public ModuleName Intent { get; set; }
 
 
 
-    public string String { get; set; }
+    public string Name { get; set; }
 }

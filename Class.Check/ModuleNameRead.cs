@@ -23,7 +23,11 @@ class ModuleNameRead : Object
 
 
 
-    public ModuleNameMap Result { get; set; }
+    public ModuleNameMap NameMap { get; set; }
+
+
+
+    public ModuleStringMap StringMap { get; set; }
 
 
 
@@ -65,15 +69,6 @@ class ModuleNameRead : Object
 
     public bool Execute()
     {
-        this.Result = new ModuleNameMap();
-
-
-        this.Result.Init();
-
-
-
-
-
         this.TextInfra.Text = this.Text;
 
 
