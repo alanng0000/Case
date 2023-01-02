@@ -7,14 +7,14 @@ public class ClassCompare : Compare
 {
     public override int Execute(object left, object right)
     {
-        if (left == null)
+        if (this.Null(left))
         {
             return 0;
         }
 
 
 
-        if (right == null)
+        if (this.Null(right))
         {
             return 0;
         }
