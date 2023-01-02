@@ -91,7 +91,7 @@ public class Compile : InfraCompile
 
 
 
-    private DataMap ModuleHead { get; set; }
+    private ModuleDataMap ModuleHead { get; set; }
 
 
 
@@ -125,7 +125,7 @@ public class Compile : InfraCompile
 
 
 
-        this.ModuleHead = new DataMap();
+        this.ModuleHead = new ModuleDataMap();
 
 
         this.ModuleHead.Init();
@@ -417,7 +417,7 @@ public class Compile : InfraCompile
 
         string moduleName;
 
-        moduleName = this.Module.Name.Value;
+        moduleName = this.Module.Intent.Name.Value;
 
 
 
@@ -778,17 +778,23 @@ public class Compile : InfraCompile
 
 
 
-    private bool LoadModuleHead(Module module)
+    private bool LoadModuleHead(ModuleIntent intent)
     {
-        this.Load.ModuleName = module.Name.Value;
+        if (!this.Null(this.ModuleHead.Get(intent)))
+        {
+            return true;
+        }
+        
 
 
-        this.Load.ModuleVer = module.Ver.Value;
 
+        this.Load.Intent = intent;
 
 
 
         this.Load.Execute();
+
+
 
 
 
@@ -801,7 +807,19 @@ public class Compile : InfraCompile
 
 
 
+        Pair pair;
 
+        pair = new Pair();
+
+        pair.Init();
+
+        pair.Key = intent;
+
+        pair.Value = data;
+
+
+
+        this.ModuleHead.Add(pair);
 
 
 
