@@ -69,7 +69,7 @@ class ModuleNameRead : Object
 
 
         this.Result.Init();
-        
+
 
 
 
@@ -102,6 +102,11 @@ class ModuleNameRead : Object
 
 
         s = this.LineText();
+
+
+
+
+        
 
 
 
