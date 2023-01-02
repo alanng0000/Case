@@ -109,7 +109,7 @@ public class StateTraverse : Traverse
 
 
 
-    public SystemModule System { get; set; }
+    public ConstantClass System { get; set; }
 
 
 
