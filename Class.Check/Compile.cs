@@ -447,37 +447,36 @@ public class Compile : InfraCompile
 
 
 
-        if (this.Null(this.SystemModules))
+
+        if (this.IsSystem)
         {
-            if (this.IsSystem)
-            {
-                Class varClass;
+            Class varClass;
 
 
 
-                varClass = this.CreateObjectClass();
+            varClass = this.CreateObjectClass();
 
 
 
-                varClass.Module = this.Module;
+            varClass.Module = this.Module;
 
 
 
-                varClass.Index = this.Module.Class.Count;
-
-
-
-
-
-
-                this.AddSystemClass(varClass);
+            varClass.Index = this.Module.Class.Count;
 
 
 
 
 
 
-                this.ObjectClass = varClass;
+            this.AddSystemClass(varClass);
+
+
+
+
+
+
+            this.ObjectClass = varClass;
 
 
 
@@ -485,32 +484,31 @@ public class Compile : InfraCompile
 
 
 
-                this.SetConstantClass(this.ConstantClass.Bool);
+            this.SetConstantClass(this.ConstantClass.Bool);
 
 
 
-                this.AddSystemClass(this.ConstantClass.Bool);
-
-
-
-
-
-                this.SetConstantClass(this.ConstantClass.Int);
-
-
-
-                this.AddSystemClass(this.ConstantClass.Int);
+            this.AddSystemClass(this.ConstantClass.Bool);
 
 
 
 
 
-                this.SetConstantClass(this.ConstantClass.String);
+            this.SetConstantClass(this.ConstantClass.Int);
 
 
-                
-                this.AddSystemClass(this.ConstantClass.String);
-            }
+
+            this.AddSystemClass(this.ConstantClass.Int);
+
+
+
+
+
+            this.SetConstantClass(this.ConstantClass.String);
+
+
+            
+            this.AddSystemClass(this.ConstantClass.String);
         }
 
 
