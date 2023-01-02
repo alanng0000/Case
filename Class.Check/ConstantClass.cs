@@ -4,13 +4,8 @@ namespace Class.Check;
 
 
 
-public class SystemModule : Object
+public class ConstantClass : Object
 {
-    public Module Module { get; set; }
-
-
-
-
     public Class Bool { get; private set; }
 
 
@@ -35,17 +30,17 @@ public class SystemModule : Object
         
 
 
-        this.Bool = this.NewClass("Bool");
+        this.Bool = this.CreateClass("Bool");
 
 
 
 
-        this.Int = this.NewClass("Int");
+        this.Int = this.CreateClass("Int");
 
 
 
 
-        this.String = this.NewClass("String");
+        this.String = this.CreateClass("String");
 
 
 
@@ -58,7 +53,7 @@ public class SystemModule : Object
 
 
 
-    private Class NewClass(string name)
+    private Class CreateClass(string name)
     {
         Class c;
 
