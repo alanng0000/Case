@@ -8,10 +8,10 @@ public class ModuleNameMap : Map
 {
     public override bool Init()
     {
-        StringCompare compare;
+        ModuleNameCompare compare;
 
 
-        compare = new StringCompare();
+        compare = new ModuleNameCompare();
 
 
         compare.Init();
