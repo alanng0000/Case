@@ -29,7 +29,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.System = this.Compile.SystemModule;
+        this.System = this.Compile.ConstantClass;
 
 
 

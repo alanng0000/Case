@@ -48,7 +48,7 @@ public class Compile : InfraCompile
 
 
 
-    public SystemModule SystemModule { get; set; }
+    public ConstantClass ConstantClass { get; set; }
 
 
 
@@ -134,11 +134,11 @@ public class Compile : InfraCompile
 
 
 
-        this.SystemModule = new SystemModule();
+        this.ConstantClass = new ConstantClass();
 
 
 
-        this.SystemModule.Init();
+        this.ConstantClass.Init();
 
 
 
@@ -485,31 +485,31 @@ public class Compile : InfraCompile
 
 
 
-                this.ConstantClass(this.SystemModule.Bool);
+                this.SetConstantClass(this.ConstantClass.Bool);
 
 
 
-                this.AddSystemClass(this.SystemModule.Bool);
-
-
-
-
-
-                this.ConstantClass(this.SystemModule.Int);
-
-
-
-                this.AddSystemClass(this.SystemModule.Int);
+                this.AddSystemClass(this.ConstantClass.Bool);
 
 
 
 
 
-                this.ConstantClass(this.SystemModule.String);
+                this.SetConstantClass(this.ConstantClass.Int);
+
+
+
+                this.AddSystemClass(this.ConstantClass.Int);
+
+
+
+
+
+                this.SetConstantClass(this.ConstantClass.String);
 
 
                 
-                this.AddSystemClass(this.SystemModule.String);
+                this.AddSystemClass(this.ConstantClass.String);
             }
         }
 
@@ -525,7 +525,7 @@ public class Compile : InfraCompile
 
 
 
-    private bool ConstantClass(Class varClass)
+    private bool SetConstantClass(Class varClass)
     {
         varClass.Base = this.ObjectClass;
 
@@ -1037,12 +1037,6 @@ public class Compile : InfraCompile
 
 
 
-        this.SetSystemModule();
-
-
-
-
-
         this.SetObjectClassMembers();
 
 
@@ -1083,7 +1077,7 @@ public class Compile : InfraCompile
         Method method;
 
 
-        method = this.CreateMethod(this.SystemModule.Bool, name, this.Access.Public);
+        method = this.CreateMethod(this.ConstantClass.Bool, name, this.Access.Public);
 
 
         method.Parent = this.ObjectClass;
@@ -1291,19 +1285,19 @@ public class Compile : InfraCompile
 
 
 
-        if (varClass == this.SystemModule.Bool)
+        if (varClass == this.ConstantClass.Bool)
         {
             b = true;
         }
 
 
-        if (varClass == this.SystemModule.Int)
+        if (varClass == this.ConstantClass.Int)
         {
             b = true;
         }
 
 
-        if (varClass == this.SystemModule.String)
+        if (varClass == this.ConstantClass.String)
         {
             b = true;
         }
@@ -1900,28 +1894,6 @@ public class Compile : InfraCompile
 
 
 
-
-
-
-    private bool SetSystemModule()
-    {
-        Module m;
-
-
-
-        m = (Module)this.Refer.Module.Get("System");
-
-
-
-
-
-        this.SystemModule.Module = m;
-
-
-
-
-        return true;
-    }
 
 
 
