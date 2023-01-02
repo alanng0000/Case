@@ -12,12 +12,38 @@ public class Read : Object
 
 
 
+
     public ulong Index { get; set; }
 
 
 
 
     public Module Result { get; set; }
+
+
+
+
+    private Convert Convert { get; set; }
+
+
+
+
+
+    public override bool Init()
+    {
+        base.Init();
+
+
+
+        this.Convert = new Convert();
+
+
+        this.Convert.Init();
+
+
+
+        return true;
+    }
 
 
 
@@ -120,12 +146,6 @@ public class Read : Object
         ret.Name = name;
 
         ret.Ver = ver;
-
-        ret.Import = import;
-
-        ret.Export = export;
-
-        ret.Entry = entry;
 
         return ret;
     }
@@ -377,11 +397,7 @@ public class Read : Object
 
         ret.Init();
 
-        ret.Module = module;
-
-        ret.Ver = ver;
-
-        ret.Class = varClass;
+        ret.Class = null;
 
         ret.Name = name;
 
@@ -497,7 +513,7 @@ public class Read : Object
 
         ret.Init();
 
-        ret.Class = varClass;
+        ret.Class = null;
 
         return ret;
     }
@@ -522,7 +538,7 @@ public class Read : Object
 
         ret.Init();
 
-        ret.Class = varClass;
+        ret.Class = null;
 
         return ret;
     }
@@ -564,29 +580,6 @@ public class Read : Object
 
 
 
-    private ulong IntByteCount
-    {
-        get
-        {
-            return sizeof(ulong);
-        }
-        set
-        {
-        }
-    }
-
-
-
-    private ulong ByteBitCount
-    {
-        get
-        {
-            return 8;
-        }
-        set
-        {
-        }
-    }
 
 
 
@@ -709,7 +702,7 @@ public class Read : Object
         ulong count;
 
 
-        count = this.IntByteCount;
+        count = InfraConstant.This.IntByteCount;
 
 
 
@@ -721,73 +714,22 @@ public class Read : Object
 
 
 
-
-        ulong d;
-
-
-        d = 0;
-
-
-
         ulong k;
 
 
-
-        byte a;
-
-
-
-        ulong shiftCount;
-
-
-
-        int u;
+        k = this.Convert.ByteListULong(this.Data.Value, this.Index);
 
 
 
 
+        this.Index = this.Index + count;
 
-        ulong i;
-
-        i = 0;
-
-
-        while (i < count)
-        {
-            a = this.Byte();
-
-
-
-        
-            shiftCount = this.ByteBitCount * i;
-
-
-
-            u = this.SInt32(shiftCount);
-
-
-
-            k = a;
-            
-            
-            k = k << u;
-
-
-
-            d = d | k;
-
-
-
-
-            i = i + 1;
-        }
 
 
 
         ulong ret;
 
-
-        ret = d;
+        ret = k;
 
 
         return ret;
