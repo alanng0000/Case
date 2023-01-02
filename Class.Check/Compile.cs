@@ -78,7 +78,17 @@ public class Compile : InfraCompile
 
 
 
+    private Load Load { get; set; }
+
+
+
+
+
     private bool IsSystem { get; set; }
+
+
+
+
 
 
 
@@ -98,6 +108,15 @@ public class Compile : InfraCompile
 
 
         this.Access = this.CreateAccess();
+
+
+
+
+
+        this.Load = new Load();
+
+
+        this.Load.Init();
 
 
 
