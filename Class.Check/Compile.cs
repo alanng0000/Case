@@ -91,6 +91,9 @@ public class Compile : InfraCompile
 
 
 
+    private DataMap ModuleHead { get; set; }
+
+
 
 
 
@@ -117,6 +120,15 @@ public class Compile : InfraCompile
 
 
         this.Load.Init();
+
+
+
+
+
+        this.ModuleHead = new DataMap();
+
+
+        this.ModuleHead.Init();
 
 
 
@@ -760,6 +772,42 @@ public class Compile : InfraCompile
 
         return ret;
     }
+
+
+
+
+
+
+    private bool LoadModuleHead(Module module)
+    {
+        this.Load.ModuleName = module.Name.Value;
+
+
+        this.Load.ModuleVer = module.Ver.Value;
+
+
+
+
+        this.Load.Execute();
+
+
+
+        Data data;
+
+
+        data = this.Load.Result;
+
+
+
+
+
+
+
+
+
+        return true;
+    }
+
 
 
 

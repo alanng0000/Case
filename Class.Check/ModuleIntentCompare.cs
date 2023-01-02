@@ -3,7 +3,7 @@ namespace Class.Check;
 
 
 
-public class ModuleCompare : Compare
+public class ModuleIntentCompare : Compare
 {
     private StringCompare StringCompare { get; set; }
 
@@ -47,20 +47,20 @@ public class ModuleCompare : Compare
 
 
 
-        Module leftModule;
+        ModuleIntent leftModuleIntent;
 
 
 
-        leftModule = (Module)left;
+        leftModuleIntent = (ModuleIntent)left;
 
 
 
 
-        Module rightModule;
+        ModuleIntent rightModuleIntent;
 
 
 
-        rightModule = (Module)right;
+        rightModuleIntent = (ModuleIntent)right;
 
 
 
@@ -69,7 +69,7 @@ public class ModuleCompare : Compare
         string leftName;
 
 
-        leftName = leftModule.Name.Value;
+        leftName = leftModuleIntent.Name.Value;
 
 
 
@@ -77,7 +77,7 @@ public class ModuleCompare : Compare
         string rightName;
 
 
-        rightName = rightModule.Name.Value;
+        rightName = rightModuleIntent.Name.Value;
 
 
 
@@ -102,7 +102,7 @@ public class ModuleCompare : Compare
         ulong leftVer;
 
 
-        leftVer = leftModule.Ver.Value;
+        leftVer = leftModuleIntent.Ver.Value;
 
 
 
@@ -110,7 +110,7 @@ public class ModuleCompare : Compare
         ulong rightVer;
 
 
-        rightVer = rightModule.Ver.Value;
+        rightVer = rightModuleIntent.Ver.Value;
 
 
 
