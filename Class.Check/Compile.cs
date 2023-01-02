@@ -143,6 +143,8 @@ public class Compile : InfraCompile
 
 
 
+
+
         return true;
     }
 
@@ -439,7 +441,7 @@ public class Compile : InfraCompile
 
 
 
-        this.IsSystem = (moduleName == "System");
+        this.IsSystem = (this.Module.Intent.Name.Value == 0);
 
 
 
