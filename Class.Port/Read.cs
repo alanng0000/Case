@@ -882,11 +882,9 @@ public class Read : Object
 
 
 
-
-
     private Line Line(int row)
     {
-        return (Line)this.Text.Lines.Get(row);
+        return this.TextInfra.Line(row);
     }
 
 
