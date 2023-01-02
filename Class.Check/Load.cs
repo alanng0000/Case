@@ -5,6 +5,11 @@ namespace Class.Check;
 
 public class Load : Object
 {
+    private Convert Convert { get; set; }
+
+
+
+
     public override bool Init()
     {
         base.Init();
@@ -13,6 +18,14 @@ public class Load : Object
 
         
         this.InitRootPath();
+
+
+
+
+        this.Convert = new Convert();
+
+
+        this.Convert.Init();
 
 
 
@@ -82,7 +95,9 @@ public class Load : Object
 
 
 
+
     public ulong ModuleVer { get; set; }
+
 
 
 
@@ -93,11 +108,19 @@ public class Load : Object
 
 
 
+
     public bool Execute()
     {
+        this.Result = null;
+
+
+
+
+
         string modulePath;
 
         modulePath = this.ModulePath();
+
 
 
 
@@ -113,6 +136,8 @@ public class Load : Object
 
 
         fileStream = new FileStream(modulePath, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.Read);
+
+
 
 
         int f;
@@ -131,10 +156,38 @@ public class Load : Object
 
 
 
+        ulong size;
+
+
+        size = this.Convert.ByteListULong(u, 0);
+
+
 
 
         
+
+        byte[] d;
+
+
+        d = new byte[size];
+
+
+
+
+        f = fileStream.Read(d, 0, d.Length);
+
         
+
+        if (f < d.Length)
+        {
+            return true;
+        }
+        
+
+
+
+        fileStream.Dispose();
+
 
 
 
@@ -146,7 +199,7 @@ public class Load : Object
         data = new Data();
 
 
-        data.Value = u;
+        data.Value = d;
 
 
 
