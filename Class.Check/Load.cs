@@ -101,11 +101,40 @@ public class Load : Object
 
 
 
-
         byte[] u;
 
+        u = new byte[InfraConstant.This.IntByteCount];
 
-        u = File.ReadAllBytes(modulePath);
+
+
+
+
+        FileStream fileStream;
+
+
+        fileStream = new FileStream(modulePath, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.Read);
+
+
+        int f;
+
+
+
+        f = fileStream.Read(u, 0, u.Length);
+
+
+
+        if (f < u.Length)
+        {
+            return true;
+        }
+
+
+
+
+
+
+        
+        
 
 
 
@@ -126,6 +155,10 @@ public class Load : Object
 
         return true;
     }
+
+
+
+
 
 
 
