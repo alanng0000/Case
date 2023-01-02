@@ -10,6 +10,11 @@ public class Module : Object
 
 
 
+    public ModuleVer Ver { get; set; }
+    
+
+
+
 
     public ClassMap Class { get; set; }
 }

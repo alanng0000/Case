@@ -5,6 +5,30 @@ namespace Class.Check;
 
 public class ModuleNameCompare : Compare
 {
+    private StringCompare StringCompare { get; set; }
+
+
+
+    public override bool Init()
+    {
+        base.Init();
+
+
+
+        this.StringCompare = new StringCompare();
+
+
+        this.StringCompare.Init();
+
+
+
+        return true;
+    }
+
+    
+
+
+
     public override int Execute(object left, object right)
     {
         if (this.Null(left))
@@ -42,7 +66,8 @@ public class ModuleNameCompare : Compare
 
         int u;
 
-        u = leftName.Value.CompareTo(rightName.Value);
+
+        u = this.StringCompare.Execute(leftName.Value, rightName.Value);
 
 
         return u;
