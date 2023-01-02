@@ -5,14 +5,26 @@ namespace Class.Check;
 
 public class ModuleIntentCompare : Compare
 {
+    private ModuleNameCompare NameCompare { get; set; }
+
+
+
     public override bool Init()
     {
         base.Init();
 
 
 
+        this.NameCompare = new ModuleNameCompare();
+
+
+        this.NameCompare.Init();
+
+
+
         return true;
     }
+
 
 
 
@@ -43,6 +55,7 @@ public class ModuleIntentCompare : Compare
 
 
 
+
         ModuleIntent rightModuleIntent;
 
 
@@ -53,18 +66,21 @@ public class ModuleIntentCompare : Compare
 
 
 
-        ulong leftName;
+
+        ModuleName leftName;
 
 
-        leftName = leftModuleIntent.Name.Value;
+        leftName = leftModuleIntent.Name;
 
 
 
 
-        ulong rightName;
+        ModuleName rightName;
 
 
-        rightName = rightModuleIntent.Name.Value;
+        rightName = rightModuleIntent.Name;
+
+
 
 
 
@@ -72,7 +88,10 @@ public class ModuleIntentCompare : Compare
 
         int u;
 
-        u = leftName.CompareTo(rightName);
+
+        u = this.NameCompare.Execute(leftName, rightName);
+
+
 
 
         if (!(u == 0))
