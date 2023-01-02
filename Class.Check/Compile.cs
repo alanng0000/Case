@@ -441,7 +441,7 @@ public class Compile : InfraCompile
 
 
 
-        this.IsSystem = (this.Module.Intent.Name.Value == 0);
+        this.IsSystem = (this.Module.Intent.Name.Value == this.SystemModuleIntentName);
 
 
 
@@ -1761,6 +1761,21 @@ public class Compile : InfraCompile
 
 
         return true;
+    }
+
+
+
+
+
+
+
+
+    private ulong SystemModuleIntentName
+    {
+        get
+        {
+            return 0;
+        }
     }
 
 
