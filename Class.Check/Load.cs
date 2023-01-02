@@ -91,12 +91,7 @@ public class Load : Object
 
 
 
-    public string ModuleName { get; set; }
-
-
-
-
-    public ulong ModuleVer { get; set; }
+    public ModuleIntent Intent { get; set; }
 
 
 
@@ -221,7 +216,13 @@ public class Load : Object
     {
         string u;
 
-        u = this.ModuleVer.ToString();
+        u = this.Intent.Name.Value;
+
+
+
+        string v;
+
+        v = this.Intent.Ver.Value.ToString();
 
 
 
@@ -229,7 +230,7 @@ public class Load : Object
         string s;
 
 
-        s = Path.Combine(this.RootPath, this.ModuleName, u);
+        s = Path.Combine(this.RootPath, u, v);
 
 
         s = Path.Combine(s, this.DataFileName);
