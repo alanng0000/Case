@@ -240,10 +240,6 @@ public class Compile : InfraCompile
 
 
 
-        this.Module.Port = this.Port;
-
-
-
         this.Module.Class = new ClassMap();
 
 
@@ -390,7 +386,7 @@ public class Compile : InfraCompile
 
         string moduleName;
 
-        moduleName = this.Module.Port.Name.Value;
+        moduleName = this.Module.Name.Value;
 
 
 
@@ -752,52 +748,6 @@ public class Compile : InfraCompile
 
     private bool ImportModule(string name, ulong ver)
     {   
-        PortModuleName a;
-
-        a = new PortModuleName();
-
-        a.Init();
-
-        a.Value = name;
-
-
-
-        PortVer k;
-
-        k = new PortVer();
-
-        k.Init();
-
-        k.Value = ver;
-
-
-
-
-        PortPort port;
-
-        port = new PortPort();
-
-        port.Init();
-
-        port.Name = a;
-
-        port.Ver = k;
-
-
-
-        port.Import = new PortImportList();
-
-        port.Import.Init();
-
-        
-
-        port.Export = new PortExportList();
-
-        port.Export.Init();
-
-
-
-
         Module module;
 
 
@@ -805,7 +755,6 @@ public class Compile : InfraCompile
 
         module.Init();
 
-        module.Port = port;
 
 
         module.Class = new ClassMap();
@@ -836,47 +785,6 @@ public class Compile : InfraCompile
     }
 
 
-
-
-
-    private bool ImportModuleList(PortImportList importList)
-    {
-        ListIter iter;
-
-        iter = importList.Iter();
-
-
-
-        while (iter.Next())
-        {
-            PortImport import;
-
-            import = (PortImport)iter.Value;
-
-
-
-            string name;
-
-            name = import.Module.Value;
-
-
-
-            ulong ver;
-
-            ver = import.Ver.Value;
-
-
-
-            if (this.Null(this.Refer.Module.Get(name)))
-            {
-                this.ImportModule(name, ver);
-            }
-        }
-
-
-
-        return true;
-    }
 
 
 
