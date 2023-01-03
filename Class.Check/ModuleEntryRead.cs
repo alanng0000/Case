@@ -153,6 +153,20 @@ class ModuleNameRead : Object
 
 
 
+        ModuleEntry entry;
+
+        entry = new ModuleEntry();
+
+        entry.Init();
+
+        entry.Intent = intent;
+
+        entry.Name = name;
+
+
+
+
+
 
         Pair pairA;
 
@@ -160,9 +174,9 @@ class ModuleNameRead : Object
 
         pairA.Init();
 
-        pairA.Key = intent;
+        pairA.Key = entry.Intent;
 
-        pairA.Value = name;
+        pairA.Value = entry;
 
 
 
@@ -179,9 +193,9 @@ class ModuleNameRead : Object
 
         pairB.Init();
 
-        pairB.Key = name;
+        pairB.Key = entry.Name;
 
-        pairB.Value = intent;
+        pairB.Value = entry;
 
 
 
