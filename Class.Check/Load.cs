@@ -95,6 +95,10 @@ public class Load : Object
 
 
 
+    public ModuleVer Ver { get; set; }
+
+
+
 
 
     public Data Result { get; set; }
@@ -216,13 +220,13 @@ public class Load : Object
     {
         string u;
 
-        u = this.Intent.Name.Value.ToString("x15");
+        u = this.Intent.Value.ToString("x15");
 
 
 
         string v;
 
-        v = this.Intent.Ver.Value.ToString("x15");
+        v = this.Ver.Value.ToString("x15");
 
 
 
