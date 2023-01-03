@@ -5,7 +5,7 @@ namespace Class.Check;
 
 
 
-class ModuleNameEntry : Object
+class ModuleEntry : Object
 {
     public ModuleIntent Intent { get; set; }
 

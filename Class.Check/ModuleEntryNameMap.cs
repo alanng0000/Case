@@ -4,14 +4,14 @@ namespace Class.Check;
 
 
 
-public class ModuleStringMap : Map
+public class ModuleEntryNameMap : Map
 {
     public override bool Init()
     {
-        StringCompare compare;
+        ModuleNameCompare compare;
 
 
-        compare = new StringCompare();
+        compare = new ModuleNameCompare();
 
 
         compare.Init();

@@ -23,11 +23,13 @@ class ModuleNameRead : Object
 
 
 
-    public ModuleNameMap NameMap { get; set; }
+
+    public ModuleEntryIntentMap IntentMap { get; set; }
 
 
 
-    public ModuleStringMap StringMap { get; set; }
+    public ModuleEntryNameMap NameMap { get; set; }
+
 
 
 
