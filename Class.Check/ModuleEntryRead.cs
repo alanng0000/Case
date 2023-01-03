@@ -17,6 +17,11 @@ class ModuleNameRead : Object
 
 
 
+    private Convert Convert { get; set; }
+
+
+
+
 
     public Text Text { get; set; }
 
@@ -62,6 +67,14 @@ class ModuleNameRead : Object
 
 
 
+        this.Convert = new Convert();
+
+
+        this.Convert.Init();
+
+
+
+
         return true;
     }
 
@@ -102,7 +115,80 @@ class ModuleNameRead : Object
 
 
 
-        
+
+        ulong k;
+
+        k = this.Convert.ULong(this.Row);
+
+
+
+        ulong index;
+
+        index = k;
+
+
+
+
+
+        ModuleIntent intent;
+
+        intent = new ModuleIntent();
+
+        intent.Init();
+
+        intent.Value = index;
+
+
+
+
+        ModuleName name;
+
+        name = new ModuleName();
+
+        name.Init();
+
+        name.Value = s;
+
+
+
+
+
+
+        Pair pairA;
+
+        pairA = new Pair();
+
+        pairA.Init();
+
+        pairA.Key = intent;
+
+        pairA.Value = name;
+
+
+
+        this.IntentMap.Add(pairA);
+
+
+
+
+
+
+        Pair pairB;
+
+        pairB = new Pair();
+
+        pairB.Init();
+
+        pairB.Key = name;
+
+        pairB.Value = intent;
+
+
+
+        this.NameMap.Add(pairB);
+
+
+
 
 
 
@@ -115,6 +201,13 @@ class ModuleNameRead : Object
 
         return true;
     }
+
+
+
+
+
+
+
 
 
 
