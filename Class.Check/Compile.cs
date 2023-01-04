@@ -179,6 +179,7 @@ public class Compile : InfraCompile
 
         
 
+        this.InitModuleEntry();
 
 
 
