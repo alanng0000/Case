@@ -459,11 +459,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Module.Intent = intent;
-
-
-
-        this.Module.Ver = ver;
+        this.Module.Refer = null;
 
 
 
@@ -1174,7 +1170,7 @@ public class Compile : InfraCompile
         t.Init();
 
 
-        t.Key = this.Module.Intent;
+        t.Key = this.Module.Refer;
 
 
         t.Value = this.Module;
@@ -1187,7 +1183,7 @@ public class Compile : InfraCompile
 
 
 
-        this.IsSystem = (this.Module.Intent.Value == this.SystemModuleIntent);
+        this.IsSystem = (this.Module.Refer.Intent.Value == this.SystemModuleIntent);
 
 
 
