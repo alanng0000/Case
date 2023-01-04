@@ -345,7 +345,7 @@ public class Compile : InfraCompile
         LineIter lineIter;
 
 
-        lineIter = this.SourceText.Lines.Iter();
+        lineIter = this.SourceText.Line.Iter();
 
 
 
@@ -364,7 +364,7 @@ public class Compile : InfraCompile
             CharIter charIter;
 
 
-            charIter = line.Chars.Iter();
+            charIter = line.Char.Iter();
 
 
 
@@ -401,7 +401,7 @@ public class Compile : InfraCompile
                     this.Range.Range.Start = this.Pos.Col;
 
 
-                    this.Range.Range.End = line.Chars.Count;
+                    this.Range.Range.End = line.Char.Count;
 
 
 
