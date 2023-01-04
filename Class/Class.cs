@@ -1531,7 +1531,7 @@ public class Class : Object
 
 
 
-            text.Lines.Add(line);
+            text.Line.Add(line);
 
 
 
@@ -1585,7 +1585,7 @@ public class Class : Object
 
 
 
-            line.Chars.Add(oc);
+            line.Char.Add(oc);
 
 
 
