@@ -981,7 +981,7 @@ public class Compile : InfraCompile
 
 
 
-    private bool LoadModuleHead(ModuleIntent intent)
+    private bool LoadModuleHead(ModuleIntent intent, ModuleVer ver)
     {
         if (!this.Null(this.ModuleHead.Get(intent)))
         {
@@ -992,6 +992,10 @@ public class Compile : InfraCompile
 
 
         this.ModuleHeadLoad.Intent = intent;
+
+
+        this.ModuleHeadLoad.Ver = ver;
+        
 
 
 
