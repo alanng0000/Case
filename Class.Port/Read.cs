@@ -836,7 +836,7 @@ public class Read : Object
 
         int end;
         
-        end = line.Chars.Count;
+        end = line.Char.Count;
 
 
 
