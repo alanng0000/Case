@@ -3,7 +3,7 @@ namespace Class.Check;
 
 
 
-public class ModuleIntentCompare : Compare
+public class ModuleVerCompare : Compare
 {
     public override int Execute(object left, object right)
     {
@@ -22,21 +22,21 @@ public class ModuleIntentCompare : Compare
 
 
 
-        ModuleIntent leftIntent;
+        ModuleVer leftVer;
 
 
 
-        leftIntent = (ModuleIntent)left;
+        leftVer = (ModuleVer)left;
 
 
 
 
 
-        ModuleIntent rightIntent;
+        ModuleVer rightVer;
 
 
 
-        rightIntent = (ModuleIntent)right;
+        rightVer = (ModuleVer)right;
 
 
 
@@ -44,7 +44,7 @@ public class ModuleIntentCompare : Compare
         int u;
 
 
-        u = leftIntent.Value.CompareTo(rightIntent.Value);
+        u = leftVer.Value.CompareTo(rightVer.Value);
 
 
 
