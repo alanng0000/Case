@@ -5,7 +5,7 @@ namespace Class.Check;
 
 
 
-class ModuleNameRead : Object
+class ModuleEntryRead : Object
 {
     private TextInfra TextInfra { get; set; }
 
