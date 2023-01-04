@@ -338,11 +338,9 @@ public class Compile : InfraCompile
 
 
 
-        this.Refer = new Refer();
 
-
-
-        this.Refer.Init();
+        this.InitRefer();
+        
 
 
 
@@ -380,7 +378,6 @@ public class Compile : InfraCompile
 
         
 
-        this.InitRefer();
 
 
 
@@ -564,6 +561,20 @@ public class Compile : InfraCompile
 
     private bool InitRefer()
     {
+        this.Refer = new Refer();
+
+
+
+        this.Refer.Init();
+
+
+
+
+        
+
+
+
+
         this.Refer.Module = new ModuleMap();
 
 
