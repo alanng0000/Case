@@ -100,11 +100,11 @@ public class Compile : InfraCompile
 
 
 
-    private ModuleEntryIntentMap IntentMap { get; set; }
+    private ModuleEntryIntentMap EntryIntentMap { get; set; }
 
 
 
-    private ModuleEntryNameMap NameMap { get; set; }
+    private ModuleEntryNameMap EntryNameMap { get; set; }
 
 
 
@@ -159,10 +159,11 @@ public class Compile : InfraCompile
         this.ModuleHeadLoad = new ModuleHeadLoad();
 
 
+        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
+
+
         this.ModuleHeadLoad.Init();
 
-
-        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
         
 
 
@@ -176,19 +177,7 @@ public class Compile : InfraCompile
 
 
 
-
-
-
-
-        ModuleEntryRead entryRead;
-
-        entryRead = new ModuleEntryRead();
-
-        entryRead.Init();
-
-
-
-
+        
 
 
 
@@ -227,7 +216,50 @@ public class Compile : InfraCompile
 
     private bool InitModuleEntry()
     {
+        this.EntryIntentMap = new ModuleEntryIntentMap();
 
+
+        this.EntryIntentMap.Init();
+
+
+
+
+
+        this.EntryNameMap = new ModuleEntryNameMap();
+
+
+        this.EntryNameMap.Init();
+
+
+
+
+
+        ModuleEntryLoad moduleEntryLoad;
+
+        moduleEntryLoad = new ModuleEntryLoad();
+
+        moduleEntryLoad.RootPath = this.ModuleRootPath;
+
+        moduleEntryLoad.Init();
+
+
+
+
+        moduleEntryLoad.IntentMap = this.EntryIntentMap;
+
+
+        moduleEntryLoad.NameMap = this.EntryNameMap;
+
+
+
+
+        moduleEntryLoad.Execute();
+        
+
+
+
+
+        return true;
     }
     
 
