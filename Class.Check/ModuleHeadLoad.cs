@@ -53,11 +53,7 @@ public class ModuleHeadLoad : Object
 
 
 
-    public ModuleIntent Intent { get; set; }
-
-
-
-    public ModuleVer Ver { get; set; }
+    public ModuleRefer Refer { get; set; }
 
 
 
@@ -180,15 +176,27 @@ public class ModuleHeadLoad : Object
 
     private string ModulePath()
     {
+        ulong o;
+
+        o = this.Refer.Intent.Value;
+
+
+
+
         string u;
 
-        u = this.Intent.Value.ToString("x15");
+        u = this.Convert.Int60BitListString(o);
+
+
+
+
+        o = this.Refer.Ver.Value;
 
 
 
         string v;
 
-        v = this.Ver.Value.ToString("x15");
+        v = this.Convert.Int60BitListString(o);
 
 
 
