@@ -981,9 +981,9 @@ public class Compile : InfraCompile
 
 
 
-    private bool LoadModuleHead(ModuleIntent intent, ModuleVer ver)
+    private bool LoadModuleHead(ModuleRefer refer)
     {
-        if (!this.Null(this.ModuleHead.Get(intent)))
+        if (!this.Null(this.ModuleHead.Get(refer)))
         {
             return true;
         }
@@ -991,11 +991,8 @@ public class Compile : InfraCompile
 
 
 
-        this.ModuleHeadLoad.Intent = intent;
+        this.ModuleHeadLoad.Refer = refer;
 
-
-        this.ModuleHeadLoad.Ver = ver;
-        
 
 
 
@@ -1020,7 +1017,7 @@ public class Compile : InfraCompile
 
         pair.Init();
 
-        pair.Key = intent;
+        pair.Key = refer;
 
         pair.Value = data;
 
