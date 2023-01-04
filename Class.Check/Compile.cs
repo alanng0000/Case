@@ -979,14 +979,6 @@ public class Compile : InfraCompile
 
     private bool LoadModuleHead(ModuleRefer refer)
     {
-        if (!this.Null(this.ModuleHead.Get(refer)))
-        {
-            return true;
-        }
-        
-
-
-
         this.ModuleHeadLoad.Refer = refer;
 
 
