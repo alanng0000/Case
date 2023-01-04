@@ -6,7 +6,7 @@ namespace Class.Check;
 
 
 
-public class Read : Object
+public class ModuleHeadRead : Object
 {
     public Data Data { get; set; }
 
