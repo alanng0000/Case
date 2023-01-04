@@ -505,6 +505,8 @@ public class Compile : InfraCompile
         s = this.Port.Name.Value;
 
 
+
+
         ModuleName a;
 
         a = new ModuleName();
@@ -512,6 +514,7 @@ public class Compile : InfraCompile
         a.Init();
 
         a.Value = s;
+
 
 
 
@@ -562,6 +565,22 @@ public class Compile : InfraCompile
             ModuleIntent e;
 
             e = u.Intent;
+
+
+
+
+
+            Module m;
+            
+            
+            m = (Module)this.Refer.Module.Get(e);
+
+
+
+            if (this.Null(m))
+            {
+                
+            }
         }
 
 
