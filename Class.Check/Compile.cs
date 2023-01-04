@@ -117,6 +117,11 @@ public class Compile : InfraCompile
 
 
 
+    private bool PortError { get; set; }
+
+
+
+
 
     public override bool Init()
     {
@@ -340,7 +345,7 @@ public class Compile : InfraCompile
 
 
         this.InitRefer();
-        
+
 
 
 
@@ -377,6 +382,33 @@ public class Compile : InfraCompile
 
 
         
+        string s;
+
+        s = this.Port.Name.Value;
+
+
+        ModuleName name;
+
+        name = new ModuleName();
+
+        name.Init();
+
+        name.Value = s;
+
+
+
+        ModuleEntry entry;
+
+        entry = (ModuleEntry)this.EntryNameMap.Get(name);
+
+
+        if (this.Null(entry))
+        {
+            this.PortError = true;
+
+
+            return true;
+        }
 
 
 
@@ -476,6 +508,9 @@ public class Compile : InfraCompile
 
         return true;
     }
+
+
+
 
 
 
@@ -1212,6 +1247,14 @@ public class Compile : InfraCompile
 
     private bool ExecuteClass()
     {
+        if (this.PortError)
+        {
+            return true;
+        }
+        
+
+
+
         Traverse traverse;
 
 
@@ -2001,6 +2044,14 @@ public class Compile : InfraCompile
 
     protected virtual bool ExecuteMember()
     {
+        if (this.PortError)
+        {
+            return true;
+        }
+
+
+
+
         Traverse traverse;
 
 
@@ -2057,6 +2108,14 @@ public class Compile : InfraCompile
 
     private bool ExecuteState()
     {
+        if (this.PortError)
+        {
+            return true;
+        }
+
+
+
+
         Traverse traverse;
 
 
