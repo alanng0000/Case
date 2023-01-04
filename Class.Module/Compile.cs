@@ -38,7 +38,7 @@ public class Compile : InfraCompile
 
 
 
-    public SystemModule SystemModule { get; set; }
+    public ConstantClass ConstantClass { get; set; }
 
 
 
@@ -228,29 +228,6 @@ public class Compile : InfraCompile
 
     private bool SetSystemClass()
     {
-        CheckModule m;
-
-
-
-        m = (CheckModule)this.CheckResult.Refer.Module.Get("System");
-
-
-
-
-        this.SystemModule = new SystemModule();
-
-
-
-        this.SystemModule.Module = m;
-
-
-
-        this.SystemModule.Init();
-
-
-
-
-
         return true;
     }
 

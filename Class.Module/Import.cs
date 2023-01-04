@@ -69,5 +69,5 @@ global using CheckModule = Class.Check.Module;
 global using CheckModuleMap = Class.Check.ModuleMap;
 global using ClassCompare = Class.Check.ClassCompare;
 global using Traverse = Class.Check.Traverse;
-global using SystemModule = Class.Check.SystemModule;
+global using ConstantClass = Class.Check.ConstantClass;
 global using NullableInt64 = System.Nullable<ulong>;

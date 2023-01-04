@@ -185,7 +185,7 @@ class SizeCompile
 
 
 
-        name = this.Module.Port.Name.Value;
+        name = this.Module.Name.Value;
 
 
 
