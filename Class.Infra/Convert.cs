@@ -106,4 +106,13 @@ public class Convert : Object
     {
         return (int)a;
     }
+
+
+
+
+
+    public string Int60BitListString(ulong a)
+    {
+        return a.ToString("x15");
+    }
 }
