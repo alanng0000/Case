@@ -537,11 +537,13 @@ public class Compile : InfraCompile
         {
             PortImport o;
 
+
             o = (PortImport)iter.Value;
 
 
 
             a.Value = o.Module.Value;
+
 
 
 
@@ -558,9 +560,30 @@ public class Compile : InfraCompile
 
 
 
-            ModuleIntent e;
 
-            e = u.Intent;
+            ModuleVer ver;
+
+
+            ver = new ModuleVer();
+
+
+            ver.Init();
+
+
+            ver.Value = o.Ver.Value;
+
+
+
+
+            ModuleRefer refer;
+
+            refer = new ModuleRefer();
+
+            refer.Init();
+
+            refer.Intent = u.Intent;
+
+            refer.Ver = ver;
 
 
 
@@ -569,13 +592,24 @@ public class Compile : InfraCompile
             Module m;
             
             
-            m = (Module)this.Refer.Module.Get(e);
+            m = (Module)this.Refer.Module.Get(refer);
 
 
 
             if (this.Null(m))
             {
+                Data head;
                 
+                head = (Data)this.ModuleHead.Get(refer);
+
+
+                if (this.Null(head))
+                {
+                    this.LoadModuleHead(refer);
+
+
+                    head = (Data)this.ModuleHead.Get(refer);
+                }
             }
         }
 
@@ -585,11 +619,10 @@ public class Compile : InfraCompile
 
 
 
-
-
-
         return true;
     }
+
+
 
 
 
