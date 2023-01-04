@@ -381,35 +381,19 @@ public class Compile : InfraCompile
 
 
 
-        
-        string s;
+        bool b;
 
-        s = this.Port.Name.Value;
-
-
-        ModuleName name;
-
-        name = new ModuleName();
-
-        name.Init();
-
-        name.Value = s;
+        b = this.PortModule();
 
 
 
-        ModuleEntry entry;
-
-        entry = (ModuleEntry)this.EntryNameMap.Get(name);
-
-
-        if (this.Null(entry))
+        if (!b)
         {
             this.PortError = true;
 
 
             return true;
         }
-
 
 
 
@@ -509,6 +493,88 @@ public class Compile : InfraCompile
         return true;
     }
 
+
+
+
+
+
+    private bool PortModule()
+    {
+        string s;
+
+        s = this.Port.Name.Value;
+
+
+        ModuleName a;
+
+        a = new ModuleName();
+
+        a.Init();
+
+        a.Value = s;
+
+
+
+        ModuleEntry entry;
+
+        entry = (ModuleEntry)this.EntryNameMap.Get(a);
+
+
+
+        if (this.Null(entry))
+        {
+            return false;
+        }
+
+
+
+
+        ListIter iter;
+
+        iter = this.Port.Import.Iter();
+
+
+        while (iter.Next())
+        {
+            PortImport o;
+
+            o = (PortImport)iter.Value;
+
+
+
+            a.Value = o.Module.Value;
+
+
+
+            ModuleEntry u;
+
+            u = (ModuleEntry)this.EntryNameMap.Get(a);
+
+
+
+            if (this.Null(u))
+            {
+                return false;
+            }
+
+
+
+            ModuleIntent e;
+
+            e = u.Intent;
+        }
+
+
+
+
+
+
+
+
+
+
+        return true;
+    }
 
 
 
