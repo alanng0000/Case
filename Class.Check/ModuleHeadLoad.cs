@@ -3,21 +3,20 @@ namespace Class.Check;
 
 
 
-public class Load : Object
+public class ModuleHeadLoad : Object
 {
     private Convert Convert { get; set; }
 
+
+
+    public string RootPath { get; set; }
+    
 
 
 
     public override bool Init()
     {
         base.Init();
-
-
-
-        
-        this.InitRootPath();
 
 
 
@@ -36,43 +35,6 @@ public class Load : Object
 
 
 
-
-    private bool InitRootPath()
-    {
-        string s;
-
-
-        s = File.ReadAllText(this.PathFileName);
-
-
-
-        this.RootPath = s;
-
-
-
-        return true;
-    }
-
-
-
-
-
-
-    private string RootPath { get; set; }
-
-
-
-
-    private string PathFileName
-    {
-        get
-        {
-            return "Path.txt";
-        }
-        set
-        {
-        }
-    }
 
 
 

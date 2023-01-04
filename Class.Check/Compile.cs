@@ -78,10 +78,6 @@ public class Compile : InfraCompile
 
 
 
-    private Load Load { get; set; }
-
-
-
 
 
     private bool IsSystem { get; set; }
@@ -91,7 +87,31 @@ public class Compile : InfraCompile
 
 
 
+    private ModuleHeadLoad ModuleHeadLoad { get; set; }
+
+
+
+
+
     private ModuleDataMap ModuleHead { get; set; }
+
+
+
+
+
+
+    private ModuleEntryIntentMap IntentMap { get; set; }
+
+
+
+    private ModuleEntryNameMap NameMap { get; set; }
+
+
+
+
+
+
+    private string ModuleRootPath { get; set; }
 
 
 
@@ -116,10 +136,34 @@ public class Compile : InfraCompile
 
 
 
-        this.Load = new Load();
 
 
-        this.Load.Init();
+
+        this.ConstantClass = new ConstantClass();
+
+
+
+        this.ConstantClass.Init();
+
+
+
+
+
+        this.InitModuleRootPath();
+
+
+
+
+
+
+        this.ModuleHeadLoad = new ModuleHeadLoad();
+
+
+        this.ModuleHeadLoad.Init();
+
+
+        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
+        
 
 
 
@@ -134,11 +178,17 @@ public class Compile : InfraCompile
 
 
 
-        this.ConstantClass = new ConstantClass();
+
+
+        ModuleEntryRead entryRead;
+
+        entryRead = new ModuleEntryRead();
+
+        entryRead.Init();
 
 
 
-        this.ConstantClass.Init();
+
 
 
 
@@ -146,6 +196,55 @@ public class Compile : InfraCompile
 
 
         return true;
+    }
+
+
+
+
+
+
+
+
+    private bool InitModuleRootPath()
+    {
+        string s;
+
+
+        s = File.ReadAllText(this.PathFileName);
+
+
+
+        this.ModuleRootPath = s;
+
+
+
+        return true;
+    }
+
+
+
+
+
+    private bool InitModuleEntry()
+    {
+
+    }
+    
+
+
+
+
+
+
+    private string PathFileName
+    {
+        get
+        {
+            return "Path.txt";
+        }
+        set
+        {
+        }
     }
 
 
