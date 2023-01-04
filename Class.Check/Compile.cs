@@ -378,6 +378,21 @@ public class Compile : InfraCompile
 
 
 
+        
+
+        this.InitRefer();
+
+
+
+
+        
+
+        this.ClassNewId = 0;
+
+
+
+
+
 
         Traverse traverse;
 
@@ -406,20 +421,18 @@ public class Compile : InfraCompile
         intent.Init();
 
 
-        intent.Name = new ModuleName();
-
-        intent.Name.Init();
 
 
         
 
 
+        ModuleVer ver;
 
-        intent.Ver = new ModuleVer();
+        ver = new ModuleVer();
 
-        intent.Ver.Init();
+        ver.Init();
 
-        intent.Ver.Value = this.Port.Ver.Value;
+        ver.Value = this.Port.Ver.Value;
 
 
 
@@ -437,6 +450,10 @@ public class Compile : InfraCompile
 
 
 
+        this.Module.Ver = ver;
+
+
+
         this.Module.Class = new ClassMap();
 
 
@@ -449,7 +466,12 @@ public class Compile : InfraCompile
 
 
 
-        this.InitRefer();
+
+
+
+        this.ReferImport();
+
+
 
 
 
@@ -565,115 +587,6 @@ public class Compile : InfraCompile
 
 
 
-
-
-        this.ClassNewId = 0;
-
-
-
-
-
-
-        this.InitReferImport();
-
-
-
-
-
-
-
-
-        Pair t;
-
-
-        t = new Pair();
-
-
-        t.Init();
-
-
-        t.Key = this.Module.Intent;
-
-
-        t.Value = this.Module;
-
-
-
-        this.Refer.Module.Add(t);
-
-
-
-
-
-        this.IsSystem = (this.Module.Intent.Name.Value == this.SystemModuleIntentName);
-
-
-
-
-
-
-        if (this.IsSystem)
-        {
-            Class varClass;
-
-
-
-            varClass = this.CreateObjectClass();
-
-
-
-            varClass.Module = this.Module;
-
-
-
-            varClass.Index = this.Module.Class.Count;
-
-
-
-
-
-
-            this.AddSystemClass(varClass);
-
-
-
-
-
-
-            this.ObjectClass = varClass;
-
-
-
-
-
-
-
-            this.SetConstantClass(this.ConstantClass.Bool);
-
-
-
-            this.AddSystemClass(this.ConstantClass.Bool);
-
-
-
-
-
-            this.SetConstantClass(this.ConstantClass.Int);
-
-
-
-            this.AddSystemClass(this.ConstantClass.Int);
-
-
-
-
-
-            this.SetConstantClass(this.ConstantClass.String);
-
-
-            
-            this.AddSystemClass(this.ConstantClass.String);
-        }
 
 
 
@@ -947,11 +860,11 @@ public class Compile : InfraCompile
 
 
 
-        this.Load.Intent = intent;
+        this.ModuleHeadLoad.Intent = intent;
 
 
 
-        this.Load.Execute();
+        this.ModuleHeadLoad.Execute();
 
 
 
@@ -960,7 +873,7 @@ public class Compile : InfraCompile
         Data data;
 
 
-        data = this.Load.Result;
+        data = this.ModuleHeadLoad.Result;
 
 
 
@@ -1034,7 +947,7 @@ public class Compile : InfraCompile
 
 
 
-    private bool InitReferImport()
+    private bool ReferImport()
     {
         if (!this.Null(this.SystemModules))
         {
@@ -1110,6 +1023,112 @@ public class Compile : InfraCompile
                 }
             }
         }
+
+
+
+
+
+
+
+
+
+
+        Pair t;
+
+
+        t = new Pair();
+
+
+        t.Init();
+
+
+        t.Key = this.Module.Intent;
+
+
+        t.Value = this.Module;
+
+
+
+        this.Refer.Module.Add(t);
+
+
+
+
+
+        this.IsSystem = (this.Module.Intent.Value == this.SystemModuleIntent);
+
+
+
+
+
+
+        if (this.IsSystem)
+        {
+            Class varClass;
+
+
+
+            varClass = this.CreateObjectClass();
+
+
+
+            varClass.Module = this.Module;
+
+
+
+            varClass.Index = this.Module.Class.Count;
+
+
+
+
+
+
+            this.AddSystemClass(varClass);
+
+
+
+
+
+
+            this.ObjectClass = varClass;
+
+
+
+
+
+
+
+            this.SetConstantClass(this.ConstantClass.Bool);
+
+
+
+            this.AddSystemClass(this.ConstantClass.Bool);
+
+
+
+
+
+            this.SetConstantClass(this.ConstantClass.Int);
+
+
+
+            this.AddSystemClass(this.ConstantClass.Int);
+
+
+
+
+
+            this.SetConstantClass(this.ConstantClass.String);
+
+
+            
+            this.AddSystemClass(this.ConstantClass.String);
+        }
+
+
+
+
+
 
 
 
@@ -1932,7 +1951,7 @@ public class Compile : InfraCompile
 
 
 
-    private ulong SystemModuleIntentName
+    private ulong SystemModuleIntent
     {
         get
         {
