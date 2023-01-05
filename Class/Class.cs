@@ -554,9 +554,9 @@ public class Class : Object
 
 
 
-            ModuleEntry u;
+            CheckModuleEntry u;
 
-            u = (ModuleEntry)this.EntryNameMap.Get(a);
+            u = (CheckModuleEntry)this.EntryNameMap.Get(a);
 
 
 
@@ -568,10 +568,10 @@ public class Class : Object
 
 
 
-            ModuleVer ver;
+            CheckModuleVer ver;
 
 
-            ver = new ModuleVer();
+            ver = new CheckModuleVer();
 
 
             ver.Init();
@@ -582,46 +582,16 @@ public class Class : Object
 
 
 
-            ModuleRefer refer;
+            CheckModuleRefer refer;
 
-            refer = new ModuleRefer();
+            refer = new CheckModuleRefer();
 
             refer.Init();
 
             refer.Intent = u.Intent;
 
             refer.Ver = ver;
-
-
-
-
-
-            Module m;
-            
-            
-            m = (Module)this.Refer.Module.Get(refer);
-
-
-
-            if (this.Null(m))
-            {
-                Data head;
-                
-                head = (Data)this.ModuleHead.Get(refer);
-
-
-                if (this.Null(head))
-                {
-                    this.LoadModuleHead(refer);
-
-
-                    head = (Data)this.ModuleHead.Get(refer);
-                }
-            }
         }
-
-
-
 
 
 
