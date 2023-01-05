@@ -150,27 +150,8 @@ public class Class : Object
 
 
 
+        this.InitModuleHead();
 
-
-
-        this.ModuleHeadLoad = new ModuleHeadLoad();
-
-
-        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
-
-
-        this.ModuleHeadLoad.Init();
-
-        
-
-
-
-
-
-        this.ModuleHead = new ModuleDataMap();
-
-
-        this.ModuleHead.Init();
 
 
 
@@ -248,6 +229,40 @@ public class Class : Object
         {
         }
     }
+
+
+
+
+
+
+
+    private bool InitModuleHead()
+    {
+        this.ModuleHeadLoad = new ModuleHeadLoad();
+
+
+        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
+
+
+        this.ModuleHeadLoad.Init();
+
+        
+
+
+
+
+
+        this.ModuleHead = new ModuleDataMap();
+
+
+        this.ModuleHead.Init();
+
+
+
+
+        return true;
+    }
+
 
 
 
