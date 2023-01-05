@@ -48,6 +48,10 @@ public class TaskKindList : Object
 
 
 
+    public TaskKind Port { get; private set; }
+
+
+
 
 
 
@@ -70,6 +74,10 @@ public class TaskKindList : Object
 
 
         this.Token = this.CreateTaskKind();
+
+
+
+        this.Port = this.CreateTaskKind();
 
 
 
