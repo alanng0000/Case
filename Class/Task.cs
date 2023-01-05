@@ -33,5 +33,11 @@ public class Task : Object
 
 
 
+    public PortPort Port { get; set; }
+
+
+
+
+
     public TextWriter Out { get; set; }
 }
