@@ -27,5 +27,5 @@ public class Refer : Object
 
 
 
-    public Entry Entry { get; set; }
+    public ModuleEntry Entry { get; set; }
 }

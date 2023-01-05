@@ -125,7 +125,7 @@ class ModuleHeadRead : Object
 
 
 
-        CheckEntry entry;
+        CheckModuleEntry entry;
 
         entry = this.ExecuteEntry();
 
@@ -525,7 +525,7 @@ class ModuleHeadRead : Object
 
 
 
-    private CheckEntry ExecuteEntry()
+    private CheckModuleEntry ExecuteEntry()
     {
         CheckClassName varClass;
 
@@ -534,9 +534,9 @@ class ModuleHeadRead : Object
 
 
 
-        CheckEntry ret;
+        CheckModuleEntry ret;
 
-        ret = new CheckEntry();
+        ret = new CheckModuleEntry();
 
         ret.Init();
 
