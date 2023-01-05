@@ -83,6 +83,18 @@ public class Class : Object
 
 
 
+    private CheckModuleEntryIntentMap EntryIntentMap { get; set; }
+
+
+
+    private CheckModuleEntryNameMap EntryNameMap { get; set; }
+
+
+
+
+
+
+
 
     public override bool Init()
     {
@@ -123,6 +135,22 @@ public class Class : Object
 
 
 
+        
+
+        this.InitModuleRootPath();
+
+
+
+
+        
+
+        this.InitModuleEntry();
+
+
+
+
+
+
         this.InitSystem();
 
 
@@ -133,6 +161,105 @@ public class Class : Object
         return true;
     }
 
+
+
+
+
+
+
+
+    private bool InitModuleRootPath()
+    {
+        string s;
+
+
+        s = File.ReadAllText(this.PathFileName);
+
+
+
+        this.ModuleRootPath = s;
+
+
+
+        return true;
+    }
+
+
+
+
+
+    private string ModuleRootPath { get; set; }
+
+
+
+
+
+
+    private string PathFileName
+    {
+        get
+        {
+            return "Path.txt";
+        }
+        set
+        {
+        }
+    }
+
+
+
+
+
+
+
+
+    private bool InitModuleEntry()
+    {
+        this.EntryIntentMap = new CheckModuleEntryIntentMap();
+
+
+        this.EntryIntentMap.Init();
+
+
+
+
+
+        this.EntryNameMap = new CheckModuleEntryNameMap();
+
+
+        this.EntryNameMap.Init();
+
+
+
+
+
+        ModuleEntryLoad moduleEntryLoad;
+
+        moduleEntryLoad = new ModuleEntryLoad();
+
+        moduleEntryLoad.RootPath = this.ModuleRootPath;
+
+        moduleEntryLoad.Init();
+
+
+
+
+        moduleEntryLoad.IntentMap = this.EntryIntentMap;
+
+
+        moduleEntryLoad.NameMap = this.EntryNameMap;
+
+
+
+
+        moduleEntryLoad.Execute();
+        
+
+
+
+
+        return true;
+    }
 
 
 
@@ -153,6 +280,33 @@ public class Class : Object
 
 
         k = this.TaskKindList;
+
+
+
+        bool taskPort;
+
+
+        taskPort = (t == k.Port);
+
+
+
+
+        if (taskPort)
+        {
+            bool b;
+
+            b = this.ExecutePort();
+
+
+            if (!b)
+            {
+                return false;
+            }
+
+
+            return true;
+        }
+
 
 
 
@@ -339,6 +493,147 @@ public class Class : Object
 
         return true;
     }
+
+
+
+
+
+
+    
+
+    private bool ExecutePort()
+    {
+        string s;
+
+        s = this.Port.Name.Value;
+
+
+
+
+        CheckModuleName a;
+
+        a = new CheckModuleName();
+
+        a.Init();
+
+        a.Value = s;
+
+
+
+
+        CheckModuleEntry entry;
+
+        entry = (CheckModuleEntry)this.EntryNameMap.Get(a);
+
+
+
+        if (this.Null(entry))
+        {
+            return false;
+        }
+
+
+
+
+        ListIter iter;
+
+        iter = this.Port.Import.Iter();
+
+
+        while (iter.Next())
+        {
+            PortImport o;
+
+
+            o = (PortImport)iter.Value;
+
+
+
+            a.Value = o.Module.Value;
+
+
+
+
+            ModuleEntry u;
+
+            u = (ModuleEntry)this.EntryNameMap.Get(a);
+
+
+
+            if (this.Null(u))
+            {
+                return false;
+            }
+
+
+
+
+            ModuleVer ver;
+
+
+            ver = new ModuleVer();
+
+
+            ver.Init();
+
+
+            ver.Value = o.Ver.Value;
+
+
+
+
+            ModuleRefer refer;
+
+            refer = new ModuleRefer();
+
+            refer.Init();
+
+            refer.Intent = u.Intent;
+
+            refer.Ver = ver;
+
+
+
+
+
+            Module m;
+            
+            
+            m = (Module)this.Refer.Module.Get(refer);
+
+
+
+            if (this.Null(m))
+            {
+                Data head;
+                
+                head = (Data)this.ModuleHead.Get(refer);
+
+
+                if (this.Null(head))
+                {
+                    this.LoadModuleHead(refer);
+
+
+                    head = (Data)this.ModuleHead.Get(refer);
+                }
+            }
+        }
+
+
+
+
+
+
+
+        return true;
+    }
+
+
+
+
+
+
 
 
 

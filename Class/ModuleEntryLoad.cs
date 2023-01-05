@@ -1,4 +1,4 @@
-namespace Class.Check;
+namespace Class;
 
 
 
@@ -41,11 +41,11 @@ class ModuleEntryLoad : Object
 
 
 
-    public ModuleEntryIntentMap IntentMap { get; set; }
+    public CheckModuleEntryIntentMap IntentMap { get; set; }
 
 
 
-    public ModuleEntryNameMap NameMap { get; set; }
+    public CheckModuleEntryNameMap NameMap { get; set; }
 
 
 
@@ -165,9 +165,9 @@ class ModuleEntryLoad : Object
 
 
 
-        ModuleIntent intent;
+        CheckModuleIntent intent;
 
-        intent = new ModuleIntent();
+        intent = new CheckModuleIntent();
 
         intent.Init();
 
@@ -176,9 +176,9 @@ class ModuleEntryLoad : Object
 
 
 
-        ModuleName name;
+        CheckModuleName name;
 
-        name = new ModuleName();
+        name = new CheckModuleName();
 
         name.Init();
 
@@ -188,9 +188,9 @@ class ModuleEntryLoad : Object
 
 
 
-        ModuleEntry entry;
+        CheckModuleEntry entry;
 
-        entry = new ModuleEntry();
+        entry = new CheckModuleEntry();
 
         entry.Init();
 

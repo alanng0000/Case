@@ -12,9 +12,4 @@
         <ProjectReference Include="../Class.Node/Class.Node.csproj" />
     </ItemGroup>
 
-
-    <ItemGroup>
-        <Content Include="Path.txt" CopyToOutputDirectory="PreserveNewest" />
-    </ItemGroup>
-
 </Project>
