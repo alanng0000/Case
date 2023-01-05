@@ -12,12 +12,6 @@ public class Port : Object
 
 
 
-    public ModuleVer Ver { get; set; }
-
-
-
-
-
     public ImportList Import { get; set; }
 
 

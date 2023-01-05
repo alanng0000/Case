@@ -126,23 +126,6 @@ public class Read : Object
 
 
 
-        ModuleVer ver;
-
-        ver = this.ModuleVer();
-
-
-        if (this.Null(ver))
-        {
-            return null;
-        }
-
-
-
-
-        this.NextRow();
-
-
-
 
 
 
@@ -226,9 +209,6 @@ public class Read : Object
 
 
         ret.Name = name;
-
-
-        ret.Ver = ver;
 
 
         ret.Import = importList;
