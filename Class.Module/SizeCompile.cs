@@ -417,7 +417,7 @@ class SizeCompile
 
 
 
-            name = varClass.Name;
+            name = varClass.Name.Value;
 
 
 

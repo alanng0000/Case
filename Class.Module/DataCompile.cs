@@ -603,7 +603,7 @@ class DataCompile
 
 
 
-            name = varClass.Name;
+            name = varClass.Name.Value;
 
 
 
