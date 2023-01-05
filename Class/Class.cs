@@ -83,11 +83,11 @@ public class Class : Object
 
 
 
-    private CheckModuleEntryIntentMap EntryIntentMap { get; set; }
+    private ModuleEntryIntentMap EntryIntentMap { get; set; }
 
 
 
-    private CheckModuleEntryNameMap EntryNameMap { get; set; }
+    private ModuleEntryNameMap EntryNameMap { get; set; }
 
 
 
@@ -258,7 +258,7 @@ public class Class : Object
 
     private bool InitModuleEntry()
     {
-        this.EntryIntentMap = new CheckModuleEntryIntentMap();
+        this.EntryIntentMap = new ModuleEntryIntentMap();
 
 
         this.EntryIntentMap.Init();
@@ -267,7 +267,7 @@ public class Class : Object
 
 
 
-        this.EntryNameMap = new CheckModuleEntryNameMap();
+        this.EntryNameMap = new ModuleEntryNameMap();
 
 
         this.EntryNameMap.Init();
@@ -553,9 +553,9 @@ public class Class : Object
 
 
 
-        CheckModuleName a;
+        ModuleName a;
 
-        a = new CheckModuleName();
+        a = new ModuleName();
 
         a.Init();
 
@@ -564,9 +564,9 @@ public class Class : Object
 
 
 
-        CheckModuleEntry entry;
+        ModuleEntry entry;
 
-        entry = (CheckModuleEntry)this.EntryNameMap.Get(a);
+        entry = (ModuleEntry)this.EntryNameMap.Get(a);
 
 
 
@@ -609,9 +609,9 @@ public class Class : Object
 
     private bool ExecutePortImport(PortImport o)
     {
-        CheckModuleName a;
+        ModuleName a;
 
-        a = new CheckModuleName();
+        a = new ModuleName();
 
         a.Init();
 
@@ -620,9 +620,9 @@ public class Class : Object
 
 
 
-        CheckModuleEntry u;
+        ModuleEntry u;
 
-        u = (CheckModuleEntry)this.EntryNameMap.Get(a);
+        u = (ModuleEntry)this.EntryNameMap.Get(a);
 
 
 
@@ -634,10 +634,10 @@ public class Class : Object
 
 
 
-        CheckModuleVer ver;
+        ModuleVer ver;
 
 
-        ver = new CheckModuleVer();
+        ver = new ModuleVer();
 
 
         ver.Init();
@@ -648,9 +648,9 @@ public class Class : Object
 
 
 
-        CheckModuleRefer refer;
+        ModuleRefer refer;
 
-        refer = new CheckModuleRefer();
+        refer = new ModuleRefer();
 
         refer.Init();
 
@@ -672,7 +672,7 @@ public class Class : Object
 
 
 
-    private bool LoadModuleHead(CheckModuleRefer refer)
+    private bool LoadModuleHead(ModuleRefer refer)
     {
         this.ModuleHeadLoad.Refer = refer;
 

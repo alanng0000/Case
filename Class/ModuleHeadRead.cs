@@ -71,7 +71,7 @@ class ModuleHeadRead : Object
 
     private CheckModule ExecuteModule()
     {
-        CheckModuleName name;
+        ModuleName name;
 
         name = this.ExecuteModuleName();
 
@@ -84,7 +84,7 @@ class ModuleHeadRead : Object
 
 
 
-        CheckModuleVer ver;
+        ModuleVer ver;
 
         ver = this.ExecuteModuleVer();
 
@@ -159,7 +159,7 @@ class ModuleHeadRead : Object
 
 
 
-    private CheckModuleName ExecuteModuleName()
+    private ModuleName ExecuteModuleName()
     {
         string value;
 
@@ -176,9 +176,9 @@ class ModuleHeadRead : Object
 
 
 
-        CheckModuleName ret;
+        ModuleName ret;
 
-        ret = new CheckModuleName();
+        ret = new ModuleName();
 
         ret.Init();
 
@@ -224,7 +224,7 @@ class ModuleHeadRead : Object
 
 
 
-    private CheckModuleVer ExecuteModuleVer()
+    private ModuleVer ExecuteModuleVer()
     {
         ulong? u;
 
@@ -245,9 +245,9 @@ class ModuleHeadRead : Object
 
 
 
-        CheckModuleVer ret;
+        ModuleVer ret;
 
-        ret = new CheckModuleVer();
+        ret = new ModuleVer();
 
         ret.Init();
 
@@ -341,7 +341,7 @@ class ModuleHeadRead : Object
 
     private CheckImport ExecuteImport()
     {
-        CheckModuleName module;
+        ModuleName module;
 
         module = this.ExecuteModuleName();
 
@@ -354,7 +354,7 @@ class ModuleHeadRead : Object
 
 
 
-        CheckModuleVer ver;
+        ModuleVer ver;
 
         ver = this.ExecuteModuleVer();
 

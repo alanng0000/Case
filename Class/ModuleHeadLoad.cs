@@ -53,7 +53,7 @@ class ModuleHeadLoad : Object
 
 
 
-    public CheckModuleRefer Refer { get; set; }
+    public ModuleRefer Refer { get; set; }
 
 
 

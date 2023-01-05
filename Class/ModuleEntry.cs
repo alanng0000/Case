@@ -1,4 +1,4 @@
-namespace Class.Check;
+namespace Class;
 
 
 

@@ -41,11 +41,11 @@ class ModuleEntryLoad : Object
 
 
 
-    public CheckModuleEntryIntentMap IntentMap { get; set; }
+    public ModuleEntryIntentMap IntentMap { get; set; }
 
 
 
-    public CheckModuleEntryNameMap NameMap { get; set; }
+    public ModuleEntryNameMap NameMap { get; set; }
 
 
 
@@ -165,9 +165,9 @@ class ModuleEntryLoad : Object
 
 
 
-        CheckModuleIntent intent;
+        ModuleIntent intent;
 
-        intent = new CheckModuleIntent();
+        intent = new ModuleIntent();
 
         intent.Init();
 
@@ -176,9 +176,9 @@ class ModuleEntryLoad : Object
 
 
 
-        CheckModuleName name;
+        ModuleName name;
 
-        name = new CheckModuleName();
+        name = new ModuleName();
 
         name.Init();
 
@@ -188,9 +188,9 @@ class ModuleEntryLoad : Object
 
 
 
-        CheckModuleEntry entry;
+        ModuleEntry entry;
 
-        entry = new CheckModuleEntry();
+        entry = new ModuleEntry();
 
         entry.Init();
 

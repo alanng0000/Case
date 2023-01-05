@@ -1,17 +1,17 @@
-namespace Class.Check;
+namespace Class;
 
 
 
 
 
-public class ModuleEntryNameMap : Map
+public class ModuleEntryIntentMap : Map
 {
     public override bool Init()
     {
-        ModuleNameCompare compare;
+        ModuleIntentCompare compare;
 
 
-        compare = new ModuleNameCompare();
+        compare = new ModuleIntentCompare();
 
 
         compare.Init();

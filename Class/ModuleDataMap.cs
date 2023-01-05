@@ -9,10 +9,10 @@ public class ModuleDataMap : Map
 {
     public override bool Init()
     {
-        CheckModuleReferCompare compare;
+        ModuleReferCompare compare;
 
 
-        compare = new CheckModuleReferCompare();
+        compare = new ModuleReferCompare();
 
 
         compare.Init();
