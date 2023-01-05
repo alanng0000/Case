@@ -87,22 +87,12 @@ public class Compile : InfraCompile
 
 
 
-    private ModuleHeadLoad ModuleHeadLoad { get; set; }
-
-
-
-
-
-    private ModuleDataMap ModuleHead { get; set; }
-
-
-
-
-
-
 
 
     private bool PortError { get; set; }
+
+
+
 
 
 
@@ -623,6 +613,17 @@ public class Compile : InfraCompile
 
     protected virtual Class CreateObjectClass()
     {
+        ClassName u;
+
+        u = new ClassName();
+
+        u.Init();
+
+        u.Value = "Object";
+
+
+
+
         Class varClass;
 
 
@@ -631,7 +632,7 @@ public class Compile : InfraCompile
 
 
 
-        varClass.Name = "Object";
+        varClass.Name = u;
 
 
 
@@ -756,47 +757,6 @@ public class Compile : InfraCompile
 
 
 
-
-    private bool LoadModuleHead(ModuleRefer refer)
-    {
-        this.ModuleHeadLoad.Refer = refer;
-
-
-
-
-        this.ModuleHeadLoad.Execute();
-
-
-
-
-
-        Data data;
-
-
-        data = this.ModuleHeadLoad.Result;
-
-
-
-
-
-        Pair pair;
-
-        pair = new Pair();
-
-        pair.Init();
-
-        pair.Key = refer;
-
-        pair.Value = data;
-
-
-
-        this.ModuleHead.Add(pair);
-
-
-
-        return true;
-    }
 
 
 
@@ -1451,7 +1411,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName nodeBase;
+        NodeClassName nodeBase;
 
 
 

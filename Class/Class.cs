@@ -232,7 +232,7 @@ public class Class : Object
 
 
 
-    
+
 
 
 
@@ -605,6 +605,8 @@ public class Class : Object
 
 
 
+
+
     private bool ExecutePortImport(PortImport o)
     {
         CheckModuleName a;
@@ -663,6 +665,53 @@ public class Class : Object
         return true;
     }
 
+
+
+
+
+
+
+
+    private bool LoadModuleHead(CheckModuleRefer refer)
+    {
+        this.ModuleHeadLoad.Refer = refer;
+
+
+
+
+        this.ModuleHeadLoad.Execute();
+
+
+
+
+
+        Data data;
+
+
+        data = this.ModuleHeadLoad.Result;
+
+
+
+
+
+        Pair pair;
+
+        pair = new Pair();
+
+        pair.Init();
+
+        pair.Key = refer;
+
+        pair.Value = data;
+
+
+
+        this.ModuleHead.Add(pair);
+
+
+
+        return true;
+    }
 
 
 
