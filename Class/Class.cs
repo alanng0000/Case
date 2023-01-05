@@ -408,26 +408,6 @@ public class Class : Object
 
             files.Add(file);
 
-
-
-
-
-            this.Port = null;
-
-
-
-            if (t == k.Check)
-            {
-                string moduleName;
-
-
-                moduleName = "Module";
-
-
-
-
-                this.Port = this.CreatePortNonModule(moduleName);
-            }
             
 
 
