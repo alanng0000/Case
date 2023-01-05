@@ -16,7 +16,7 @@ class ClassTraverse : Traverse
 
 
 
-        ClassName name;
+        NodeClassName name;
             
 
         name = nodeClass.Name;
@@ -57,7 +57,14 @@ class ClassTraverse : Traverse
 
 
         
+        ClassName h;
 
+        h = new ClassName();
+
+        h.Init();
+
+        h.Value = className;
+        
 
 
         
@@ -74,7 +81,7 @@ class ClassTraverse : Traverse
 
 
 
-        varClass.Name = className;
+        varClass.Name = h;
 
 
 
