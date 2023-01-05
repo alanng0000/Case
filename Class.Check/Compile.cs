@@ -301,17 +301,6 @@ public class Compile : InfraCompile
 
 
 
-        
-
-
-        ModuleVer ver;
-
-        ver = new ModuleVer();
-
-        ver.Init();
-
-        ver.Value = this.Port.Ver.Value;
-
 
 
 
