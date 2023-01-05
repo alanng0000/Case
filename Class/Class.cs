@@ -209,7 +209,7 @@ public class Class : Object
 
 
 
-    private ModuleDataMap ModuleHead { get; set; }
+    private ModuleDataMap ModuleHeadList { get; set; }
 
 
 
@@ -252,10 +252,10 @@ public class Class : Object
 
 
 
-        this.ModuleHead = new ModuleDataMap();
+        this.ModuleHeadList = new ModuleDataMap();
 
 
-        this.ModuleHead.Init();
+        this.ModuleHeadList.Init();
 
 
 
@@ -671,11 +671,46 @@ public class Class : Object
 
 
 
+        Data n;
+
+        n = this.GetModuleHead(refer);
+
+
+
+        if (this.Null(n))
+        {
+            this.LoadModuleHead(refer);
+
+
+            n = this.GetModuleHead(refer);
+        }
+
+
+
 
         return true;
     }
 
 
+
+
+
+    private Data GetModuleHead(ModuleRefer refer)
+    {
+        Data o;
+
+
+        o = (Data)this.ModuleHeadList.Get(refer);
+
+
+
+        Data ret;
+
+        ret = o;
+
+
+        return ret;
+    }
 
 
 
@@ -716,7 +751,7 @@ public class Class : Object
 
 
 
-        this.ModuleHead.Add(pair);
+        this.ModuleHeadList.Add(pair);
 
 
 
@@ -1532,9 +1567,6 @@ public class Class : Object
 
 
         o.Name = name;
-
-
-        o.Ver = ver;
 
 
         o.Import = import;
