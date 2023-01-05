@@ -151,6 +151,31 @@ public class Class : Object
 
 
 
+
+
+        this.ModuleHeadLoad = new ModuleHeadLoad();
+
+
+        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
+
+
+        this.ModuleHeadLoad.Init();
+
+        
+
+
+
+
+
+        this.ModuleHead = new ModuleDataMap();
+
+
+        this.ModuleHead.Init();
+
+
+
+
+
         this.InitSystem();
 
 
@@ -190,6 +215,24 @@ public class Class : Object
 
     private string ModuleRootPath { get; set; }
 
+
+
+
+
+
+
+
+    private ModuleHeadLoad ModuleHeadLoad { get; set; }
+
+
+
+
+
+    private ModuleDataMap ModuleHead { get; set; }
+
+
+
+    
 
 
 
@@ -549,48 +592,7 @@ public class Class : Object
 
 
 
-            a.Value = o.Module.Value;
 
-
-
-
-            CheckModuleEntry u;
-
-            u = (CheckModuleEntry)this.EntryNameMap.Get(a);
-
-
-
-            if (this.Null(u))
-            {
-                return false;
-            }
-
-
-
-
-            CheckModuleVer ver;
-
-
-            ver = new CheckModuleVer();
-
-
-            ver.Init();
-
-
-            ver.Value = o.Ver.Value;
-
-
-
-
-            CheckModuleRefer refer;
-
-            refer = new CheckModuleRefer();
-
-            refer.Init();
-
-            refer.Intent = u.Intent;
-
-            refer.Ver = ver;
         }
 
 
@@ -599,6 +601,67 @@ public class Class : Object
         return true;
     }
 
+
+
+
+
+    private bool ExecutePortImport(PortImport o)
+    {
+        CheckModuleName a;
+
+        a = new CheckModuleName();
+
+        a.Init();
+
+        a.Value = o.Module.Value;
+
+
+
+
+        CheckModuleEntry u;
+
+        u = (CheckModuleEntry)this.EntryNameMap.Get(a);
+
+
+
+        if (this.Null(u))
+        {
+            return false;
+        }
+
+
+
+
+        CheckModuleVer ver;
+
+
+        ver = new CheckModuleVer();
+
+
+        ver.Init();
+
+
+        ver.Value = o.Ver.Value;
+
+
+
+
+        CheckModuleRefer refer;
+
+        refer = new CheckModuleRefer();
+
+        refer.Init();
+
+        refer.Intent = u.Intent;
+
+        refer.Ver = ver;
+
+
+
+
+
+        return true;
+    }
 
 
 
