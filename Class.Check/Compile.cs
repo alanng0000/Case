@@ -142,25 +142,6 @@ public class Compile : InfraCompile
 
 
 
-        this.ModuleHeadLoad = new ModuleHeadLoad();
-
-
-        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
-
-
-        this.ModuleHeadLoad.Init();
-
-        
-
-
-
-
-
-        this.ModuleHead = new ModuleDataMap();
-
-
-        this.ModuleHead.Init();
-
 
 
         
