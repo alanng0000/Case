@@ -443,26 +443,6 @@ public class Class : Object
 
 
 
-
-
-            bool ba;
-            
-            ba = this.GetPort();
-            
-
-            if (!ba)
-            {
-                this.Error("Port Invalid");
-
-
-                return false;
-            }
-
-
-
-
-
-
             files = this.GetClassFiles(this.SourceFold);
         }
 
@@ -541,6 +521,39 @@ public class Class : Object
 
     private bool ExecutePort()
     {
+        bool b;
+
+        b = this.Null(this.Task.Source);
+
+
+        if (!b)
+        {
+            bool ba;
+            
+            ba = this.GetPort(this.Task.Source);
+            
+
+            if (!ba)
+            {
+                this.Error("Port Invalid");
+
+
+                return false;
+            }
+        }
+
+
+
+
+        if (b)
+        {
+            this.Port = this.Task.Port;
+        }
+
+        
+
+
+
         string s;
 
         s = this.Port.Name.Value;
@@ -719,7 +732,7 @@ public class Class : Object
     {
         get
         {
-            return "_Port";
+            return "_";
         }
     }
 
@@ -727,17 +740,8 @@ public class Class : Object
 
 
 
-    protected virtual bool GetPort()
+    protected virtual bool GetPort(string portFile)
     {
-        string portFile;
-
-
-
-        portFile = Path.Combine(this.SourceFold, this.PortFileName);
-
-
-
-
         if (!this.CheckPortFile(portFile))
         {   
             return false;
