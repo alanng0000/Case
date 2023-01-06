@@ -654,7 +654,7 @@ public class Class : Object
             }
         }
 
-        
+
 
 
 
@@ -803,8 +803,17 @@ public class Class : Object
 
 
 
+        bool b;
 
-        this.ModuleHeadLoad.Execute();
+
+        b = this.ModuleHeadLoad.Execute();
+
+
+
+        if (!b)
+        {
+            return false;
+        }
 
 
 
