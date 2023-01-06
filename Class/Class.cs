@@ -621,7 +621,7 @@ public class Class : Object
 
 
 
-        this.Refer = refer;
+        
 
 
 
@@ -643,8 +643,22 @@ public class Class : Object
 
 
 
-            this.ExecutePortImport(o);
+            bool ba;
+            
+            ba = this.ExecutePortImport(o);
+
+
+            if (!ba)
+            {
+                return false;
+            }
         }
+
+        
+
+
+
+        this.Refer = refer;
 
 
 
@@ -699,6 +713,15 @@ public class Class : Object
 
 
 
+        if (!this.CheckModuleVer(u.Intent, ver))
+        {
+            return false;
+        }
+
+
+
+
+
         ModuleRefer refer;
 
         refer = new ModuleRefer();
@@ -727,6 +750,22 @@ public class Class : Object
         }
 
 
+
+
+        return true;
+    }
+
+
+
+
+
+
+    private bool CheckModuleVer(ModuleIntent intent, ModuleVer ver)
+    {
+        if (!(ver.Value == 0))
+        {
+            return false;
+        }
 
 
         return true;
