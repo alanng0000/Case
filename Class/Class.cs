@@ -580,6 +580,7 @@ public class Class : Object
 
 
 
+
         bool b;
 
         b = this.Null(this.Task.Source);
@@ -724,10 +725,24 @@ public class Class : Object
 
 
 
+
         this.Module = m;
 
 
         
+
+
+
+        bool bb;
+
+        bb = this.SetPortImportMap();
+
+
+        if (!bb)
+        {
+            return false;
+        }
+
 
 
 
@@ -746,6 +761,7 @@ public class Class : Object
 
         return true;
     }
+
 
 
 
@@ -796,14 +812,17 @@ public class Class : Object
 
 
 
+            bool b;
 
 
+            b = this.SetPortImportMapImport(o);
 
 
-
-            
+            if (!b)
+            {
+                return false;
+            }
         }
-
 
 
 
@@ -814,7 +833,7 @@ public class Class : Object
 
 
 
-    private bool SetPortImportMap(PortImport o)
+    private bool SetPortImportMapImport(PortImport o)
     {
         ModuleRefer refer;
 
@@ -1026,74 +1045,75 @@ public class Class : Object
 
 
 
-
-    private bool ExecutePortImport(PortImport o)
+    private bool ExecutePortImportMap()
     {
+        MapIter iter;
+
+
+        iter = this.ImportMap.Iter();
 
 
 
-
-
-
-        CheckModule oo;
-
-
-
-        oo = this.GetModule(refer);
-
-
-
-        if (this.Null(oo))
+        while (iter.Next())
         {
-            Data n;
-
-            n = this.GetModuleHead(refer);
+            Pair pair;
 
 
+            pair = (Pair)iter.Value;
 
-            if (this.Null(n))
+
+
+            bool b;
+
+
+            b = this.ExecutePortImportMapPair(pair);
+
+
+
+            if (!b)
             {
-                bool b;
-                
-                b = this.LoadModuleHead(refer);
-
-
-                if (!b)
-                {
-                    return false;
-                }
-
-
-
-                n = this.GetModuleHead(refer);
+                return false;
             }
         }
 
 
 
+        return true;
+    }
 
 
 
 
+    private bool ExecutePortImportMapPair(Pair pair)
+    {
+        ModuleRefer refer;
 
 
+        refer = (ModuleRefer)pair.Key;
+
+
+
+
+        Map classImportMap;
+
+
+        classImportMap = (Map)pair.Value;
+
+
+
+
+        Data moduleHead;
+
+
+        moduleHead = this.GetModuleHead(refer);
         
-
-
-        
-
-
-
-
-
-
-
 
 
 
 
         return true;
     }
+
 
 
 
@@ -1160,29 +1180,8 @@ public class Class : Object
 
 
 
+
     private Data GetModuleHead(ModuleRefer refer)
-    {
-        Data o;
-
-
-        o = (Data)this.ModuleHeadList.Get(refer);
-
-
-
-        Data ret;
-
-        ret = o;
-
-
-        return ret;
-    }
-
-
-
-
-
-
-    private bool LoadModuleHead(ModuleRefer refer)
     {
         this.ModuleHeadLoad.Refer = refer;
 
@@ -1197,7 +1196,7 @@ public class Class : Object
 
         if (!b)
         {
-            return false;
+            return null;
         }
 
 
@@ -1212,27 +1211,12 @@ public class Class : Object
 
 
 
+        Data ret;
 
-        Pair pair;
+        ret = data;
 
-        pair = new Pair();
-
-        pair.Init();
-
-        pair.Key = refer;
-
-        pair.Value = data;
-
-
-
-        this.ModuleHeadList.Add(pair);
-
-
-
-        return true;
+        return ret;
     }
-
-
 
 
 
