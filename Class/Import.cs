@@ -64,6 +64,7 @@ global using ModuleRefer = Class.Check.ModuleRefer;
 global using ModuleNameCompare = Class.Check.ModuleNameCompare;
 global using ModuleIntentCompare = Class.Check.ModuleIntentCompare;
 global using ModuleReferCompare = Class.Check.ModuleReferCompare;
+global using ClassNameCompare = Class.Check.ClassNameCompare;
 global using CheckImport = Class.Check.Import;
 global using CheckExport = Class.Check.Export;
 global using CheckImportList = Class.Check.ImportList;
