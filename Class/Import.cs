@@ -48,6 +48,7 @@ global using NodeList = Class.Node.NodeList;
 global using CheckCompile = Class.Check.Compile;
 global using CheckResult = Class.Check.Result;
 global using CheckCheck = Class.Check.Check;
+global using CheckRefer = Class.Check.Refer;
 global using CheckModule = Class.Check.Module;
 global using CheckClass = Class.Check.Class;
 global using CheckField = Class.Check.Field;
