@@ -743,7 +743,16 @@ public class Class : Object
 
         if (this.Null(n))
         {
-            this.LoadModuleHead(refer);
+            bool b;
+            
+            b = this.LoadModuleHead(refer);
+
+
+            if (!b)
+            {
+                return false;
+            }
+
 
 
             n = this.GetModuleHead(refer);
