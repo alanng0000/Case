@@ -98,7 +98,15 @@ public class Class : Object
 
 
 
+    private CheckModule Module { get; set; }
+
+
+
+
+
     private CheckRefer PortRefer { get; set; }
+
+
 
 
 
@@ -223,6 +231,9 @@ public class Class : Object
 
 
 
+    private ModuleHeadRead ModuleHeadRead { get; set; }
+
+
 
 
 
@@ -264,6 +275,16 @@ public class Class : Object
 
 
         this.ModuleHeadList.Init();
+
+
+
+
+
+
+        this.ModuleHeadRead = new ModuleHeadRead();
+
+
+        this.ModuleHeadRead.Init();
 
 
 
@@ -682,11 +703,12 @@ public class Class : Object
 
         CheckModule m;
 
+
         m = new CheckModule();
+
 
         m.Init();
         
-
 
         m.Refer = u;
 
@@ -702,7 +724,7 @@ public class Class : Object
 
 
 
-        
+        this.Module = m;
 
 
         
@@ -817,34 +839,111 @@ public class Class : Object
 
 
 
-        Data n;
 
-        n = this.GetModuleHead(refer);
-
+        CheckModule oo;
 
 
-        if (this.Null(n))
+
+        oo = this.GetModule(refer);
+
+
+
+        if (this.Null(oo))
         {
-            bool b;
-            
-            b = this.LoadModuleHead(refer);
-
-
-            if (!b)
-            {
-                return false;
-            }
-
-
+            Data n;
 
             n = this.GetModuleHead(refer);
+
+
+
+            if (this.Null(n))
+            {
+                bool b;
+                
+                b = this.LoadModuleHead(refer);
+
+
+                if (!b)
+                {
+                    return false;
+                }
+
+
+
+                n = this.GetModuleHead(refer);
+            }
         }
+
+
+
+
+
+
+
+
+
+        
+
+
+        
+
+
+
+
+
+
+
 
 
 
 
         return true;
     }
+
+
+
+
+
+
+    private CheckModule GetModule(ModuleRefer refer)
+    {
+        return (CheckModule)this.PortRefer.Module.Get(refer);
+    }
+
+
+
+
+
+    private CheckModule ReadModule(Data data)
+    {
+        this.ModuleHeadRead.Data = data;
+
+
+        this.ModuleHeadRead.Index = 0;
+
+
+
+        this.ModuleHeadRead.Execute();
+
+
+
+
+        CheckModule o;
+
+        o = this.ModuleHeadRead.Result;
+
+
+
+        CheckModule ret;
+
+        ret = o;
+
+
+        return ret;
+    }
+
+
+
 
 
 
