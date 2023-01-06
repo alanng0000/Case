@@ -732,30 +732,7 @@ public class Class : Object
 
 
 
-        ListIter iter;
 
-        iter = this.Port.Import.Iter();
-
-
-        while (iter.Next())
-        {
-            PortImport o;
-
-
-            o = (PortImport)iter.Value;
-
-
-
-            bool ba;
-            
-            ba = this.ExecutePortImport(o);
-
-
-            if (!ba)
-            {
-                return false;
-            }
-        }
 
 
 
@@ -773,10 +750,207 @@ public class Class : Object
 
 
 
+    private Map ImportMap { get; set; }
 
 
 
-    private bool ExecutePortImport(PortImport o)
+
+
+    private bool SetPortImportMap()
+    {   
+        ModuleReferCompare c;
+
+        c = new ModuleReferCompare();
+
+        c.Init();
+        
+        
+
+        Map importMap;
+
+        importMap = new Map();
+
+        importMap.Compare = c;
+
+        importMap.Init();
+
+
+
+        this.ImportMap = importMap;
+
+
+
+
+
+        ListIter iter;
+
+        iter = this.Port.Import.Iter();
+
+
+        while (iter.Next())
+        {
+            PortImport o;
+
+
+            o = (PortImport)iter.Value;
+
+
+
+
+
+
+
+
+            
+        }
+
+
+
+
+
+        return true;
+    }
+
+
+
+
+    private bool SetPortImportMap(PortImport o)
+    {
+        ModuleRefer refer;
+
+        
+        refer = this.GetPortModuleRefer(o);
+
+
+
+        if (this.Null(refer))
+        {
+            return false;
+        }
+
+
+
+
+        Map u;
+        
+        u = (Map)this.ImportMap.Get(refer);
+
+
+
+        if (this.Null(u))
+        {
+            ClassNameCompare cc;
+
+            cc = new ClassNameCompare();
+
+            cc.Init();
+
+
+
+            Map a;
+
+
+            a = new Map();
+
+
+            a.Compare = cc;
+
+
+            a.Init();
+
+
+
+
+            Pair pair;
+
+            pair = new Pair();
+
+            pair.Init();
+
+            pair.Key = refer;
+
+            pair.Value = a;
+
+
+
+            this.ImportMap.Add(pair);
+
+
+
+            u = a;
+        }
+
+
+
+
+
+        Map classImportMap;
+
+        classImportMap = u;
+
+
+
+
+        CheckClassName aa;
+
+        aa = new CheckClassName();
+
+        aa.Init();
+
+        aa.Value = o.Class.Value;
+
+
+
+
+
+        CheckClassName e;
+
+        e = (CheckClassName)classImportMap.Get(aa);
+
+
+
+        if (!this.Null(e))
+        {
+            return false;
+        }
+
+
+
+
+
+        CheckClassName ab;
+
+        ab = new CheckClassName();
+
+        ab.Init();
+
+        ab.Value = o.Name.Value;
+
+
+
+        Pair p;
+
+        p = new Pair();
+
+        p.Init();
+
+        p.Key = aa;
+
+        p.Value = ab;
+
+
+        classImportMap.Add(p);
+        
+
+
+        return true;
+    }
+
+
+
+
+
+    private ModuleRefer GetPortModuleRefer(PortImport o)
     {
         ModuleName a;
 
@@ -797,7 +971,7 @@ public class Class : Object
 
         if (this.Null(u))
         {
-            return false;
+            return null;
         }
 
 
@@ -819,7 +993,7 @@ public class Class : Object
 
         if (!this.CheckModuleVer(u.Intent, ver))
         {
-            return false;
+            return null;
         }
 
 
@@ -835,6 +1009,27 @@ public class Class : Object
         refer.Intent = u.Intent;
 
         refer.Ver = ver;
+
+
+
+
+        ModuleRefer ret;
+
+        ret = refer;
+
+
+        return ret;
+    }
+
+
+
+
+
+
+
+    private bool ExecutePortImport(PortImport o)
+    {
+
 
 
 
