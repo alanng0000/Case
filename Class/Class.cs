@@ -225,10 +225,6 @@ public class Class : Object
 
 
 
-    private ModuleDataMap ModuleHeadList { get; set; }
-
-
-
 
 
     private ModuleHeadRead ModuleHeadRead { get; set; }
@@ -264,17 +260,6 @@ public class Class : Object
 
 
         this.ModuleHeadLoad.Init();
-
-        
-
-
-
-
-
-        this.ModuleHeadList = new ModuleDataMap();
-
-
-        this.ModuleHeadList.Init();
 
 
 
