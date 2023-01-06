@@ -1119,7 +1119,20 @@ public class Class : Object
 
 
 
-        
+
+        Pair p;
+
+        p = new Pair();
+
+        p.Init();
+
+        p.Key = module.Refer;
+
+        p.Value = module;
+
+
+
+        this.Refer.Module.Add(p);
 
 
 
