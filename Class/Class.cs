@@ -98,6 +98,10 @@ public class Class : Object
 
 
 
+    private CheckRefer PortRefer { get; set; }
+
+
+
 
 
     public override bool Init()
@@ -556,7 +560,43 @@ public class Class : Object
             this.Port = this.Task.Port;
         }
 
-        
+
+
+
+
+
+        CheckRefer refer;
+
+        refer = new CheckRefer();
+
+        refer.Init();
+
+        refer.Module = new CheckModuleMap();
+
+        refer.Module.Init();
+
+        refer.Class = new CheckClassMap();
+
+        refer.Class.Init();
+
+        refer.Import = new CheckImportList();
+
+        refer.Import.Init();
+
+        refer.Export = new CheckExportList();
+
+        refer.Export.Init();
+
+        refer.Entry = new CheckModuleEntry();
+
+        refer.Entry.Init();
+
+
+
+        this.PortRefer = refer;
+
+
+
 
 
 
@@ -593,38 +633,51 @@ public class Class : Object
 
 
 
-        CheckRefer refer;
 
-        refer = new CheckRefer();
+        ModuleRefer u;
 
-        refer.Init();
 
-        refer.Module = new CheckModuleMap();
+        u = new ModuleRefer();
 
-        refer.Module.Init();
 
-        refer.Class = new CheckClassMap();
+        u.Init();
 
-        refer.Class.Init();
 
-        refer.Import = new CheckImportList();
+        u.Intent = entry.Intent;
 
-        refer.Import.Init();
 
-        refer.Export = new CheckExportList();
+        u.Ver = null;
 
-        refer.Export.Init();
 
-        refer.Entry = new CheckModuleEntry();
 
-        refer.Entry.Init();
+
+
+        CheckModule m;
+
+        m = new CheckModule();
+
+        m.Init();
+        
+
+
+        m.Refer = u;
+
+
+        m.Name = entry.Name;
+
+
+        m.Class = new CheckClassMap();
+
+
+        m.Class.Init();
+
 
 
 
         
 
 
-
+        
 
 
 
@@ -658,7 +711,8 @@ public class Class : Object
 
 
 
-        this.Refer = refer;
+        this.Refer = this.PortRefer;
+        
 
 
 
