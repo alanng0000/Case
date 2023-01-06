@@ -531,6 +531,13 @@ public class Class : Object
 
     private bool ExecutePort()
     {
+        this.PortRefer = null;
+
+
+        this.Refer = null;
+
+
+        
         bool b;
 
         b = this.Null(this.Task.Source);
