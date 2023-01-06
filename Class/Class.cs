@@ -93,6 +93,10 @@ public class Class : Object
 
 
 
+    private CheckRefer Refer { get; set; }
+
+
+
 
 
 
@@ -588,6 +592,43 @@ public class Class : Object
 
 
 
+
+        CheckRefer refer;
+
+        refer = new CheckRefer();
+
+        refer.Init();
+
+        refer.Module = new CheckModuleMap();
+
+        refer.Module.Init();
+
+        refer.Class = new CheckClassMap();
+
+        refer.Class.Init();
+
+        refer.Import = new CheckImportList();
+
+        refer.Import.Init();
+
+        refer.Export = new CheckExportList();
+
+        refer.Export.Init();
+
+        refer.Entry = new CheckModuleEntry();
+
+        refer.Entry.Init();
+
+
+
+        this.Refer = refer;
+
+
+
+
+
+
+
         ListIter iter;
 
         iter = this.Port.Import.Iter();
@@ -602,7 +643,7 @@ public class Class : Object
 
 
 
-
+            this.ExecutePortImport(o);
         }
 
 

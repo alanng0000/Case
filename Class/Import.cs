@@ -54,6 +54,7 @@ global using CheckClass = Class.Check.Class;
 global using CheckField = Class.Check.Field;
 global using CheckMethod = Class.Check.Method;
 global using CheckVar = Class.Check.Var;
+global using CheckModuleMap = Class.Check.ModuleMap;
 global using CheckClassMap = Class.Check.ClassMap;
 global using CheckClassName = Class.Check.ClassName;
 global using ModuleName = Class.Check.ModuleName;
