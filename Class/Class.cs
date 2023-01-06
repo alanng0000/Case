@@ -389,6 +389,27 @@ public class Class : Object
 
 
 
+        bool bb;
+
+
+        bb = (t == k.Check);
+
+
+
+        if (taskModule | bb)
+        {
+            if (this.Null(this.Refer))
+            {
+                this.Error("Require Valid Port");
+
+
+                return false;
+            }
+        }
+
+        
+
+
 
         List files;
 
@@ -537,7 +558,7 @@ public class Class : Object
         this.Refer = null;
 
 
-        
+
         bool b;
 
         b = this.Null(this.Task.Source);
