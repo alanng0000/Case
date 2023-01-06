@@ -107,7 +107,7 @@ class ModuleHeadLoad : Object
 
         if (f < u.Length)
         {
-            return true;
+            return false;
         }
 
 
@@ -137,7 +137,7 @@ class ModuleHeadLoad : Object
 
         if (f < d.Length)
         {
-            return true;
+            return false;
         }
         
 
@@ -154,6 +154,9 @@ class ModuleHeadLoad : Object
 
 
         data = new Data();
+
+
+        data.Init();
 
 
         data.Value = d;
