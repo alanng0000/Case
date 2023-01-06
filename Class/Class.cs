@@ -1087,10 +1087,38 @@ public class Class : Object
 
 
 
+
         Data moduleHead;
 
 
-        moduleHead = this.GetModuleHead(refer);
+        moduleHead = this.LoadModuleHead(refer);
+
+
+
+
+        if (this.Null(moduleHead))
+        {
+            return false;
+        }
+
+        
+
+
+        CheckModule module;
+
+
+        module = this.ReadModuleHead(moduleHead, classImportMap);
+
+
+
+        if (this.Null(module))
+        {
+            return false;
+        }
+
+
+
+
         
 
 
@@ -1108,38 +1136,6 @@ public class Class : Object
     private CheckModule GetModule(ModuleRefer refer)
     {
         return (CheckModule)this.PortRefer.Module.Get(refer);
-    }
-
-
-
-
-
-    private CheckModule ReadModule(Data data)
-    {
-        this.ModuleHeadRead.Data = data;
-
-
-        this.ModuleHeadRead.Index = 0;
-
-
-
-        this.ModuleHeadRead.Execute();
-
-
-
-
-        CheckModule o;
-
-        o = this.ModuleHeadRead.Result;
-
-
-
-        CheckModule ret;
-
-        ret = o;
-
-
-        return ret;
     }
 
 
@@ -1165,10 +1161,60 @@ public class Class : Object
 
 
 
+    private CheckModule ReadModuleHead(Data moduleHead, Map classImportMap)
+    {
+        this.ModuleHeadRead.Data = moduleHead;
 
-    private Data GetModuleHead(ModuleRefer refer)
+
+        this.ModuleHeadRead.Index = 0;
+
+
+
+        this.ModuleHeadRead.ClassImportList = classImportMap;
+
+
+
+
+        bool b;
+
+
+        b = this.ModuleHeadRead.Execute();
+
+
+
+        if (!b)
+        {
+            return null;
+        }
+
+
+
+
+        CheckModule module;
+
+
+        module = this.ModuleHeadRead.Result;
+
+
+
+
+        CheckModule ret;
+
+        ret = module;
+
+
+        return ret;
+    }
+
+
+
+
+
+
+    private Data LoadModuleHead(ModuleRefer refer)
     {
         this.ModuleHeadLoad.Refer = refer;
+
 
 
 

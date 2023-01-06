@@ -18,7 +18,16 @@ class ModuleHeadRead : Object
 
 
 
+    public Map ClassImportList { get; set; }
+
+
+
+
+
     public CheckModule Result { get; set; }
+
+
+    
 
 
 
