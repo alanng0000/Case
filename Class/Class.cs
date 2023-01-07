@@ -857,6 +857,7 @@ public class Class : Object
 
 
 
+
         ModuleRefer refer;
 
         
@@ -868,6 +869,16 @@ public class Class : Object
         {
             return false;
         }
+
+
+
+
+
+        if (!this.CheckModuleVer(refer.Intent, refer.Ver))
+        {
+            return false;
+        }
+
 
 
 
