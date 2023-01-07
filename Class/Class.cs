@@ -1093,18 +1093,10 @@ public class Class : Object
 
 
 
-            ModuleRefer refer;
+            ModuleImportValue u;
 
 
-            refer = (ModuleRefer)pair.Key;
-
-
-
-
-            Map classImportMap;
-
-
-            classImportMap = (Map)pair.Value;
+            u = (ModuleImportValue)pair.Value;
 
 
 
@@ -1113,7 +1105,7 @@ public class Class : Object
             bool b;
 
 
-            b = this.ExecutePortImportMapModule(refer, classImportMap);
+            b = this.ExecutePortImportMapModule(u);
 
 
 
@@ -1133,8 +1125,17 @@ public class Class : Object
 
 
 
-    private bool ExecutePortImportMapModule(ModuleRefer refer, Map classImportMap)
+    private bool ExecutePortImportMapModule(ModuleImportValue o)
     {
+        ModuleRefer refer;
+
+
+        refer = o.Refer;
+
+
+
+
+
         Data moduleHead;
 
 
@@ -1154,7 +1155,7 @@ public class Class : Object
         CheckModule module;
 
 
-        module = this.ReadModuleHead(moduleHead, classImportMap);
+        module = this.ReadModuleHead(moduleHead, o);
 
 
 
@@ -1210,7 +1211,7 @@ public class Class : Object
 
 
 
-    private CheckModule ReadModuleHead(Data moduleHead, Map classImportMap)
+    private CheckModule ReadModuleHead(Data moduleHead, ModuleImportValue o)
     {
         this.ModuleHeadRead.Data = moduleHead;
 
@@ -1219,7 +1220,7 @@ public class Class : Object
 
 
 
-        this.ModuleHeadRead.ClassImportList = classImportMap;
+        this.ModuleHeadRead.ClassImportList = o.ClassImport;
 
 
 
