@@ -38,7 +38,12 @@ class ModuleHeadRead : Object
 
 
 
-    private Map ClassIndexMap { get; set; }
+    private Map ClassImportMap { get; set; }
+
+
+
+
+    private CheckClassMap ClassMap { get; set; }
 
 
 
@@ -74,7 +79,7 @@ class ModuleHeadRead : Object
 
 
 
-        this.ClassIndexMap = null;
+        this.ClassImportMap = null;
 
 
 
@@ -145,13 +150,13 @@ class ModuleHeadRead : Object
 
 
 
-        this.ClassIndexMap = new Map();
+        this.ClassImportMap = new Map();
 
 
-        this.ClassIndexMap.Compare = compare;
+        this.ClassImportMap.Compare = compare;
 
 
-        this.ClassIndexMap.Init();
+        this.ClassImportMap.Init();
 
 
 
@@ -181,6 +186,23 @@ class ModuleHeadRead : Object
 
 
 
+
+        this.ClassMap = new CheckClassMap();
+
+
+        this.ClassMap.Init();
+
+
+
+
+
+        b = this.ExecuteExportList();
+
+
+        if (!b)
+        {
+            return null;
+        }
 
 
 
@@ -284,6 +306,27 @@ class ModuleHeadRead : Object
 
 
 
+
+                ClassImport a;
+
+
+                a = new ClassImport();
+
+
+                a.Init();
+
+
+                a.Index = oi;
+
+
+                a.Class = className;
+
+
+                a.Name = uu;
+                
+
+
+
                 Pair pair;
 
                 pair = new Pair();
@@ -292,11 +335,11 @@ class ModuleHeadRead : Object
 
                 pair.Key = oi;
 
-                pair.Value = className;
+                pair.Value = a;
 
 
 
-                this.ClassIndexMap.Add(pair);
+                this.ClassImportMap.Add(pair);
             }
 
 
@@ -490,7 +533,59 @@ class ModuleHeadRead : Object
 
 
 
-        
+
+
+        ClassImport u;
+
+
+        u = (ClassImport)this.ClassImportMap.Get(a);
+
+
+
+
+        if (!this.Null(u))
+        {
+            int k;
+
+
+            k = this.SInt32(a.Value);
+            
+
+
+
+            CheckClass varClass;
+
+
+            varClass = new CheckClass();
+
+
+            varClass.Init();
+
+
+            varClass.Name = u.Class;
+
+
+            varClass.Index = k;
+
+
+
+
+            Pair pair;
+
+            pair = new Pair();
+
+            pair.Init();
+
+            pair.Key = u.Name;
+
+            pair.Value = varClass;
+
+
+
+
+            this.ClassMap.Add(pair);
+        }
+
 
 
 

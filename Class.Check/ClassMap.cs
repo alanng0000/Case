@@ -7,10 +7,10 @@ public class ClassMap : Map
 {
     public override bool Init()
     {
-        StringCompare compare;
+        ClassNameCompare compare;
 
 
-        compare = new StringCompare();
+        compare = new ClassNameCompare();
 
 
         compare.Init();
