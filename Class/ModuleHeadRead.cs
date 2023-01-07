@@ -81,12 +81,12 @@ class ModuleHeadRead : Object
 
     private CheckModule ExecuteModule()
     {
-        ModuleName name;
+        bool b;
 
-        name = this.ExecuteModuleName();
+        b = this.ExecutePassModuleIntent();
 
 
-        if (this.Null(name))
+        if (!b)
         {
             return null;
         }
@@ -94,15 +94,15 @@ class ModuleHeadRead : Object
 
 
 
-        ModuleVer ver;
 
-        ver = this.ExecuteModuleVer();
+        b = this.ExecutePassModuleVer();
 
 
-        if (this.Null(ver))
+        if (!b)
         {
             return null;
         }
+        
 
 
 
@@ -154,6 +154,10 @@ class ModuleHeadRead : Object
         ret = new CheckModule();
 
         ret.Init();
+
+        ret.Refer = this.Import.Refer;
+
+        ret.Name = this.Import.Name;
 
         return ret;
     }
@@ -229,6 +233,9 @@ class ModuleHeadRead : Object
 
         return ret;
     }
+
+
+
 
 
 
@@ -704,6 +711,50 @@ class ModuleHeadRead : Object
     }
 
 
+
+
+    private bool ExecutePassModuleIntent()
+    {
+        return this.ExecutePassInt();
+    }
+
+
+
+
+
+    private bool ExecutePassModuleVer()
+    {
+        return this.ExecutePassInt();
+    }
+
+
+
+
+
+    private bool ExecutePassInt()
+    {
+        ulong count;
+
+
+        count = Constant.This.IntByteCount;
+
+
+
+        if (!this.CheckByteAvailable(count))
+        {
+            return false;
+        }
+
+
+
+
+        this.Index = this.Index + count;
+
+
+
+
+        return true;
+    }
 
 
 
