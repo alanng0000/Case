@@ -569,7 +569,7 @@ class ModuleHeadRead : Object
 
             pair.Init();
 
-            pair.Key = u.Name;
+            pair.Key = varClass.Name;
 
             pair.Value = varClass;
 
