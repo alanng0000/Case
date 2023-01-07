@@ -124,18 +124,6 @@ class ModuleHeadRead : Object
 
 
 
-        ulong ? u;
-
-        u = this.Count();
-
-
-
-        if (!u.HasValue)
-        {
-            return null;
-        }
-
-
 
 
         ClassIndexCompare compare;
@@ -161,93 +149,28 @@ class ModuleHeadRead : Object
 
 
 
-
-        ulong count;
-
-        count = u.Value;
-
-
-
-        ulong i;
-
-
-        i = 0;
-
-
-        while (i < count)
-        {
-            CheckClassName
-
-
-            className = this.ExecuteClassName();
-
-
-
-            if (this.Null(className))
-            {
-                return null;
-            }
-
-
-
-
-            CheckClassName uu;
-
-
-            uu = (CheckClassName)this.Import.ClassImport.Get(className);
-
-
-
-            if (!this.Null(uu))
-            {
-                ClassIndex oi;
-
-                oi = new ClassIndex();
-
-                oi.Init();
-
-                oi.Value = i;
-
-
-
-                Pair pair;
-
-                pair = new Pair();
-
-                pair.Init();
-
-                pair.Key = oi;
-
-                pair.Value = className;
-
-
-
-                classIndexMap.Add(pair);
-            }
-
-
-
-
-            i = i + 1;
-        }
-
+        b = this.ExecuteClassList(classIndexMap);
         
 
-
-
-
-
-
-
-        CheckImportList import;
-
-        import = this.ExecuteImportList();
-
-
-        if (this.Null(import))
+        if (!b)
         {
             return null;
         }
+
+
+
+
+
+
+
+        b = this.ExecuteImportList();
+
+
+        if (!b)
+        {
+            return null;
+        }
+
 
 
 
@@ -293,6 +216,203 @@ class ModuleHeadRead : Object
         return ret;
     }
 
+
+
+
+
+
+    private bool ExecuteClassList(Map classIndexMap)
+    {
+        ulong ? u;
+
+        u = this.Count();
+
+
+
+        if (!u.HasValue)
+        {
+            return false;
+        }
+
+
+
+
+
+        ulong count;
+
+        count = u.Value;
+
+
+
+        ulong i;
+
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            CheckClassName className;
+
+
+            className = this.ExecuteClassName();
+
+
+
+            if (this.Null(className))
+            {
+                return false;
+            }
+
+
+
+
+            CheckClassName uu;
+
+
+            uu = (CheckClassName)this.Import.ClassImport.Get(className);
+
+
+
+            if (!this.Null(uu))
+            {
+                ClassIndex oi;
+
+                oi = new ClassIndex();
+
+                oi.Init();
+
+                oi.Value = i;
+
+
+
+                Pair pair;
+
+                pair = new Pair();
+
+                pair.Init();
+
+                pair.Key = oi;
+
+                pair.Value = className;
+
+
+
+                classIndexMap.Add(pair);
+            }
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+
+        return true;
+    }
+
+
+
+
+    private bool ExecuteImportList()
+    {
+        ulong ? u;
+
+        u = this.Count();
+
+
+
+        if (!u.HasValue)
+        {
+            return false;
+        }
+
+
+
+
+
+        ulong count;
+
+        count = u.Value;
+
+
+
+        ulong i;
+
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            bool b;
+
+
+            b = this.ExecuteImport();
+
+
+            if (!b)
+            {
+                return false;
+            }
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+        return true;
+    }
+
+
+
+
+    private bool ExecuteImport()
+    {
+        bool b;
+
+
+
+        b = this.ExecutePassModuleIntent();
+
+
+        if (!b)
+        {
+            return false;
+        }
+
+
+
+
+
+        b = this.ExecutePassModuleVer();
+
+
+        if (!b)
+        {
+            return false;
+        }
+
+
+
+
+        b = this.ExecutePassClassIndex();
+
+
+        if (!b)
+        {
+            return false;
+        }
+
+
+
+        return true;
+    }
 
 
 
@@ -427,154 +547,6 @@ class ModuleHeadRead : Object
     }
 
 
-
-
-
-    
-    private CheckImportList ExecuteImportList()
-    {
-        ulong? u;
-
-
-        u = this.Count();
-
-
-
-
-        if (!u.HasValue)
-        {
-            return null;
-        }
-
-
-
-
-        CheckImportList list;
-
-        list = new CheckImportList();
-
-        list.Init();
-
-
-
-
-
-        CheckImport import;
-
-
-
-
-        ulong count;
-
-        count = u.Value;
-
-
-
-
-        ulong i;
-
-        i = 0;
-
-
-        while (i < count)
-        {
-            import = this.ExecuteImport();
-
-
-            if (this.Null(import))
-            {
-                return null;
-            }
-
-
-
-            list.Add(import);
-
-
-
-            i = i + 1;
-        }
-
-
-
-        CheckImportList ret;
-
-        ret = list;
-
-        return ret;
-    }
-
-
-
-
-
-
-    private CheckImport ExecuteImport()
-    {
-        ModuleName module;
-
-        module = this.ExecuteModuleName();
-
-
-        if (this.Null((module)))
-        {
-            return null;
-        }
-
-
-
-
-        ModuleVer ver;
-
-        ver = this.ExecuteModuleVer();
-
-
-        if (this.Null(ver))
-        {
-            return null;
-        }
-
-
-
-
-        CheckClassName varClass;
-
-        varClass = this.ExecuteClassName();
-
-
-        if (this.Null(varClass))
-        {
-            return null;
-        }
-
-
-
-
-
-        CheckClassName name;
-
-        name = this.ExecuteClassName();
-
-
-        if (this.Null(name))
-        {
-            return null;
-        }
-
-
-
-        CheckImport ret;
-
-        ret = new CheckImport();
-
-        ret.Init();
-
-        ret.Class = null;
-
-        ret.Name = name;
-
-        return ret;
-    }
 
 
 
@@ -933,6 +905,14 @@ class ModuleHeadRead : Object
 
 
     private bool ExecutePassModuleVer()
+    {
+        return this.ExecutePassInt();
+    }
+
+
+
+
+    private bool ExecutePassClassIndex()
     {
         return this.ExecutePassInt();
     }
