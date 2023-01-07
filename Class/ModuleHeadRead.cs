@@ -39,6 +39,8 @@ class ModuleHeadRead : Object
 
 
 
+
+
     public override bool Init()
     {
         base.Init();
@@ -136,6 +138,29 @@ class ModuleHeadRead : Object
 
 
 
+        ClassIndexCompare compare;
+
+        compare = new ClassIndexCompare();
+
+        compare.Init();
+
+
+
+
+        Map classIndexMap;
+
+
+        classIndexMap = new Map();
+
+
+        classIndexMap.Compare = compare;
+
+
+        classIndexMap.Init();
+
+
+
+
 
         ulong count;
 
@@ -185,7 +210,19 @@ class ModuleHeadRead : Object
 
 
 
-                
+                Pair pair;
+
+                pair = new Pair();
+
+                pair.Init();
+
+                pair.Key = oi;
+
+                pair.Value = className;
+
+
+
+                classIndexMap.Add(pair);
             }
 
 
