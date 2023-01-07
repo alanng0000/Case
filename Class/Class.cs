@@ -883,9 +883,9 @@ public class Class : Object
 
 
 
-        ModuleImportValue u;
+        ModuleImport u;
         
-        u = (ModuleImportValue)this.ImportMap.Get(refer);
+        u = (ModuleImport)this.ImportMap.Get(refer);
 
 
 
@@ -914,9 +914,9 @@ public class Class : Object
 
 
 
-            ModuleImportValue h;
+            ModuleImport h;
 
-            h = new ModuleImportValue();
+            h = new ModuleImport();
 
             h.Init();
 
@@ -952,7 +952,7 @@ public class Class : Object
 
 
 
-        ModuleImportValue moduleImportValue;
+        ModuleImport moduleImportValue;
 
         moduleImportValue = u;
 
@@ -1093,10 +1093,11 @@ public class Class : Object
 
 
 
-            ModuleImportValue u;
+
+            ModuleImport import;
 
 
-            u = (ModuleImportValue)pair.Value;
+            import = (ModuleImport)pair.Value;
 
 
 
@@ -1105,7 +1106,7 @@ public class Class : Object
             bool b;
 
 
-            b = this.ExecutePortImportMapModule(u);
+            b = this.ExecutePortImportMapModule(import);
 
 
 
@@ -1125,12 +1126,12 @@ public class Class : Object
 
 
 
-    private bool ExecutePortImportMapModule(ModuleImportValue o)
+    private bool ExecutePortImportMapModule(ModuleImport import)
     {
         ModuleRefer refer;
 
 
-        refer = o.Refer;
+        refer = import.Refer;
 
 
 
@@ -1155,7 +1156,7 @@ public class Class : Object
         CheckModule module;
 
 
-        module = this.ReadModuleHead(moduleHead, o);
+        module = this.ReadModuleHead(moduleHead, import);
 
 
 
@@ -1211,7 +1212,7 @@ public class Class : Object
 
 
 
-    private CheckModule ReadModuleHead(Data moduleHead, ModuleImportValue o)
+    private CheckModule ReadModuleHead(Data moduleHead, ModuleImport import)
     {
         this.ModuleHeadRead.Data = moduleHead;
 
@@ -1220,7 +1221,7 @@ public class Class : Object
 
 
 
-        this.ModuleHeadRead.ClassImportList = o.ClassImport;
+        this.ModuleHeadRead.Import = import;
 
 
 

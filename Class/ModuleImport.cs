@@ -3,7 +3,7 @@ namespace Class;
 
 
 
-class ModuleImportValue : Object
+class ModuleImport : Object
 {
     public ModuleRefer Refer { get; set; }
 

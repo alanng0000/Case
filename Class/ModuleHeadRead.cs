@@ -18,7 +18,8 @@ class ModuleHeadRead : Object
 
 
 
-    public Map ClassImportList { get; set; }
+
+    public ModuleImport Import { get; set; }
 
 
 
