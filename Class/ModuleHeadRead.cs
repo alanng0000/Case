@@ -79,9 +79,13 @@ class ModuleHeadRead : Object
 
 
 
+
+
+
     private CheckModule ExecuteModule()
     {
         bool b;
+
 
         b = this.ExecutePassModuleIntent();
 
@@ -103,6 +107,20 @@ class ModuleHeadRead : Object
             return null;
         }
         
+
+
+
+        b = this.ExecutePassModuleName();
+
+
+        if (!b)
+        {
+            return null;
+        }
+
+
+
+
 
 
 
@@ -165,6 +183,28 @@ class ModuleHeadRead : Object
 
 
 
+
+
+
+    private bool ExecutePassModuleName()
+    {
+        bool b;
+
+
+        b = this.PassNameValue();
+
+
+
+        if (!b)
+        {
+            return false;
+        }
+
+
+
+
+        return true;
+    }
 
 
 
@@ -599,6 +639,17 @@ class ModuleHeadRead : Object
 
 
 
+    private bool PassNameValue()
+    {
+        bool b;
+
+        b = this.ExecutePassString();
+
+
+        return b;
+    }
+
+
 
 
 
@@ -615,6 +666,52 @@ class ModuleHeadRead : Object
 
         return this.Index + count <= a;
     }
+
+
+
+
+
+
+    private bool ExecutePassString()
+    {
+        ulong? u;
+
+
+        u = this.ExecuteInt();
+
+
+
+        if (!u.HasValue)
+        {
+            return false;
+        }
+
+
+
+
+        ulong count;
+
+        count = u.Value;
+
+
+
+
+        if (!this.CheckByteAvailable(count))
+        {
+            return false;
+        }
+
+
+
+
+        this.Index = this.Index + count;
+
+
+
+
+        return true;
+    }
+
 
 
 
