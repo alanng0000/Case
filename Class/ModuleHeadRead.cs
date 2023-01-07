@@ -79,7 +79,12 @@ class ModuleHeadRead : Object
 
 
 
+
         this.ClassImportMap = null;
+
+
+        this.ClassMap = null;
+
 
 
 
@@ -148,8 +153,6 @@ class ModuleHeadRead : Object
 
 
 
-
-
         this.ClassImportMap = new Map();
 
 
@@ -157,6 +160,8 @@ class ModuleHeadRead : Object
 
 
         this.ClassImportMap.Init();
+
+
 
 
 
@@ -209,20 +214,6 @@ class ModuleHeadRead : Object
 
 
 
-        CheckModuleEntry entry;
-
-        entry = this.ExecuteEntry();
-
-
-        if (this.Null(entry))
-        {
-            return null;
-        }
-
-
-
-
-
         CheckModule ret;
 
         ret = new CheckModule();
@@ -232,6 +223,8 @@ class ModuleHeadRead : Object
         ret.Refer = this.Import.Refer;
 
         ret.Name = this.Import.Name;
+
+        ret.Class =  this.ClassMap;
 
         return ret;
     }
@@ -549,7 +542,7 @@ class ModuleHeadRead : Object
 
 
             k = this.SInt32(a.Value);
-            
+
 
 
 
@@ -764,35 +757,6 @@ class ModuleHeadRead : Object
         return ret;
     }
 
-
-
-
-
-
-
-
-
-
-
-    private CheckModuleEntry ExecuteEntry()
-    {
-        CheckClassName varClass;
-
-
-        varClass = this.ExecuteClassName();
-
-
-
-        CheckModuleEntry ret;
-
-        ret = new CheckModuleEntry();
-
-        ret.Init();
-
-        ret.Class = null;
-
-        return ret;
-    }
 
 
 
