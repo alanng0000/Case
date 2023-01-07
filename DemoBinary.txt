@@ -19,7 +19,7 @@ ModuleEntry : ClassIndex
 
 
 GlobalCount
-ClassIndex Per Global
+ClassIndex Per unique ClassName of GlobalExpress
 
 
 
