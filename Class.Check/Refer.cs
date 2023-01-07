@@ -12,6 +12,11 @@ public class Refer : Object
 
 
 
+    public Module Module { get; set; }
+
+
+
+
     public ModuleMap Import { get; set; }
 
 
