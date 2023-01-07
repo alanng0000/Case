@@ -122,6 +122,82 @@ class ModuleHeadRead : Object
 
 
 
+        ulong ? u;
+
+        u = this.Count();
+
+
+
+        if (!u.HasValue)
+        {
+            return null;
+        }
+
+
+
+
+
+        ulong count;
+
+        count = u.Value;
+
+
+
+        ulong i;
+
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            CheckClassName
+
+
+            className = this.ExecuteClassName();
+
+
+
+            if (this.Null(className))
+            {
+                return null;
+            }
+
+
+
+
+            CheckClassName uu;
+
+
+            uu = (CheckClassName)this.Import.ClassImport.Get(className);
+
+
+
+            if (!this.Null(uu))
+            {
+                ClassIndex oi;
+
+                oi = new ClassIndex();
+
+                oi.Init();
+
+                oi.Value = i;
+
+
+
+                
+            }
+
+
+
+
+            i = i + 1;
+        }
+
+        
+
+
+
 
 
 

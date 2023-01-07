@@ -1,6 +1,7 @@
 global using Object = System.Infra.Object;
 global using Range = System.Infra.Range;
 global using RangeInfra = System.Infra.RangeInfra;
+global using Compare = System.Infra.Compare;
 global using StringComparer = System.Infra.StringComparer;
 global using List = System.List.List;
 global using Map = System.List.Map;
