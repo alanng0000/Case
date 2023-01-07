@@ -831,10 +831,36 @@ public class Class : Object
 
     private bool SetPortImportMapImport(PortImport o)
     {
+        ModuleName name;
+
+        name = new ModuleName();
+
+        name.Init();
+
+        name.Value = o.Module.Value;
+
+
+
+
+
+        ModuleVer ver;
+
+
+        ver = new ModuleVer();
+
+
+        ver.Init();
+
+
+        ver.Value = o.Ver.Value;
+
+
+
+
         ModuleRefer refer;
 
         
-        refer = this.GetPortModuleRefer(o);
+        refer = this.GetPortModuleRefer(name, ver);
 
 
 
@@ -846,9 +872,9 @@ public class Class : Object
 
 
 
-        Map u;
+        ModuleImportValue u;
         
-        u = (Map)this.ImportMap.Get(refer);
+        u = (ModuleImportValue)this.ImportMap.Get(refer);
 
 
 
@@ -876,15 +902,31 @@ public class Class : Object
 
 
 
+
+            ModuleImportValue h;
+
+            h = new ModuleImportValue();
+
+            h.Init();
+
+            h.Refer = refer;
+
+            h.Name = name;
+
+            h.ClassImport = a;
+
+
+
+
             Pair pair;
 
             pair = new Pair();
 
             pair.Init();
 
-            pair.Key = refer;
+            pair.Key = h.Refer;
 
-            pair.Value = a;
+            pair.Value = h;
 
 
 
@@ -892,8 +934,16 @@ public class Class : Object
 
 
 
-            u = a;
+            u = h;
         }
+
+
+
+
+
+        ModuleImportValue moduleImportValue;
+
+        moduleImportValue = u;
 
 
 
@@ -901,7 +951,9 @@ public class Class : Object
 
         Map classImportMap;
 
-        classImportMap = u;
+
+        classImportMap = moduleImportValue.ClassImport;
+
 
 
 
@@ -943,6 +995,8 @@ public class Class : Object
 
 
 
+
+
         Pair p;
 
         p = new Pair();
@@ -965,48 +1019,15 @@ public class Class : Object
 
 
 
-    private ModuleRefer GetPortModuleRefer(PortImport o)
+    private ModuleRefer GetPortModuleRefer(ModuleName name, ModuleVer ver)
     {
-        ModuleName a;
-
-        a = new ModuleName();
-
-        a.Init();
-
-        a.Value = o.Module.Value;
-
-
-
-
         ModuleEntry u;
 
-        u = (ModuleEntry)this.EntryNameMap.Get(a);
+        u = (ModuleEntry)this.EntryNameMap.Get(name);
 
 
 
         if (this.Null(u))
-        {
-            return null;
-        }
-
-
-
-
-        ModuleVer ver;
-
-
-        ver = new ModuleVer();
-
-
-        ver.Init();
-
-
-        ver.Value = o.Ver.Value;
-
-
-
-
-        if (!this.CheckModuleVer(u.Intent, ver))
         {
             return null;
         }
@@ -1028,7 +1049,9 @@ public class Class : Object
 
 
 
+
         ModuleRefer ret;
+
 
         ret = refer;
 
