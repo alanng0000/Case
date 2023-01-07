@@ -46,20 +46,20 @@ public class ClassNameCompare : Compare
 
 
 
-        ModuleName leftName;
+        ClassName leftName;
 
 
 
-        leftName = (ModuleName)left;
+        leftName = (ClassName)left;
 
 
 
 
-        ModuleName rightName;
+        ClassName rightName;
 
 
 
-        rightName = (ModuleName)right;
+        rightName = (ClassName)right;
 
 
 
