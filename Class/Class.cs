@@ -955,9 +955,9 @@ public class Class : Object
 
 
 
-        ModuleImport moduleImportValue;
+        ModuleImport moduleImport;
 
-        moduleImportValue = u;
+        moduleImport = u;
 
 
 
@@ -966,7 +966,7 @@ public class Class : Object
         Map classImportMap;
 
 
-        classImportMap = moduleImportValue.ClassImport;
+        classImportMap = moduleImport.ClassImport;
 
 
 
