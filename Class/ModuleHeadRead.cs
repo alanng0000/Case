@@ -38,6 +38,9 @@ class ModuleHeadRead : Object
 
 
 
+    private Map ClassIndexMap { get; set; }
+
+
 
 
 
@@ -67,6 +70,11 @@ class ModuleHeadRead : Object
 
 
         module = this.ExecuteModule();
+
+
+
+
+        this.ClassIndexMap = null;
 
 
 
@@ -135,21 +143,20 @@ class ModuleHeadRead : Object
 
 
 
-        Map classIndexMap;
 
 
-        classIndexMap = new Map();
+        this.ClassIndexMap = new Map();
 
 
-        classIndexMap.Compare = compare;
+        this.ClassIndexMap.Compare = compare;
 
 
-        classIndexMap.Init();
+        this.ClassIndexMap.Init();
 
 
 
 
-        b = this.ExecuteClassList(classIndexMap);
+        b = this.ExecuteClassList();
         
 
         if (!b)
@@ -212,7 +219,7 @@ class ModuleHeadRead : Object
 
 
 
-    private bool ExecuteClassList(Map classIndexMap)
+    private bool ExecuteClassList()
     {
         ulong ? u;
 
@@ -289,7 +296,7 @@ class ModuleHeadRead : Object
 
 
 
-                classIndexMap.Add(pair);
+                this.ClassIndexMap.Add(pair);
             }
 
 
@@ -409,8 +416,56 @@ class ModuleHeadRead : Object
 
 
 
-    private bool ExecuteExportList(Map classIndexMap)
+    private bool ExecuteExportList()
     {
+        ulong ? u;
+
+        u = this.Count();
+
+
+
+        if (!u.HasValue)
+        {
+            return false;
+        }
+
+
+
+
+
+        ulong count;
+
+        count = u.Value;
+
+
+
+        ulong i;
+
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            bool b;
+
+
+            b = this.ExecuteExport();
+
+
+            if (!b)
+            {
+                return false;
+            }
+
+
+
+
+            i = i + 1;
+        }
+
+
+
         return true;
     }
 
@@ -421,6 +476,22 @@ class ModuleHeadRead : Object
 
     private bool ExecuteExport()
     {
+        ClassIndex a;
+
+
+        a = this.ExecuteClassIndex();
+
+
+
+        if (this.Null(a))
+        {
+            return false;
+        }
+
+
+
+        
+
 
 
 
