@@ -17,8 +17,20 @@ ModuleEntry : ClassIndex
 
 
 
+
 GlobalCount
 ClassIndex Per Global
+
+
+
+IntCount
+Big Int Per Big Int Constant
+
+
+
+StringCount
+String Per StringConstant
+
 
 
 
