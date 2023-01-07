@@ -16,6 +16,12 @@ ClassIndex Per Export
 ModuleEntry : ClassIndex
 
 
+
+GlobalCount
+ClassIndex Per Global
+
+
+
 Base : ClassIndex per Class
 
 
