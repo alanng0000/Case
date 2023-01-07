@@ -603,15 +603,11 @@ public class Class : Object
 
         refer.Init();
 
-        refer.Module = new CheckModuleMap();
-
-        refer.Module.Init();
-
         refer.Class = new CheckClassMap();
 
         refer.Class.Init();
 
-        refer.Import = new CheckImportList();
+        refer.Import = new CheckModuleMap();
 
         refer.Import.Init();
 
@@ -1184,7 +1180,7 @@ public class Class : Object
 
 
 
-        this.PortRefer.Module.Add(p);
+        this.PortRefer.Import.Add(p);
 
 
 
