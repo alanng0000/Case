@@ -720,6 +720,7 @@ public class Class : Object
 
         bool bb;
 
+
         bb = this.SetPortImportMap();
 
 
@@ -732,10 +733,16 @@ public class Class : Object
 
 
 
+        bool bc;
 
-        this.ExecutePortImportMap();
+
+        bc = this.ExecutePortImportMap();
 
 
+        if (!bc)
+        {
+            return false;
+        }
 
 
 
