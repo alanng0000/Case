@@ -558,9 +558,6 @@ public class Class : Object
 
     private bool ExecutePort()
     {
-        this.PortRefer = null;
-
-
         this.Refer = null;
 
 
@@ -747,10 +744,16 @@ public class Class : Object
 
 
 
+        this.ImportMap = null;
+
+
 
 
         this.Refer = this.PortRefer;
-        
+
+
+
+        this.PortRefer = null;
 
 
 
