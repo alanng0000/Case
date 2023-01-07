@@ -175,15 +175,6 @@ class ModuleHeadRead : Object
 
 
 
-        CheckExportList export;
-
-        export = this.ExecuteExportList();
-
-
-        if (this.Null(export))
-        {
-            return null;
-        }
 
 
 
@@ -418,6 +409,29 @@ class ModuleHeadRead : Object
 
 
 
+    private bool ExecuteExportList(Map classIndexMap)
+    {
+        return true;
+    }
+
+
+
+
+
+
+    private bool ExecuteExport()
+    {
+
+
+
+        return true;
+    }
+
+
+
+
+
+
 
     private bool ExecutePassModuleName()
     {
@@ -552,16 +566,11 @@ class ModuleHeadRead : Object
 
 
 
-
-
-    private CheckExportList ExecuteExportList()
+    private ClassIndex ExecuteClassIndex()
     {
         ulong? u;
 
-
-        u = this.Count();
-
-
+        u = this.ExecuteInt();
 
 
         if (!u.HasValue)
@@ -571,96 +580,28 @@ class ModuleHeadRead : Object
 
 
 
+        ulong value;
 
-        CheckExportList list;
 
-        list = new CheckExportList();
-
-        list.Init();
+        value = u.Value;
 
 
 
+        ClassIndex ret;
 
-
-        CheckExport export;
-
-
-
-
-        ulong count;
-
-        count = u.Value;
-
-
-
-
-        ulong i;
-
-        i = 0;
-
-
-        while (i < count)
-        {
-            export = this.ExecuteExport();
-
-
-            if (this.Null(export))
-            {
-                return null;
-            }
-
-
-
-            list.Add(export);
-
-
-
-            i = i + 1;
-        }
-
-
-
-        CheckExportList ret;
-
-        ret = list;
-
-        return ret;
-    }
-
-
-
-
-
-
-
-
-    private CheckExport ExecuteExport()
-    {
-        CheckClassName varClass;
-
-
-        varClass = this.ExecuteClassName();
-
-
-
-        if (this.Null(varClass))
-        {
-            return null;
-        }
-
-
-
-
-        CheckExport ret;
-
-        ret = new CheckExport();
+        ret = new ClassIndex();
 
         ret.Init();
 
-        ret.Class = null;
+        ret.Value = value;
 
         return ret;
     }
+
+
+
+
+
 
 
 
