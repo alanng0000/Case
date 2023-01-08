@@ -383,7 +383,7 @@ public class Compile : InfraCompile
                 isValid = false;
 
 
-                char c;
+                byte c;
 
                 c = charIter.Value;
 
@@ -464,7 +464,7 @@ public class Compile : InfraCompile
 
 
 
-                    char oc;
+                    byte oc;
 
 
 
