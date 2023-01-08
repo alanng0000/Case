@@ -345,20 +345,9 @@ public class Compile : Object
 
 
 
-        this.Check.Port = this.Class.Port;
-
-
-
-
         this.Check.NodeResult = this.Result.Node;
         
 
-
-
-        if (this.Class.SystemResult != null)
-        {
-            this.Check.SystemModules = this.Class.SystemResult.Check.Refer.Module;
-        }
         
 
 

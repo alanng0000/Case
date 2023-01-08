@@ -2513,7 +2513,14 @@ public class Class : Object
 
 
 
+
+        byte ob;
+
+
+
+
         char oc;
+
 
 
 
@@ -2534,7 +2541,11 @@ public class Class : Object
 
 
 
-            line.Char.Add(oc);
+            ob = (byte)oc;
+
+
+
+            line.Char.Add(ob);
 
 
 
