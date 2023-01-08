@@ -450,11 +450,11 @@ public class Compile : InfraCompile
 
 
 
-        this.Refer.Module = new ModuleMap();
+        this.Refer.Import = new ModuleMap();
 
 
 
-        this.Refer.Module.Init();
+        this.Refer.Import.Init();
 
 
 
@@ -750,52 +750,6 @@ public class Compile : InfraCompile
 
 
 
-
-
-    private bool ImportModule(string name, ulong ver)
-    {   
-        Module module;
-
-
-        module = new Module();
-
-        module.Init();
-
-
-
-        module.Class = new ClassMap();
-
-        module.Class.Init();
-
-
-
-
-        Pair pair;
-
-        pair = new Pair();
-
-        pair.Init();
-
-        pair.Key = name;
-
-        pair.Value = module;
-
-
-
-
-        this.Refer.Module.Add(pair);
-        
-
-
-        return true;
-    }
-
-
-
-
-
-
-
     private bool ReferImport()
     {
         if (!this.Null(this.SystemModules))
@@ -833,7 +787,7 @@ public class Compile : InfraCompile
 
 
 
-                this.Refer.Module.Add(pair);
+                this.Refer.Import.Add(pair);
 
 
 
@@ -882,23 +836,7 @@ public class Compile : InfraCompile
 
 
 
-        Pair t;
-
-
-        t = new Pair();
-
-
-        t.Init();
-
-
-        t.Key = this.Module.Refer;
-
-
-        t.Value = this.Module;
-
-
-
-        this.Refer.Module.Add(t);
+        this.Refer.Module = this.Module;
 
 
 
