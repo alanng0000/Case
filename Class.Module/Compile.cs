@@ -187,7 +187,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Module = (CheckModule)this.CheckResult.Refer.Module.Get(this.Port.Name.Value);
+        this.Module = this.CheckResult.Refer.Module;
 
 
 

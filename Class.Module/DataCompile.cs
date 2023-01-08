@@ -329,7 +329,7 @@ class DataCompile
             
 
 
-            module = (CheckModule)this.Compile.CheckResult.Refer.Module.Get(moduleName);
+            module = (CheckModule)this.Compile.CheckResult.Refer.Import.Get(moduleName);
 
 
 
