@@ -6761,7 +6761,7 @@ public class Compile : InfraCompile
 
 
 
-        byte oc;
+        char oc;
 
 
 
@@ -6874,7 +6874,7 @@ public class Compile : InfraCompile
 
 
 
-        byte code;
+        char code;
 
 
 
@@ -6951,7 +6951,7 @@ public class Compile : InfraCompile
 
 
 
-    private ulong DigitValue(byte oc)
+    private ulong DigitValue(char oc)
     {
         ulong k;
 
@@ -7049,7 +7049,7 @@ public class Compile : InfraCompile
 
 
 
-        byte oc;
+        char oc;
 
 
         oc = this.TextInfra.Char(u);
@@ -7141,7 +7141,7 @@ public class Compile : InfraCompile
 
 
 
-            byte code;
+            char code;
 
 
             code = this.TextInfra.Char(pos);
