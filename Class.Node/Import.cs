@@ -1,6 +1,7 @@
 global using Object = System.Infra.Object;
 global using Range = System.Infra.Range;
 global using StringCompare = System.Infra.StringCompare;
+global using ObjectInfra = System.Infra.ObjectInfra;
 global using TextPos = System.Text.Pos;
 global using Keyword = Class.Infra.Keyword;
 global using Delimiter = Class.Infra.Delimiter;
