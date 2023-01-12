@@ -82,16 +82,6 @@ indent_size = 4
 
 
 
-[*.cvs]
-end_of_line = lf
-
-charset = utf-8
-
-indent_style = space
-
-indent_size = 4
-
-
 
 [{Expect,Actual,Code}]
 end_of_line = lf
