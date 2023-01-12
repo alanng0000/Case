@@ -227,7 +227,7 @@ public class Class : Object
 
 
 
-    private ModuleHeadRead ModuleHeadRead { get; set; }
+    private ModuleHeadImportRead ModuleHeadImportRead { get; set; }
 
 
 
@@ -266,10 +266,10 @@ public class Class : Object
 
 
 
-        this.ModuleHeadRead = new ModuleHeadRead();
+        this.ModuleHeadImportRead = new ModuleHeadImportRead();
 
 
-        this.ModuleHeadRead.Init();
+        this.ModuleHeadImportRead.Init();
 
 
 
@@ -702,7 +702,7 @@ public class Class : Object
 
 
 
-        this.Module = m;
+        this.PortRefer.Module = m;
 
 
         
@@ -1153,7 +1153,7 @@ public class Class : Object
         CheckModule module;
 
 
-        module = this.ReadModuleHead(moduleHead, import);
+        module = this.ReadModuleHeadImport(moduleHead, import);
 
 
 
@@ -1209,16 +1209,16 @@ public class Class : Object
 
 
 
-    private CheckModule ReadModuleHead(Data moduleHead, ModuleImport import)
+    private CheckModule ReadModuleHeadImport(Data moduleHead, ModuleImport import)
     {
-        this.ModuleHeadRead.Data = moduleHead;
+        this.ModuleHeadImportRead.Data = moduleHead;
 
 
-        this.ModuleHeadRead.Index = 0;
+        this.ModuleHeadImportRead.Index = 0;
 
 
 
-        this.ModuleHeadRead.Import = import;
+        this.ModuleHeadImportRead.Import = import;
 
 
 
@@ -1226,7 +1226,7 @@ public class Class : Object
         bool b;
 
 
-        b = this.ModuleHeadRead.Execute();
+        b = this.ModuleHeadImportRead.Execute();
 
 
 
@@ -1241,7 +1241,7 @@ public class Class : Object
         CheckModule module;
 
 
-        module = this.ModuleHeadRead.Result;
+        module = this.ModuleHeadImportRead.Result;
 
 
 

@@ -6,7 +6,7 @@ namespace Class;
 
 
 
-class ModuleHeadRead : Object
+class ModuleHeadImportRead : Object
 {
     public Data Data { get; set; }
 
