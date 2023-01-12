@@ -37,7 +37,42 @@ class Infra : Object
 
     public Refer CreateRefer(Refer refer)
     {
-        return null;
+        Refer a;
+
+        a = new Refer();
+
+        a.Init();
+
+
+
+        Module module;
+
+        module = this.CreateModule(refer.Module);
+
+
+
+        a.Module = module;
+
+
+
+
+        ModuleMap import;
+
+        import = this.CreateModuleMap(refer.Import);
+
+
+
+        a.Import = import;
+
+
+
+
+        Refer ret;
+
+        ret = a;
+
+
+        return ret;
     }
 
 
