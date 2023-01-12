@@ -13,11 +13,11 @@ public class Traverse
 
 
 
-        this.ErrorKind = this.Compile.ErrorKind;
+        this.ErrorKind = ErrorKindList.This;
 
 
 
-        this.Access = this.Compile.Access;
+        this.Access = AccessList.This;
 
 
 
