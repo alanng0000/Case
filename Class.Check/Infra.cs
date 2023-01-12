@@ -261,9 +261,9 @@ class Infra : Object
 
 
 
-            ClassName name;
+            string name;
 
-            name = (ClassName)pair.Key;
+            name = (string)pair.Key;
 
 
 
@@ -274,9 +274,9 @@ class Infra : Object
 
 
 
-            ClassName o;
+            string o;
 
-            o = this.CreateClassName(name);
+            o = name;
 
 
 
