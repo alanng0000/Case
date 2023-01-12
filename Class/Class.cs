@@ -142,13 +142,6 @@ public class Class : Object
 
         
 
-        this.InitModuleRootPath();
-
-
-
-
-        
-
         this.InitModuleEntry();
 
 
@@ -179,29 +172,6 @@ public class Class : Object
 
 
 
-    private bool InitModuleRootPath()
-    {
-        string s;
-
-
-        s = File.ReadAllText(this.PathFileName);
-
-
-
-        this.ModuleRootPath = s;
-
-
-
-        return true;
-    }
-
-
-
-
-
-    private string ModuleRootPath { get; set; }
-
-
 
 
 
@@ -223,18 +193,6 @@ public class Class : Object
 
 
 
-    private string PathFileName
-    {
-        get
-        {
-            return "Path.txt";
-        }
-        set
-        {
-        }
-    }
-
-
 
 
 
@@ -242,10 +200,18 @@ public class Class : Object
 
     private bool InitModuleHead()
     {
+        ModuleRoot moduleRoot;
+
+
+        moduleRoot = ModuleRoot.This;
+
+
+
+
         this.ModuleHeadLoad = new ModuleHeadLoad();
 
 
-        this.ModuleHeadLoad.RootPath = this.ModuleRootPath;
+        this.ModuleHeadLoad.RootPath = moduleRoot.Path;
 
 
         this.ModuleHeadLoad.Init();
@@ -294,11 +260,21 @@ public class Class : Object
 
 
 
+
+        ModuleRoot moduleRoot;
+
+
+        moduleRoot = ModuleRoot.This;
+
+
+
+
+
         ModuleEntryLoad moduleEntryLoad;
 
         moduleEntryLoad = new ModuleEntryLoad();
 
-        moduleEntryLoad.RootPath = this.ModuleRootPath;
+        moduleEntryLoad.RootPath = moduleRoot.Path;
 
         moduleEntryLoad.Init();
 

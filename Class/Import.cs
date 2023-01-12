@@ -25,6 +25,7 @@ global using ErrorList = Class.Infra.ErrorList;
 global using Data = Class.Infra.Data;
 global using Convert = Class.Infra.Convert;
 global using Constant = Class.Infra.Constant;
+global using ModuleRoot = Class.Infra.ModuleRoot;
 global using PortPort = Class.Port.Port;
 global using PortRead = Class.Port.Read;
 global using PortModuleName = Class.Port.ModuleName;
