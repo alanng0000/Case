@@ -41,9 +41,22 @@ public class Compile : Object
 
 
 
+    private TaskKindList TaskKindList { get; set; }
+
+
+
+
+
     public override bool Init()
     {
         base.Init();
+
+
+
+
+
+        this.TaskKindList = TaskKindList.This;
+
 
 
 
@@ -236,18 +249,18 @@ public class Compile : Object
 
 
 
-        TaskKindList kinds;
+        TaskKindList kindList;
             
 
-        kinds = this.Class.TaskKindList;
+        kindList = this.TaskKindList;
 
         
 
 
-        if (kind == kinds.Module |
-            kind == kinds.Check |
-            kind == kinds.Node |
-            kind == kinds.Token
+        if (kind == kindList.Module |
+            kind == kindList.Check |
+            kind == kindList.Node |
+            kind == kindList.Token
         )
         {
             this.ExecuteToken();
@@ -256,9 +269,9 @@ public class Compile : Object
 
 
 
-        if (kind == kinds.Module |
-            kind == kinds.Check |
-            kind == kinds.Node
+        if (kind == kindList.Module |
+            kind == kindList.Check |
+            kind == kindList.Node
         )
         {
             this.ExecuteNode();
@@ -267,8 +280,8 @@ public class Compile : Object
         
 
 
-        if (kind == kinds.Module |
-            kind == kinds.Check
+        if (kind == kindList.Module |
+            kind == kindList.Check
         )
         {
             this.ExecuteCheck();
@@ -277,7 +290,7 @@ public class Compile : Object
 
 
 
-        if (kind == kinds.Module)
+        if (kind == kindList.Module)
         {
             this.ExecuteModule();
         }
@@ -349,6 +362,8 @@ public class Compile : Object
         
 
         
+        this.Check.PortRefer = this.
+
 
 
         this.Check.Execute();
@@ -368,16 +383,6 @@ public class Compile : Object
 
     public bool ExecuteModule()
     {
-        this.Module.Sources = this.Source;
-
-
-
-
-        this.Module.Port = this.Class.Port;
-
-
-
-
         this.Module.NodeResult = this.Result.Node;
 
 
