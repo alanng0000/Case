@@ -825,9 +825,9 @@ public class Class : Object
 
         if (this.Null(u))
         {
-            ClassNameCompare cc;
+            StringCompare cc;
 
-            cc = new ClassNameCompare();
+            cc = new StringCompare();
 
             cc.Init();
 
@@ -903,21 +903,18 @@ public class Class : Object
 
 
 
-        CheckClassName aa;
+        string aa;
 
-        aa = new CheckClassName();
-
-        aa.Init();
-
-        aa.Value = o.Class.Value;
+        
+        aa = o.Class.Value;
 
 
 
 
 
-        CheckClassName e;
+        string e;
 
-        e = (CheckClassName)classImportMap.Get(aa);
+        e = (string)classImportMap.Get(aa);
 
 
 
@@ -930,13 +927,9 @@ public class Class : Object
 
 
 
-        CheckClassName ab;
+        string ab;
 
-        ab = new CheckClassName();
-
-        ab.Init();
-
-        ab.Value = o.Name.Value;
+        ab = o.Name.Value;
 
 
 
@@ -1044,8 +1037,6 @@ public class Class : Object
 
 
 
-
-
             if (!b)
             {
                 return false;
@@ -1056,6 +1047,9 @@ public class Class : Object
 
         return true;
     }
+
+
+
 
 
 
