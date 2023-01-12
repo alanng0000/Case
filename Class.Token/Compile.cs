@@ -437,7 +437,7 @@ public class Compile : InfraCompile
 
 
 
-                if (c == ' ' | c == '\t')
+                if (c == this.Constant.Space)
                 {
                     this.EndToken();
 
