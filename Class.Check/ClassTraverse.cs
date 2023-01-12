@@ -105,7 +105,7 @@ class ClassTraverse : Traverse
 
 
 
-        varClass.Module = this.Compile.Module;
+        varClass.Module = this.Compile.Refer.Module;
 
 
 
@@ -167,7 +167,7 @@ class ClassTraverse : Traverse
 
 
 
-        this.Compile.Module.Class.Add(o);
+        this.Compile.Refer.Module.Class.Add(o);
         
 
 

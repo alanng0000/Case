@@ -17,12 +17,7 @@ public class Compile : InfraCompile
 
 
 
-    public PortPort Port { get; set; }
-
-
-
-
-    public ModuleMap SystemModules { get; set; }
+    public Refer PortRefer { get; set; }
 
 
 
@@ -33,11 +28,6 @@ public class Compile : InfraCompile
 
 
     public Refer Refer { get; set; }
-        
-        
-
-
-    public Module Module { get; set; }
 
 
 
@@ -290,42 +280,6 @@ public class Compile : InfraCompile
 
 
 
-        ModuleIntent intent;
-
-
-        intent = new ModuleIntent();
-
-
-        intent.Init();
-
-
-
-
-
-
-
-
-        this.Module = new Module();
-
-
-
-        this.Module.Init();
-
-
-
-        this.Module.Refer = null;
-
-
-
-        this.Module.Class = new ClassMap();
-
-
-
-        this.Module.Class.Init();
-
-
-
-
 
 
 
@@ -342,12 +296,6 @@ public class Compile : InfraCompile
 
         return true;
     }
-
-
-
-
-
-
 
 
 
@@ -752,78 +700,75 @@ public class Compile : InfraCompile
 
     private bool ReferImport()
     {
-        if (!this.Null(this.SystemModules))
+        MapIter iter;
+
+
+
+        iter = this.PortRefer.Import.Iter();
+
+
+
+
+        while (iter.Next())
         {
-            MapIter iter;
-
-
-
-            iter = this.SystemModules.Iter();
+            Pair pair;
 
 
 
 
-            while (iter.Next())
+            pair = (Pair)iter.Value;
+
+
+
+
+            Module module;
+
+
+
+
+            module = (Module)pair.Value;
+
+
+
+
+
+
+            this.Refer.Import.Add(pair);
+
+
+
+
+
+            MapIter classIter;
+
+
+            classIter = module.Class.Iter();
+
+
+            while (classIter.Next())
             {
-                Pair pair;
+                Pair classPair;
+
+
+                classPair = (Pair)classIter.Value;
 
 
 
 
-                pair = (Pair)iter.Value;
+                Class varClass;
+
+
+
+                varClass = (Class)classPair.Value;
+
+
+
+                varClass.Id = this.NewClassId();
 
 
 
 
-                Module module;
-
-
-
-
-                module = (Module)pair.Value;
-
-
-
-
-
-
-                this.Refer.Import.Add(pair);
-
-
-
-
-
-                MapIter classIter;
-
-
-                classIter = module.Class.Iter();
-
-
-                while (classIter.Next())
-                {
-                    Pair classPair;
-
-
-                    classPair = (Pair)classIter.Value;
-
-
-
-
-                    Class varClass;
-
-
-
-                    varClass = (Class)classPair.Value;
-
-
-
-                    varClass.Id = this.NewClassId();
-
-
-
-
-                    this.Refer.Class.Add(classPair);
-                }
+                this.Refer.Class.Add(classPair);
             }
         }
 
