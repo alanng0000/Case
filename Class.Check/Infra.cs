@@ -40,7 +40,7 @@ class Infra : Object
         return null;
     }
 
-    
+
 
 
 
@@ -168,17 +168,28 @@ class Infra : Object
     {
         Class a;
 
+
         a = new Class();
+
 
         a.Init();
 
+
         a.Name = this.CreateClassName(varClass.Name);
+
+
+        a.Module = this.Module;
+
 
         a.Index = varClass.Index;
 
 
 
-        return null;
+        Class ret;
+
+        ret = a;
+
+        return ret;
     }
 
 
