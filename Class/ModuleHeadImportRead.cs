@@ -288,10 +288,10 @@ class ModuleHeadImportRead : Object
 
         while (i < count)
         {
-            CheckClassName className;
+            string className;
 
 
-            className = this.ExecuteClassName();
+            className = this.ExecuteClassNameString();
 
 
 
@@ -303,10 +303,10 @@ class ModuleHeadImportRead : Object
 
 
 
-            CheckClassName uu;
+            string uu;
 
 
-            uu = (CheckClassName)this.Import.ClassImport.Get(className);
+            uu = (string)this.Import.ClassImport.Get(className);
 
 
 
