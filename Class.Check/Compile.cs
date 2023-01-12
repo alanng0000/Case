@@ -79,15 +79,6 @@ public class Compile : InfraCompile
 
 
 
-    private bool PortError { get; set; }
-
-
-
-
-
-
-
-
     public override bool Init()
     {
         base.Init();
@@ -212,23 +203,6 @@ public class Compile : InfraCompile
         this.Result.Error = this.ErrorList;
 
 
-
-
-
-
-        bool b;
-
-        b = true;
-
-
-
-        if (!b)
-        {
-            this.PortError = true;
-
-
-            return true;
-        }
 
 
 
@@ -895,14 +869,6 @@ public class Compile : InfraCompile
 
     private bool ExecuteClass()
     {
-        if (this.PortError)
-        {
-            return true;
-        }
-        
-
-
-
         Traverse traverse;
 
 
@@ -1692,14 +1658,6 @@ public class Compile : InfraCompile
 
     protected virtual bool ExecuteMember()
     {
-        if (this.PortError)
-        {
-            return true;
-        }
-
-
-
-
         Traverse traverse;
 
 
@@ -1756,14 +1714,6 @@ public class Compile : InfraCompile
 
     private bool ExecuteState()
     {
-        if (this.PortError)
-        {
-            return true;
-        }
-
-
-
-
         Traverse traverse;
 
 
