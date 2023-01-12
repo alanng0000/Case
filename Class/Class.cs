@@ -46,7 +46,7 @@ public class Class : Object
 
 
 
-    public TaskKindList TaskKindList { get; set; }
+    private TaskKindList TaskKindList { get; set; }
 
 
 
@@ -93,7 +93,7 @@ public class Class : Object
 
 
 
-    private CheckRefer Refer { get; set; }
+    internal CheckRefer Refer { get; set; }
 
 
 
