@@ -402,9 +402,9 @@ public class Compile : InfraCompile
 
 
 
-                ClassName name;
+                string name;
 
-                name = (ClassName)pairB.Key;
+                name = (string)pairB.Key;
 
 
 
@@ -559,17 +559,6 @@ public class Compile : InfraCompile
 
     protected virtual Class CreateObjectClass()
     {
-        ClassName u;
-
-        u = new ClassName();
-
-        u.Init();
-
-        u.Value = "Object";
-
-
-
-
         Class varClass;
 
 
@@ -578,7 +567,11 @@ public class Compile : InfraCompile
 
 
 
-        varClass.Name = u;
+        varClass.Init();
+
+
+
+        varClass.Name = "Object";
 
 
 
