@@ -20,22 +20,22 @@ public class Compile : Object
 
 
 
-    public TokenCompile Token { get; set; }
+    private TokenCompile Token { get; set; }
 
 
 
 
-    public NodeCompile Node { get; set; }
+    private NodeCompile Node { get; set; }
 
 
 
 
-    public CheckCompile Check { get; set; }
+    private CheckCompile Check { get; set; }
 
 
 
 
-    public ModuleCompile Module { get; set; }
+    private ModuleCompile Module { get; set; }
 
 
 
