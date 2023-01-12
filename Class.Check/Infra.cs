@@ -149,6 +149,7 @@ class Infra : Object
             o = this.CreateClassName(name);
 
 
+
             Class u;
 
             u = this.CreateClass(varClass);
