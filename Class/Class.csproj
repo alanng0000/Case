@@ -16,9 +16,4 @@
         <ProjectReference Include="../Class.Module/Class.Module.csproj" />
     </ItemGroup>
 
-
-    <ItemGroup>
-        <Content Include="Path.txt" CopyToOutputDirectory="PreserveNewest" />
-    </ItemGroup>
-
 </Project>
