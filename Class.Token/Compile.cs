@@ -400,7 +400,7 @@ public class Compile : InfraCompile
 
 
 
-                if (c == '#')
+                if (c == this.Constant.Hash)
                 {
                     this.EndToken();
 

@@ -51,6 +51,10 @@ public class Constant : Object
 
 
 
+        this.Hash = '#';
+
+
+
 
 
         this.IntByteCount = sizeof(ulong);
@@ -94,6 +98,13 @@ public class Constant : Object
     }
 
 
+
+
+    public char Hash
+    {
+        get;
+        private set;
+    }
 
 
 
