@@ -54,7 +54,9 @@ class Infra : Object
 
         
 
+
         ModuleName name;
+
 
         name = this.CreateModuleName(module.Name);
 
@@ -63,13 +65,30 @@ class Infra : Object
 
 
 
+
         ModuleRefer refer;
+
 
         refer = this.CreateModuleRefer(module.Refer);
 
 
         a.Refer = refer;
 
+
+
+
+        if (this.Null(a.Refer.Ver))
+        {
+            ModuleVer ver;
+
+
+            ver = this.VerInfra.GetCurrentVer(a.Refer.Intent);
+
+
+
+            a.Refer.Ver = ver;
+        }
+        
 
 
 
@@ -93,7 +112,7 @@ class Infra : Object
 
             this.Module = null;
         }
-        
+
 
 
 
@@ -291,13 +310,6 @@ class Infra : Object
 
 
         b = this.Null(refer.Ver);
-
-
-        if (b)
-        {
-            ver = this.VerInfra.GetCurrentVer(a.Intent);
-        }
-
 
 
         if (!b)
