@@ -316,37 +316,32 @@ public class Compile : InfraCompile
 
     private bool InitRefer()
     {
-        this.Refer = new Refer();
+        this.Refer = this.Infra.CreateRefer(this.PortRefer);
 
 
 
-        this.Refer.Init();
-
-
-
-        this.Refer.Import = new ModuleMap();
-
-
-
-        this.Refer.Import.Init();
-
-
-
-        this.Refer.Module = new Module();
-
-
-        
+        ClassMap varClass;
 
 
 
 
+        varClass = new ClassMap();
 
-        this.Refer.Class = new ClassMap();
+        varClass.Init();
 
 
 
-        this.Refer.Class.Init();
+        this.Refer.Class = varClass;
 
+
+
+
+        varClass = new ClassMap();
+
+        varClass.Init();
+
+
+        this.Refer.Module.Class = varClass;
 
 
 
