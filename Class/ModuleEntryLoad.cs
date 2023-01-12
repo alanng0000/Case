@@ -13,12 +13,6 @@ class ModuleEntryLoad : Object
 
 
 
-    public string RootPath { get; set; }
-
-
-
-
-
     private string EntryFileName
     {
         get
@@ -80,8 +74,13 @@ class ModuleEntryLoad : Object
 
 
 
+        ModuleRoot moduleRoot;
 
-        this.EntryFilePath = Path.Combine(this.RootPath, this.EntryFileName);
+        moduleRoot = ModuleRoot.This;
+
+
+
+        this.EntryFilePath = Path.Combine(moduleRoot.Path, this.EntryFileName);
 
 
 
