@@ -22,12 +22,12 @@ public class Compile : InfraCompile
 
 
 
-    public CheckMap Check { get; set; }
+    internal CheckMap Check { get; set; }
 
 
 
 
-    public Refer Refer { get; set; }
+    internal Refer Refer { get; set; }
 
 
 
@@ -38,7 +38,7 @@ public class Compile : InfraCompile
 
 
 
-    public ConstantClass ConstantClass { get; set; }
+    internal ConstantClass ConstantClass { get; set; }
 
 
 
@@ -57,12 +57,12 @@ public class Compile : InfraCompile
 
 
 
-    public ErrorKindList ErrorKind { get; set; }
+    internal ErrorKindList ErrorKind { get; set; }
 
 
 
 
-    public AccessList Access { get; set; }
+    internal AccessList Access { get; set; }
 
 
 
