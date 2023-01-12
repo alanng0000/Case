@@ -3530,7 +3530,7 @@ public class StateTraverse : Traverse
 
         if (access == this.Access.Local)
         {
-            if (this.Compile.Module == varClass.Module)
+            if (this.Compile.Refer.Module == varClass.Module)
             {
                 return true;
             }
