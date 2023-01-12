@@ -5,6 +5,32 @@ namespace Class.Infra;
 
 public class ModuleRoot : Object
 {
+    public static ModuleRoot This { get; } = CreateGlobal();
+
+
+
+
+    private static ModuleRoot CreateGlobal()
+    {
+        ModuleRoot global;
+
+
+        global = new ModuleRoot();
+
+
+        global.Init();
+
+
+
+        return global;
+    }
+
+
+    
+
+
+
+
     public override bool Init()
     {
         string s;
