@@ -677,39 +677,6 @@ class ModuleHeadImportRead : Object
 
 
 
-    private CheckClassName ExecuteClassName()
-    {
-        string value;
-
-
-        value = this.ExecuteClassNameString();
-
-
-
-        if (this.Null(value))
-        {
-            return null;
-        }
-
-
-
-
-
-        CheckClassName ret;
-
-        ret = new CheckClassName();
-
-        ret.Init();
-
-        ret.Value = value;
-
-
-        return ret;
-    }
-
-
-
-
 
 
     private string ExecuteClassNameString()
