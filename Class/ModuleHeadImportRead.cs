@@ -48,6 +48,11 @@ class ModuleHeadImportRead : Object
 
 
 
+    private CheckModule Module { get; set; }
+
+
+
+
 
     public override bool Init()
     {
@@ -84,6 +89,9 @@ class ModuleHeadImportRead : Object
 
 
         this.ClassMap = null;
+
+
+        this.Module = null;
 
 
 
@@ -209,6 +217,23 @@ class ModuleHeadImportRead : Object
 
 
 
+        
+        CheckModule m;
+
+        m = new CheckModule();
+
+        m.Init();
+
+        m.Refer = this.Import.Refer;
+
+        m.Name = this.Import.Name;
+
+
+
+        this.Module = m;
+
+
+
 
         b = this.ExecuteExportList();
 
@@ -222,21 +247,16 @@ class ModuleHeadImportRead : Object
 
 
 
-
         CheckModule ret;
 
-        ret = new CheckModule();
 
-        ret.Init();
+        ret = this.Module;
 
-        ret.Refer = this.Import.Refer;
-
-        ret.Name = this.Import.Name;
-
-        ret.Class =  this.ClassMap;
 
         return ret;
     }
+
+
 
 
 
@@ -565,6 +585,9 @@ class ModuleHeadImportRead : Object
 
 
             varClass.Name = u.Class;
+
+
+            varClass.Module = this.Module;
 
 
             varClass.Index = k;
