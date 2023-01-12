@@ -57,6 +57,18 @@ public class StringInfra
 
 
 
+    public char QuoteChar
+    {
+        get
+        {
+            return this.Quote;
+        }
+    }
+
+
+
+
+
     public bool Equal(Range range, string other)
     {
         int count;
