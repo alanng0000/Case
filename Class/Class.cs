@@ -98,17 +98,6 @@ public class Class : Object
 
 
 
-    private CheckModule Module { get; set; }
-
-
-
-
-
-    private CheckRefer PortRefer { get; set; }
-
-
-
-
 
 
 
@@ -558,40 +547,54 @@ public class Class : Object
 
     private bool ExecutePort()
     {
-        this.Refer = null;
+        bool b;
 
+        b = this.ExecutePortRefer();
+
+
+
+        if (!b)
+        {
+            this.Refer = null;
+        }
+
+
+
+        this.ImportMap = null;
+
+
+
+
+
+        bool ret;
+        
+        ret = b;
+
+        return ret;
+    }
+
+
+
+
+
+
+
+    private bool ExecutePortRefer()
+    {
+        this.Refer = null;
 
 
 
         bool b;
 
-        b = this.Null(this.Task.Source);
+
+        b = this.GetPort();
 
 
         if (!b)
         {
-            bool ba;
-            
-            ba = this.GetPort(this.Task.Source);
-            
-
-            if (!ba)
-            {
-                this.Error("Port Invalid");
-
-
-                return false;
-            }
+            return false;
         }
-
-
-
-
-        if (b)
-        {
-            this.Port = this.Task.Port;
-        }
-
 
 
 
@@ -621,7 +624,7 @@ public class Class : Object
 
 
 
-        this.PortRefer = refer;
+        this.Refer = refer;
 
 
 
@@ -702,7 +705,7 @@ public class Class : Object
 
 
 
-        this.PortRefer.Module = m;
+        this.Refer.Module = m;
 
 
         
@@ -734,20 +737,7 @@ public class Class : Object
         {
             return false;
         }
-
-
-
-
-        this.ImportMap = null;
-
-
-
-
-        this.Refer = this.PortRefer;
-
-
-
-        this.PortRefer = null;
+ 
 
 
 
@@ -1178,7 +1168,7 @@ public class Class : Object
 
 
 
-        this.PortRefer.Import.Add(p);
+        this.Refer.Import.Add(p);
 
 
 
@@ -1313,8 +1303,47 @@ public class Class : Object
 
 
 
+    private bool GetPort()
+    {
+        bool b;
 
-    protected virtual bool GetPort(string portFile)
+        b = this.Null(this.Task.Source);
+
+
+        if (!b)
+        {
+            bool ba;
+            
+            ba = this.GetSourcePort(this.Task.Source);
+            
+
+            if (!ba)
+            {
+                this.Error("Port Invalid");
+
+
+                return false;
+            }
+        }
+
+
+
+
+        if (b)
+        {
+            this.Port = this.Task.Port;
+        }
+
+
+
+        return true;
+    }
+
+
+
+
+
+    protected virtual bool GetSourcePort(string portFile)
     {
         if (!this.CheckPortFile(portFile))
         {   
