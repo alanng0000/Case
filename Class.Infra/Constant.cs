@@ -47,6 +47,10 @@ public class Constant : Object
 
 
 
+        this.Space = ' ';
+
+
+
 
 
         this.IntByteCount = sizeof(ulong);
@@ -79,6 +83,18 @@ public class Constant : Object
         get;
         private set;
     }
+
+
+
+
+    public char Space
+    {
+        get;
+        private set;
+    }
+
+
+
 
 
 
