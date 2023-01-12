@@ -73,17 +73,23 @@ class Infra : Object
 
 
 
-        this.Module = a;
-
-
-
         ClassMap varClass;
 
-        varClass = this.CreateClassMap(module.Class);
+        varClass = null;
+        
+
+
+        if (this.Null(module.Class))
+        {
+            this.Module = a;
+
+
+            varClass = this.CreateClassMap(module.Class);
 
 
 
-        this.Module = null;
+            this.Module = null;
+        }
 
 
 
