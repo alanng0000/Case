@@ -4,6 +4,31 @@ namespace Class.Infra;
 
 public class Convert : Object
 {
+    public static Convert This { get; } = CreateGlobal();
+
+
+
+
+    private static Convert CreateGlobal()
+    {
+        Convert global;
+
+
+        global = new Convert();
+
+
+
+        global.Init();
+
+
+
+        return global;
+    }
+
+
+
+
+
     public ulong ByteListULong(byte[] u, ulong start)
     {
         ulong m;
