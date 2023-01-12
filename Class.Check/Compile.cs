@@ -38,6 +38,12 @@ public class Compile : InfraCompile
 
 
 
+    private Infra Infra { get; set; }
+
+
+
+
+
     internal ConstantClass ConstantClass { get; set; }
 
 
@@ -69,7 +75,6 @@ public class Compile : InfraCompile
 
 
 
-
     private bool IsSystem { get; set; }
 
 
@@ -92,6 +97,14 @@ public class Compile : InfraCompile
 
 
         this.Access = AccessList.This;
+
+
+
+
+        this.Infra = new Infra();
+
+
+        this.Infra.Init();
 
 
 
