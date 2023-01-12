@@ -14,5 +14,6 @@ global using InfraCompile = Class.Infra.Compile;
 global using Source = Class.Infra.Source;
 global using SourceArray = Class.Infra.SourceArray;
 global using ErrorList = Class.Infra.ErrorList;
+global using Constant = Class.Infra.Constant;
 global using TokenStructArray = System.List.StructArray<Class.Token.Token>;
 global using CommentStructArray = System.List.StructArray<Class.Token.Comment>;

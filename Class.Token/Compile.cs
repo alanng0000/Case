@@ -45,6 +45,12 @@ public class Compile : InfraCompile
 
 
 
+        this.Constant = Constant.This;
+
+
+
+
+
         this.CountNew = new CountNew();
 
 
@@ -267,6 +273,11 @@ public class Compile : InfraCompile
 
 
 
+    private Constant Constant { get; set; }
+
+
+
+
 
     private CountNew CountNew { get; set; }
 
@@ -442,7 +453,7 @@ public class Compile : InfraCompile
 
 
 
-                if (c == '\"')
+                if (c == this.Constant.Quote)
                 {
                     this.EndToken();
                     
@@ -501,13 +512,13 @@ public class Compile : InfraCompile
 
                         if (!ba)
                         {
-                            if (oc == '\\')
+                            if (oc == this.Constant.BackSlash)
                             {
                                 isEscape = true;
                             }
 
 
-                            if (oc == '\"')
+                            if (oc == this.Constant.Quote)
                             {
                                 b = true;
                             }
