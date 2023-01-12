@@ -6,10 +6,6 @@ namespace Class;
 class ModuleHeadLoad : Object
 {
     private Convert Convert { get; set; }
-
-
-
-    public string RootPath { get; set; }
     
 
 
@@ -204,10 +200,20 @@ class ModuleHeadLoad : Object
 
 
 
+        
+
+        ModuleRoot moduleRoot;
+
+
+        moduleRoot = ModuleRoot.This;
+
+
+
+
         string s;
 
 
-        s = Path.Combine(this.RootPath, u, v);
+        s = Path.Combine(moduleRoot.Path, u, v);
 
 
         s = Path.Combine(s, this.DataFileName);

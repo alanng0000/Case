@@ -211,9 +211,6 @@ public class Class : Object
         this.ModuleHeadLoad = new ModuleHeadLoad();
 
 
-        this.ModuleHeadLoad.RootPath = moduleRoot.Path;
-
-
         this.ModuleHeadLoad.Init();
 
 
@@ -261,20 +258,9 @@ public class Class : Object
 
 
 
-        ModuleRoot moduleRoot;
-
-
-        moduleRoot = ModuleRoot.This;
-
-
-
-
-
         ModuleEntryLoad moduleEntryLoad;
 
         moduleEntryLoad = new ModuleEntryLoad();
-
-        moduleEntryLoad.RootPath = moduleRoot.Path;
 
         moduleEntryLoad.Init();
 
