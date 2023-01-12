@@ -9,9 +9,9 @@ class ClassImport : Object
 
 
 
-    public CheckClassName Class { get; set; }
+    public string Class { get; set; }
 
 
 
-    public CheckClassName Name { get; set; }
+    public string Name { get; set; }
 }
