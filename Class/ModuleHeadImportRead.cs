@@ -291,7 +291,7 @@ class ModuleHeadImportRead : Object
             string className;
 
 
-            className = this.ExecuteClassNameString();
+            className = this.ExecuteClassName();
 
 
 
@@ -679,7 +679,7 @@ class ModuleHeadImportRead : Object
 
 
 
-    private string ExecuteClassNameString()
+    private string ExecuteClassName()
     {
         string value;
 
