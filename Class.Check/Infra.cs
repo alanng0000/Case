@@ -4,38 +4,177 @@ namespace Class.Check;
 
 class Infra : Object
 {
-    public Compile Compile { get; set; }
-
-
-
-    public Refer CreateRefer()
+    public override bool Init()
     {
-        return null;
+        base.Init();
+
+
+
+        this.VerInfra = new VerInfra();
+
+
+        this.VerInfra.Init();
+
+
+
+        return true;
     }
 
 
 
-    private Module CreateReferModule(Module module)
+
+
+    private VerInfra VerInfra { get; set; }
+
+
+
+
+
+    private Module Module { get; set; }
+
+
+
+
+    public Refer CreateRefer(Refer refer)
     {
-        Module m;
+        return null;
+    }
 
-        m = new Module();
+    
 
-        m.Init();
+
+
+    private Module CreateModule(Module module)
+    {
+        Module a;
+
+        a = new Module();
+
+        a.Init();
 
         
 
         ModuleName name;
 
-        name = this.CreateReferModuleName(module.Name);
+        name = this.CreateModuleName(module.Name);
 
 
-        m.Name = name;
-
-
+        a.Name = name;
 
 
 
+        ModuleRefer refer;
+
+        refer = this.CreateModuleRefer(module.Refer);
+
+
+        a.Refer = refer;
+
+
+
+
+        this.Module = a;
+
+
+
+        ClassMap varClass;
+
+        varClass = this.CreateClassMap(module.Class);
+
+
+
+        this.Module = null;
+
+
+
+
+        a.Class = varClass;
+
+
+
+        Module ret;
+
+        ret = a;
+
+
+        return ret;
+    }
+
+
+
+
+
+
+
+    private ClassMap CreateClassMap(ClassMap classMap)
+    {
+        ClassMap a;
+
+        a = new ClassMap();
+
+        a.Init();
+
+
+
+        MapIter iter;
+
+        iter = classMap.Iter();
+
+
+        while (iter.Next())
+        {
+            Pair pair;
+
+
+            pair = (Pair)iter.Value;
+
+
+
+
+            ClassName name;
+
+            name = (ClassName)pair.Key;
+
+
+
+            Class varClass;
+
+            varClass = (Class)pair.Value;
+
+
+
+            ClassName o;
+
+            o = this.CreateClassName(name);
+        }
+
+
+
+
+
+        ClassMap ret;
+
+        ret = a;
+
+
+        return ret;
+    }
+
+
+
+
+
+    private Class CreateClass(Class varClass)
+    {
+        Class a;
+
+        a = new Class();
+
+        a.Init();
+
+        a.Name = this.CreateClassName(varClass.Name);
+
+        a.Index = varClass.Index;
 
 
 
@@ -45,7 +184,33 @@ class Infra : Object
 
 
 
-    private ModuleRefer CreateReferModuleRefer(ModuleRefer refer)
+
+
+
+    private ClassName CreateClassName(ClassName name)
+    {
+        ClassName a;
+
+        a = new ClassName();
+
+        a.Init();
+
+        a.Value = name.Value;
+
+
+
+        ClassName ret;
+
+        ret = a;
+
+        return ret;
+    }
+
+
+
+
+
+    private ModuleRefer CreateModuleRefer(ModuleRefer refer)
     {
         ModuleRefer a;
 
@@ -58,7 +223,9 @@ class Infra : Object
 
         ModuleIntent intent;
 
-        intent = this.CreateReferModuleIntent(refer.Intent);
+
+        intent = this.CreateModuleIntent(refer.Intent);
+
 
 
         a.Intent = intent;
@@ -66,10 +233,36 @@ class Infra : Object
 
 
 
-        if (refer.Ver == null)
-        {
 
+        ModuleVer ver;
+
+
+        ver = null;
+
+
+
+
+        bool b;
+
+
+        b = this.Null(refer.Ver);
+
+
+        if (b)
+        {
+            ver = this.VerInfra.GetCurrentVer(a.Intent);
         }
+
+
+
+        if (!b)
+        {
+            ver = this.CreateModuleVer(refer.Ver);
+        }
+
+
+        
+        a.Ver = ver;
 
 
 
@@ -86,16 +279,30 @@ class Infra : Object
 
 
 
-    private ulong GetCurrentModuleVer(ModuleIntent intent)
+    private ModuleVer CreateModuleVer(ModuleVer ver)
     {
-        return 0;
+        ModuleVer a;
+
+        a = new ModuleVer();
+
+        a.Init();
+
+        a.Value = ver.Value;
+
+
+
+        ModuleVer ret;
+
+        ret = a;
+
+        return ret;
     }
 
 
 
 
 
-    private ModuleIntent CreateReferModuleIntent(ModuleIntent intent)
+    private ModuleIntent CreateModuleIntent(ModuleIntent intent)
     {
         ModuleIntent a;
 
@@ -111,7 +318,7 @@ class Infra : Object
 
 
 
-    private ModuleName CreateReferModuleName(ModuleName name)
+    private ModuleName CreateModuleName(ModuleName name)
     {
         ModuleName a;
 
@@ -123,5 +330,13 @@ class Infra : Object
 
 
         return a;
+    }
+
+
+
+
+    private bool Null(object o)
+    {
+        return ObjectInfra.This.Null(o);
     }
 }
