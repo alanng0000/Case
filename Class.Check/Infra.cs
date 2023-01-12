@@ -88,7 +88,7 @@ class Infra : Object
 
             a.Refer.Ver = ver;
         }
-        
+
 
 
 
@@ -101,7 +101,7 @@ class Infra : Object
 
 
 
-        if (this.Null(module.Class))
+        if (!this.Null(module.Class))
         {
             this.Module = a;
 
