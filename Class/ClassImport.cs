@@ -5,7 +5,7 @@ namespace Class;
 
 class ClassImport : Object
 {
-    public ClassIndex Index { get; set; }
+    public int Index { get; set; }
 
 
 
