@@ -34,12 +34,66 @@ class Infra : Object
 
 
 
-        
+
 
 
 
 
         return null;
+    }
+
+
+
+
+    private ModuleRefer CreateReferModuleRefer(ModuleRefer refer)
+    {
+        ModuleRefer a;
+
+        a = new ModuleRefer();
+
+        a.Init();
+
+
+
+
+        ModuleIntent intent;
+
+        intent = this.CreateReferModuleIntent(refer.Intent);
+
+
+        a.Intent = intent;
+
+
+
+
+
+
+
+        ModuleRefer ret;
+
+        ret = a;
+
+        return ret;
+    }
+
+
+
+
+
+
+
+    private ModuleIntent CreateReferModuleIntent(ModuleIntent intent)
+    {
+        ModuleIntent a;
+
+        a = new ModuleIntent();
+
+        a.Init();
+
+        a.Value = intent.Value;
+
+
+        return a;
     }
 
 
