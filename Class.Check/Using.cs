@@ -21,6 +21,7 @@ global using ModuleRefer = Class.Infra.ModuleRefer;
 global using ModuleIntent = Class.Infra.ModuleIntent;
 global using ModuleName = Class.Infra.ModuleName;
 global using ModuleReferCompare = Class.Infra.ModuleReferCompare;
+global using VerInfra = Class.Infra.VerInfra;
 global using NodeClass = Class.Node.Class;
 global using NodeClassName = Class.Node.ClassName;
 global using NodeField = Class.Node.Field;
