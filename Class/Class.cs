@@ -665,9 +665,6 @@ public class Class : Object
         u.Intent = entry.Intent;
 
 
-        u.Ver = null;
-
-
 
 
 
