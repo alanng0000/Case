@@ -155,10 +155,7 @@ public class Compile : InfraCompile
 
 
 
-
         this.Check = new CheckMap();
-
-
 
 
 
