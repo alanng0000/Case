@@ -12,3 +12,5 @@ global using EnvironmentSpecialFolder = System.Environment.SpecialFolder;
 global using StringBuilder = System.Text.StringBuilder;
 global using Path = System.IO.Path;
 global using File = System.IO.File;
+global using NumberStyles = System.Globalization.NumberStyles;
+global using CultureInfo = System.Globalization.CultureInfo;

@@ -71,8 +71,8 @@ public class VerInfra : Object
 
         bool b;
 
-        b = ulong.TryParse(s, out o);
-        
+        b = ulong.TryParse(s, NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture, out o);
+
 
 
         if (!b)
