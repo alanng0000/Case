@@ -10,4 +10,3 @@ global using TextInfra = System.Text.Infra;
 global using Environment = System.Environment;
 global using EnvironmentSpecialFolder = System.Environment.SpecialFolder;
 global using StringBuilder = System.Text.StringBuilder;
-global using Path = System.IO.Path;
