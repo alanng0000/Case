@@ -57,12 +57,12 @@ public class Compile : InfraCompile
 
 
 
-    internal ErrorKindList ErrorKind { get; set; }
+    private ErrorKindList ErrorKind { get; set; }
 
 
 
 
-    internal AccessList Access { get; set; }
+    private AccessList Access { get; set; }
 
 
 
@@ -95,16 +95,12 @@ public class Compile : InfraCompile
 
 
 
-        this.ErrorKind = this.CreateErrorKind();
+        this.ErrorKind = ErrorKindList.This;
 
 
 
 
-        this.Access = this.CreateAccess();
-
-
-
-
+        this.Access = AccessList.This;
 
 
 
@@ -114,15 +110,6 @@ public class Compile : InfraCompile
 
 
         this.ConstantClass.Init();
-
-
-
-
-
-
-
-
-
 
         
 
@@ -298,24 +285,6 @@ public class Compile : InfraCompile
     }
 
 
-
-
-
-
-
-
-    protected virtual ErrorKindList CreateErrorKind()
-    {
-        return ErrorKindList.This;
-    }
-
-
-
-
-    protected virtual AccessList CreateAccess()
-    {
-        return AccessList.This;
-    }
 
 
 
