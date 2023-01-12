@@ -89,6 +89,15 @@ class ModuleHeadImportRead : Object
 
 
 
+        if (this.Null(module))
+        {
+            return false;
+        }
+
+
+
+
+
         this.Result = module;
 
 
