@@ -66,11 +66,6 @@ class Infra : Object
 
 
 
-            ModuleRefer refer;
-
-            refer = (ModuleRefer)pair.Key;
-
-
 
             Module module;
 
@@ -79,12 +74,36 @@ class Infra : Object
 
 
 
-            
+            Module u;
+
+            u = this.CreateModule(module);
+
+
+
+            Pair h;
+
+            h = new Pair();
+
+            h.Init();
+
+            h.Key = u.Refer;
+
+            h.Value = u;
+
+
+
+            a.Add(h);
         }
 
 
 
-        return null;
+
+        ModuleMap ret;
+
+        ret = a;
+
+
+        return ret;
     }
 
 
