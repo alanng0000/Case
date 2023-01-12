@@ -51,6 +51,14 @@ public class Constant : Object
 
 
 
+        this.Tab = '\t';
+
+
+
+        this.NewLine = '\n';
+
+
+
         this.Hash = '#';
 
 
@@ -96,6 +104,25 @@ public class Constant : Object
         get;
         private set;
     }
+
+
+
+
+    public char Tab
+    {
+        get;
+        private set;
+    }
+
+
+
+
+    public char NewLine
+    {
+        get;
+        private set;
+    }
+
 
 
 

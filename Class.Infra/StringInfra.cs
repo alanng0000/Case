@@ -7,18 +7,8 @@ public class StringInfra
 {
     public bool Init()
     {
-        Constant constant;
+        this.Constant = Constant.This;
 
-        constant = Constant.This;
-
-
-
-        this.Quote = constant.Quote;
-
-
-
-
-        this.BackSlash = constant.BackSlash;
 
 
 
@@ -44,6 +34,11 @@ public class StringInfra
 
 
     private RangeInfra Ranges { get; set; }
+
+
+
+
+    private Constant Constant { get; set; }
 
 
 
@@ -353,7 +348,7 @@ public class StringInfra
 
 
 
-            b = (c == this.BackSlash);
+            b = (c == this.Constant.BackSlash);
             
             
 
@@ -373,19 +368,19 @@ public class StringInfra
 
 
                     
-                    if (u == Quote)
+                    if (u == this.Constant.Quote)
                     {
                         escapeValue = u;
                     }
                     else if (u == 't')
                     {
-                        escapeValue = '\t';
+                        escapeValue = this.Constant.Tab;
                     }
                     else if (u == 'n')
                     {
-                        escapeValue = '\n';
+                        escapeValue = this.Constant.NewLine;
                     }
-                    else if (u == this.BackSlash)
+                    else if (u == this.Constant.BackSlash)
                     {
                         escapeValue = u;
                     }
@@ -415,7 +410,7 @@ public class StringInfra
 
             if (! b)
             {
-                bb = (c == this.Quote);
+                bb = (c == this.Constant.Quote);
 
 
 
@@ -716,25 +711,15 @@ public class StringInfra
 
 
 
-    private char Quote;
-
-
-
-
-    private char BackSlash;
-
-
-
-
 
     private bool IsQuote(int charIndex)
     {
-        char code;
+        char oc;
 
 
 
 
-        code = this.Char(charIndex);
+        oc = this.Char(charIndex);
 
 
 
@@ -743,7 +728,7 @@ public class StringInfra
 
 
 
-        b = code == Quote;
+        b = (oc == this.Constant.Quote);
 
 
 
