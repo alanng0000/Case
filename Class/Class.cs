@@ -606,21 +606,9 @@ public class Class : Object
 
         refer.Init();
 
-        refer.Class = new CheckClassMap();
-
-        refer.Class.Init();
-
         refer.Import = new CheckModuleMap();
 
         refer.Import.Init();
-
-        refer.Export = new CheckExportList();
-
-        refer.Export.Init();
-
-        refer.Entry = new CheckModuleEntry();
-
-        refer.Entry.Init();
 
 
 

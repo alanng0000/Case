@@ -311,12 +311,6 @@ public class Compile : InfraCompile
 
 
 
-
-        
-
-
-
-
         this.Refer.Import = new ModuleMap();
 
 
@@ -325,7 +319,10 @@ public class Compile : InfraCompile
 
 
 
+        this.Refer.Module = new Module();
 
+
+        
 
 
 
@@ -346,6 +343,10 @@ public class Compile : InfraCompile
 
         return true;
     }
+
+
+
+
 
 
 
@@ -390,11 +391,11 @@ public class Compile : InfraCompile
 
 
 
-        varClass.Module = this.Module;
+        varClass.Module = this.Refer.Module;
 
 
 
-        varClass.Index = this.Module.Class.Count;
+        varClass.Index = this.Refer.Module.Class.Count;
 
 
 
@@ -453,7 +454,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Module.Class.Add(tt);
+        this.Refer.Module.Class.Add(tt);
 
 
 
@@ -700,13 +701,8 @@ public class Compile : InfraCompile
 
 
 
-        this.Refer.Module = this.Module;
 
-
-
-
-
-        this.IsSystem = (this.Module.Refer.Intent.Value == this.SystemModuleIntent);
+        this.IsSystem = (this.Refer.Module.Refer.Intent.Value == this.SystemModuleIntent);
 
 
 
@@ -723,11 +719,11 @@ public class Compile : InfraCompile
 
 
 
-            varClass.Module = this.Module;
+            varClass.Module = this.Refer.Module;
 
 
 
-            varClass.Index = this.Module.Class.Count;
+            varClass.Index = this.Refer.Module.Class.Count;
 
 
 
@@ -1039,7 +1035,7 @@ public class Compile : InfraCompile
 
 
 
-        iter = this.Module.Class.Iter();
+        iter = this.Refer.Module.Class.Iter();
 
 
 
