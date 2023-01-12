@@ -161,19 +161,8 @@ class ModuleHeadImportRead : Object
 
 
 
-        ClassIndexCompare compare;
+        this.ClassImportMap = new ClassImportMap();
 
-        compare = new ClassIndexCompare();
-
-        compare.Init();
-
-
-
-
-        this.ClassImportMap = new Map();
-
-
-        this.ClassImportMap.Compare = compare;
 
 
         this.ClassImportMap.Init();
