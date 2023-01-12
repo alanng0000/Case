@@ -5,7 +5,7 @@ namespace Class.Check;
 
 public class Class : Object
 {
-    public ClassName Name { get; set; }
+    public string Name { get; set; }
 
 
 
