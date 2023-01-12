@@ -682,7 +682,7 @@ class ModuleHeadImportRead : Object
         string value;
 
 
-        value = this.NameValue();
+        value = this.ExecuteClassNameString();
 
 
 
@@ -690,6 +690,7 @@ class ModuleHeadImportRead : Object
         {
             return null;
         }
+
 
 
 
@@ -707,6 +708,34 @@ class ModuleHeadImportRead : Object
     }
 
 
+
+
+
+
+    private string ExecuteClassNameString()
+    {
+        string value;
+
+
+        value = this.NameValue();
+
+
+
+        if (this.Null(value))
+        {
+            return null;
+        }
+
+
+
+
+        string ret;
+
+        ret = value;
+
+
+        return ret;
+    }
 
 
 
