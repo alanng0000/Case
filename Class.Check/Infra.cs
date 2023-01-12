@@ -66,6 +66,12 @@ class Infra : Object
 
 
 
+        if (refer.Ver == null)
+        {
+
+        }
+
+
 
 
 
@@ -77,6 +83,13 @@ class Infra : Object
     }
 
 
+
+
+
+    private ulong GetCurrentModuleVer(ModuleIntent intent)
+    {
+        return 0;
+    }
 
 
 
