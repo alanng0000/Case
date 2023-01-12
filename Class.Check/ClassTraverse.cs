@@ -54,16 +54,6 @@ class ClassTraverse : Traverse
         }
 
 
-
-
-        
-        ClassName h;
-
-        h = new ClassName();
-
-        h.Init();
-
-        h.Value = className;
         
 
 
@@ -81,7 +71,7 @@ class ClassTraverse : Traverse
 
 
 
-        varClass.Name = h;
+        varClass.Name = className;
 
 
 
