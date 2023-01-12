@@ -329,7 +329,7 @@ class Infra : Object
         a.Init();
 
 
-        a.Name = this.CreateClassName(varClass.Name);
+        a.Name = varClass.Name;
 
 
         a.Module = this.Module;
@@ -347,29 +347,6 @@ class Infra : Object
     }
 
 
-
-
-
-
-
-    private ClassName CreateClassName(ClassName name)
-    {
-        ClassName a;
-
-        a = new ClassName();
-
-        a.Init();
-
-        a.Value = name.Value;
-
-
-
-        ClassName ret;
-
-        ret = a;
-
-        return ret;
-    }
 
 
 
