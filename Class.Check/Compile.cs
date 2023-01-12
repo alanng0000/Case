@@ -320,6 +320,7 @@ public class Compile : InfraCompile
 
 
 
+
         ClassMap varClass;
 
 
@@ -348,13 +349,91 @@ public class Compile : InfraCompile
 
 
 
+        this.InitReferImport();
+
+
+
+
+
 
         return true;
     }
 
+    
 
 
 
+
+
+    private bool InitReferImport()
+    {
+        MapIter moduleIter;
+
+        moduleIter = this.Refer.Import.Iter();
+
+
+        while (moduleIter.Next())
+        {
+            Pair pairA;
+
+            pairA = (Pair)moduleIter.Value;
+
+
+
+            Module module;
+
+            module = (Module)pairA.Value;
+
+
+
+
+            MapIter classIter;
+
+            classIter = module.Class.Iter();
+
+
+            while (classIter.Next())
+            {
+                Pair pairB;
+
+                pairB = (Pair)classIter.Value;
+
+
+
+                ClassName name;
+
+                name = (ClassName)pairB.Key;
+
+
+
+                Class varClass;
+
+                varClass = (Class)pairB.Value;
+
+
+
+
+                Pair pair;
+
+                pair = new Pair();
+
+                pair.Init();
+
+                pair.Key = name;
+
+                pair.Value = varClass;
+
+
+
+                this.Refer.Class.Add(pair);
+            }
+        }
+
+
+
+
+        return true;
+    }
 
 
 
