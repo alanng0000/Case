@@ -33,10 +33,20 @@ public class ModuleRoot : Object
 
     public override bool Init()
     {
+        EnvironmentSpecialFolder fold;
+
+        fold = EnvironmentSpecialFolder.UserProfile;
+
+
+
         string s;
+        
+
+        s = Environment.GetFolderPath(fold);
 
 
-        s = File.ReadAllText(this.PathFileName);
+
+        s = global::System.IO.Path.Combine(s, "Module");
 
 
 
