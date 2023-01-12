@@ -337,9 +337,11 @@ public class Compile : InfraCompile
 
 
 
+
         varClass = new ClassMap();
 
         varClass.Init();
+
 
 
         this.Refer.Module.Class = varClass;
@@ -359,7 +361,7 @@ public class Compile : InfraCompile
         return true;
     }
 
-    
+
 
 
 
