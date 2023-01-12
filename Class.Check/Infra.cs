@@ -73,10 +73,13 @@ class Infra : Object
 
 
 
+
         ClassMap varClass;
 
+
         varClass = null;
-        
+
+
 
 
         if (this.Null(module.Class))
@@ -90,6 +93,7 @@ class Infra : Object
 
             this.Module = null;
         }
+        
 
 
 
