@@ -353,7 +353,7 @@ public class CheckString : Object
 
 
 
-        this.Append(varClass.Name.Value);
+        this.Append(varClass.Name);
 
 
 
