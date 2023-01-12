@@ -6,3 +6,4 @@ global using Array = System.List.Array;
 global using Text = System.Text.Text;
 global using TextInfra = System.Text.Infra;
 global using StringBuilder = System.Text.StringBuilder;
+global using File = System.IO.File;
