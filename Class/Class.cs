@@ -695,10 +695,8 @@ public class Class : Object
         m.Name = entry.Name;
 
 
-        m.Class = new CheckClassMap();
+        m.Class = null;
 
-
-        m.Class.Init();
 
 
 
