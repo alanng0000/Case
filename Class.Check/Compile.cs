@@ -1541,7 +1541,7 @@ public class Compile : InfraCompile
 
     private bool ThisModule(Class varClass)
     {
-        return (varClass.Module == this.Module);
+        return (varClass.Module == this.Refer.Module);
     }
 
 
