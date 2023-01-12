@@ -335,7 +335,7 @@ class ModuleHeadImportRead : Object
 
                 pair.Init();
 
-                pair.Key = oi;
+                pair.Key = a.Index;
 
                 pair.Value = a;
 
