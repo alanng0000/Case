@@ -38,6 +38,17 @@ public class Constant : Object
 
 
 
+
+        this.Quote = '\"';
+
+
+
+        this.BackSlash = '\\';
+
+
+
+
+
         this.IntByteCount = sizeof(ulong);
 
 
@@ -53,6 +64,21 @@ public class Constant : Object
 
 
     
+
+    public char Quote
+    {
+        get;
+        private set;
+    }
+
+
+
+
+    public char BackSlash
+    {
+        get;
+        private set;
+    }
 
 
 

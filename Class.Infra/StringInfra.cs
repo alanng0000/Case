@@ -7,11 +7,18 @@ public class StringInfra
 {
     public bool Init()
     {
-        this.Quote = '\"';
+        Constant constant;
+
+        constant = Constant.This;
 
 
 
-        this.BackSlash = '\\';
+        this.Quote = constant.Quote;
+
+
+
+
+        this.BackSlash = constant.BackSlash;
 
 
 
@@ -55,15 +62,6 @@ public class StringInfra
 
 
 
-
-
-    public char QuoteChar
-    {
-        get
-        {
-            return this.Quote;
-        }
-    }
 
 
 
