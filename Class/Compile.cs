@@ -6,8 +6,8 @@ namespace Class;
 public class Compile : Object
 {
     public Class Class { get; set; }
-        
-        
+
+
 
 
     public Result Result { get; set; }
