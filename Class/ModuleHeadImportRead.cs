@@ -246,6 +246,11 @@ class ModuleHeadImportRead : Object
 
 
 
+        this.Module.Class = this.ClassMap;
+
+
+
+
 
         CheckModule ret;
 
