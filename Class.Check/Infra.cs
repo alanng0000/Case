@@ -44,6 +44,53 @@ class Infra : Object
 
 
 
+    private ModuleMap CreateModuleMap(ModuleMap moduleMap)
+    {
+        ModuleMap a;
+
+        a = new ModuleMap();
+
+        a.Init();
+
+
+
+        MapIter iter;
+
+        iter = moduleMap.Iter();
+
+        while (iter.Next())
+        {
+            Pair pair;
+
+            pair = (Pair)iter.Value;
+
+
+
+            ModuleRefer refer;
+
+            refer = (ModuleRefer)pair.Key;
+
+
+
+            Module module;
+
+            module = (Module)pair.Value;
+
+
+
+
+            
+        }
+
+
+
+        return null;
+    }
+
+
+
+
+
     private Module CreateModule(Module module)
     {
         Module a;
