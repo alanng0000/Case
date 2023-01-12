@@ -362,7 +362,7 @@ public class Compile : Object
         
 
         
-        this.Check.PortRefer = this.
+        this.Check.PortRefer = this.Class.Refer;
 
 
 
