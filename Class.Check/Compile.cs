@@ -414,6 +414,10 @@ public class Compile : InfraCompile
 
 
 
+                varClass.Id = this.NewClassId();
+
+
+
 
                 Pair pair;
 
@@ -702,88 +706,6 @@ public class Compile : InfraCompile
 
     private bool ReferImport()
     {
-        MapIter iter;
-
-
-
-        iter = this.PortRefer.Import.Iter();
-
-
-
-
-        while (iter.Next())
-        {
-            Pair pair;
-
-
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
-            Module module;
-
-
-
-
-            module = (Module)pair.Value;
-
-
-
-
-
-
-            this.Refer.Import.Add(pair);
-
-
-
-
-
-            MapIter classIter;
-
-
-            classIter = module.Class.Iter();
-
-
-            while (classIter.Next())
-            {
-                Pair classPair;
-
-
-                classPair = (Pair)classIter.Value;
-
-
-
-
-                Class varClass;
-
-
-
-                varClass = (Class)classPair.Value;
-
-
-
-                varClass.Id = this.NewClassId();
-
-
-
-
-                this.Refer.Class.Add(classPair);
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
         this.IsSystem = (this.Refer.Module.Refer.Intent.Value == this.SystemModuleIntent);
 
 
