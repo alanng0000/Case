@@ -55,17 +55,6 @@ public class ConstantClass : Object
 
     private Class CreateClass(string name)
     {
-        ClassName h;
-
-        h = new ClassName();
-
-        h.Init();
-
-        h.Value = name;
-
-
-
-
         Class c;
 
 
@@ -75,7 +64,7 @@ public class ConstantClass : Object
         c.Init();
 
 
-        c.Name = h;
+        c.Name = name;
 
 
 
