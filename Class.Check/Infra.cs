@@ -143,9 +143,32 @@ class Infra : Object
 
 
 
+
             ClassName o;
 
             o = this.CreateClassName(name);
+
+
+            Class u;
+
+            u = this.CreateClass(varClass);
+
+
+
+
+            Pair h;
+
+            h = new Pair();
+
+            h.Init();
+
+            h.Key = o;
+
+            h.Value = u;
+
+
+
+            a.Add(h);
         }
 
 
