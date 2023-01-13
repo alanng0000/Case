@@ -65,6 +65,12 @@ public class Constant : Object
 
 
 
+        this.NullClassIndex = 0xffffffffffffffff;
+
+
+
+
+
         this.IntByteCount = sizeof(ulong);
 
 
@@ -128,6 +134,17 @@ public class Constant : Object
 
 
     public char Hash
+    {
+        get;
+        private set;
+    }
+
+
+
+
+
+
+    public ulong NullClassIndex
     {
         get;
         private set;
