@@ -334,6 +334,18 @@ class Write : Object
 
         return true;
     }
+    
+
+
+
+
+    private bool ExecuteExport(Export export)
+    {
+        this.ExecuteClassIndex(export.Index);
+
+
+        return true;
+    }
 
 
 
