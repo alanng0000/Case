@@ -114,6 +114,20 @@ public class ModulePath : Object
 
 
 
+    public string ModuleDataName
+    {
+        get
+        {
+            return "_";
+        }
+        set
+        {
+        }
+    }
+
+
+
+
 
     public string Root
     {

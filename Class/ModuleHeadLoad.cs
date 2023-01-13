@@ -35,17 +35,6 @@ class ModuleHeadLoad : Object
 
 
 
-    private string DataFileName
-    {
-        get
-        {
-            return "_";
-        }
-        set
-        {
-        }
-    }
-
 
 
 
@@ -206,7 +195,15 @@ class ModuleHeadLoad : Object
 
 
 
-        s = Path.Combine(s, this.DataFileName);
+        string su;
+
+
+        su = modulePath.ModuleDataName;
+
+
+
+
+        s = Path.Combine(s, su);
 
 
 
