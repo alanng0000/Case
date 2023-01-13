@@ -253,26 +253,4 @@ class Write : Object
 
 
     private ByteOp ByteOp { get; set; }
-
-
-
-
-
-
-
-    private Stream Stream { get; set; }
-
-
-
-
-
-
-    private bool InitStream()
-    {
-        this.Stream = new FileStream(this.Path, System.IO.FileMode.Create, System.IO.FileAccess.Write, System.IO.FileShare.None);
-
-
-
-        return true;
-    }
 }

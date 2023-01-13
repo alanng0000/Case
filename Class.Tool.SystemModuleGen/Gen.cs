@@ -16,9 +16,37 @@ class Gen : Object
 
 
 
+        this.WriteFile();
+
+
         return 0;
     }
 
+
+
+
+
+
+
+    private string Path { get; set; }
+
+
+
+    private Data Data { get; set; }
+
+
+
+
+
+    private bool WriteFile()
+    {
+        File.WriteAllBytes(this.Path, this.Data.Value);
+        
+        
+
+
+        return true;
+    }
 
 
 

@@ -9,5 +9,4 @@ global using ModuleVer = Class.Infra.ModuleVer;
 global using ModuleName = Class.Infra.ModuleName;
 global using Convert = Class.Infra.Convert;
 global using Constant = Class.Infra.Constant;
-global using Stream = System.IO.Stream;
-global using FileStream = System.IO.FileStream;
+global using File = System.IO.File;
