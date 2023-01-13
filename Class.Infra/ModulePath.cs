@@ -46,7 +46,7 @@ public class ModulePath : Object
 
 
 
-        s = global::System.IO.Path.Combine(s, "Module");
+        s = Path.Combine(s, "Module");
 
 
 
