@@ -3,19 +3,19 @@ namespace Class.Infra;
 
 
 
-public class ModuleRoot : Object
+public class ModulePath : Object
 {
-    public static ModuleRoot This { get; } = CreateGlobal();
+    public static ModulePath This { get; } = CreateGlobal();
 
 
 
 
-    private static ModuleRoot CreateGlobal()
+    private static ModulePath CreateGlobal()
     {
-        ModuleRoot global;
+        ModulePath global;
 
 
-        global = new ModuleRoot();
+        global = new ModulePath();
 
 
         global.Init();
