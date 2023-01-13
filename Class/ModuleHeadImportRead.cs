@@ -48,9 +48,6 @@ class ModuleHeadImportRead : Object
 
 
 
-    private CheckModule Module { get; set; }
-
-
 
 
 
@@ -89,9 +86,6 @@ class ModuleHeadImportRead : Object
 
 
         this.ClassMap = null;
-
-
-        this.Module = null;
 
 
 
@@ -206,21 +200,6 @@ class ModuleHeadImportRead : Object
 
 
 
-        
-        CheckModule m;
-
-        m = new CheckModule();
-
-        m.Init();
-
-        m.Refer = this.Import.Refer;
-
-        m.Name = this.Import.Name;
-
-
-
-        this.Module = m;
-
 
 
 
@@ -235,7 +214,19 @@ class ModuleHeadImportRead : Object
 
 
 
-        this.Module.Class = this.ClassMap;
+
+        
+        CheckModule m;
+
+        m = new CheckModule();
+
+        m.Init();
+
+        m.Refer = this.Import.Refer;
+
+        m.Name = this.Import.Name;
+
+        m.Class = this.ClassMap;
 
 
 
@@ -244,7 +235,7 @@ class ModuleHeadImportRead : Object
         CheckModule ret;
 
 
-        ret = this.Module;
+        ret = m;
 
 
         return ret;
@@ -579,9 +570,6 @@ class ModuleHeadImportRead : Object
 
 
             varClass.Name = u.Class;
-
-
-            varClass.Module = this.Module;
 
 
             varClass.Index = k;
