@@ -125,14 +125,32 @@ class Write : Object
 
     private bool ExecuteModule()
     {
+        this.ExecuteModuleRefer(this.Module.Refer);
 
 
+        this.ExecuteModuleName(this.Module.Name);
 
 
 
 
         return true;
     }
+
+
+
+
+    private bool ExecuteModuleRefer(ModuleRefer refer)
+    {
+        this.ExecuteModuleIntent(refer.Intent);
+
+
+        this.ExecuteModuleVer(refer.Ver);
+
+
+
+        return true;
+    }
+
 
 
 
@@ -151,6 +169,17 @@ class Write : Object
     private bool ExecuteModuleVer(ModuleVer ver)
     {
         this.Int(ver.Value);
+
+
+        return true;
+    }
+
+
+
+
+    private bool ExecuteModuleName(ModuleName name)
+    {
+        this.String(name.Value);
 
 
         return true;
