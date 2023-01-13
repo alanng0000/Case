@@ -41,21 +41,12 @@ public class Compile : Object
 
 
 
-    private TaskKindList TaskKindList { get; set; }
-
-
-
 
 
     public override bool Init()
     {
         base.Init();
 
-
-
-
-
-        this.TaskKindList = TaskKindList.This;
 
 
 
@@ -252,8 +243,8 @@ public class Compile : Object
         TaskKindList kindList;
             
 
-        kindList = this.TaskKindList;
-
+        kindList = TaskKindList.This;
+        
         
 
 
