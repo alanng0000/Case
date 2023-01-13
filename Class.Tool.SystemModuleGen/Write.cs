@@ -161,6 +161,11 @@ class Write : Object
 
 
 
+    public Data Data { get; set; }
+
+
+
+
 
     private Stream Stream { get; set; }
 
