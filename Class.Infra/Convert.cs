@@ -135,6 +135,13 @@ public class Convert : Object
 
 
 
+    public byte Byte(ulong a)
+    {
+        return (byte)a;
+    }
+
+
+
 
     public string Int60BitListString(ulong a)
     {
