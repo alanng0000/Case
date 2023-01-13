@@ -11,7 +11,7 @@ class MemberTraverse : Traverse
 
 
 
-    private VarMap ParamVars { get; set; }
+    private VarMap ParamVarMap { get; set; }
 
 
 
@@ -422,7 +422,7 @@ class MemberTraverse : Traverse
 
 
 
-        this.ParamVars = o;
+        this.ParamVarMap = o;
 
 
 
@@ -453,7 +453,7 @@ class MemberTraverse : Traverse
         method.Access = access;
 
 
-        method.Params = this.ParamVars;
+        method.Params = this.ParamVarMap;
 
 
         method.Call = u;
@@ -559,7 +559,7 @@ class MemberTraverse : Traverse
 
 
 
-        if (!this.Null(this.ParamVars.Get(varName)))
+        if (!this.Null(this.ParamVarMap.Get(varName)))
         {
             this.Error(this.ErrorKind.NameUnavailable, nodeVar);
 
@@ -620,7 +620,7 @@ class MemberTraverse : Traverse
 
 
 
-        this.Compile.Infra.VarMapAdd(this.ParamVars, varVar);
+        this.Compile.Infra.VarMapAdd(this.ParamVarMap, varVar);
         
 
 
