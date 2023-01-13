@@ -31,9 +31,16 @@ public class Convert : Object
 
     public ulong ByteListULong(byte[] u, ulong start)
     {
+        Constant constant;
+
+        constant = Constant.This;
+
+
+
+
         ulong m;
 
-        m = Constant.This.ByteBitCount;
+        m = constant.ByteBitCount;
 
 
 
@@ -65,7 +72,7 @@ public class Convert : Object
 
         ulong count;
 
-        count = Constant.This.IntByteCount;
+        count = constant.IntByteCount;
 
 
 
