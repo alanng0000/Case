@@ -11,21 +11,12 @@ class Write : Object
 
     public Module Module { get; set; }
 
-    
+
 
 
 
     public bool Execute()
     {
-        this.InitStream();
-
-
-
-
-
-
-
-        this.Stream.Dispose();
 
 
 
@@ -42,13 +33,23 @@ class Write : Object
 
 
 
-        
+        this.HeadSize();
+
+
 
 
         return true;
     }
 
 
+
+
+    private bool HeadSize()
+    {
+
+
+        return true;
+    }
 
     
 
@@ -123,7 +124,7 @@ class Write : Object
 
 
 
-            this.Stream.WriteByte(ob);
+            this.Byte(ob);
             
 
 
@@ -135,6 +136,26 @@ class Write : Object
 
         return true;
     }
+
+
+
+
+
+
+
+    private bool Byte(byte ob)
+    {
+        this.Index = this.Index + 1;
+
+
+        return true;
+    }
+
+
+
+
+
+    public ulong Index { get; set; }
 
 
 
