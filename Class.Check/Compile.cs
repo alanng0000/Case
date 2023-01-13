@@ -185,6 +185,11 @@ public class Compile : InfraCompile
 
 
 
+        this.IsSystem = (this.Refer.Module.Refer.Intent.Value == this.SystemModuleIntent);
+
+        
+
+
 
 
         this.ErrorList = new ErrorList();
@@ -506,60 +511,6 @@ public class Compile : InfraCompile
 
 
 
-    private bool AddSystemClass(Class varClass)
-    {
-        Pair m;
-
-
-        m = new Pair();
-
-
-        m.Init();
-
-
-        m.Key = varClass.Name;
-
-
-        m.Value = varClass;
-
-
-
-        this.Refer.Class.Add(m);
-
-
-
-
-
-
-        Pair tt;
-
-
-        tt = new Pair();
-
-
-        tt.Init();
-
-
-        tt.Key = varClass.Name;
-
-
-        tt.Value = varClass;
-
-
-
-        this.Refer.Module.Class.Add(tt);
-
-
-
-
-        return true;
-    }
-
-
-
-
-
-
 
     protected virtual Class CreateObjectClass()
     {
@@ -699,92 +650,6 @@ public class Compile : InfraCompile
 
 
 
-
-
-
-
-
-    private bool ReferImport()
-    {
-        this.IsSystem = (this.Refer.Module.Refer.Intent.Value == this.SystemModuleIntent);
-
-
-
-
-
-
-        if (this.IsSystem)
-        {
-            Class varClass;
-
-
-
-            varClass = this.CreateObjectClass();
-
-
-
-            varClass.Module = this.Refer.Module;
-
-
-
-            varClass.Index = this.Refer.Module.Class.Count;
-
-
-
-
-
-
-            this.AddSystemClass(varClass);
-
-
-
-
-
-
-            this.ObjectClass = varClass;
-
-
-
-
-
-
-
-            this.SetConstantClass(this.ConstantClass.Bool);
-
-
-
-            this.AddSystemClass(this.ConstantClass.Bool);
-
-
-
-
-
-            this.SetConstantClass(this.ConstantClass.Int);
-
-
-
-            this.AddSystemClass(this.ConstantClass.Int);
-
-
-
-
-
-            this.SetConstantClass(this.ConstantClass.String);
-
-
-            
-            this.AddSystemClass(this.ConstantClass.String);
-        }
-
-
-
-
-
-
-
-
-        return true;
-    }
 
 
 
