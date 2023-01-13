@@ -7,12 +7,6 @@ namespace Class;
 
 class ModuleEntryLoad : Object
 {
-    private Convert Convert { get; set; }
-
-
-
-
-
     private string EntryFileName
     {
         get
@@ -67,20 +61,14 @@ class ModuleEntryLoad : Object
 
 
 
-        this.Convert = new Convert();
 
+        ModulePath modulePath;
 
-        this.Convert.Init();
-
-
-
-        ModuleRoot moduleRoot;
-
-        moduleRoot = ModuleRoot.This;
+        modulePath = ModulePath.This;
 
 
 
-        this.EntryFilePath = Path.Combine(moduleRoot.Path, this.EntryFileName);
+        this.EntryFilePath = Path.Combine(modulePath.Root, this.EntryFileName);
 
 
 
@@ -150,9 +138,16 @@ class ModuleEntryLoad : Object
 
 
 
+        Convert convert;
+
+        convert = Convert.This;
+
+
+
+
         ulong k;
 
-        k = this.Convert.ULong(this.Row);
+        k = convert.ULong(this.Row);
 
 
 
