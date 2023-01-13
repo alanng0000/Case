@@ -33,10 +33,6 @@ public class Task : Object
 
 
 
-    public ModuleVer Ver { get; set; }
-
-
-
 
 
     public PortPort Port { get; set; }
