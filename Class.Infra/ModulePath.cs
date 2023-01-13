@@ -77,27 +77,17 @@ public class ModuleRoot : Object
 
 
 
-        ulong o;
-
-        o = this.Refer.Intent.Value;
-
-
-
 
         string u;
 
-        u = convert.Int60BitListString(o);
+        u = convert.Int60BitListString(intent);
 
-
-
-
-        o = this.Refer.Ver.Value;
 
 
 
         string v;
 
-        v = convert.Int60BitListString(o);
+        v = convert.Int60BitListString(ver);
 
 
 
