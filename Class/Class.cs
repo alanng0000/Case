@@ -360,14 +360,14 @@ public class Class : Object
 
 
 
-        this.ClassImportMap = import.ClassImport;
+        this.ModuleImport = import;
 
 
 
 
 
         string s;
-        
+
 
 
         s = "Bool";
@@ -392,14 +392,92 @@ public class Class : Object
 
 
 
+
+        this.InitConstantClassModule();
+
+
+
+
+
+
+
         return true;
     }
 
 
 
 
-    private Map ClassImportMap { get; set; }
 
+    private bool InitConstantClassModule()
+    {
+        ModuleImport import;
+
+        import = this.ModuleImport;
+
+
+
+
+        ModuleRefer refer;
+
+
+        refer = import.Refer;
+
+
+
+
+
+        Data moduleHead;
+
+
+        moduleHead = this.LoadModuleHead(refer);
+
+
+
+
+        if (this.Null(moduleHead))
+        {
+            return false;
+        }
+
+        
+
+
+        CheckModule module;
+
+
+        module = this.ReadModuleHeadImport(moduleHead, import);
+
+
+
+        if (this.Null(module))
+        {
+            return false;
+        }
+        
+
+
+        
+
+        this.ConstantModule = module;
+
+
+
+
+
+        return true;
+    }
+
+
+
+
+
+
+    private ModuleImport ModuleImport { get; set; }
+
+
+
+
+    private CheckModule ConstantModule { get; set; }
 
 
 
@@ -419,12 +497,14 @@ public class Class : Object
 
 
 
-        this.ClassImportMap.Add(pair);
+        this.ModuleImport.ClassImport.Add(pair);
 
 
 
         return true;
     }
+
+
 
 
 
