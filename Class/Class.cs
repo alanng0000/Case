@@ -46,12 +46,6 @@ public class Class : Object
 
 
 
-    private TaskKindList TaskKindList { get; set; }
-
-
-
-
-
 
     private TextWriter Out { get; set; }
 
@@ -105,11 +99,6 @@ public class Class : Object
     {
         base.Init();
 
-
-
-
-
-        this.TaskKindList = TaskKindList.This;
 
 
 
@@ -295,7 +284,7 @@ public class Class : Object
         TaskKindList k;
 
 
-        k = this.TaskKindList;
+        k = TaskKindList.This;
 
 
 
@@ -1315,133 +1304,6 @@ public class Class : Object
 
 
 
-    private bool InitSystem()
-    {
-        Task task;
-
-
-        task = new Task();
-
-
-        task.Init();
-
-
-        task.Kind = this.TaskKindList.Check;
-
-
-        task.Node = "Class";
-
-
-        task.Check = null;
-
-
-        task.Source = null;
-
-
-        task.Print = false;
-
-
-        task.Out = null;
-
-
-
-
-        this.Task = task;
-
-
-
-
-
-        string moduleName;
-
-
-
-        moduleName = "System";
-
-
-
-
-        this.Port = this.CreatePortNonModule(moduleName);
-
-
-
-
-
-
-        this.Source = new SourceArray();
-
-
-
-        this.Source.Init();
-
-
-
-
-
-
-
-        this.Out = Console.Out;
-
-
-
-
-
-        this.SystemResult = null;
-
-
-
-
-        this.Result = null;
-
-
-
-
-        this.ExecuteCompile();
-
-
-
-
-
-        this.SystemResult = this.Result;
-
-
-
-
-
-        this.Result = null;
-
-
-
-
-        this.Port = null;
-
-
-
-
-
-        this.Out = null;
-
-
-
-        this.Source = null;
-
-
-
-
-        this.Task = null;
-
-
-
-
-        return true;
-    }
-
-
-
-
-
-
-
 
 
     public bool ExecuteCompile()
@@ -1531,16 +1393,23 @@ public class Class : Object
 
 
 
+        TaskKindList k;
+
+        k = TaskKindList.This;
+
+
+
+
         bool kindModule;
 
 
-        kindModule = this.Kind(this.TaskKindList.Module);
+        kindModule = this.Kind(k.Module);
 
 
 
-        if (kindModule | this.Kind(this.TaskKindList.Token))
+        if (kindModule | this.Kind(k.Token))
         {
-            if (!(this.Result.Token == null))
+            if (!this.Null(this.Result.Token))
             {
                 this.WriteErrors(this.Result.Token.Error);
             }
@@ -1548,9 +1417,9 @@ public class Class : Object
 
 
 
-        if (kindModule | this.Kind(this.TaskKindList.Node))
+        if (kindModule | this.Kind(k.Node))
         {
-            if (!(this.Result.Node == null))
+            if (!this.Null(this.Result.Node))
             {
                 this.WriteErrors(this.Result.Node.Error);
             }
@@ -1558,9 +1427,9 @@ public class Class : Object
 
 
 
-        if (kindModule | this.Kind(this.TaskKindList.Check))
+        if (kindModule | this.Kind(k.Check))
         {
-            if (!(this.Result.Check == null))
+            if (!this.Null(this.Result.Check))
             {
                 this.WriteErrors(this.Result.Check.Error);
             }
