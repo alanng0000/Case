@@ -9,9 +9,5 @@
         <ProjectReference Include="../../System/System.List/System.List.csproj" />
         <ProjectReference Include="../../System/System.Text/System.Text.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-        <Content Include="Path.txt" CopyToOutputDirectory="PreserveNewest" />
-    </ItemGroup>
-
+    
 </Project>
