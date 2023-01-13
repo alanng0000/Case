@@ -88,13 +88,26 @@ class Gen : Object
 
 
 
+
         string s;
 
 
         s = modulePath.Module(intent, ver);
 
 
-        s = Path.Combine(s, this.DataFileName);
+
+
+        string su;
+
+
+        su = modulePath.ModuleDataName;
+
+
+
+
+
+        s = Path.Combine(s, su);
+
 
 
 
@@ -132,19 +145,6 @@ class Gen : Object
 
 
 
-
-
-
-    private string DataFileName
-    {
-        get
-        {
-            return "_";
-        }
-        set
-        {
-        }
-    }
 
 
 
