@@ -50,7 +50,7 @@ public class ModuleRoot : Object
 
 
 
-        this.PathData = s;
+        this.RootData = s;
 
 
 
@@ -61,32 +61,80 @@ public class ModuleRoot : Object
 
 
 
-    public string Path
+
+
+
+
+
+
+    public string Module(ulong intent, ulong ver)
+    {
+        Convert convert;
+
+
+        convert = Convert.This;
+
+
+
+
+        ulong o;
+
+        o = this.Refer.Intent.Value;
+
+
+
+
+        string u;
+
+        u = convert.Int60BitListString(o);
+
+
+
+
+        o = this.Refer.Ver.Value;
+
+
+
+        string v;
+
+        v = convert.Int60BitListString(o);
+
+
+
+
+
+        string s;
+
+
+        s = Path.Combine(this.Root, u, v);
+
+
+
+
+        string ret;
+
+        ret = s;
+
+
+        return ret;
+    }
+
+
+
+
+
+
+
+    public string Root
     {
         get
         {
-            return this.PathData;
+            return this.RootData;
         }
     }
 
 
 
 
-    private string PathData { get; set; }
-
-
-
-
-
-
-    private string PathFileName
-    {
-        get
-        {
-            return "Path.txt";
-        }
-        set
-        {
-        }
-    }
+    private string RootData { get; set; }
 }
