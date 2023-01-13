@@ -137,6 +137,98 @@ class Write : Object
 
 
 
+    private bool ExecuteModuleIntent(ModuleIntent intent)
+    {
+        this.Int(intent.Value);
+
+
+        return true;
+    }
+
+
+
+
+    private bool ExecuteModuleVer(ModuleVer ver)
+    {
+        this.Int(ver.Value);
+
+
+        return true;
+    }
+
+
+
+
+
+    private bool String(string o)
+    {
+        Convert convert;
+
+        convert = Convert.This;
+
+
+
+
+        ulong k;
+
+        k = convert.ULong(o.Length);
+
+
+
+
+        ulong count;
+
+        count = k;
+
+
+
+
+        this.Int(count);
+
+
+
+
+        char oc;
+
+
+
+        byte ob;
+
+
+
+
+        int uu;
+
+
+
+        ulong i;
+
+        i = 0;
+
+        while (i < count)
+        {
+            uu = convert.SInt32(i);
+
+
+            oc = o[uu];
+
+
+            ob = convert.CharByte(oc);
+
+
+
+            this.Byte(ob);
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+        return true;
+    }
 
 
 
