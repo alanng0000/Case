@@ -52,7 +52,7 @@ class Gen : Object
     }
 
 
-    
+
 
 
 
@@ -122,5 +122,108 @@ class Gen : Object
 
 
         return ret;
+    }
+
+
+
+
+    private Array CreateSystemClass()
+    {
+        string objectName;
+
+        objectName = "Object";
+
+
+        string boolName;
+
+        boolName = "Bool";
+
+
+        string intName;
+
+        intName = "Int";
+
+
+        string stringName;
+
+        stringName = "String";
+
+
+
+
+        int count;
+
+        count = 4;
+
+
+
+
+        Array array;
+
+        array = new Array();
+
+        array.Count = count;
+
+        array.Init();
+
+
+
+
+
+        this.Array = array;
+
+
+        this.Index = 0;
+
+
+
+
+        this.AddItem(objectName);
+
+
+        this.AddItem(boolName);
+
+
+        this.AddItem(intName);
+
+
+        this.AddItem(stringName);
+
+
+
+
+
+
+        Array ret;
+
+        ret = array;
+
+
+        return ret;
+    }
+
+
+
+
+    private Array Array { get; set; }
+
+
+
+    private int Index { get; set; }
+
+
+
+
+    private bool AddItem(object item)
+    {
+        this.Array.Set(this.Index, item);
+
+
+        
+        this.Index = this.Index + 1;
+
+
+
+        return true;
     }
 }
