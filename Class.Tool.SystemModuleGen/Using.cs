@@ -1,4 +1,5 @@
 global using Object = System.Infra.Object;
+global using Data = System.Infra.Data;
 global using Array = System.List.Array;
 global using ModuleRoot = Class.Infra.ModuleRoot;
 global using ClassIndex = Class.Infra.ClassIndex;
