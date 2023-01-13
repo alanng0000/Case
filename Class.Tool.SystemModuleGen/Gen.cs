@@ -19,6 +19,45 @@ class Gen : Object
 
     private bool CreateSystemModule()
     {
+        ModuleRefer refer;
+
+        refer = this.CreateSystemRefer();
+
+
+
+        ModuleName name;
+
+        name = this.CreateSystemName();
+
+
+
+
+
+        Module module;
+
+
+        module = new Module();
+
+
+        module.Init();
+
+
+        module.Refer = refer;
+
+
+        module.Name = name;
+
+
+        return true;
+    }
+
+
+    
+
+
+
+    private ModuleRefer CreateSystemRefer()
+    {
         ModuleIntent intent;
 
         intent = new ModuleIntent();
@@ -54,7 +93,19 @@ class Gen : Object
 
 
 
+        ModuleRefer ret;
 
+        ret = refer;
+
+        return ret;
+    }
+
+
+
+
+
+    private ModuleName CreateSystemName()
+    {
         ModuleName name;
 
         name = new ModuleName();
@@ -65,23 +116,11 @@ class Gen : Object
 
 
 
+        ModuleName ret;
 
-        Module module;
-
-
-        module = new Module();
+        ret = name;
 
 
-        module.Init();
-
-
-        module.Refer = refer;
-
-
-        module.Name = name;
-
-
-        return true;
+        return ret;
     }
-
 }
