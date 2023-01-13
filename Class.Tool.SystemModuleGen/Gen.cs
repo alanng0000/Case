@@ -65,22 +65,14 @@ class Gen : Object
     {
         ModuleIntent intent;
 
-        intent = new ModuleIntent();
-
-        intent.Init();
-
-        intent.Value = 0;
-
+        intent = this.CreateSystemIntent();
 
 
 
         ModuleVer ver;
 
-        ver = new ModuleVer();
+        ver = this.CreateSystemVer();
 
-        ver.Init();
-
-        ver.Value = 0;
 
 
 
@@ -101,6 +93,58 @@ class Gen : Object
         ModuleRefer ret;
 
         ret = refer;
+
+        return ret;
+    }
+
+
+
+    
+
+
+
+
+    private ModuleIntent CreateSystemIntent()
+    {
+        ModuleIntent intent;
+
+        intent = new ModuleIntent();
+
+        intent.Init();
+
+        intent.Value = 0;
+
+
+
+
+        ModuleIntent ret;
+
+        ret = intent;
+
+        return ret;
+    }
+
+
+
+
+
+
+    private ModuleVer CreateSystemVer()
+    {
+        ModuleVer ver;
+
+        ver = new ModuleVer();
+
+        ver.Init();
+
+        ver.Value = 0;
+
+
+
+
+        ModuleVer ret;
+
+        ret = ver;
 
         return ret;
     }
