@@ -14,26 +14,119 @@ class Write : Object
 
 
 
+    
+    public Data Data { get; set; }
+
+
+
 
     public bool Execute()
     {
+        this.Index = 0;
+
+
+
+        CountByteOp countOp;
+
+        countOp = new CountByteOp();
+
+        countOp.Write = this;
+
+        countOp.Init();
+
+
+
+        this.ByteOp = countOp;
+
+
+
+
+        this.ExecuteModule();
+
+
+
+
+
+
+        ulong headSize;
+
+        headSize = this.Index;
+
+
+
+
+        Constant constant;
+
+        constant = Constant.This;
+
+
+
+
+        ulong totalSize;
+
+        totalSize = headSize + constant.IntByteCount;
+        
+
+
+
+        byte[] uu;
+
+        uu = new byte[totalSize];
+
+
+
+        this.Data = new Data();
+
+        this.Data.Init();
+
+        this.Data.Value = uu;
+
+
+
+
+        this.Index = 0;
+
+
+
+
+        WriteByteOp writeOp;
+
+        writeOp = new WriteByteOp();
+
+        writeOp.Write = this;
+
+        writeOp.Init();
+
+
+
+        this.ByteOp = writeOp;
+
+
+
+
+
+        this.Int(headSize);
+
+
+
+
+        this.ExecuteModule();
+
 
 
 
         return true;
     }
+
+
 
 
 
 
     private bool ExecuteModule()
     {
-        this.Int(0);
 
 
-
-
-        this.HeadSize();
 
 
 
@@ -43,15 +136,6 @@ class Write : Object
 
 
 
-
-    private bool HeadSize()
-    {
-
-
-        return true;
-    }
-
-    
 
 
 
@@ -153,7 +237,7 @@ class Write : Object
         return true;
     }
 
-    
+
 
 
 
@@ -163,9 +247,6 @@ class Write : Object
 
 
 
-
-
-    public Data Data { get; set; }
 
 
 
