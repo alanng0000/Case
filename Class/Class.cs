@@ -199,14 +199,6 @@ public class Class : Object
 
     private bool InitModuleHead()
     {
-        ModuleRoot moduleRoot;
-
-
-        moduleRoot = ModuleRoot.This;
-
-
-
-
         this.ModuleHeadLoad = new ModuleHeadLoad();
 
 
