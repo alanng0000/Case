@@ -155,11 +155,6 @@ public class Class : Object
 
 
 
-        this.InitSystem();
-
-
-
-
 
 
         return true;
@@ -190,6 +185,10 @@ public class Class : Object
 
 
 
+
+
+
+    private CheckModule SystemModule { get; set; }
 
 
 
@@ -283,6 +282,8 @@ public class Class : Object
 
         return true;
     }
+
+
 
 
 
