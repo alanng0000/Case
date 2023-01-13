@@ -7,3 +7,4 @@ global using ModuleIntent = Class.Infra.ModuleIntent;
 global using ModuleVer = Class.Infra.ModuleVer;
 global using ModuleName = Class.Infra.ModuleName;
 global using Convert = Class.Infra.Convert;
+global using Constant = Class.Infra.Constant;

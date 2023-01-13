@@ -11,13 +11,21 @@ class Gen : Object
 
     public int Execute()
     {
+        this.SystemModule = this.CreateSystemModule();
+
+
+
+
         return 0;
     }
 
 
 
 
-    private bool CreateSystemModule()
+
+
+
+    private Module CreateSystemModule()
     {
         ModuleRefer refer;
 
@@ -51,7 +59,9 @@ class Gen : Object
 
 
 
+        ClassIndex entry;
 
+        entry = this.CreateSystemEntry();
 
 
 
@@ -72,7 +82,25 @@ class Gen : Object
         module.Name = name;
 
 
-        return true;
+        module.Class = varClass;
+
+
+        module.Import = import;
+
+
+        module.Export = export;
+
+
+        module.Entry = entry;
+
+
+
+        Module ret;
+
+        ret = module;
+
+
+        return ret;
     }
 
 
@@ -395,6 +423,44 @@ class Gen : Object
         return ret;
     }
 
+
+
+
+
+
+    private ClassIndex CreateSystemEntry()
+    {
+        Constant constant;
+
+        constant = Constant.This;
+
+
+
+
+        ulong o;
+
+        o = constant.NullClassIndex;
+
+        
+
+
+        ClassIndex index;
+
+        index = new ClassIndex();
+
+        index.Init();
+
+        index.Value = o;
+
+
+
+
+        ClassIndex ret;
+
+        ret = index;
+
+        return ret;
+    }
 
 
 
