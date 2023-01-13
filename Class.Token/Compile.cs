@@ -45,11 +45,6 @@ public class Compile : InfraCompile
 
 
 
-        this.Constant = Constant.This;
-
-
-
-
 
         this.CountNew = new CountNew();
 
@@ -273,10 +268,6 @@ public class Compile : InfraCompile
 
 
 
-    private Constant Constant { get; set; }
-
-
-
 
 
     private CountNew CountNew { get; set; }
@@ -334,6 +325,15 @@ public class Compile : InfraCompile
 
     private bool ExecuteCode()
     {
+        Constant constant;
+
+
+        constant = Constant.This;
+
+
+
+
+
         this.SourceText = this.Source.Text;
 
 
@@ -400,7 +400,7 @@ public class Compile : InfraCompile
 
 
 
-                if (c == this.Constant.Hash)
+                if (c == constant.Hash)
                 {
                     this.EndToken();
 
@@ -437,7 +437,7 @@ public class Compile : InfraCompile
 
 
 
-                if (c == this.Constant.Space)
+                if (c == constant.Space)
                 {
                     this.EndToken();
 
@@ -453,7 +453,7 @@ public class Compile : InfraCompile
 
 
 
-                if (c == this.Constant.Quote)
+                if (c == constant.Quote)
                 {
                     this.EndToken();
                     
@@ -512,13 +512,13 @@ public class Compile : InfraCompile
 
                         if (!ba)
                         {
-                            if (oc == this.Constant.BackSlash)
+                            if (oc == constant.BackSlash)
                             {
                                 isEscape = true;
                             }
 
 
-                            if (oc == this.Constant.Quote)
+                            if (oc == constant.Quote)
                             {
                                 b = true;
                             }
