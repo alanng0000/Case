@@ -69,6 +69,7 @@ global using CheckMethod = Class.Check.Method;
 global using CheckVar = Class.Check.Var;
 global using CheckModuleMap = Class.Check.ModuleMap;
 global using CheckClassMap = Class.Check.ClassMap;
+global using CheckConstantClass = Class.Check.ConstantClass;
 global using CheckExport = Class.Check.Export;
 global using CheckExportList = Class.Check.ExportList;
 global using CheckModuleEntry = Class.Check.ModuleEntry;

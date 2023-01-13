@@ -88,6 +88,12 @@ public class Class : Object
 
 
 
+    internal CheckConstantClass ConstantClass { get; set; }
+
+
+
+
+
 
 
     public override bool Init()
