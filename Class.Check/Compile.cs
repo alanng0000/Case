@@ -187,7 +187,7 @@ public class Compile : InfraCompile
 
         this.IsSystem = (this.Refer.Module.Refer.Intent.Value == this.SystemModuleIntent);
 
-        
+
 
 
 
@@ -452,206 +452,6 @@ public class Compile : InfraCompile
 
 
 
-    private bool SetConstantClass(Class varClass)
-    {
-        varClass.Base = this.ObjectClass;
-
-
-
-        varClass.Field = new FieldMap();
-
-
-
-        varClass.Field.Init();
-
-
-
-        varClass.Method = new MethodMap();
-
-
-
-        varClass.Method.Init();
-
-
-
-        varClass.Node = null;
-
-        
-
-        varClass.Source = null;
-
-
-
-        varClass.Id = this.NewClassId();
-
-
-
-
-
-
-        varClass.Module = this.Refer.Module;
-
-
-
-        varClass.Index = this.Refer.Module.Class.Count;
-
-
-
-
-
-
-
-        return true;
-    }
-
-
-
-
-
-
-
-
-
-    protected virtual Class CreateObjectClass()
-    {
-        Class varClass;
-
-
-
-        varClass = new Class();
-
-
-
-        varClass.Init();
-
-
-
-        varClass.Name = "Object";
-
-
-
-        varClass.Base = null;
-
-
-
-        varClass.Field = new FieldMap();
-
-
-
-        varClass.Field.Init();
-
-
-
-        varClass.Method = new MethodMap();
-
-
-
-        varClass.Method.Init();
-
-
-
-        varClass.Node = null;
-
-        
-
-        varClass.Source = null;
-
-
-
-        varClass.Id = this.NewClassId();
-
-
-
-
-
-        Class ret;
-
-
-        ret = varClass;
-
-
-        return ret;
-    }
-
-
-
-
-
-    protected virtual Method CreateMethod(Class varClass, string name, Access access)
-    {
-        Method method;
-
-
-        method = new Method();
-
-
-        method.Init();
-
-
-        method.Class = varClass;
-
-
-        method.Name = name;
-
-
-        method.Access = access;
-
-
-
-
-
-
-
-
-        VarMap varParams;
-
-
-        varParams = new VarMap();
-
-
-        varParams.Init();
-
-
-
-
-        method.Params = varParams;
-
-
-
-
-
-
-
-        VarMap call;
-
-
-        call = new VarMap();
-
-
-        call.Init();
-
-
-
-        method.Call = call;
-        
-
-
-
-
-        Method ret;
-
-
-        ret = method;
-
-
-        return ret;
-    }
-
-
-
-
-
-
 
 
 
@@ -692,13 +492,6 @@ public class Compile : InfraCompile
 
 
 
-        if (this.IsSystem)
-        {
-            index = index + 1;
-        }
-
-
-
 
         int ret;
 
@@ -734,13 +527,6 @@ public class Compile : InfraCompile
 
 
 
-        this.SetObjectClassMembers();
-
-
-
-
-
-
         this.ExecuteClassBase();
         
 
@@ -752,65 +538,6 @@ public class Compile : InfraCompile
     }
 
 
-
-
-
-    protected virtual bool SetObjectClassMembers()
-    {
-        this.AddObjectClassMethod("Init");
-
-
-
-
-        return true;
-    }
-
-
-
-
-
-    protected bool AddObjectClassMethod(string name)
-    {
-        Method method;
-
-
-        method = this.CreateMethod(this.ConstantClass.Bool, name, this.Access.Public);
-
-
-        method.Parent = this.ObjectClass;
-
-
-        method.Index = this.ObjectClass.Method.Count;
-
-
-
-
-
-        Pair pair;
-
-
-        pair = new Pair();
-
-
-        pair.Init();
-
-
-        pair.Key = method.Name;
-
-
-        pair.Value = method;
-
-
-
-
-
-        this.ObjectClass.Method.Add(pair);
-
-
-
-
-        return true;
-    }
 
 
 
