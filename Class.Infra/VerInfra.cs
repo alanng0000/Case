@@ -9,7 +9,7 @@ public class VerInfra : Object
     {
         string u;
         
-        u = this.ModulePath(intent);
+        u = this.VerPath(intent);
 
 
 
@@ -93,7 +93,7 @@ public class VerInfra : Object
 
 
 
-    private string ModulePath(ModuleIntent intent)
+    private string VerPath(ModuleIntent intent)
     {
         Convert convert;
 
@@ -118,10 +118,10 @@ public class VerInfra : Object
 
         
 
-        ModuleRoot moduleRoot;
+        ModulePath modulePath;
 
 
-        moduleRoot = ModuleRoot.This;
+        modulePath = ModulePath.This;
 
 
 
@@ -130,7 +130,7 @@ public class VerInfra : Object
         string s;
 
 
-        s = Path.Combine(moduleRoot.Path, u);
+        s = Path.Combine(modulePath.Root, u);
 
 
         s = Path.Combine(s, this.VerFileName);
