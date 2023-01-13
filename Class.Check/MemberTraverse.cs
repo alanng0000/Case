@@ -711,14 +711,14 @@ class MemberTraverse : Traverse
         bool ba;
 
 
-        ba = ! this.Null(this.CurrentClass.Field.Get(name));
+        ba = !this.Null(this.CurrentClass.Field.Get(name));
 
 
 
 
         bool bb;
 
-        bb = ! this.Null(this.CurrentClass.Method.Get(name));
+        bb = !this.Null(this.CurrentClass.Method.Get(name));
 
 
 
