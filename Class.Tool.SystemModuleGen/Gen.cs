@@ -16,6 +16,13 @@ class Gen : Object
 
 
 
+
+
+
+        this.SetPath();
+
+
+
         this.WriteFile();
 
 
@@ -25,10 +32,50 @@ class Gen : Object
 
 
 
+    private bool SetPath()
+    {
+        ModulePath modulePath;
+
+        modulePath = ModulePath.This;
 
 
 
-    private string Path { get; set; }
+
+        ulong intent;
+        
+        intent = this.SystemModule.Refer.Intent.Value;
+
+
+        ulong ver;
+
+        ver = this.SystemModule.Refer.Ver.Value;
+
+
+
+
+        string s;
+
+
+        s = modulePath.Module(intent, ver);
+
+
+        s = Path.Combine(s, this.DataFileName);
+
+
+
+        this.DataPath = s;
+
+
+
+        return true;
+    }
+
+
+
+
+
+    private string DataPath { get; set; }
+
 
 
 
@@ -40,7 +87,7 @@ class Gen : Object
 
     private bool WriteFile()
     {
-        File.WriteAllBytes(this.Path, this.Data.Value);
+        File.WriteAllBytes(this.DataPath, this.Data.Value);
         
         
 
@@ -49,6 +96,20 @@ class Gen : Object
     }
 
 
+
+
+
+
+    private string DataFileName
+    {
+        get
+        {
+            return "_";
+        }
+        set
+        {
+        }
+    }
 
 
 
