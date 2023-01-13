@@ -145,11 +145,15 @@ class Write : Object
 
     private bool Byte(byte ob)
     {
-        this.Index = this.Index + 1;
+        this.ByteOp.Execute(ob);
+
+
 
 
         return true;
     }
+
+    
 
 
 
@@ -162,6 +166,14 @@ class Write : Object
 
 
     public Data Data { get; set; }
+
+
+
+
+
+    private ByteOp ByteOp { get; set; }
+
+
 
 
 

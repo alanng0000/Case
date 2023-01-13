@@ -9,7 +9,7 @@ class CountByteOp : ByteOp
 
 
 
-    public override bool Op(byte ob)
+    public override bool Execute(byte ob)
     {
         ulong k;
 

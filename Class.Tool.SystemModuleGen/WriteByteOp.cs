@@ -9,7 +9,7 @@ class WriteByteOp : ByteOp
 
 
 
-    public override bool Op(byte ob)
+    public override bool Execute(byte ob)
     {
         byte[] o;
 

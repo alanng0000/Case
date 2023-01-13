@@ -6,7 +6,7 @@ namespace Class.Tool.SystemModuleGen;
 
 class ByteOp : Object
 {
-    public virtual bool Op(byte ob)
+    public virtual bool Execute(byte ob)
     {
         return true;
     }
