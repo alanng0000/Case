@@ -13,7 +13,7 @@ ExportCount
 ClassIndex Per Export
 
 
-ModuleEntry : ClassIndex
+Entry : ClassIndex
 
 
 
