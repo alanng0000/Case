@@ -31,6 +31,11 @@ class Gen : Object
 
 
 
+        Array varClass;
+
+        varClass = this.CreateSystemClass();
+
+
 
 
         Module module;
@@ -201,7 +206,7 @@ class Gen : Object
         return ret;
     }
 
-    
+
 
 
 
