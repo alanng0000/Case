@@ -70,11 +70,6 @@ public class Class : Object
 
 
 
-    public string SourceFold { get; set; }
-
-
-
-
 
 
     private ModuleEntryIntentMap EntryIntentMap { get; set; }
@@ -397,11 +392,14 @@ public class Class : Object
 
         if (taskModule)
         {
-            this.SourceFold = this.Task.Source;
+            string sourceFold;
+
+
+            sourceFold = this.Task.Source;
 
 
 
-            if (this.Null(this.SourceFold))
+            if (this.Null(sourceFold))
             {
                 this.Error("Source Fold Invalid");
 
@@ -413,7 +411,7 @@ public class Class : Object
 
 
 
-            files = this.GetClassFiles(this.SourceFold);
+            files = this.GetClassFiles(sourceFold);
         }
 
 
