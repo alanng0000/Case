@@ -188,6 +188,74 @@ class Write : Object
 
 
 
+    private bool ExecuteClass(Array varClass)
+    {
+        Convert convert;
+
+
+        convert = Convert.This;
+
+
+
+
+        ulong k;
+
+        k = convert.ULong(varClass.Count);
+
+
+
+
+        ulong count;
+
+        count = k;
+
+
+
+
+        this.Int(count);
+
+
+
+        int uu;
+
+
+
+        ulong i;
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            uu = convert.SInt32(i);
+
+
+
+            string s;
+
+            s = (string)varClass.Get(uu);
+
+
+
+
+            this.String(s);
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+        return true;
+    }
+
+
+
+
+
+
 
     private bool String(string o)
     {
