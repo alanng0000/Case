@@ -188,7 +188,7 @@ class Write : Object
 
 
 
-    private bool ExecuteClass(Array varClass)
+    private bool ExecuteClassArray(Array varClass)
     {
         Convert convert;
 
@@ -252,6 +252,100 @@ class Write : Object
     }
 
 
+
+
+
+
+
+    private bool ExecuteImportArray(Array import)
+    {
+        Convert convert;
+
+
+        convert = Convert.This;
+
+
+
+
+        ulong k;
+
+        k = convert.ULong(import.Count);
+
+
+
+
+        ulong count;
+
+        count = k;
+
+
+
+
+        this.Int(count);
+
+
+
+        int uu;
+
+
+
+        ulong i;
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            uu = convert.SInt32(i);
+
+
+
+            Import a;
+
+            a = (Import)import.Get(uu);
+
+
+
+
+            this.ExecuteImport(a);
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+        return true;
+    }
+
+
+
+
+
+    private bool ExecuteImport(Import import)
+    {
+        this.ExecuteModuleRefer(import.Refer);
+
+
+        this.ExecuteClassIndex(import.Index);
+
+
+        return true;
+    }
+
+
+
+
+
+    private bool ExecuteClassIndex(ClassIndex index)
+    {
+        this.Int(index.Value);
+
+
+        return true;
+    }
 
 
 
