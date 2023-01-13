@@ -99,7 +99,7 @@ class Gen : Object
 
 
 
-    
+
 
 
 
@@ -250,6 +250,32 @@ class Gen : Object
         return ret;
     }
 
+
+
+
+    private Array CreateSystemImport()
+    {
+        Array array;
+
+        array = new Array();
+
+        array.Count = 0;
+
+        array.Init();
+
+
+
+        Array ret;
+
+        ret = array;
+
+        return ret;
+    }
+
+
+
+
+    
 
 
 
