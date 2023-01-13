@@ -40,6 +40,7 @@ class Gen : Object
 
 
 
+
         ModuleRefer refer;
 
         refer = new ModuleRefer();
@@ -52,6 +53,8 @@ class Gen : Object
 
 
 
+
+
         ModuleName name;
 
         name = new ModuleName();
@@ -61,6 +64,21 @@ class Gen : Object
         name.Value = "System";
 
 
+
+
+        Module module;
+
+
+        module = new Module();
+
+
+        module.Init();
+
+
+        module.Refer = refer;
+
+
+        module.Name = name;
 
 
         return true;
