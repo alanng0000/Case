@@ -22,4 +22,8 @@ class Module : Object
 
 
     public Array Export { get; set; }
+
+
+
+    public ClassIndex Entry { get; set; }
 }
