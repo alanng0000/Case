@@ -144,16 +144,15 @@ public class Class : Object
 
 
 
+        this.InitConstantClass();
+
+
+
 
 
 
         return true;
     }
-
-
-
-
-
 
 
 
@@ -262,6 +261,16 @@ public class Class : Object
 
 
 
+        return true;
+    }
+
+
+
+
+
+
+    private bool InitConstantClass()
+    {
         return true;
     }
 
