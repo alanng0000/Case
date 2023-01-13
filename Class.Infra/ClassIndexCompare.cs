@@ -1,9 +1,9 @@
-namespace Class;
+namespace Class.Infra;
 
 
 
 
-class ClassIndexCompare : Compare
+public class ClassIndexCompare : Compare
 {
     public override int Execute(object left, object right)
     {
