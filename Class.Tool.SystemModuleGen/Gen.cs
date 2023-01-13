@@ -15,19 +15,54 @@ class Gen : Object
 
 
 
-
-
-
-
         this.SetPath();
+
+
+
+        this.WriteModule();
 
 
 
         this.WriteFile();
 
 
+
         return 0;
     }
+
+
+
+
+
+    private bool WriteModule()
+    {
+        Write write;
+
+        write = new Write();
+
+        write.Init();
+
+
+        write.Module = this.SystemModule;
+
+
+        write.Path = this.DataPath;
+
+
+
+        write.Execute();
+
+
+
+
+        this.Data = write.Data;
+
+
+
+        return true;
+    }
+
+
 
 
 
