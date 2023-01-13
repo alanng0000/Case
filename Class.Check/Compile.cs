@@ -1132,9 +1132,15 @@ public class Compile : InfraCompile
 
 
 
+
     private bool Null(object o)
     {
-        return o == null;
+        ObjectInfra infra;
+
+        infra = ObjectInfra.This;
+
+
+        return infra.Null(o);
     }
 
 
@@ -1399,7 +1405,7 @@ public class Compile : InfraCompile
 
 
 
-        if (node == null)
+        if (this.Null(node))
         {
             return true;
         }
