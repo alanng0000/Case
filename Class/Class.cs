@@ -2358,6 +2358,11 @@ public class Class : Object
 
     private bool Null(object o)
     {
-        return o == null;
+        ObjectInfra infra;
+
+        infra = ObjectInfra.This;
+
+
+        return infra.Null(o);
     }
 }
