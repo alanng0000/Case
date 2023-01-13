@@ -41,7 +41,7 @@ class Write : Object
 
 
 
-        this.ExecuteModule();
+        this.ExecuteModule(this.Module);
 
 
 
@@ -110,7 +110,7 @@ class Write : Object
 
 
 
-        this.ExecuteModule();
+        this.ExecuteModule(this.Module);
 
 
 
@@ -123,13 +123,29 @@ class Write : Object
 
 
 
-    private bool ExecuteModule()
+    private bool ExecuteModule(Module module)
     {
-        this.ExecuteModuleRefer(this.Module.Refer);
+        this.ExecuteModuleRefer(module.Refer);
 
 
-        this.ExecuteModuleName(this.Module.Name);
 
+        this.ExecuteModuleName(module.Name);
+
+
+
+        this.ExecuteClassArray(module.Class);
+
+
+
+        this.ExecuteImportArray(module.Import);
+
+
+
+        this.ExecuteExportArray(module.Export);
+
+
+
+        this.ExecuteEntry(module.Entry);
 
 
 
@@ -324,6 +340,77 @@ class Write : Object
 
 
 
+
+    private bool ExecuteExportArray(Array export)
+    {
+        Convert convert;
+
+
+        convert = Convert.This;
+
+
+
+
+        ulong k;
+
+        k = convert.ULong(export.Count);
+
+
+
+
+        ulong count;
+
+        count = k;
+
+
+
+
+        this.Int(count);
+
+
+
+        int uu;
+
+
+
+        ulong i;
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            uu = convert.SInt32(i);
+
+
+
+            Export a;
+
+            a = (Export)export.Get(uu);
+
+
+
+
+            this.ExecuteExport(a);
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+        return true;
+    }
+
+
+
+
+
+
+
+
     private bool ExecuteImport(Import import)
     {
         this.ExecuteModuleRefer(import.Refer);
@@ -334,7 +421,7 @@ class Write : Object
 
         return true;
     }
-    
+
 
 
 
@@ -342,6 +429,17 @@ class Write : Object
     private bool ExecuteExport(Export export)
     {
         this.ExecuteClassIndex(export.Index);
+
+
+        return true;
+    }
+
+
+
+
+    private bool ExecuteEntry(ClassIndex entry)
+    {
+        this.ExecuteClassIndex(entry);
 
 
         return true;
