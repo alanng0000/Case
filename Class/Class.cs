@@ -271,10 +271,160 @@ public class Class : Object
 
     private bool InitConstantClass()
     {
+        ModuleIntent intent;
+
+        intent = new ModuleIntent();
+
+        intent.Init();
+
+        intent.Value = 0;
+
+
+
+
+        ModuleVer ver;
+
+        ver = new ModuleVer();
+
+        ver.Init();
+
+        ver.Value = 0;
+        
+
+
+
+        ModuleRefer refer;
+
+        refer = new ModuleRefer();
+
+        refer.Init();
+
+        refer.Intent = intent;
+
+        refer.Ver = ver;
+
+
+
+
+        ModuleName name;
+
+        name = new ModuleName();
+
+        name.Init();
+
+        name.Value = "System";
+
+
+
+
+
+
+        StringCompare compare;
+
+        compare = new StringCompare();
+
+        compare.Init();
+
+
+
+
+
+        Map a;
+
+
+        a = new Map();
+
+
+        a.Compare = compare;
+
+
+        a.Init();
+
+
+
+
+
+        ModuleImport import;
+
+        import = new ModuleImport();
+
+        import.Init();
+
+        import.Refer = refer;
+
+        import.Name = name;
+
+        import.ClassImport = a;
+
+
+
+
+
+        this.ClassImportMap = import.ClassImport;
+
+
+
+
+
+        string s;
+        
+
+
+        s = "Bool";
+
+
+        this.AddClassImport(s, s);
+
+
+
+        s = "Int";
+
+
+        this.AddClassImport(s, s);
+
+
+
+        s = "String";
+
+
+        this.AddClassImport(s, s);
+
+
+
+
         return true;
     }
 
 
+
+
+    private Map ClassImportMap { get; set; }
+
+
+
+
+
+
+    private bool AddClassImport(string varClass, string name)
+    {
+        Pair pair;
+
+        pair = new Pair();
+
+        pair.Init();
+
+        pair.Key = varClass;
+
+        pair.Value = name;
+
+
+
+        this.ClassImportMap.Add(pair);
+
+
+
+        return true;
+    }
 
 
 
