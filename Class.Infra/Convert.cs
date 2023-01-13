@@ -143,6 +143,14 @@ public class Convert : Object
 
 
 
+    public byte CharByte(char a)
+    {
+        return (byte)a;
+    }
+
+
+
+
     public string Int60BitListString(ulong a)
     {
         return a.ToString("x15");
