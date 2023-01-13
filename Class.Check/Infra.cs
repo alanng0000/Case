@@ -454,6 +454,7 @@ class Infra : Object
 
 
 
+
     private ModuleName CreateModuleName(ModuleName name)
     {
         ModuleName a;
@@ -471,8 +472,89 @@ class Infra : Object
 
 
 
+
+
+
+
+    public bool VarMapAdd(VarMap map, Var varVar)
+    {
+        Pair pair;
+
+
+        pair = new Pair();
+
+
+        pair.Init();
+
+
+        pair.Key = varVar.Name;
+
+
+        pair.Value = varVar;
+
+
+
+
+        map.Add(pair);
+
+
+
+        return true;
+    }
+
+
+
+
+
+    public bool VarMapMapAdd(VarMap map, VarMap other)
+    {
+        MapIter iter;
+
+
+        iter = other.Iter();
+
+
+
+        while (iter.Next())
+        {
+            Pair pair;
+
+
+            pair = (Pair)iter.Value;
+
+
+
+
+            Var varVar;
+
+
+            varVar = (Var)pair.Value;
+
+
+
+
+            this.VarMapAdd(map, varVar);
+        }
+
+
+
+        return true;
+    }
+
+
+
+
+
+
     private bool Null(object o)
     {
-        return ObjectInfra.This.Null(o);
+        ObjectInfra infra;
+
+
+        infra = ObjectInfra.This;
+
+
+
+        return infra.Null(o);
     }
 }

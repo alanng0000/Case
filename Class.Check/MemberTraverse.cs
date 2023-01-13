@@ -17,6 +17,8 @@ class MemberTraverse : Traverse
 
 
 
+
+
     public override bool ExecuteClass(NodeClass nodeClass)
     {
         if (this.Null(nodeClass))
@@ -618,7 +620,7 @@ class MemberTraverse : Traverse
 
 
 
-        this.VarMapAdd(this.ParamVars, varVar);
+        this.Compile.Infra.VarMapAdd(this.ParamVars, varVar);
         
 
 
@@ -634,72 +636,6 @@ class MemberTraverse : Traverse
 
 
 
-
-
-    private bool VarMapAdd(VarMap map, Var varVar)
-    {
-        Pair pair;
-
-
-        pair = new Pair();
-
-
-        pair.Init();
-
-
-        pair.Key = varVar.Name;
-
-
-        pair.Value = varVar;
-
-
-
-
-        map.Add(pair);
-
-
-
-        return true;
-    }
-
-
-
-
-
-    private bool VarMapMapAdd(VarMap map, VarMap other)
-    {
-        MapIter iter;
-
-
-        iter = other.Iter();
-
-
-
-        while (iter.Next())
-        {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
-            Var varVar;
-
-
-            varVar = (Var)pair.Value;
-
-
-
-
-            this.VarMapAdd(map, varVar);
-        }
-
-
-
-        return true;
-    }
 
 
 

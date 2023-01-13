@@ -38,7 +38,7 @@ public class Compile : InfraCompile
 
 
 
-    private Infra Infra { get; set; }
+    internal Infra Infra { get; set; }
 
 
 
