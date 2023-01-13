@@ -70,9 +70,9 @@ class ModuleHeadLoad : Object
 
 
 
-        string modulePath;
+        string dataPath;
 
-        modulePath = this.ModulePath();
+        dataPath = this.DataPath();
 
 
 
@@ -88,7 +88,7 @@ class ModuleHeadLoad : Object
         FileStream fileStream;
 
 
-        fileStream = new FileStream(modulePath, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.Read);
+        fileStream = new FileStream(dataPath, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.Read);
 
 
 
@@ -173,47 +173,37 @@ class ModuleHeadLoad : Object
 
 
 
-    private string ModulePath()
+    private string DataPath()
     {
-        ulong o;
-
-        o = this.Refer.Intent.Value;
+        ModulePath modulePath;
 
 
-
-
-        string u;
-
-        u = this.Convert.Int60BitListString(o);
+        modulePath = ModulePath.This;
 
 
 
 
-        o = this.Refer.Ver.Value;
+
+        ulong oo;
+
+        oo = this.Refer.Intent.Value;
 
 
 
-        string v;
 
-        v = this.Convert.Int60BitListString(o);
+        ulong ou;
 
+        ou = this.Refer.Ver.Value;
 
 
 
         
-
-        ModuleRoot moduleRoot;
-
-
-        moduleRoot = ModuleRoot.This;
-
-
-
-
         string s;
 
 
-        s = Path.Combine(moduleRoot.Path, u, v);
+        s = modulePath.Module(oo, ou);
+
+
 
 
         s = Path.Combine(s, this.DataFileName);
