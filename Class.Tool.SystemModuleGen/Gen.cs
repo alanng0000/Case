@@ -38,6 +38,25 @@ class Gen : Object
 
 
 
+        Array import;
+
+        import = this.CreateSystemImport();
+
+
+
+        Array export;
+
+        export = this.CreateSystemExport();
+
+
+
+
+
+
+
+
+
+
         Module module;
 
 
@@ -275,7 +294,108 @@ class Gen : Object
 
 
 
-    
+    private Array CreateSystemExport()
+    {
+        Array array;
+
+        array = new Array();
+
+        array.Count = 4;
+
+        array.Init();
+
+
+
+
+
+        int count;
+
+        count = array.Count;
+
+
+
+        int i;
+
+        i = 0;
+
+
+        while (i < count)
+        {
+            Export export;
+
+            export = this.CreateExport(i);
+
+
+
+            array.Set(i, export);
+
+
+
+
+            i = i + 1;
+        }
+
+
+
+
+
+        Array ret;
+
+        ret = array;
+
+        return ret;
+    }
+
+
+
+
+    private Export CreateExport(int index)
+    {
+        Convert convert;
+
+        convert = Convert.This;
+
+
+
+
+        ulong o;
+
+
+        o = convert.ULong(index);
+
+
+
+
+        ClassIndex classIndex;
+
+        classIndex = new ClassIndex();
+
+        classIndex.Init();
+
+        classIndex.Value = o;
+
+
+
+
+        Export export;
+
+        export = new Export();
+
+        export.Init();
+
+        export.Index = classIndex;
+
+
+
+
+        Export ret;
+
+        ret = export;
+
+        return ret;
+    }
+
+
 
 
 
