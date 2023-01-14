@@ -3809,28 +3809,7 @@ public class StateTraverse : Traverse
 
     private bool VarMapAdd(VarMap map, Var varVar)
     {
-        Pair pair;
-
-
-        pair = new Pair();
-
-
-        pair.Init();
-
-
-        pair.Key = varVar.Name;
-
-
-        pair.Value = varVar;
-
-
-
-
-        map.Add(pair);
-
-
-
-        return true;
+        return this.Compile.Infra.VarMapAdd(map, varVar);
     }
 
 
@@ -3839,37 +3818,7 @@ public class StateTraverse : Traverse
 
     private bool VarMapMapAdd(VarMap map, VarMap other)
     {
-        MapIter iter;
-
-
-        iter = other.Iter();
-
-
-
-        while (iter.Next())
-        {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
-            Var varVar;
-
-
-            varVar = (Var)pair.Value;
-
-
-
-
-            this.VarMapAdd(map, varVar);
-        }
-
-
-
-        return true;
+        return this.Compile.Infra.VarMapMapAdd(map, other);
     }
 
 
