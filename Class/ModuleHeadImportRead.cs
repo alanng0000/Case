@@ -43,9 +43,6 @@ class ModuleHeadImportRead : Object
 
 
 
-    private CheckClassMap ClassMap { get; set; }
-
-
 
 
 
@@ -85,9 +82,6 @@ class ModuleHeadImportRead : Object
         this.ClassImportMap = null;
 
 
-        this.ClassMap = null;
-
-
 
 
 
@@ -95,9 +89,6 @@ class ModuleHeadImportRead : Object
         {
             return false;
         }
-
-
-
 
 
         
@@ -560,7 +551,7 @@ class ModuleHeadImportRead : Object
 
 
 
-            this.ClassMap.Add(pair);
+            this.Module.Class.Add(pair);
         }
 
 
