@@ -106,6 +106,12 @@ public class Class : Object
 
 
 
+    internal string Node { get; set; }
+
+
+
+
+
 
     public override bool Init()
     {
@@ -636,14 +642,23 @@ public class Class : Object
 
 
 
-        bool bb;
+        bool taskCheck;
 
 
-        bb = (t == k.Check);
+        taskCheck = (t == k.Check);
 
 
 
-        if (taskModule | bb)
+
+        bool taskNode;
+
+
+        taskNode = (t == k.Node);
+
+
+
+
+        if (taskModule | taskCheck)
         {
             if (this.Null(this.Refer))
             {
@@ -652,8 +667,32 @@ public class Class : Object
 
                 return false;
             }
+
+
+
+
+            this.Node = "Class";
         }
 
+
+
+
+        if (taskNode)
+        {
+            if (this.Null(this.Task.Node))
+            {
+                this.Error("Node Invalid");
+
+
+                return false;
+            }
+
+
+
+            this.Node = this.Task.Node;
+        }
+        
+        
 
 
 

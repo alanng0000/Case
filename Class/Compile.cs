@@ -320,7 +320,7 @@ public class Compile : Object
 
 
 
-        this.Node.TaskNode = this.Class.Task.Node;
+        this.Node.TaskNode = this.Class.Node;
 
 
 
