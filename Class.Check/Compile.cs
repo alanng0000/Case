@@ -112,15 +112,6 @@ public class Compile : InfraCompile
 
         this.Infra.Init();
 
-
-
-
-        this.ConstantClass = new ConstantClass();
-
-
-
-        this.ConstantClass.Init();
-
         
 
 
