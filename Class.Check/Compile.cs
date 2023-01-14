@@ -22,7 +22,7 @@ public class Compile : InfraCompile
 
 
     
-    public ConstantClass PortConstantClass { get; set; }
+    public Module PortConstantModule { get; set; }
 
 
 

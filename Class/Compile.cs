@@ -357,7 +357,7 @@ public class Compile : Object
 
 
 
-        this.Check.PortConstantClass = this.Class.ConstantClass;
+        this.Check.PortConstantModule = this.Class.ConstantModule;
 
 
 
