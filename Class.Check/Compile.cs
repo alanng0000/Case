@@ -22,7 +22,12 @@ public class Compile : InfraCompile
 
 
     
-    public Module PortConstantModule { get; set; }
+    public ConstantClass PortConstantClass { get; set; }
+
+
+
+
+    public ModuleRefer PortConstantRefer { get; set; }
 
 
 
@@ -323,17 +328,17 @@ public class Compile : InfraCompile
 
     private bool InitConstantClass()
     {
-        this.ConstantClass.Bool = this.CreateConstantClass("Bool");
+        this.ConstantClass.Bool = this.CreateConstantClass(this.PortConstantClass.Bool);
 
 
 
 
-        this.ConstantClass.Int = this.CreateConstantClass("Int");
+        this.ConstantClass.Int = this.CreateConstantClass(this.PortConstantClass.Int);
 
 
 
 
-        this.ConstantClass.String = this.CreateConstantClass("String");
+        this.ConstantClass.String = this.CreateConstantClass(this.PortConstantClass.String);
 
 
 
@@ -347,17 +352,8 @@ public class Compile : InfraCompile
 
 
 
-    private Class CreateConstantClass(string name)
+    private Class CreateConstantClass(Class varClass)
     {
-        Class varClass;
-
-
-        varClass = (Class)this.PortConstantModule.Class.Get(name);
-
-
-
-
-
         this.Infra.Module = null;
 
 
@@ -392,7 +388,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Infra.ConstantRefer = this.PortConstantModule.Refer;
+        this.Infra.ConstantRefer = this.PortConstantRefer;
         
 
 
@@ -538,12 +534,12 @@ public class Compile : InfraCompile
     {
         bool ba;
         
-        ba = (refer.Intent.Value == this.PortConstantModule.Refer.Intent.Value);
+        ba = (refer.Intent.Value == this.PortConstantRefer.Intent.Value);
 
 
         bool bb;
 
-        bb = (refer.Ver.Value == this.PortConstantModule.Refer.Ver.Value);
+        bb = (refer.Ver.Value == this.PortConstantRefer.Ver.Value);
 
 
 
