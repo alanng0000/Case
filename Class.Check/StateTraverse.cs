@@ -3197,7 +3197,7 @@ public class StateTraverse : Traverse
 
 
 
-        Constant constant;
+        NodeConstant constant;
         
 
         constant = constantExpress.Constant;
