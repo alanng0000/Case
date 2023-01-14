@@ -407,6 +407,16 @@ class Infra : Object
 
 
 
+
+        if (!b & varClass == this.PortConstantClass.Object)
+        {
+            o = this.ConstantClass.Object;
+
+            b = true;
+        }
+
+
+
         if (!b & varClass == this.PortConstantClass.Bool)
         {
             o = this.ConstantClass.Bool;
