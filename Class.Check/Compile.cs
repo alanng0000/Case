@@ -1067,8 +1067,17 @@ public class Compile : InfraCompile
 
     private bool CheckClassDependency(Class varClass)
     {
-        Map map;
+        ClassCompare compare;
 
+        compare = new ClassCompare();
+
+        compare.Init();
+
+
+
+
+
+        Map map;
 
 
 
@@ -1076,9 +1085,7 @@ public class Compile : InfraCompile
 
 
 
-
-        map.Compare = new ClassCompare();
-
+        map.Compare = compare;
 
 
 
