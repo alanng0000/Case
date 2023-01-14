@@ -2628,7 +2628,7 @@ public class Class : Object
             string[] array;
 
 
-            array = File.ReadAllLines(source.Path);
+            array = File.ReadAllLines(source.Name);
 
 
             
