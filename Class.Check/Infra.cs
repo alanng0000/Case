@@ -35,13 +35,24 @@ class Infra : Object
 
 
 
-    public ModuleRefer ConstantRefer { get; set; }
+    public ConstantClass PortConstantClass { get; set; }
+
+
+
+    public ModuleRefer PortConstantRefer { get; set; }
     
 
 
 
 
     public Module Module { get; set; }
+
+
+
+
+
+    private bool IsModuleSystem { get; set; }
+
 
 
 
@@ -480,6 +491,39 @@ class Infra : Object
         return a;
     }
 
+
+
+
+
+
+
+
+
+    public bool IsSystem(ModuleRefer refer)
+    {
+        bool ba;
+        
+        ba = (refer.Intent.Value == this.PortConstantRefer.Intent.Value);
+
+
+        bool bb;
+
+        bb = (refer.Ver.Value == this.PortConstantRefer.Ver.Value);
+
+
+
+        bool b;
+        
+        b = (ba & bb);
+
+
+
+        bool ret;
+
+        ret = b;
+
+        return ret;
+    }
 
 
 

@@ -388,7 +388,11 @@ public class Compile : InfraCompile
 
 
 
-        this.Infra.ConstantRefer = this.PortConstantRefer;
+        this.Infra.PortConstantClass = this.PortConstantClass;
+
+
+
+        this.Infra.PortConstantRefer = this.PortConstantRefer;
         
 
 
@@ -527,34 +531,6 @@ public class Compile : InfraCompile
 
 
 
-
-
-
-    private bool IsSystem(ModuleRefer refer)
-    {
-        bool ba;
-        
-        ba = (refer.Intent.Value == this.PortConstantRefer.Intent.Value);
-
-
-        bool bb;
-
-        bb = (refer.Ver.Value == this.PortConstantRefer.Ver.Value);
-
-
-
-        bool b;
-        
-        b = (ba & bb);
-
-
-
-        bool ret;
-
-        ret = b;
-
-        return ret;
-    }
 
 
 
