@@ -322,23 +322,46 @@ public class Compile : InfraCompile
 
     private bool InitConstantClass()
     {
+        this.ConstantClass.Bool = this.GetConstantClass("Bool");
+
+
+
+
+        this.ConstantClass.Int = this.GetConstantClass("Int");
+
+
+
+
+        this.ConstantClass.String = this.GetConstantClass("String");
+
 
 
 
         return true;
     }
 
+    
 
 
 
-    private bool AddConstantClass(string name)
+
+
+    private Class GetConstantClass(string name)
     {
-        
+        Class varClass;
+
+
+        varClass = (Class)this.PortConstantModule.Class.Get(name);
 
 
 
 
-        return true;
+        Class ret;
+
+        ret = varClass;
+
+
+        return ret;
     }
 
 
