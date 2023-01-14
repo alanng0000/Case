@@ -13,9 +13,5 @@ public class Source : Object
 
 
 
-    public string Path { get; set; }
-
-
-
     public Text Text { get; set; }
 }
