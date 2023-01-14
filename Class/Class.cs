@@ -654,111 +654,130 @@ public class Class : Object
             }
         }
 
-        
-
-
-
-        List fileList;
-
-
-
-        fileList = null;
 
 
 
 
-        if (!taskModule)
+        bool bc;
+
+
+        bc = this.Null(this.Task.Source);
+
+
+
+        if (!bc)
         {
-            string filePath;
-
-
-            filePath = this.Task.SourcePath;
-
-
-
-
-            if (this.Null(filePath))
-            {
-                this.Error("Source Invalid");
-
-
-
-                return false;
-            }
-
-
-
-
-
-            this.SourceFold = Path.GetDirectoryName(filePath);
-
-
-
-
-            string file;
-
-            
-            file = Path.GetFileName(filePath);
-            
-
-
-
-            fileList = new List();
-
-
-            fileList.Init();
-
-
-
-            fileList.Add(file);
+            this.Source = this.Task.Source;
         }
 
 
 
 
-        if (taskModule)
+        if (bc)
         {
-            string sourceFold;
-
-
-            sourceFold = this.Task.SourcePath;
+            List fileList;
 
 
 
-            if (this.Null(sourceFold))
+            fileList = null;
+
+
+
+
+            if (!taskModule)
             {
-                this.Error("Source Fold Invalid");
+                string filePath;
 
 
-
-                return false;
-            }
-
-
-
-            this.SourceFold = sourceFold;
-
-
-
-            fileList = this.GetClassFiles(this.SourceFold);
-        }
+                filePath = this.Task.SourcePath;
 
 
 
 
+                if (this.Null(filePath))
+                {
+                    this.Error("Source Invalid");
 
-        this.Out = this.Task.Out;
+
+
+                    return false;
+                }
 
 
 
 
 
-        this.SetSource(fileList);
+                this.SourceFold = Path.GetDirectoryName(filePath);
+
+
+
+
+                string file;
+
+                
+                file = Path.GetFileName(filePath);
                 
 
 
 
-        this.ReadCodes();
+                fileList = new List();
+
+
+                fileList.Init();
+
+
+
+                fileList.Add(file);
+            }
+
+
+
+
+            if (taskModule)
+            {
+                string sourceFold;
+
+
+                sourceFold = this.Task.SourcePath;
+
+
+
+                if (this.Null(sourceFold))
+                {
+                    this.Error("Source Fold Invalid");
+
+
+
+                    return false;
+                }
+
+
+
+                this.SourceFold = sourceFold;
+
+
+
+                fileList = this.GetClassFiles(this.SourceFold);
+            }
+
+
+
+
+
+            this.SetSource(fileList);
+                
+
+
+
+            this.ReadCodes();
+        }
+
+
+
+
+        
+        this.Out = this.Task.Out;
+
             
                 
             
