@@ -87,6 +87,11 @@ public class Class : Object
 
 
 
+
+    internal CheckConstantClass ConstantClass { get; set; }
+
+
+
     
 
     internal CheckModule ConstantModule { get; set; }
@@ -400,6 +405,18 @@ public class Class : Object
 
 
 
+
+
+
+        this.ConstantClass = new CheckConstantClass();
+
+
+        this.ConstantClass.Init();
+
+
+
+
+        this.ConstantClass.Bool = (CheckClass)this.ConstantModule.Class.Get("Bool");
 
 
 
