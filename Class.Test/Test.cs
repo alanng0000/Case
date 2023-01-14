@@ -1402,11 +1402,18 @@ public class Test
 
 
 
+
+
         Task task;
+
+
 
         task = new Task();
 
+
+
         task.Init();
+
 
 
         task.Kind = k.Port;
@@ -1418,7 +1425,7 @@ public class Test
 
 
         task.Out = Console.Out;
-        
+
         
 
 
