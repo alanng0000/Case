@@ -1382,11 +1382,7 @@ public class Test
     {
         PortModuleName name;
 
-        name = new PortModuleName();
-
-        name.Init();
-
-        name.Value = "M";
+        name = this.CreatePortModuleName("M");
 
 
 
@@ -1458,6 +1454,7 @@ public class Test
 
 
 
+
         PortPort ret;
 
         ret = port;
@@ -1516,11 +1513,8 @@ public class Test
 
         PortModuleName module;
 
-        module = new PortModuleName();
+        module = this.CreatePortModuleName(constant.SystemName);
 
-        module.Init();
-
-        module.Value = constant.SystemName;
 
 
 
@@ -1563,6 +1557,30 @@ public class Test
 
         return ret;
     }
+
+
+
+
+
+    private PortModuleName CreatePortModuleName(string name)
+    {
+        PortModuleName a;
+
+        a = new PortModuleName();
+
+        a.Init();
+
+        a.Value = name;
+
+
+
+        PortModuleName ret;
+
+        ret = a;
+
+        return ret;
+    }
+
 
 
 
