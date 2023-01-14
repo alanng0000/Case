@@ -531,13 +531,6 @@ public class Compile : InfraCompile
 
 
 
-
-
-
-
-
-
-
     public ulong NewClassId()
     {
         ulong t;
