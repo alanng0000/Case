@@ -1335,7 +1335,7 @@ public class Class : Object
 
         if (this.IsSystem(module.Refer))
         {
-
+            this.ModuleAddConstantClassImport(module, import);
         }
 
 
@@ -1406,6 +1406,65 @@ public class Class : Object
         return true;
     }
 
+
+
+
+
+    private bool ModuleAddConstantClassImport(CheckModule module, ModuleImport import)
+    {
+        MapIter iter;
+
+        iter = import.ClassImport.Iter();
+
+
+        while (iter.Next())
+        {
+            Pair pair;
+
+            pair = (Pair)iter.Value;
+
+
+
+            string varClass;
+
+            varClass = (string)pair.Key;
+
+
+
+            string name;
+
+            name = (string)pair.Value;
+
+
+
+
+            CheckClass c;
+
+
+            c = (CheckClass)this.ConstantModule.Class.Get(varClass);
+
+
+            if (!this.Null(c))
+            {
+                Pair u;
+
+                u = new Pair();
+
+                u.Init();
+
+                u.Key = name;
+
+                u.Value = c;
+
+
+                module.Class.Add(u);
+            }
+        }
+
+
+
+        return true;
+    }
 
 
 
