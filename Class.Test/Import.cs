@@ -6,6 +6,7 @@ global using Array = System.List.Array;
 global using Pair = System.List.Pair;
 global using ListIter = System.List.ListIter;
 global using MapIter = System.List.MapIter;
+global using Constant = Class.Infra.Constant;
 global using PortPort = Class.Port.Port;
 global using PortModuleName = Class.Port.ModuleName;
 global using PortModuleVer = Class.Port.ModuleVer;
