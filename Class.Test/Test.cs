@@ -585,7 +585,7 @@ public class Test
 
         string setFolder;
             
-        setFolder = this.TestFold + PathSeparator + set;
+        setFolder = this.TestFold + this.PathSeparator + set;
 
 
 
