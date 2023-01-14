@@ -366,28 +366,20 @@ public class Class : Object
 
 
 
-        string s;
+
+
+        this.AddClassImport("Bool");
 
 
 
-        s = "Bool";
 
-
-        this.AddClassImport(s, s);
-
-
-
-        s = "Int";
-
-
-        this.AddClassImport(s, s);
+        this.AddClassImport("Int");
 
 
 
-        s = "String";
 
+        this.AddClassImport("String");
 
-        this.AddClassImport(s, s);
 
 
 
@@ -483,7 +475,7 @@ public class Class : Object
 
 
 
-    private bool AddClassImport(string varClass, string name)
+    private bool AddClassImport(string varClass)
     {
         Pair pair;
 
@@ -493,7 +485,7 @@ public class Class : Object
 
         pair.Key = varClass;
 
-        pair.Value = name;
+        pair.Value = varClass;
 
 
 
