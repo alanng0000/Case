@@ -271,13 +271,20 @@ public class Class : Object
 
     private bool InitConstantClass()
     {
+        Constant constant;
+
+        constant = Constant.This;
+
+
+
+
         ModuleIntent intent;
 
         intent = new ModuleIntent();
 
         intent.Init();
 
-        intent.Value = 0;
+        intent.Value = constant.SystemIntent;
 
 
 
@@ -288,7 +295,7 @@ public class Class : Object
 
         ver.Init();
 
-        ver.Value = 0;
+        ver.Value = constant.SystemVer;
         
 
 
@@ -312,7 +319,7 @@ public class Class : Object
 
         name.Init();
 
-        name.Value = "System";
+        name.Value = constant.SystemName;
 
 
 
