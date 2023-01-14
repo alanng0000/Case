@@ -39,6 +39,22 @@ public class Constant : Object
 
 
 
+
+        this.SystemIntent = 0;
+
+
+
+        this.SystemVer = 0;
+
+
+
+        this.SystemName = "System";
+
+
+
+
+
+
         this.Quote = '\"';
 
 
@@ -82,6 +98,31 @@ public class Constant : Object
 
 
         return true;
+    }
+
+
+
+
+    public ulong SystemIntent
+    {
+        get;
+        private set;
+    }
+
+
+
+    public ulong SystemVer
+    {
+        get;
+        private set;
+    }
+
+
+
+    public string SystemName
+    {
+        get;
+        private set;
     }
 
 
