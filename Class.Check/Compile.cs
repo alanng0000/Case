@@ -43,6 +43,7 @@ public class Compile : InfraCompile
 
 
 
+
     public Result Result { get; set; }
 
 
@@ -61,9 +62,7 @@ public class Compile : InfraCompile
 
 
 
-
     private ulong ClassNewId { get; set; }
-
 
 
 
@@ -76,6 +75,11 @@ public class Compile : InfraCompile
 
     private AccessList Access { get; set; }
 
+
+
+
+
+    private Map BaseMap { get; set; }
 
 
 
@@ -663,13 +667,6 @@ public class Compile : InfraCompile
     }
 
 
-
-
-
-
-
-
-    private Map BaseMap { get; set; }
 
 
 
