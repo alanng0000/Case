@@ -1551,14 +1551,21 @@ public class Class : Object
 
     private bool IsSystem(ModuleRefer refer)
     {
+        ModuleRefer o;
+
+        o = this.ConstantModule.Refer;
+
+
+
+
         bool ba;
         
-        ba = (refer.Intent.Value == this.ConstantModule.Refer.Intent.Value);
+        ba = (refer.Intent.Value == o.Intent.Value);
 
 
         bool bb;
 
-        bb = (refer.Ver.Value == this.ConstantModule.Refer.Ver.Value);
+        bb = (refer.Ver.Value == o.Ver.Value);
 
 
 
