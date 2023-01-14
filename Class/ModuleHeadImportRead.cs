@@ -25,7 +25,7 @@ class ModuleHeadImportRead : Object
 
 
 
-    public CheckModule Result { get; set; }
+    public CheckModule Module { get; set; }
 
 
     
@@ -73,10 +73,10 @@ class ModuleHeadImportRead : Object
 
     public bool Execute()
     {
-        CheckModule module;
+        bool b;
 
 
-        module = this.ExecuteModule();
+        b = this.ExecuteModule();
 
 
 
@@ -91,7 +91,7 @@ class ModuleHeadImportRead : Object
 
 
 
-        if (this.Null(module))
+        if (!b)
         {
             return false;
         }
@@ -100,7 +100,7 @@ class ModuleHeadImportRead : Object
 
 
 
-        this.Result = module;
+        
 
 
 
@@ -113,7 +113,7 @@ class ModuleHeadImportRead : Object
 
 
 
-    private CheckModule ExecuteModule()
+    private bool ExecuteModule()
     {
         bool b;
 
@@ -123,7 +123,7 @@ class ModuleHeadImportRead : Object
 
         if (!b)
         {
-            return null;
+            return false;
         }
 
 
@@ -135,7 +135,7 @@ class ModuleHeadImportRead : Object
 
         if (!b)
         {
-            return null;
+            return false;
         }
         
 
@@ -146,7 +146,7 @@ class ModuleHeadImportRead : Object
 
         if (!b)
         {
-            return null;
+            return false;
         }
 
 
@@ -171,7 +171,7 @@ class ModuleHeadImportRead : Object
 
         if (!b)
         {
-            return null;
+            return false;
         }
 
 
@@ -185,17 +185,9 @@ class ModuleHeadImportRead : Object
 
         if (!b)
         {
-            return null;
+            return false;
         }
 
-
-
-
-
-        this.ClassMap = new CheckClassMap();
-
-
-        this.ClassMap.Init();
 
 
 
@@ -208,7 +200,7 @@ class ModuleHeadImportRead : Object
 
         if (!b)
         {
-            return null;
+            return false;
         }
 
 
@@ -216,29 +208,7 @@ class ModuleHeadImportRead : Object
 
 
         
-        CheckModule m;
-
-        m = new CheckModule();
-
-        m.Init();
-
-        m.Refer = this.Import.Refer;
-
-        m.Name = this.Import.Name;
-
-        m.Class = this.ClassMap;
-
-
-
-
-
-        CheckModule ret;
-
-
-        ret = m;
-
-
-        return ret;
+        return true;
     }
 
 

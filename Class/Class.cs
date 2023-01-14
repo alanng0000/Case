@@ -416,6 +416,33 @@ public class Class : Object
 
 
 
+        CheckClassMap classMap;
+
+
+        classMap = new CheckClassMap();
+
+
+        classMap.Init();
+
+
+
+
+        CheckModule module;
+
+        module = new CheckModule();
+
+        module.Init();
+
+        module.Refer = import.Refer;
+
+        module.Name = import.Name;
+
+        module.Class = classMap;
+
+
+
+
+
         ModuleRefer refer;
 
 
@@ -441,14 +468,14 @@ public class Class : Object
         
 
 
-        CheckModule module;
+        bool b;
+
+        
+        b = this.ReadModuleHeadImport(moduleHead, import, module);
 
 
-        module = this.ReadModuleHeadImport(moduleHead, import);
 
-
-
-        if (this.Null(module))
+        if (!b)
         {
             return false;
         }
@@ -1280,6 +1307,35 @@ public class Class : Object
 
     private bool ExecutePortImportMapModule(ModuleImport import)
     {
+        CheckClassMap classMap;
+
+
+        classMap = new CheckClassMap();
+
+
+        classMap.Init();
+
+
+
+
+        CheckModule module;
+
+        module = new CheckModule();
+
+        module.Init();
+
+        module.Refer = import.Refer;
+
+        module.Name = import.Name;
+
+        module.Class = classMap;
+
+
+
+
+
+
+
         ModuleRefer refer;
 
 
@@ -1304,15 +1360,16 @@ public class Class : Object
 
         
 
+        
+        
+        bool b;
 
-        CheckModule module;
-
-
-        module = this.ReadModuleHeadImport(moduleHead, import);
+        
+        b = this.ReadModuleHeadImport(moduleHead, import, module);
 
 
 
-        if (this.Null(module))
+        if (!b)
         {
             return false;
         }
@@ -1364,7 +1421,7 @@ public class Class : Object
 
 
 
-    private CheckModule ReadModuleHeadImport(Data moduleHead, ModuleImport import)
+    private bool ReadModuleHeadImport(Data moduleHead, ModuleImport import, CheckModule module)
     {
         this.ModuleHeadImportRead.Data = moduleHead;
 
@@ -1374,6 +1431,11 @@ public class Class : Object
 
 
         this.ModuleHeadImportRead.Import = import;
+
+
+
+        this.ModuleHeadImportRead.Module = module;
+
 
 
 
@@ -1387,26 +1449,13 @@ public class Class : Object
 
         if (!b)
         {
-            return null;
+            return false;
         }
 
 
 
 
-        CheckModule module;
-
-
-        module = this.ModuleHeadImportRead.Result;
-
-
-
-
-        CheckModule ret;
-
-        ret = module;
-
-
-        return ret;
+        return true;
     }
 
 
