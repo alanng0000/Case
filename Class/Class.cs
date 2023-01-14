@@ -1470,11 +1470,22 @@ public class Class : Object
 
     private bool ModuleAddConstantClassImport(CheckModule module, ModuleImport import)
     {
-        List list;
+        StringCompare cc;
 
-        list = new List();
-        
-        list.Init();
+        cc = new StringCompare();
+
+        cc.Init();
+
+
+
+        Map map;
+
+        map = new Map();
+
+        map.Compare = cc;
+
+        map.Init();
+
 
 
 
@@ -1511,52 +1522,56 @@ public class Class : Object
             c = (CheckClass)this.ConstantModule.Class.Get(varClass);
 
 
-            if (!this.Null(c))
+            
+            bool b;
+
+
+            b = this.Null(c);
+
+
+
+            if (!b)
             {
-                Pair u;
+                Pair pairA;
 
-                u = new Pair();
+                pairA = new Pair();
 
-                u.Init();
+                pairA.Init();
 
-                u.Key = name;
+                pairA.Key = name;
 
-                u.Value = c;
-
-
-
-                module.Class.Add(u);
+                pairA.Value = c;
 
 
 
-                list.Add(varClass);
+                module.Class.Add(pairA);
+            }
+            
+
+
+
+            if (b)
+            {
+                Pair pairB;
+
+                pairB = new Pair();
+
+                pairB.Init();
+
+                pairB.Key = varClass;
+
+                pairB.Value = name;
+
+
+
+                map.Add(pairB);
             }
         }
 
 
 
 
-
-        ListIter it;
-
-        it = list.Iter();
-
-        while (it.Next())
-        {
-            string s;
-
-            s = (string)it.Value;
-
-
-
-            string varClass;
-
-            varClass = s;
-
-
-
-            import.ClassImport.Remove(varClass);
-        }
+        import.ClassImport = map;
 
 
 
