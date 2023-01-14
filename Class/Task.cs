@@ -22,7 +22,15 @@ public class Task : Object
 
 
 
+
+    public SourceArray Source { get; set; }
+
+
+
+
     public string SourcePath { get; set; }
+
+
 
 
 
