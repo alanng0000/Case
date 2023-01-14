@@ -655,11 +655,11 @@ public class Class : Object
 
 
 
-        List files;
+        List fileList;
 
 
 
-        files = null;
+        fileList = null;
 
 
 
@@ -674,21 +674,21 @@ public class Class : Object
 
 
 
-            files = new List();
+            fileList = new List();
 
 
-            files.Init();
+            fileList.Init();
 
 
 
-            files.Add(file);
-
-            
-
-
+            fileList.Add(file);
 
             
-            if (!this.CheckClassFiles(files))
+
+
+
+            
+            if (!this.CheckClassFiles(fileList))
             {
                 this.Error("Class Files Invalid");
 
@@ -721,7 +721,7 @@ public class Class : Object
 
 
 
-            files = this.GetClassFiles(sourceFold);
+            fileList = this.GetClassFiles(sourceFold);
         }
 
 
@@ -734,7 +734,7 @@ public class Class : Object
 
 
 
-        this.SetSources(files);
+        this.SetSource(fileList);
                 
 
 
@@ -2524,7 +2524,7 @@ public class Class : Object
 
 
 
-    private bool SetSources(List files)
+    private bool SetSource(List fileList)
     {
         SourceArray t;
 
@@ -2533,7 +2533,7 @@ public class Class : Object
 
 
 
-        t.Count = files.Count;
+        t.Count = fileList.Count;
 
 
 
@@ -2551,23 +2551,18 @@ public class Class : Object
         ListIter iter;
 
 
-        iter = files.Iter();
+        iter = fileList.Iter();
 
 
 
         while (iter.Next())
         {
-            string filePath;
-
-
-            filePath = (string)iter.Value;
-
-
-
-
             string fileName;
-        
-            fileName = Path.GetFileNameWithoutExtension(filePath);
+
+
+            fileName = (string)iter.Value;
+
+
 
 
 
@@ -2586,8 +2581,6 @@ public class Class : Object
 
             source.Name = fileName;
 
-
-            source.Path = filePath;
 
 
 
