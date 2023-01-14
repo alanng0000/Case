@@ -52,6 +52,11 @@ public class Constant : Object
 
 
 
+
+
+        this.SystemObjectName = "Object";
+
+
         this.SystemBoolName = "Bool";
 
 
@@ -130,6 +135,15 @@ public class Constant : Object
 
 
     public string SystemName
+    {
+        get;
+        private set;
+    }
+
+
+
+
+    public string SystemObjectName
     {
         get;
         private set;
