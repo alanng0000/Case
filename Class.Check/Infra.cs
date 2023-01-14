@@ -394,6 +394,18 @@ class Infra : Object
 
     private Class GetConstantClass(Class varClass)
     {
+        ConstantClass oe;
+        
+        oe = this.PortConstantClass;
+
+
+        ConstantClass os;
+
+        os = this.ConstantClass;
+
+
+
+
         bool b;
 
         b = false;
@@ -408,36 +420,36 @@ class Infra : Object
 
 
 
-        if (!b & varClass == this.PortConstantClass.Object)
+        if (!b & varClass == oe.Object)
         {
-            o = this.ConstantClass.Object;
+            o = os.Object;
 
             b = true;
         }
 
 
 
-        if (!b & varClass == this.PortConstantClass.Bool)
+        if (!b & varClass == oe.Bool)
         {
-            o = this.ConstantClass.Bool;
+            o = os.Bool;
 
             b = true;
         }
 
 
 
-        if (!b & varClass == this.PortConstantClass.Int)
+        if (!b & varClass == oe.Int)
         {
-            o = this.ConstantClass.Int;
+            o = os.Int;
 
             b = true;
         }
 
 
 
-        if (!b & varClass == this.PortConstantClass.String)
+        if (!b & varClass == oe.String)
         {
-            o = this.ConstantClass.String;
+            o = os.String;
 
             b = true;
         }
