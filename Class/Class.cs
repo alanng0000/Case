@@ -100,6 +100,9 @@ public class Class : Object
 
 
 
+    private string SourceFold { get; set; }
+    
+
 
 
 
@@ -666,11 +669,37 @@ public class Class : Object
 
         if (!taskModule)
         {
+            string filePath;
+
+
+            filePath = this.Task.Source;
+
+
+
+
+            if (this.Null(filePath))
+            {
+                this.Error("Source Invalid");
+
+
+
+                return false;
+            }
+
+
+
+
+
+            this.SourceFold = Path.GetDirectoryName(filePath);
+
+
+
+
             string file;
 
-
-            file = this.Task.Source;
-
+            
+            file = Path.GetFileName(filePath);
+            
 
 
 
@@ -682,19 +711,6 @@ public class Class : Object
 
 
             fileList.Add(file);
-
-            
-
-
-
-            
-            if (!this.CheckClassFiles(fileList))
-            {
-                this.Error("Class Files Invalid");
-
-
-                return false;
-            }
         }
 
 
@@ -720,8 +736,11 @@ public class Class : Object
 
 
 
+            this.SourceFold = sourceFold;
 
-            fileList = this.GetClassFiles(sourceFold);
+
+
+            fileList = this.GetClassFiles(this.SourceFold);
         }
 
 
@@ -2787,36 +2806,6 @@ public class Class : Object
 
 
 
-
-    private bool CheckClassFiles(List files)
-    {
-        ListIter iter;
-
-
-        iter = files.Iter();
-
-
-
-        while (iter.Next())
-        {
-            string file;
-
-
-            file = (string)iter.Value;
-
-
-
-            if (!File.Exists(file))
-            {
-                return false;
-            }
-        }
-
-
-
-
-        return true;
-    }
 
 
 
