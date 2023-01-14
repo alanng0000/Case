@@ -185,7 +185,12 @@ public class Compile : InfraCompile
 
 
 
-        this.IsSystem = (this.Refer.Module.Refer.Intent.Value == this.SystemModuleIntent);
+        Constant constant;
+
+        constant = Constant.This;
+
+
+        this.IsSystem = (this.Refer.Module.Refer.Intent.Value == constant.SystemIntent);
 
 
 
@@ -1193,20 +1198,6 @@ public class Compile : InfraCompile
         return true;
     }
 
-
-
-
-
-
-
-
-    private ulong SystemModuleIntent
-    {
-        get
-        {
-            return 0;
-        }
-    }
 
 
 
