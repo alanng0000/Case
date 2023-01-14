@@ -684,7 +684,7 @@ public class Test
                     string pathFile;
 
 
-                    pathFile = unitFolder + PathSeparator + "Path";
+                    pathFile = unitFolder + this.PathSeparator + "Path";
 
 
 
