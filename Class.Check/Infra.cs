@@ -39,6 +39,7 @@ class Infra : Object
 
 
 
+
     public ModuleRefer PortConstantRefer { get; set; }
     
 
@@ -230,7 +231,18 @@ class Infra : Object
             this.Module = a;
 
 
+
+            this.IsModuleSystem = this.IsSystem(this.Module.Refer);
+
+
+
+
             varClass = this.CreateClassMap(module.Class);
+
+
+
+
+            this.IsModuleSystem = false;
 
 
 
@@ -261,6 +273,15 @@ class Infra : Object
 
     private ClassMap CreateClassMap(ClassMap classMap)
     {
+        bool b;
+
+
+        b = this.IsModuleSystem;
+        
+
+
+
+
         ClassMap a;
 
         a = new ClassMap();
@@ -305,7 +326,37 @@ class Infra : Object
 
             Class u;
 
-            u = this.CreateClass(varClass);
+            u = null;
+
+
+
+            if (b)
+            {
+                u = this.GetConstantClass(varClass);
+            }
+
+
+
+            bool ba;
+
+
+            ba = this.Null(u);
+
+
+
+            if (!ba)
+            {
+                u.Module = this.Module;
+            }
+
+
+
+            if (ba)
+            {
+                u = this.CreateClass(varClass);
+            }
+
+            
 
 
 
@@ -332,6 +383,60 @@ class Infra : Object
         ClassMap ret;
 
         ret = a;
+
+
+        return ret;
+    }
+
+
+
+
+
+    private Class GetConstantClass(Class varClass)
+    {
+        bool b;
+
+        b = false;
+
+
+
+        Class o;
+
+        o = null;
+
+
+
+
+        if (!b & varClass == this.PortConstantClass.Bool)
+        {
+            o = this.ConstantClass.Bool;
+
+            b = true;
+        }
+
+
+
+        if (!b & varClass == this.PortConstantClass.Int)
+        {
+            o = this.ConstantClass.Int;
+
+            b = true;
+        }
+
+
+
+        if (!b & varClass == this.PortConstantClass.String)
+        {
+            o = this.ConstantClass.String;
+
+            b = true;
+        }
+
+
+
+        Class ret;
+
+        ret = o;
 
 
         return ret;
