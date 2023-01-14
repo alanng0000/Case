@@ -384,17 +384,17 @@ public class Class : Object
 
 
 
-        this.AddClassImport("Bool");
+        this.AddClassImport(constant.SystemBoolName);
 
 
 
 
-        this.AddClassImport("Int");
+        this.AddClassImport(constant.SystemIntName);
 
 
 
 
-        this.AddClassImport("String");
+        this.AddClassImport(constant.SystemStringName);
 
 
 
@@ -416,13 +416,33 @@ public class Class : Object
 
 
 
-        this.ConstantClass.Bool = (CheckClass)this.ConstantModule.Class.Get("Bool");
+
+        this.ConstantClass.Bool = this.GetConstantModuleClass(constant.SystemBoolName);
+
+
+        this.ConstantClass.Int = this.GetConstantModuleClass(constant.SystemIntName);
+
+
+        this.ConstantClass.String = this.GetConstantModuleClass(constant.SystemStringName);
+
 
 
 
 
         return true;
     }
+
+
+
+
+
+
+    private CheckClass GetConstantModuleClass(string name)
+    {
+        return (CheckClass)this.ConstantModule.Class.Get(name);
+    }
+
+
 
 
 
