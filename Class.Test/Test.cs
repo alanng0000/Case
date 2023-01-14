@@ -317,6 +317,11 @@ public class Test
     private ClassClass Class { get; set; }
 
 
+
+    private PortPort Port { get; set; }
+
+
+
     private string UnitFolder { get; set; }
 
 
