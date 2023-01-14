@@ -1898,7 +1898,7 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteConstant(Constant constant)
+    public virtual bool ExecuteConstant(NodeConstant constant)
     {
         if (this.Null(constant))
         {
