@@ -322,17 +322,17 @@ public class Compile : InfraCompile
 
     private bool InitConstantClass()
     {
-        this.ConstantClass.Bool = this.GetConstantClass("Bool");
+        this.ConstantClass.Bool = this.CreateConstantClass("Bool");
 
 
 
 
-        this.ConstantClass.Int = this.GetConstantClass("Int");
+        this.ConstantClass.Int = this.CreateConstantClass("Int");
 
 
 
 
-        this.ConstantClass.String = this.GetConstantClass("String");
+        this.ConstantClass.String = this.CreateConstantClass("String");
 
 
 
@@ -340,13 +340,13 @@ public class Compile : InfraCompile
         return true;
     }
 
-    
 
 
 
 
 
-    private Class GetConstantClass(string name)
+
+    private Class CreateConstantClass(string name)
     {
         Class varClass;
 
@@ -356,9 +356,26 @@ public class Compile : InfraCompile
 
 
 
+
+        this.Infra.Module = null;
+
+
+
+
+
+        Class constantClass;
+
+
+        constantClass = this.Infra.CreateClass(varClass);
+
+
+
+
+
+
         Class ret;
 
-        ret = varClass;
+        ret = constantClass;
 
 
         return ret;
