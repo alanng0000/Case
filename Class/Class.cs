@@ -2643,11 +2643,23 @@ public class Class : Object
 
 
 
+            string fileName;
+
+            fileName = source.Name;
+
+
+
+            string filePath;
+
+            filePath = Path.Combine(this.SourceFold, fileName);
+
+
+
 
             string[] array;
 
 
-            array = File.ReadAllLines(source.Name);
+            array = File.ReadAllLines(filePath);
 
 
             
