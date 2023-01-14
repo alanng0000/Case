@@ -615,7 +615,7 @@ public class Test
             string kindFolder;
 
 
-            kindFolder = setFolder + PathSeparator + kind;
+            kindFolder = setFolder + this.PathSeparator + kind;
 
 
 
@@ -646,7 +646,7 @@ public class Test
                 string unitFolder;
                 
 
-                unitFolder = kindFolder + PathSeparator + unit;
+                unitFolder = kindFolder + this.PathSeparator + unit;
 
 
 
@@ -654,7 +654,7 @@ public class Test
                 string expectFile;
                 
                 
-                expectFile = unitFolder + PathSeparator + "Expect";
+                expectFile = unitFolder + this.PathSeparator + "Expect";
 
 
                 
