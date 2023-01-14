@@ -387,6 +387,10 @@ public class Compile : InfraCompile
 
     private bool InitRefer()
     {
+        this.Infra.ConstantClass = this.ConstantClass;
+
+
+
         this.Refer = this.Infra.CreateRefer(this.PortRefer);
 
 

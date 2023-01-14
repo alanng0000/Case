@@ -30,6 +30,12 @@ class Infra : Object
 
 
 
+    public ConstantClass ConstantClass { get; set; }
+
+
+
+
+
     public Module Module { get; set; }
 
 
