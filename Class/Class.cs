@@ -1412,6 +1412,15 @@ public class Class : Object
 
     private bool ModuleAddConstantClassImport(CheckModule module, ModuleImport import)
     {
+        List list;
+
+        list = new List();
+        
+        list.Init();
+
+
+
+
         MapIter iter;
 
         iter = import.ClassImport.Iter();
@@ -1457,9 +1466,40 @@ public class Class : Object
                 u.Value = c;
 
 
+
                 module.Class.Add(u);
+
+
+
+                list.Add(varClass);
             }
         }
+
+
+
+
+
+        ListIter it;
+
+        it = list.Iter();
+
+        while (it.Next())
+        {
+            string s;
+
+            s = (string)it.Value;
+
+
+
+            string varClass;
+
+            varClass = s;
+
+
+
+            import.ClassImport.Remove(varClass);
+        }
+
 
 
 
