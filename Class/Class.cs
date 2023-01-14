@@ -1336,6 +1336,10 @@ public class Class : Object
 
 
 
+
+
+
+
         ModuleRefer refer;
 
 
@@ -1400,6 +1404,40 @@ public class Class : Object
 
 
 
+
+
+
+    private bool IsSystem(ModuleRefer refer)
+    {
+        Constant constant;
+
+        constant = Constant.This;
+
+
+
+        bool ba;
+        
+        ba = (refer.Intent.Value == constant.SystemIntent);
+
+
+        bool bb;
+
+        bb = (refer.Ver.Value == constant.SystemVer);
+
+
+
+        bool b;
+        
+        b = (ba & bb);
+
+
+
+        bool ret;
+
+        ret = b;
+
+        return ret;
+    }
 
 
 
