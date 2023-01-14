@@ -58,6 +58,12 @@ public class Test
 
 
 
+        this.ExecutePort();
+
+
+
+
+
         this.Strings = new ModuleStrings();
 
 
@@ -1213,10 +1219,21 @@ public class Test
 
 
 
+
+        TaskKindList k;
+
+        k = TaskKindList.This;
+
+
+
+
+
+
+
         TaskKind kind;
 
 
-        kind = TaskKindList.This.Module;
+        kind = k.Module;
 
 
 
@@ -1253,7 +1270,7 @@ public class Test
 
             if (!ba)
             {
-                if (!(task.Kind == TaskKindList.This.Token))
+                if (!(task.Kind == k.Token))
                 {
                     task.Node = "Class";
                 }
@@ -1373,7 +1390,45 @@ public class Test
 
     private bool ExecutePort()
     {
+        this.Port = this.CreatePort();
+
+
+
+
+        TaskKindList k;
+
+        k = TaskKindList.This;
+
+
+
+
+        Task task;
+
+        task = new Task();
+
+        task.Init();
+
+
+        task.Kind = k.Port;
+
+
+
+        task.Port = this.Port;
+
+
+
+        task.Out = Console.Out;
         
+        
+
+
+        this.Class.Task = task;
+
+
+
+
+        this.Class.Execute();
+
 
 
 
