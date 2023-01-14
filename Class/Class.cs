@@ -1333,6 +1333,10 @@ public class Class : Object
 
 
 
+        if (this.IsSystem(module.Refer))
+        {
+
+        }
 
 
 
@@ -1409,20 +1413,14 @@ public class Class : Object
 
     private bool IsSystem(ModuleRefer refer)
     {
-        Constant constant;
-
-        constant = Constant.This;
-
-
-
         bool ba;
         
-        ba = (refer.Intent.Value == constant.SystemIntent);
+        ba = (refer.Intent.Value == this.ConstantModule.Refer.Intent.Value);
 
 
         bool bb;
 
-        bb = (refer.Ver.Value == constant.SystemVer);
+        bb = (refer.Ver.Value == this.ConstantModule.Refer.Ver.Value);
 
 
 
