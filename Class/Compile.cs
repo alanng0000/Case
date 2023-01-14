@@ -357,6 +357,11 @@ public class Compile : Object
 
 
 
+        this.Check.PortConstantClass = this.Class.ConstantClass;
+
+
+
+
         this.Check.Execute();
 
 

@@ -21,6 +21,12 @@ public class Compile : InfraCompile
 
 
 
+    
+    public ConstantClass PortConstantClass { get; set; }
+
+
+
+
 
     internal CheckMap Check { get; set; }
 
