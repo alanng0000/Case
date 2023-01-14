@@ -81,13 +81,6 @@ public class Compile : InfraCompile
 
 
 
-    private bool IsSystem { get; set; }
-
-
-
-
-
-
 
 
     public override bool Init()
@@ -112,6 +105,14 @@ public class Compile : InfraCompile
 
         this.Infra.Init();
 
+
+
+
+
+        this.ConstantClass = new ConstantClass();
+
+
+        this.ConstantClass.Init();
         
 
 
@@ -177,19 +178,15 @@ public class Compile : InfraCompile
 
 
 
-        this.InitRefer();
-
-
-
 
         this.InitConstantClass();
 
 
 
 
+        this.InitRefer();
 
 
-        this.IsSystem = false;
 
 
 
@@ -318,6 +315,31 @@ public class Compile : InfraCompile
     }
 
 
+
+
+
+
+
+    private bool InitConstantClass()
+    {
+
+
+
+        return true;
+    }
+
+
+
+
+    private bool AddConstantClass(string name)
+    {
+        
+
+
+
+
+        return true;
+    }
 
 
 
@@ -455,36 +477,37 @@ public class Compile : InfraCompile
 
 
 
-    private bool InitConstantClass()
+
+
+
+
+
+
+    private bool IsSystem(ModuleRefer refer)
     {
-        MapIter moduleIter;
+        bool ba;
+        
+        ba = (refer.Intent.Value == this.PortConstantModule.Refer.Intent.Value);
 
-        moduleIter = this.Refer.Import.Iter();
 
+        bool bb;
 
-        while (moduleIter.Next())
-        {
-            Pair pairA;
-
-            pairA = (Pair)moduleIter.Value;
+        bb = (refer.Ver.Value == this.PortConstantModule.Refer.Ver.Value);
 
 
 
-            Module module;
-
-            module = (Module)pairA.Value;
-        }
-
+        bool b;
+        
+        b = (ba & bb);
 
 
 
-        return true;
+        bool ret;
+
+        ret = b;
+
+        return ret;
     }
-
-
-
-
-
 
 
 

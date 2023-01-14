@@ -30,7 +30,7 @@ class Infra : Object
 
 
 
-    private Module Module { get; set; }
+    public Module Module { get; set; }
 
 
 
@@ -319,7 +319,7 @@ class Infra : Object
 
 
 
-    private Class CreateClass(Class varClass)
+    public Class CreateClass(Class varClass)
     {
         Class a;
 
