@@ -163,23 +163,23 @@ public class Test
 
     protected virtual bool AddFoldSets()
     {
-        TaskKindList kinds;
+        TaskKindList k;
 
 
-        kinds = TaskKindList.This;
-
-
-
-
-        this.AddFoldSet("Token", kinds.Token, false, false, false);
+        k = TaskKindList.This;
 
 
 
-        this.AddFoldSet("Node", kinds.Node, true, false, false);
+
+        this.AddFoldSet("Token", k.Token, false, false, false);
+
+
+
+        this.AddFoldSet("Node", k.Node, true, false, false);
         
 
 
-        this.AddFoldSet("Check", kinds.Check, false, true, false);
+        this.AddFoldSet("Check", k.Check, false, true, false);
 
 
 
