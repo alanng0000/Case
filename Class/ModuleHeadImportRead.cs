@@ -33,36 +33,11 @@ class ModuleHeadImportRead : Object
 
 
 
-    private Convert Convert { get; set; }
-
-
-
-
     private Map ClassImportMap { get; set; }
 
 
 
 
-
-
-
-
-
-    public override bool Init()
-    {
-        base.Init();
-
-
-
-        this.Convert = new Convert();
-
-
-        this.Convert.Init();
-
-
-
-        return true;
-    }
 
 
 
@@ -994,10 +969,24 @@ class ModuleHeadImportRead : Object
 
     private ulong? ExecuteInt()
     {
+        Constant constant;
+
+        constant = Constant.This;
+
+
+
+        Convert convert;
+
+        convert = Convert.This;
+
+
+
+
+
         ulong count;
 
 
-        count = Constant.This.IntByteCount;
+        count = constant.IntByteCount;
 
 
 
@@ -1012,7 +1001,7 @@ class ModuleHeadImportRead : Object
         ulong k;
 
 
-        k = this.Convert.ByteListULong(this.Data.Value, this.Index);
+        k = convert.ByteListULong(this.Data.Value, this.Index);
 
 
 
