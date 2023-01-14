@@ -184,6 +184,7 @@ public class Compile : InfraCompile
 
 
 
+
         this.InitRefer();
 
 
@@ -388,6 +389,12 @@ public class Compile : InfraCompile
     private bool InitRefer()
     {
         this.Infra.ConstantClass = this.ConstantClass;
+
+
+
+        this.Infra.ConstantRefer = this.PortConstantModule.Refer;
+        
+
 
 
 
