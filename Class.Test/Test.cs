@@ -1331,7 +1331,7 @@ public class Test
 
 
 
-        task.Source = source;
+        task.SourcePath = source;
 
 
 

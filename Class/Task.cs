@@ -22,7 +22,7 @@ public class Task : Object
 
 
 
-    public string Source { get; set; }
+    public string SourcePath { get; set; }
 
 
 

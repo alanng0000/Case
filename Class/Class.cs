@@ -672,7 +672,7 @@ public class Class : Object
             string filePath;
 
 
-            filePath = this.Task.Source;
+            filePath = this.Task.SourcePath;
 
 
 
@@ -721,7 +721,7 @@ public class Class : Object
             string sourceFold;
 
 
-            sourceFold = this.Task.Source;
+            sourceFold = this.Task.SourcePath;
 
 
 
@@ -1736,14 +1736,14 @@ public class Class : Object
     {
         bool b;
 
-        b = this.Null(this.Task.Source);
+        b = this.Null(this.Task.SourcePath);
 
 
         if (!b)
         {
             bool ba;
             
-            ba = this.GetSourcePort(this.Task.Source);
+            ba = this.GetSourcePort(this.Task.SourcePath);
             
 
             if (!ba)
