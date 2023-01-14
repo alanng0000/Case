@@ -775,6 +775,13 @@ public class Compile : InfraCompile
 
     private bool IsConstantClass(Class varClass)
     {
+        ConstantClass o;
+
+        o = this.ConstantClass;
+
+
+
+
         bool b;
 
 
@@ -782,19 +789,25 @@ public class Compile : InfraCompile
 
 
 
-        if (varClass == this.ConstantClass.Bool)
+        if (varClass == o.Object)
         {
             b = true;
         }
 
 
-        if (varClass == this.ConstantClass.Int)
+        if (varClass == o.Bool)
         {
             b = true;
         }
 
 
-        if (varClass == this.ConstantClass.String)
+        if (varClass == o.Int)
+        {
+            b = true;
+        }
+
+
+        if (varClass == o.String)
         {
             b = true;
         }
