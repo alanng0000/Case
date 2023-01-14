@@ -6,6 +6,11 @@ namespace Class.Check;
 
 public class ConstantClass : Object
 {
+    public Class Object { get; set; }
+
+
+
+
     public Class Bool { get; set; }
 
 
