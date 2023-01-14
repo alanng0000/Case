@@ -1818,20 +1818,6 @@ public class Class : Object
 
 
 
-    private bool CreateFoldIfNotExist(string foldPath)
-    {
-        if (!Directory.Exists(foldPath))
-        {
-            Directory.CreateDirectory(foldPath);
-        }
-
-
-        return true;
-    }
-
-
-
-
 
 
     protected virtual Compile CreateCompile()
