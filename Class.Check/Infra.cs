@@ -35,6 +35,11 @@ class Infra : Object
 
 
 
+    public ModuleRefer ConstantRefer { get; set; }
+    
+
+
+
 
     public Module Module { get; set; }
 
