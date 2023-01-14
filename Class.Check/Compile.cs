@@ -61,11 +61,6 @@ public class Compile : InfraCompile
 
 
 
-    private Class ObjectClass { get; set; }
-
-
-
-
 
     private ulong ClassNewId { get; set; }
 
@@ -947,7 +942,7 @@ public class Compile : InfraCompile
 
         if (b)
         {
-            t = this.ObjectClass;
+            t = this.ConstantClass.Object;
         }
         
 
@@ -1043,7 +1038,7 @@ public class Compile : InfraCompile
 
 
 
-            t = this.ObjectClass;
+            t = this.ConstantClass.Object;
 
 
 
@@ -1206,7 +1201,7 @@ public class Compile : InfraCompile
 
     private bool SystemObject(Class varClass)
     {
-        return (varClass == this.ObjectClass);
+        return (varClass == this.ConstantClass.Object);
     }
 
 
