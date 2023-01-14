@@ -182,12 +182,14 @@ public class Compile : InfraCompile
 
 
 
-        Constant constant;
-
-        constant = Constant.This;
+        this.InitConstantClass();
 
 
-        this.IsSystem = (this.Refer.Module.Refer.Intent.Value == constant.SystemIntent);
+
+
+
+
+        this.IsSystem = false;
 
 
 
@@ -447,6 +449,38 @@ public class Compile : InfraCompile
 
         return true;
     }
+
+
+
+
+
+
+    private bool InitConstantClass()
+    {
+        MapIter moduleIter;
+
+        moduleIter = this.Refer.Import.Iter();
+
+
+        while (moduleIter.Next())
+        {
+            Pair pairA;
+
+            pairA = (Pair)moduleIter.Value;
+
+
+
+            Module module;
+
+            module = (Module)pairA.Value;
+        }
+
+
+
+
+        return true;
+    }
+
 
 
 

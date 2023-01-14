@@ -87,8 +87,11 @@ public class Class : Object
 
 
 
+    
 
-    internal CheckConstantClass ConstantClass { get; set; }
+    internal CheckModule ConstantModule { get; set; }
+
+
 
 
 
@@ -177,7 +180,8 @@ public class Class : Object
 
 
 
-    private CheckModule SystemModule { get; set; }
+
+    private ModuleImport ModuleImport { get; set; }
 
 
 
@@ -495,15 +499,6 @@ public class Class : Object
 
 
 
-
-
-
-    private ModuleImport ModuleImport { get; set; }
-
-
-
-
-    private CheckModule ConstantModule { get; set; }
 
 
 
