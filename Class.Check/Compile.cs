@@ -328,6 +328,12 @@ public class Compile : InfraCompile
 
     private bool InitConstantClass()
     {
+        this.ConstantClass.Object = this.CreateConstantClass(this.PortConstantClass.Object);
+
+
+
+
+
         this.ConstantClass.Bool = this.CreateConstantClass(this.PortConstantClass.Bool);
 
 
