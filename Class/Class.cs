@@ -383,6 +383,10 @@ public class Class : Object
 
 
 
+        this.AddClassImport(constant.SystemObjectName);
+
+
+
 
         this.AddClassImport(constant.SystemBoolName);
 
@@ -415,6 +419,9 @@ public class Class : Object
 
 
 
+
+
+        this.ConstantClass.Object = this.GetConstantModuleClass(constant.SystemObjectName);
 
 
         this.ConstantClass.Bool = this.GetConstantModuleClass(constant.SystemBoolName);
