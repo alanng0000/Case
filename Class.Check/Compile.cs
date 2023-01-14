@@ -628,7 +628,7 @@ public class Compile : InfraCompile
 
 
         
-        this.AddBases();
+        this.AddBase();
 
 
 
@@ -989,7 +989,7 @@ public class Compile : InfraCompile
 
 
 
-    private bool AddBases()
+    private bool AddBase()
     {
         MapIter iter;
 
