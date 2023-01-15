@@ -2815,8 +2815,29 @@ public class Class : Object
 
 
 
+        char[] charList;
+
+        charList = new char[1];
+
+
+
 
         char oc;
+
+
+
+
+        RangeInfra rangeInfra;
+
+        rangeInfra = RangeInfra.This;
+
+
+
+
+        Range range;
+
+
+        range = rangeInfra.Range(0, charList.Length);
 
 
 
@@ -2837,9 +2858,11 @@ public class Class : Object
             oc = s[i];
 
 
+            charList[0] = oc;
 
 
-            line.Char.Add(oc);
+
+            line.Char.AddRange(charList, range);
 
 
 
