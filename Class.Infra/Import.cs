@@ -6,6 +6,7 @@ global using StringCompare = System.Infra.StringCompare;
 global using List = System.List.List;
 global using Array = System.List.Array;
 global using Text = System.Text.Text;
+global using Pos = System.Text.Pos;
 global using TextInfra = System.Text.Infra;
 global using Environment = System.Environment;
 global using EnvironmentSpecialFolder = System.Environment.SpecialFolder;
