@@ -335,8 +335,6 @@ public class StringInfra : Object
         t = t.Replace("\n", "\\n");
 
 
-        t = t.Replace("\r", "\\r");
-
 
         string ret;
         ret = t;
