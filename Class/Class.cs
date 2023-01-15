@@ -167,6 +167,11 @@ public class Class : Object
 
 
 
+        this.CharOneList = new char[1];
+
+
+
+
 
         return true;
     }
@@ -2802,6 +2807,11 @@ public class Class : Object
 
 
 
+    private char[] CharOneList { get; set; }
+
+
+
+
 
 
     private TextLine CreateTextLine(string s)
@@ -2815,14 +2825,16 @@ public class Class : Object
 
 
 
-        char[] charList;
-
-        charList = new char[1];
-
-
 
 
         char oc;
+
+
+
+
+        char[] charList;
+
+        charList = this.CharOneList;
 
 
 
