@@ -470,6 +470,24 @@ class Infra : Object
 
     public Class CreateClass(Class varClass)
     {
+        FieldMap field;
+
+        field = new FieldMap();
+
+        field.Init();
+
+
+
+
+        MethodMap method;
+
+        method = new MethodMap();
+
+        method.Init();
+
+
+
+
         Class a;
 
 
@@ -480,6 +498,12 @@ class Infra : Object
 
 
         a.Name = varClass.Name;
+
+
+        a.Field = field;
+
+
+        a.Method = method;
 
 
         a.Module = this.Module;
