@@ -34,6 +34,10 @@ class ObjectString : Object
 
 
 
+    private StringInfra StringInfra { get; set; }
+
+
+
     private Type NodeType { get; set; }
 
 
@@ -73,7 +77,6 @@ class ObjectString : Object
 
 
 
-
         this.RangeInfra.Init();
 
 
@@ -84,8 +87,17 @@ class ObjectString : Object
 
 
 
-
         this.TextInfra.Init();
+
+
+
+
+
+        this.StringInfra = new StringInfra();
+
+
+
+        this.StringInfra.Init();
 
 
 
@@ -216,7 +228,7 @@ class ObjectString : Object
             s = (string)varObject;
 
 
-            s = this.TextInfra.EscapeString(s);
+            s = this.StringInfra.EscapeString(s);
 
 
             this.Append("\"").Append(s).Append("\"").Append(",").AppendLine();

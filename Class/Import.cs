@@ -27,6 +27,7 @@ global using ErrorList = Class.Infra.ErrorList;
 global using Data = Class.Infra.Data;
 global using Convert = Class.Infra.Convert;
 global using Constant = Class.Infra.Constant;
+global using StringInfra = Class.Infra.StringInfra;
 global using ModuleName = Class.Infra.ModuleName;
 global using ModuleIntent = Class.Infra.ModuleIntent;
 global using ModuleVer = Class.Infra.ModuleVer;
