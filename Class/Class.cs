@@ -2862,7 +2862,7 @@ public class Class : Object
 
 
 
-            line.Char.AddRange(charList, range);
+            line.Char.Add(charList, range);
 
 
 
