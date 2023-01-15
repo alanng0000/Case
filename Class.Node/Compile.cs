@@ -61,6 +61,11 @@ public class Compile : InfraCompile
 
 
 
+    private StringInfra StringInfra { get; set; }
+
+
+
+
 
     public override bool Init()
     {
@@ -88,10 +93,20 @@ public class Compile : InfraCompile
 
 
 
+        this.StringInfra = new StringInfra();
+
+
+        this.StringInfra.Init();
+
+
+
 
 
 
         this.RangeNull = new Range();
+
+
+        this.RangeNull.Init();
 
 
         this.RangeNull.Start = IntNull;
@@ -104,6 +119,9 @@ public class Compile : InfraCompile
 
 
         this.TokenNull = new Token();
+
+
+        this.TokenNull.Init();
 
 
         this.TokenNull.Range = this.RangeNull;
@@ -4938,7 +4956,7 @@ public class Compile : InfraCompile
 
 
 
-        value = this.TextInfra.Value(s.Row, s.Range);
+        value = this.StringInfra.Value(s.Row, s.Range);
 
 
 
