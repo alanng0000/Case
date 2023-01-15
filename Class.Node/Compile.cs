@@ -67,6 +67,7 @@ public class Compile : InfraCompile
 
 
 
+
     public override bool Init()
     {
         base.Init();
@@ -464,7 +465,7 @@ public class Compile : InfraCompile
 
 
 
-        if (nodeMethod == null)
+        if (this.Null(nodeMethod))
         {
             return false;
         }
@@ -508,8 +509,18 @@ public class Compile : InfraCompile
 
 
 
+            Text text;
 
-            this.TextInfra.Text = this.Source.Text;
+
+            text = this.Source.Text;
+
+
+
+            this.TextInfra.Text = text;
+
+
+
+            this.StringInfra.Text = text;
 
 
 
