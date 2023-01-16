@@ -22,10 +22,6 @@ public class Compile : Object
 
 
 
-    protected RangeInfra RangeInfra { get; set; }
-
-
-
 
 
     protected TextInfra TextInfra { get; set; }
@@ -48,14 +44,6 @@ public class Compile : Object
         
 
 
-
-
-
-        this.RangeInfra = new RangeInfra();
-
-
-
-        this.RangeInfra.Init();
 
 
 

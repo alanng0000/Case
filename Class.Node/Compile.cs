@@ -7030,7 +7030,12 @@ public class Compile : InfraCompile
 
     protected int Count(Range range)
     {
-        return this.RangeInfra.Count(range);
+        RangeInfra infra;
+
+        infra = RangeInfra.This;
+
+
+        return infra.Count(range);
     }
 
 
