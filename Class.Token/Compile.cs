@@ -91,24 +91,24 @@ public class Compile : InfraCompile
 
 
 
-        CodeArray codes;
+        CodeArray codeList;
         
 
 
-        codes = new CodeArray();
+        codeList = new CodeArray();
 
 
 
-        codes.Count = this.SourceList.Count;
+        codeList.Count = this.SourceList.Count;
 
 
 
-        codes.Init();
+        codeList.Init();
 
 
 
 
-        this.Codes = codes;
+        this.CodeList = codeList;
 
 
 
@@ -125,7 +125,7 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Code = this.Codes;
+        this.Result.Code = this.CodeList;
 
 
 
@@ -135,7 +135,7 @@ public class Compile : InfraCompile
 
 
 
-        this.ExecuteCodes();
+        this.ExecuteCodeList();
 
 
 
@@ -147,7 +147,7 @@ public class Compile : InfraCompile
 
 
 
-    private bool ExecuteCodes()
+    private bool ExecuteCodeList()
     {
         int i;
 
@@ -155,7 +155,7 @@ public class Compile : InfraCompile
         i = 0;
 
 
-        while (i < this.Codes.Count)
+        while (i < this.CodeList.Count)
         {
             Code code;
 
@@ -169,7 +169,7 @@ public class Compile : InfraCompile
 
 
 
-            this.Codes.Set(i, code);
+            this.CodeList.Set(i, code);
 
 
 
@@ -282,7 +282,7 @@ public class Compile : InfraCompile
 
 
 
-    private CodeArray Codes { get; set; }
+    private CodeArray CodeList { get; set; }
 
 
 
