@@ -171,6 +171,9 @@ public class Class : Object
 
 
 
+        this.LineOneList = new TextLine[1];
+
+
 
 
         return true;
@@ -2760,6 +2763,22 @@ public class Class : Object
 
 
 
+        RangeInfra rangeInfra;
+
+        rangeInfra = RangeInfra.This;
+
+
+
+
+        Range range;
+
+
+        range = rangeInfra.Range(0, this.LineOneList.Length);
+
+
+
+
+
         int count;
 
         count = array.Length;
@@ -2786,7 +2805,11 @@ public class Class : Object
 
 
 
-            text.Line.Add(line);
+            this.LineOneList[0] = line;
+
+
+
+            text.Line.Add(this.LineOneList, range);
 
 
 
@@ -2807,8 +2830,13 @@ public class Class : Object
 
 
 
+
     private char[] CharOneList { get; set; }
 
+
+
+
+    private TextLine[] LineOneList { get; set; }
 
 
 
@@ -2831,13 +2859,6 @@ public class Class : Object
 
 
 
-        char[] charList;
-
-        charList = this.CharOneList;
-
-
-
-
         RangeInfra rangeInfra;
 
         rangeInfra = RangeInfra.This;
@@ -2848,7 +2869,7 @@ public class Class : Object
         Range range;
 
 
-        range = rangeInfra.Range(0, charList.Length);
+        range = rangeInfra.Range(0, this.CharOneList.Length);
 
 
 
@@ -2869,11 +2890,11 @@ public class Class : Object
             oc = s[i];
 
 
-            charList[0] = oc;
+            this.CharOneList[0] = oc;
 
 
 
-            line.Char.Add(charList, range);
+            line.Char.Add(this.CharOneList, range);
 
 
 
