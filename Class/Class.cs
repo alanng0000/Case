@@ -2809,7 +2809,13 @@ public class Class : Object
 
 
 
-            text.Line.Add(this.LineOneList, range);
+            int index;
+
+            index = text.Line.Count;
+
+
+
+            text.Line.Insert(index, this.LineOneList, range);
 
 
 
@@ -2894,7 +2900,13 @@ public class Class : Object
 
 
 
-            line.Char.Add(this.CharOneList, range);
+            int index;
+
+            index = line.Char.Count;
+
+
+
+            line.Char.Insert(index, this.CharOneList, range);
 
 
 
