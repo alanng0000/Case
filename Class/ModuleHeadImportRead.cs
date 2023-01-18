@@ -103,17 +103,6 @@ class ModuleHeadImportRead : Object
         {
             return false;
         }
-        
-
-
-
-        b = this.ExecutePassModuleName();
-
-
-        if (!b)
-        {
-            return false;
-        }
 
 
 
