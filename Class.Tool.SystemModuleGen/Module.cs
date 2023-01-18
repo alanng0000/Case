@@ -9,10 +9,6 @@ class Module : Object
 
 
 
-    public ModuleName Name { get; set; }
-
-
-
     public Array Class { get; set; }
 
 

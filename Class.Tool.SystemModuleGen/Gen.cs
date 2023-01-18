@@ -154,12 +154,7 @@ class Gen : Object
         ModuleRefer refer;
 
         refer = this.CreateSystemRefer();
-
-
-
-        ModuleName name;
-
-        name = this.CreateSystemName();
+        
 
 
 
@@ -201,9 +196,6 @@ class Gen : Object
 
 
         module.Refer = refer;
-
-
-        module.Name = name;
 
 
         module.Class = varClass;
