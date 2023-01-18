@@ -129,10 +129,6 @@ class Write : Object
 
 
 
-        this.ExecuteModuleName(module.Name);
-
-
-
         this.ExecuteClassArray(module.Class);
 
 
