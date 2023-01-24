@@ -102,16 +102,6 @@ public class Constant : Object
 
 
 
-        this.IntByteCount = sizeof(ulong);
-
-
-
-        this.ByteBitCount = 8;
-
-
-
-
-
         return true;
     }
 
@@ -236,24 +226,6 @@ public class Constant : Object
 
 
     public ulong NullClassIndex
-    {
-        get;
-        private set;
-    }
-
-
-
-
-
-    public ulong IntByteCount
-    {
-        get;
-        private set;
-    }
-
-
-
-    public ulong ByteBitCount
     {
         get;
         private set;

@@ -31,9 +31,9 @@ public class Convert : Object
 
     public ulong ByteListULong(byte[] u, ulong start)
     {
-        Constant constant;
+        InfraConstant constant;
 
-        constant = Constant.This;
+        constant = InfraConstant.This;
 
 
 
