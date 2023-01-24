@@ -1,9 +1,9 @@
+global using Data = System.Infra.Data;
 global using ListIter = System.List.ListIter;
 global using Map = System.List.Map;
 global using MapIter = System.List.MapIter;
 global using Pair = System.List.Pair;
 global using InfraCompile = Class.Infra.Compile;
-global using Data = Class.Infra.Data;
 global using SourceArray = Class.Infra.SourceArray;
 global using ErrorList = Class.Infra.ErrorList;
 global using PortPort = Class.Port.Port;
