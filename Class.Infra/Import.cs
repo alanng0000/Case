@@ -3,6 +3,7 @@ global using Range = System.Infra.Range;
 global using RangeInfra = System.Infra.RangeInfra;
 global using Compare = System.Infra.Compare;
 global using StringCompare = System.Infra.StringCompare;
+global using InfraConvert = System.Infra.Convert;
 global using List = System.List.List;
 global using Array = System.List.Array;
 global using Text = System.Text.Text;

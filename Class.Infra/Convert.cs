@@ -37,6 +37,12 @@ public class Convert : Object
 
 
 
+        InfraConvert convert;
+
+        convert = InfraConvert.This;
+
+
+
 
         ulong m;
 
@@ -86,7 +92,7 @@ public class Convert : Object
             shiftCount = i * m;
 
 
-            v = this.SInt32(shiftCount);
+            v = convert.SInt32(shiftCount);
 
 
 
@@ -123,37 +129,6 @@ public class Convert : Object
     }
 
 
-
-
-
-    public ulong ULong(int a)
-    {
-        return (ulong)a;
-    }
-
-
-
-
-    public int SInt32(ulong a)
-    {
-        return (int)a;
-    }
-
-
-
-
-    public byte Byte(ulong a)
-    {
-        return (byte)a;
-    }
-
-
-
-
-    public byte CharByte(char a)
-    {
-        return (byte)a;
-    }
 
 
 
