@@ -1,5 +1,6 @@
 global using Object = System.Infra.Object;
 global using Data = System.Infra.Data;
+global using InfraConvert = System.Infra.Convert;
 global using Array = System.List.Array;
 global using ModulePath = Class.Infra.ModulePath;
 global using ClassIndex = Class.Infra.ClassIndex;

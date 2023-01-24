@@ -495,9 +495,9 @@ class Gen : Object
 
     private Export CreateExport(int index)
     {
-        Convert convert;
+        InfraConvert convert;
 
-        convert = Convert.This;
+        convert = InfraConvert.This;
 
 
 
