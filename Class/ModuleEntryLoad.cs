@@ -138,9 +138,9 @@ class ModuleEntryLoad : Object
 
 
 
-        Convert convert;
+        InfraConvert convert;
 
-        convert = Convert.This;
+        convert = InfraConvert.This;
 
 
 
