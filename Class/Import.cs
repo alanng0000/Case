@@ -5,6 +5,7 @@ global using ObjectInfra = System.Infra.ObjectInfra;
 global using StringCompare = System.Infra.StringCompare;
 global using StringComparer = System.Infra.StringComparer;
 global using InfraConvert = System.Infra.Convert;
+global using InfraConstant = System.Infra.Constant;
 global using List = System.List.List;
 global using Map = System.List.Map;
 global using ListIter = System.List.ListIter;

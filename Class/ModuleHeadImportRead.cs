@@ -929,10 +929,16 @@ class ModuleHeadImportRead : Object
 
     private bool ExecutePassInt()
     {
+        InfraConstant constant;
+
+        constant = InfraConstant.This;
+
+
+
         ulong count;
 
 
-        count = Constant.This.IntByteCount;
+        count = constant.IntByteCount;
 
 
 
@@ -958,9 +964,9 @@ class ModuleHeadImportRead : Object
 
     private ulong? ExecuteInt()
     {
-        Constant constant;
+        InfraConstant constant;
 
-        constant = Constant.This;
+        constant = InfraConstant.This;
 
 
 

@@ -65,10 +65,15 @@ class ModuleHeadLoad : Object
 
 
 
+        InfraConstant constant;
+
+        constant = InfraConstant.This;
+
+
 
         byte[] u;
 
-        u = new byte[Constant.This.IntByteCount];
+        u = new byte[constant.IntByteCount];
 
 
 
