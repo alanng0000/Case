@@ -1,6 +1,7 @@
 global using Object = System.Infra.Object;
 global using Data = System.Infra.Data;
-global using InfraConvert = System.Infra.Convert;
+global using Convert = System.Infra.Convert;
+global using Constant = System.Infra.Constant;
 global using Array = System.List.Array;
 global using ModulePath = Class.Infra.ModulePath;
 global using ClassIndex = Class.Infra.ClassIndex;
@@ -8,7 +9,6 @@ global using ModuleRefer = Class.Infra.ModuleRefer;
 global using ModuleIntent = Class.Infra.ModuleIntent;
 global using ModuleVer = Class.Infra.ModuleVer;
 global using ModuleName = Class.Infra.ModuleName;
-global using Convert = Class.Infra.Convert;
-global using Constant = Class.Infra.Constant;
+global using ClassConstant = Class.Infra.Constant;
 global using File = System.IO.File;
 global using Path = System.IO.Path;

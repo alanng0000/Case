@@ -495,9 +495,9 @@ class Gen : Object
 
     private Export CreateExport(int index)
     {
-        InfraConvert convert;
+        Convert convert;
 
-        convert = InfraConvert.This;
+        convert = Convert.This;
 
 
 
@@ -546,9 +546,9 @@ class Gen : Object
 
     private ClassIndex CreateSystemEntry()
     {
-        Constant constant;
+        ClassConstant constant;
 
-        constant = Constant.This;
+        constant = ClassConstant.This;
 
 
 

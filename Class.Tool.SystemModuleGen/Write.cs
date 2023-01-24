@@ -202,10 +202,10 @@ class Write : Object
 
     private bool ExecuteClassArray(Array varClass)
     {
-        InfraConvert convert;
+        Convert convert;
 
 
-        convert = InfraConvert.This;
+        convert = Convert.This;
 
 
 
@@ -271,10 +271,10 @@ class Write : Object
 
     private bool ExecuteImportArray(Array import)
     {
-        InfraConvert convert;
+        Convert convert;
 
 
-        convert = InfraConvert.This;
+        convert = Convert.This;
 
 
 
@@ -339,10 +339,10 @@ class Write : Object
 
     private bool ExecuteExportArray(Array export)
     {
-        InfraConvert convert;
+        Convert convert;
 
 
-        convert = InfraConvert.This;
+        convert = Convert.This;
 
 
 
@@ -459,9 +459,9 @@ class Write : Object
 
     private bool String(string o)
     {
-        InfraConvert convert;
+        Convert convert;
 
-        convert = InfraConvert.This;
+        convert = Convert.This;
 
 
 
@@ -539,9 +539,9 @@ class Write : Object
 
 
 
-        InfraConvert convert;
+        Convert convert;
 
-        convert = InfraConvert.This;
+        convert = Convert.This;
 
 
 
