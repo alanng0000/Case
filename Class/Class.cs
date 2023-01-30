@@ -2857,7 +2857,7 @@ public class Class : Object
 
 
 
-    private Range OneRange { get; set; }
+    private Range OneRange;
 
 
 
