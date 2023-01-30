@@ -176,6 +176,18 @@ public class Class : Object
 
 
 
+
+        RangeInfra infra;
+
+        infra = RangeInfra.This;
+
+
+
+        this.OneRange = infra.Range(0, this.CharOneList.Length);
+        
+
+
+
         return true;
     }
 
@@ -2763,25 +2775,29 @@ public class Class : Object
 
 
 
+        int count;
+
+        count = array.Length;
+
+
+
+
         RangeInfra rangeInfra;
 
         rangeInfra = RangeInfra.This;
 
 
 
+        Range u;
 
-        Range range;
-
-
-        range = rangeInfra.Range(0, this.LineOneList.Length);
+        u = rangeInfra.Range(0, count);
 
 
 
 
+        text.Line.Insert(u);
 
-        int count;
 
-        count = array.Length;
 
 
 
@@ -2809,13 +2825,7 @@ public class Class : Object
 
 
 
-            int index;
-
-            index = text.Line.Count;
-
-
-
-            text.Line.Insert(index, this.LineOneList, range);
+            text.Line.Set(i, this.LineOneList, this.OneRange);
 
 
 
@@ -2847,6 +2857,11 @@ public class Class : Object
 
 
 
+    private Range OneRange { get; set; }
+
+
+
+
 
     private TextLine CreateTextLine(string s)
     {
@@ -2858,9 +2873,9 @@ public class Class : Object
 
 
 
+        int count;
 
-
-        char oc;
+        count = s.Length;
 
 
 
@@ -2871,18 +2886,20 @@ public class Class : Object
 
 
 
+        Range u;
 
-        Range range;
-
-
-        range = rangeInfra.Range(0, this.CharOneList.Length);
+        u = rangeInfra.Range(0, count);
 
 
 
 
-        int count;
+        line.Char.Insert(u);
 
-        count = s.Length;
+
+
+
+        char oc;
+        
         
 
 
@@ -2896,17 +2913,12 @@ public class Class : Object
             oc = s[i];
 
 
+
             this.CharOneList[0] = oc;
 
 
 
-            int index;
-
-            index = line.Char.Count;
-
-
-
-            line.Char.Insert(index, this.CharOneList, range);
+            line.Char.Set(i, this.CharOneList, this.OneRange);
 
 
 
