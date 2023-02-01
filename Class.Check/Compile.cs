@@ -1425,7 +1425,7 @@ public class Compile : InfraCompile
 
     private bool Traverse(Traverse traverse)
     {
-        ListIter treeIter;
+        ArrayIter treeIter;
 
 
         treeIter = this.NodeResult.Tree.Iter();
