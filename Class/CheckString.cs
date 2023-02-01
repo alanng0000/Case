@@ -139,16 +139,16 @@ public class CheckString : Object
 
     private bool GetClassNode()
     {
-        TreeList trees;
+        TreeArray treeArray;
 
 
 
-        trees = this.NodeResult.Tree;
+        treeArray = this.NodeResult.Tree;
 
 
 
 
-        if (trees.Count == 0)
+        if (treeArray.Count == 0)
         {
             return true;
         }
@@ -157,11 +157,11 @@ public class CheckString : Object
 
 
 
-        ListIter iter;
+        ArrayIter iter;
 
 
 
-        iter = trees.Iter();
+        iter = treeArray.Iter();
 
 
 

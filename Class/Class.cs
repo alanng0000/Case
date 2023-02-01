@@ -2182,7 +2182,7 @@ public class Class : Object
 
 
 
-        ListIter treeIter;
+        ArrayIter treeIter;
 
 
 
