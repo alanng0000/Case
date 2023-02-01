@@ -4,7 +4,7 @@ namespace Class.Node;
 
 public class Result : Object
 {
-    public TreeList Tree { get; set; }
+    public TreeArray Tree { get; set; }
 
 
 

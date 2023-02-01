@@ -5,6 +5,7 @@ global using RangeInfra = System.Infra.RangeInfra;
 global using ObjectInfra = System.Infra.ObjectInfra;
 global using List = System.List.List;
 global using Map = System.List.Map;
+global using Array = System.List.Array;
 global using ListIter = System.List.ListIter;
 global using ArrayIter = System.List.ArrayIter;
 global using Pair = System.List.Pair;
