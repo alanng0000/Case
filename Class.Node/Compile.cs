@@ -424,12 +424,24 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Tree = new TreeList();
+        TreeArray treeArray;
+
+
+
+        treeArray = new TreeArray();
+
+
+
+        treeArray.Count = this.TokenResult.Code.Count;
+
+
+
+        treeArray.Init();
 
 
 
 
-        this.Result.Tree.Init();
+        this.Result.Tree = treeArray;
 
 
 
@@ -535,7 +547,7 @@ public class Compile : InfraCompile
 
 
 
-            this.Result.Tree.Add(tree);
+            this.Result.Tree.Set(this.Source.Index, tree);
         }
 
 
