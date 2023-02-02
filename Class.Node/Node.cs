@@ -4,7 +4,7 @@ namespace Class.Node;
 
 public class Node : Object
 {
-    public Range Range { get; set; }
+    public Range Range;
 
 
 
