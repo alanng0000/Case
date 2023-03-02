@@ -1400,18 +1400,10 @@ public class Class : Object
 
         while (iter.Next())
         {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
             ModuleImport import;
 
 
-            import = (ModuleImport)pair.Value;
+            import = (ModuleImport)iter.Value;
 
 
 
@@ -1575,21 +1567,15 @@ public class Class : Object
 
         while (iter.Next())
         {
-            Pair pair;
-
-            pair = (Pair)iter.Value;
-
-
-
             string varClass;
 
-            varClass = (string)pair.Key;
+            varClass = (string)iter.Key;
 
 
 
             string name;
 
-            name = (string)pair.Value;
+            name = (string)iter.Value;
 
 
 

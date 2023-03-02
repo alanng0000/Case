@@ -534,14 +534,7 @@ public class Test
 
         while (iter.Next())
         {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-            this.FoldSet = (FoldSet)pair.Value;
+            this.FoldSet = (FoldSet)iter.Value;
 
 
 
