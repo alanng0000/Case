@@ -463,15 +463,9 @@ public class Compile : InfraCompile
 
         while (moduleIter.Next())
         {
-            Pair pairA;
-
-            pairA = (Pair)moduleIter.Value;
-
-
-
             Module module;
 
-            module = (Module)pairA.Value;
+            module = (Module)moduleIter.Value;
 
 
 
@@ -483,21 +477,15 @@ public class Compile : InfraCompile
 
             while (classIter.Next())
             {
-                Pair pairB;
-
-                pairB = (Pair)classIter.Value;
-
-
-
                 string name;
 
-                name = (string)pairB.Key;
+                name = (string)classIter.Key;
 
 
 
                 Class varClass;
 
-                varClass = (Class)pairB.Value;
+                varClass = (Class)classIter.Value;
 
 
 
@@ -711,19 +699,11 @@ public class Compile : InfraCompile
 
         while (iter.Next())
         {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
             Class varClass;
 
 
 
-            varClass = (Class)pair.Value;
+            varClass = (Class)iter.Value;
 
 
 
@@ -1012,19 +992,10 @@ public class Compile : InfraCompile
 
         while (iter.Next())
         {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
-
             Class varClass;
 
 
-            varClass = (Class)pair.Key;
+            varClass = (Class)iter.Key;
 
 
 
@@ -1055,7 +1026,7 @@ public class Compile : InfraCompile
 
             if (b)
             {
-                t = (Class)pair.Value;
+                t = (Class)iter.Value;
             }
 
 

@@ -52,17 +52,6 @@ public class Compile : InfraCompile
 
 
 
-    internal SizeCompile SizeCompile { get; set; }
-
-
-
-
-
-    internal DataCompile DataCompile { get; set; }
-
-
-
-
 
     internal virtual bool ExecuteStates
     {
@@ -86,33 +75,6 @@ public class Compile : InfraCompile
 
 
 
-
-
-        this.SizeCompile = new SizeCompile();
-
-
-
-        this.SizeCompile.Init();
-
-
-
-        this.SizeCompile.Compile = this;
-
-
-
-
-
-
-
-        this.DataCompile = new DataCompile();
-
-
-
-        this.DataCompile.Init();
-
-
-
-        this.DataCompile.Compile = this;
 
 
 
@@ -201,12 +163,6 @@ public class Compile : InfraCompile
 
 
 
-        this.Result.Module.Value = this.DataResult();
-
-
-
-
-
 
         return true;
     }
@@ -214,11 +170,6 @@ public class Compile : InfraCompile
 
 
 
-
-    protected virtual byte[] DataResult()
-    {
-        return this.DataCompile.Data;
-    }
 
 
 
@@ -238,50 +189,16 @@ public class Compile : InfraCompile
 
     protected virtual bool ExecuteStages()
     {
-        this.ExecuteSize();
-
-
-
-
-
-        //this.ExecuteData();
-
-
-
-
-        return true;
-    }
-
-
-
-
-
-
-
-    private bool ExecuteSize()
-    {
-        this.SizeCompile.Execute();
-
-
-
-
-        return true;
-    }
-
-
-
-
-
-
-    private bool ExecuteData()
-    {
-        this.DataCompile.Execute();
-
-
-
         
+
+
+
+
         return true;
     }
+
+
+
 
 
 

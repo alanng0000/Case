@@ -119,16 +119,9 @@ class Infra : Object
 
         while (iter.Next())
         {
-            Pair pair;
-
-            pair = (Pair)iter.Value;
-
-
-
-
             Module module;
 
-            module = (Module)pair.Value;
+            module = (Module)iter.Value;
 
 
 
@@ -297,23 +290,15 @@ class Infra : Object
 
         while (iter.Next())
         {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
             string name;
 
-            name = (string)pair.Key;
+            name = (string)iter.Key;
 
 
 
             Class varClass;
 
-            varClass = (Class)pair.Value;
+            varClass = (Class)iter.Value;
 
 
 
@@ -723,18 +708,10 @@ class Infra : Object
 
         while (iter.Next())
         {
-            Pair pair;
-
-
-            pair = (Pair)iter.Value;
-
-
-
-
             Var varVar;
 
 
-            varVar = (Var)pair.Value;
+            varVar = (Var)iter.Value;
 
 
 

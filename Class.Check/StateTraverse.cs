@@ -3732,13 +3732,6 @@ public class StateTraverse : Traverse
 
 
 
-            Pair varPair;
-
-
-            varPair = (Pair)varIter.Value;
-
-
-
 
             Argue argue;
 
@@ -3760,7 +3753,7 @@ public class StateTraverse : Traverse
             Var varVar;
 
 
-            varVar = (Var)varPair.Value;
+            varVar = (Var)varIter.Value;
 
 
 
