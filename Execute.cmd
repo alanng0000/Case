@@ -3,7 +3,7 @@
 
 
 
-cd Class.Test.Exe/bin/Debug/net6.0
+cd Class.Test.Exe/bin/Debug/net7.0
 
 dotnet Class.Test.Exe.dll
 
