@@ -20,21 +20,6 @@ class Set : global::Class.Test.Set
 
 
 
-        this.AddKind(new Module.Kind());
-
-
-
-
-        this.AddKind(new Import.Kind());
-
-
-
-
-        this.AddKind(new Imports.Kind());
-
-
-
-
 
         return true;
     }
