@@ -16,7 +16,7 @@ public class ConstantClass : Object
 
 
 
-    public Class Int { get; set; }
+    public new Class Int { get; set; }
 
 
 
