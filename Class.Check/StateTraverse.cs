@@ -1133,9 +1133,9 @@ public class StateTraverse : Traverse
 
 
 
-    public override bool ExecuteGlobExpress(GlobExpress globalExpress)
+    public override bool ExecuteGlobExpress(GlobExpress globExpress)
     {
-        if (this.Null(globalExpress))
+        if (this.Null(globExpress))
         {
             return true;
         }
@@ -1146,7 +1146,7 @@ public class StateTraverse : Traverse
         NodeClassName nodeClass;
         
 
-        nodeClass = globalExpress.Class;
+        nodeClass = globExpress.Class;
 
 
 
@@ -1188,18 +1188,18 @@ public class StateTraverse : Traverse
 
         if (this.Null(varClass))
         {
-            this.Error(this.ErrorKind.ClassUndefined, globalExpress);
+            this.Error(this.ErrorKind.ClassUndefined, globExpress);
         }
 
 
 
 
 
-        this.Check(globalExpress).GlobalClass = varClass;
+        this.Check(globExpress).GlobClass = varClass;
 
 
 
-        this.Check(globalExpress).ExpressClass = varClass;
+        this.Check(globExpress).ExpressClass = varClass;
 
 
 

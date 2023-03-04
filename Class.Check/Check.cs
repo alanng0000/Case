@@ -37,7 +37,7 @@ public class Check : Object
 
 
 
-    public Class GlobalClass { get; set; }
+    public Class GlobClass { get; set; }
 
 
 
