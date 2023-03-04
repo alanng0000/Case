@@ -1,8 +1,8 @@
-class F : N
+clas F : N
 {
-    public Bool A()
+    publi Bool A()
     {
-        this.D : new D;
+        this.D : neon D;
 
 
         this.D.Init();
@@ -43,7 +43,7 @@ class F : N
         N n;
 
 
-        n : new F;
+        n : neon F;
 
 
 
@@ -57,7 +57,7 @@ class F : N
 
 
 
-        if (this.Color = c)
+        case (this.Color = c)
         {
             
         }
@@ -67,25 +67,23 @@ class F : N
 
 
 
-        return true;
+        rest true;
     }
 
 
 
 
-    local O Tt
+    prope O Tt
     {
-        get
-        {
-        }
-        set
-        {
-        }
+        rest data;
+    }
+    {
+        data : value;
     }
 
 
 
-    parent A Bb()
+    paren A Bb()
     {
 
     }
@@ -93,30 +91,22 @@ class F : N
 
 
 
-    private Color Color
+    priva Color Color
     {
-        get
-        {
 
-        }
-        set
-        {
+    }
+    {
 
-        }
     }
 
 
 
 
-    public D D
+    publi D D
     {
-        get
-        {
-            return data;
-        }
-        set
-        {
-            data : value;
-        }
+        rest data;
+    }
+    {
+        data : value;
     }
 }
