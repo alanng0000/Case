@@ -73,7 +73,7 @@ class F : N
 
 
 
-    protect A Bb()
+    derive A Bb()
     {
 
     }
