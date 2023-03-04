@@ -85,7 +85,7 @@ class F : N
 
 
 
-    derive A Bb()
+    parent A Bb()
     {
 
     }
