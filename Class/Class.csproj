@@ -8,6 +8,7 @@
         <ProjectReference Include="../../System/System.Infra/System.Infra.csproj" />
         <ProjectReference Include="../../System/System.List/System.List.csproj" />
         <ProjectReference Include="../../System/System.Text/System.Text.csproj" />
+        <ProjectReference Include="../../System/System.Module/System.Module.csproj" />
         <ProjectReference Include="../Class.Infra/Class.Infra.csproj" />
         <ProjectReference Include="../Class.Port/Class.Port.csproj" />
         <ProjectReference Include="../Class.Token/Class.Token.csproj" />
