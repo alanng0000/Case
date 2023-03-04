@@ -417,14 +417,14 @@ public class Traverse
 
         if (access is ParentAccess)
         {
-            this.ExecuteDeriveAccess((ParentAccess)access);
+            this.ExecuteParentAccess((ParentAccess)access);
         }
 
 
         
-        if (access is PrivateAccess)
+        if (access is PrivatAccess)
         {
-            this.ExecutePrivateAccess((PrivateAccess)access);
+            this.ExecutePrivatAccess((PrivatAccess)access);
         }
 
 
@@ -482,7 +482,7 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteDeriveAccess(ParentAccess parentAccess)
+    public virtual bool ExecuteParentAccess(ParentAccess parentAccess)
     {
         if (this.Null(parentAccess))
         {
@@ -504,9 +504,9 @@ public class Traverse
 
 
 
-    public virtual bool ExecutePrivateAccess(PrivateAccess privateAccess)
+    public virtual bool ExecutePrivatAccess(PrivatAccess privatAccess)
     {
-        if (this.Null(privateAccess))
+        if (this.Null(privatAccess))
         {
             return true;
         }
@@ -514,7 +514,7 @@ public class Traverse
 
 
 
-        this.ExecuteNode(privateAccess);
+        this.ExecuteNode(privatAccess);
 
 
 
@@ -2071,7 +2071,7 @@ public class Traverse
         }
 
 
-        if (nodeAccess is PrivateAccess)
+        if (nodeAccess is PrivatAccess)
         {
             t = this.Access.Private;
         }
