@@ -272,7 +272,7 @@ public class CheckString : Object
 
 
 
-        this.AppendClass(this.Check.GlobalClass);
+        this.AppendClass(this.Check.GlobClass);
 
 
         this.AppendLine();
