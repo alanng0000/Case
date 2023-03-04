@@ -33,7 +33,7 @@ public class Keyword : Object
     public string This { get; private set; }
     public string Base { get; private set; }
     public string New { get; private set; }
-    public string Global { get; private set; }
+    public string Glob { get; private set; }
     public string Cast { get; private set; }
     public string Null { get; private set; }
     public string True { get; private set; }
@@ -64,7 +64,7 @@ public class Keyword : Object
         this.This = "this";
         this.Base = "base";
         this.New = "new";
-        this.Global = "global";
+        this.Glob = "glob";
         this.Cast = "cast";
         this.Null = "null";
         this.True = "true";
@@ -86,7 +86,7 @@ public class Keyword : Object
         this.All.Add(this.This);
         this.All.Add(this.Base);
         this.All.Add(this.New);
-        this.All.Add(this.Global);
+        this.All.Add(this.Glob);
         this.All.Add(this.Cast);
         this.All.Add(this.Null);
         this.All.Add(this.True);
