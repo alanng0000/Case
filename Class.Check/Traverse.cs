@@ -415,9 +415,9 @@ public class Traverse
 
 
 
-        if (access is DeriveAccess)
+        if (access is ParentAccess)
         {
-            this.ExecuteDeriveAccess((DeriveAccess)access);
+            this.ExecuteDeriveAccess((ParentAccess)access);
         }
 
 
@@ -482,7 +482,7 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteDeriveAccess(DeriveAccess deriveAccess)
+    public virtual bool ExecuteDeriveAccess(ParentAccess deriveAccess)
     {
         if (this.Null(deriveAccess))
         {
@@ -2065,7 +2065,7 @@ public class Traverse
         }
 
 
-        if (nodeAccess is DeriveAccess)
+        if (nodeAccess is ParentAccess)
         {
             t = this.Access.Derive;
         }
