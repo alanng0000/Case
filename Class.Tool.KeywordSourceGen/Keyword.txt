@@ -1,6 +1,6 @@
 clas
-get
-set
+gate
+sate
 this
 base
 neon
