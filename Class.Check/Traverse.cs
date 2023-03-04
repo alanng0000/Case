@@ -2067,7 +2067,7 @@ public class Traverse
 
         if (nodeAccess is ParentAccess)
         {
-            t = this.Access.Derive;
+            t = this.Access.Parent;
         }
 
 

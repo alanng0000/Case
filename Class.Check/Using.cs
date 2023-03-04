@@ -6,6 +6,7 @@ global using StringCompare = System.Infra.StringCompare;
 global using ObjectInfra = System.Infra.ObjectInfra;
 global using List = System.List.List;
 global using Map = System.List.Map;
+global using Array = System.List.Array;
 global using Stack = System.List.Stack;
 global using Pair = System.List.Pair;
 global using ListIter = System.List.ListIter;

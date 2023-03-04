@@ -38,19 +38,31 @@ public class AccessList : Object
 
 
 
-        this.Public = this.CreateAccess();
+        this.Array = new Array();
+
+
+        this.Array.Count = 4;
+
+
+        this.Array.Init();
 
 
 
-        this.Local = this.CreateAccess();
+
+
+        this.Public = this.AddAccess();
 
 
 
-        this.Derive = this.CreateAccess();
+        this.Local = this.AddAccess();
 
 
 
-        this.Private = this.CreateAccess();
+        this.Parent = this.AddAccess();
+
+
+
+        this.Private = this.AddAccess();
 
 
 
@@ -62,13 +74,27 @@ public class AccessList : Object
 
 
 
-    private ulong NewId { get; set; }
+    public Access Get(int index)
+    {
+        return (Access)this.Array.Get(index);
+    }
+    
+
+
+
+
+    private Array Array { get; set; }
+
+
+
+
+    private int Index { get; set; }
 
 
 
 
 
-    private Access CreateAccess()
+    private Access AddAccess()
     {
         Access o;
 
@@ -82,13 +108,13 @@ public class AccessList : Object
 
 
 
-        o.Id = this.NewId;
+        o.Index = this.Index;
 
 
 
 
 
-        this.NewId = this.NewId + 1;
+        this.Index = this.Index + 1;
 
 
 
@@ -112,7 +138,7 @@ public class AccessList : Object
 
 
 
-    public Access Derive { get; private set; }
+    public Access Parent { get; private set; }
 
 
 

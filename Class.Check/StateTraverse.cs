@@ -3512,7 +3512,7 @@ public class StateTraverse : Traverse
 
 
 
-    private bool CheckAcccess(Class varClass, Access access)
+    private bool CheckAccess(Class varClass, Access access)
     {
         if (this.CurrentClass == varClass)
         {
@@ -3541,7 +3541,7 @@ public class StateTraverse : Traverse
 
 
  
-        if (access == this.Access.Derive)
+        if (access == this.Access.Parent)
         {
             if (this.CheckClass(this.CurrentClass, varClass))
             {
@@ -3580,7 +3580,7 @@ public class StateTraverse : Traverse
 
         if (!this.Null(field))
         {
-            if (!this.CheckAcccess(varClass, field.Access))
+            if (!this.CheckAccess(varClass, field.Access))
             {
                 return null;
             }
@@ -3631,7 +3631,7 @@ public class StateTraverse : Traverse
 
         if (!this.Null(method))
         {
-            if (!this.CheckAcccess(varClass, method.Access))
+            if (!this.CheckAccess(varClass, method.Access))
             {
                 return null;
             }
