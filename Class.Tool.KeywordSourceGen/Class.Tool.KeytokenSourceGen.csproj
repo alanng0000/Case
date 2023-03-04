@@ -12,7 +12,7 @@
 
     <ItemGroup>
         <Content Include="Class.txt" CopyToOutputDirectory="PreserveNewest" />
-        <Content Include="Keyword.txt" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="Keytoken.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 
 </Project>
