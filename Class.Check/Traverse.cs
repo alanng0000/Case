@@ -408,9 +408,9 @@ public class Traverse
         
         
 
-        if (access is LocalAccess)
+        if (access is ProperAccess)
         {
-            this.ExecuteLocalAccess((LocalAccess)access);
+            this.ExecuteProperAccess((ProperAccess)access);
         }
 
 
@@ -460,9 +460,9 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteLocalAccess(LocalAccess localAccess)
+    public virtual bool ExecuteProperAccess(ProperAccess properAccess)
     {
-        if (this.Null(localAccess))
+        if (this.Null(properAccess))
         {
             return true;
         }
@@ -470,7 +470,7 @@ public class Traverse
 
 
 
-        this.ExecuteNode(localAccess);
+        this.ExecuteNode(properAccess);
 
 
 
@@ -482,9 +482,9 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteDeriveAccess(ParentAccess deriveAccess)
+    public virtual bool ExecuteDeriveAccess(ParentAccess parentAccess)
     {
-        if (this.Null(deriveAccess))
+        if (this.Null(parentAccess))
         {
             return true;
         }
@@ -492,7 +492,7 @@ public class Traverse
 
 
 
-        this.ExecuteNode(deriveAccess);
+        this.ExecuteNode(parentAccess);
 
 
 
@@ -2059,7 +2059,7 @@ public class Traverse
         }
 
 
-        if (nodeAccess is LocalAccess)
+        if (nodeAccess is ProperAccess)
         {
             t = this.Access.Local;
         }
