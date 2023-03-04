@@ -4831,7 +4831,7 @@ public class Compile : InfraCompile
 
 
 
-        NullableBool o;
+        bool? o;
 
 
         o = null;
