@@ -203,7 +203,7 @@ public class Compile : InfraCompile
         this.AddNodeMethod(nameof(this.PublicAccess), this.PublicAccess);
 
 
-        this.AddNodeMethod(nameof(this.LocalAccess), this.LocalAccess);
+        this.AddNodeMethod(nameof(this.ProperAccess), this.ProperAccess);
 
 
         this.AddNodeMethod(nameof(this.DeriveAccess), this.DeriveAccess);
@@ -1901,7 +1901,7 @@ public class Compile : InfraCompile
 
         if (this.Null(ret))
         {
-            ret = this.LocalAccess(range);
+            ret = this.ProperAccess(range);
         }
         
 
@@ -1973,13 +1973,13 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual LocalAccess LocalAccess(Range range)
+    protected virtual ProperAccess ProperAccess(Range range)
     {
         Token localToken;
 
 
 
-        localToken = this.Token(this.Keyword.Local, range);
+        localToken = this.Token(this.Keyword.Proper, range);
 
 
 
@@ -1993,10 +1993,10 @@ public class Compile : InfraCompile
 
 
 
-        LocalAccess ret;
+        ProperAccess ret;
 
 
-        ret = new LocalAccess();
+        ret = new ProperAccess();
 
 
         ret.Init();
