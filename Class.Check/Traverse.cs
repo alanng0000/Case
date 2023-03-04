@@ -2061,7 +2061,7 @@ public class Traverse
 
         if (nodeAccess is ProperAccess)
         {
-            t = this.Access.Local;
+            t = this.Access.Proper;
         }
 
 

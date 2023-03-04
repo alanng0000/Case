@@ -54,7 +54,7 @@ public class AccessList : Object
 
 
 
-        this.Local = this.AddAccess();
+        this.Proper = this.AddAccess();
 
 
 
@@ -134,7 +134,7 @@ public class AccessList : Object
 
 
 
-    public Access Local { get; private set; }
+    public Access Proper { get; private set; }
 
 
 

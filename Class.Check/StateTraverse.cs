@@ -3528,7 +3528,7 @@ public class StateTraverse : Traverse
 
 
 
-        if (access == this.Access.Local)
+        if (access == this.Access.Proper)
         {
             if (this.Compile.Refer.Module == varClass.Module)
             {
