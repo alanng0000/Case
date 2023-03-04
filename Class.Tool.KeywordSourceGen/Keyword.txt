@@ -15,5 +15,5 @@ while
 ACCESS
 public
 local
-derive
+parent
 private
