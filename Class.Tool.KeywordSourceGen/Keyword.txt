@@ -10,8 +10,8 @@ nul
 true
 fase
 rest
-if
-while
+case
+lope
 ACCESS
 publi
 prope
