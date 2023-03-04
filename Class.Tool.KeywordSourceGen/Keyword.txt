@@ -6,7 +6,7 @@ base
 new
 glob
 cast
-null
+nul
 true
 fase
 return
