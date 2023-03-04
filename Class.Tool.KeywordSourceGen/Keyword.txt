@@ -1,6 +1,4 @@
 clas
-get
-set
 this
 base
 neon
