@@ -206,10 +206,10 @@ public class Compile : InfraCompile
         this.AddNodeMethod(nameof(this.ProperAccess), this.ProperAccess);
 
 
-        this.AddNodeMethod(nameof(this.DeriveAccess), this.DeriveAccess);
+        this.AddNodeMethod(nameof(this.ParentAccess), this.ParentAccess);
 
 
-        this.AddNodeMethod(nameof(this.PrivateAccess), this.PrivateAccess);
+        this.AddNodeMethod(nameof(this.PrivatAccess), this.PrivatAccess);
 
 
         this.AddNodeMethod(nameof(this.StateList), this.StateList);
@@ -1910,7 +1910,7 @@ public class Compile : InfraCompile
 
         if (this.Null(ret))
         {
-            ret = this.DeriveAccess(range);
+            ret = this.ParentAccess(range);
         }
 
         
@@ -1919,7 +1919,7 @@ public class Compile : InfraCompile
 
         if (this.Null(ret))
         {
-            ret = this.PrivateAccess(range);
+            ret = this.PrivatAccess(range);
         }
 
 
@@ -1975,16 +1975,16 @@ public class Compile : InfraCompile
 
     protected virtual ProperAccess ProperAccess(Range range)
     {
-        Token localToken;
+        Token properToken;
 
 
 
-        localToken = this.Token(this.Keyword.Proper, range);
+        properToken = this.Token(this.Keyword.Proper, range);
 
 
 
 
-        if (this.NullToken(localToken))
+        if (this.NullToken(properToken))
         {
             return null;
         }
@@ -2013,18 +2013,18 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual ParentAccess DeriveAccess(Range range)
+    protected virtual ParentAccess ParentAccess(Range range)
     {
-        Token deriveToken;
+        Token parentToken;
 
 
 
-        deriveToken = this.Token(this.Keyword.Parent, range);
+        parentToken = this.Token(this.Keyword.Parent, range);
 
 
 
 
-        if (this.NullToken(deriveToken))
+        if (this.NullToken(parentToken))
         {
             return null;
         }
@@ -2055,18 +2055,18 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual PrivateAccess PrivateAccess(Range range)
+    protected virtual PrivatAccess PrivatAccess(Range range)
     {
-        Token privateToken;
+        Token privatToken;
 
 
 
-        privateToken = this.Token(this.Keyword.Private, range);
+        privatToken = this.Token(this.Keyword.Privat, range);
 
 
 
 
-        if (this.NullToken(privateToken))
+        if (this.NullToken(privatToken))
         {
             return null;
         }
@@ -2075,10 +2075,10 @@ public class Compile : InfraCompile
 
 
 
-        PrivateAccess ret;
+        PrivatAccess ret;
 
 
-        ret = new PrivateAccess();
+        ret = new PrivatAccess();
 
 
         ret.Init();
