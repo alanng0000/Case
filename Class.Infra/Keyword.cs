@@ -44,7 +44,7 @@ public class Keyword : Object
     public string Public { get; private set; }
     public string Proper { get; private set; }
     public string Parent { get; private set; }
-    public string Private { get; private set; }
+    public string Privat { get; private set; }
 
 
     public List All { get; protected set; }
@@ -75,7 +75,7 @@ public class Keyword : Object
         this.Public = "public";
         this.Proper = "proper";
         this.Parent = "parent";
-        this.Private = "private";
+        this.Privat = "privat";
 
 
         this.All = new List();
@@ -97,7 +97,7 @@ public class Keyword : Object
         this.All.Add(this.Public);
         this.All.Add(this.Proper);
         this.All.Add(this.Parent);
-        this.All.Add(this.Private);
+        this.All.Add(this.Privat);
 
 
         this.Access = new List();
@@ -105,7 +105,7 @@ public class Keyword : Object
         this.Access.Add(this.Public);
         this.Access.Add(this.Proper);
         this.Access.Add(this.Parent);
-        this.Access.Add(this.Private);
+        this.Access.Add(this.Privat);
 
 
         return true;
