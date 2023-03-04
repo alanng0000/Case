@@ -2073,7 +2073,7 @@ public class Traverse
 
         if (nodeAccess is PrivatAccess)
         {
-            t = this.Access.Private;
+            t = this.Access.Privat;
         }
 
 

@@ -62,7 +62,7 @@ public class AccessList : Object
 
 
 
-        this.Private = this.AddAccess();
+        this.Privat = this.AddAccess();
 
 
 
@@ -142,5 +142,5 @@ public class AccessList : Object
 
 
 
-    public Access Private { get; private set; }
+    public Access Privat { get; private set; }
 }

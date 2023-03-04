@@ -3554,7 +3554,7 @@ public class StateTraverse : Traverse
 
 
 
-        if (access == this.Access.Private)
+        if (access == this.Access.Privat)
         {
             return false;
         }
