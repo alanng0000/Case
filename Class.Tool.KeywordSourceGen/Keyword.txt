@@ -13,7 +13,7 @@ return
 if
 while
 ACCESS
-public
-proper
-parent
-privat
+publi
+prope
+paren
+priva
