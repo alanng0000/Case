@@ -16,4 +16,4 @@ ACCESS
 public
 proper
 parent
-private
+privat
