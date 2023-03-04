@@ -695,9 +695,9 @@ public class Traverse
 
 
 
-        if (express is GlobalExpress)
+        if (express is GlobExpress)
         {
-            this.ExecuteGlobalExpress((GlobalExpress)express);
+            this.ExecuteGlobExpress((GlobExpress)express);
         }
 
 
@@ -963,9 +963,9 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteGlobalExpress(GlobalExpress globalExpress)
+    public virtual bool ExecuteGlobExpress(GlobExpress globExpress)
     {
-        if (this.Null(globalExpress))
+        if (this.Null(globExpress))
         {
             return true;
         }
@@ -973,12 +973,12 @@ public class Traverse
 
 
 
-        this.ExecuteNode(globalExpress);
+        this.ExecuteNode(globExpress);
 
             
 
 
-        this.ExecuteClassName(globalExpress.Class);
+        this.ExecuteClassName(globExpress.Class);
 
 
 

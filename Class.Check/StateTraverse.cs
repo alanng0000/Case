@@ -1133,7 +1133,7 @@ public class StateTraverse : Traverse
 
 
 
-    public override bool ExecuteGlobalExpress(GlobalExpress globalExpress)
+    public override bool ExecuteGlobExpress(GlobExpress globalExpress)
     {
         if (this.Null(globalExpress))
         {
