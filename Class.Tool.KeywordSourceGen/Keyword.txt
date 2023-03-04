@@ -4,7 +4,7 @@ set
 this
 base
 new
-global
+glob
 cast
 null
 true
