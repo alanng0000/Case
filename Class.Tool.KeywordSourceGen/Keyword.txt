@@ -8,7 +8,7 @@ glob
 cast
 null
 true
-fale
+fase
 return
 if
 while
