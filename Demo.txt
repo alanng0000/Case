@@ -96,7 +96,7 @@ class F : N
         }
         set
         {
-            data = value;
+            data : value;
         }
     }
 }
