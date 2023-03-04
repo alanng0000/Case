@@ -52,7 +52,7 @@ class Module : Object
         List lines;
 
 
-        lines = this.GetLines("Keyword.txt");
+        lines = this.GetLines("Keytoken.txt");
 
 
 
@@ -265,7 +265,7 @@ class Module : Object
 
 
 
-        this.AppendSetKeywords();
+        this.AppendSetKeytokens();
 
 
 
@@ -345,7 +345,7 @@ class Module : Object
         string outputFilePath;
         
         
-        outputFilePath = "../../../../Class.Infra/Keyword.cs";
+        outputFilePath = "../../../../Class.Infra/Keytoken.cs";
             
 
 
@@ -362,7 +362,7 @@ class Module : Object
 
 
 
-    private void AppendSetKeywords()
+    private void AppendSetKeytokens()
     {
         ListIter iter;
         
@@ -381,16 +381,16 @@ class Module : Object
 
 
 
-            string keyword;
+            string keytoken;
 
-            keyword = name.ToLower();
+            keytoken = name.ToLower();
 
 
 
             this.AppendIndents(2)
                 .Append("this").Append(".").Append(name).Append(" ")
                 .Append("=").Append(" ")
-                .Append("\"").Append(keyword).Append("\"")
+                .Append("\"").Append(keytoken).Append("\"")
                 .Append(";")
                 .AppendLine();
         }
