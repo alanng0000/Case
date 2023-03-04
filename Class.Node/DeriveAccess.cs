@@ -2,6 +2,6 @@ namespace Class.Node;
 
 
 
-public class DeriveAccess : Access
+public class ParentAccess : Access
 {
 }

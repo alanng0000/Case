@@ -2013,13 +2013,13 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual DeriveAccess DeriveAccess(Range range)
+    protected virtual ParentAccess DeriveAccess(Range range)
     {
         Token deriveToken;
 
 
 
-        deriveToken = this.Token(this.Keyword.Derive, range);
+        deriveToken = this.Token(this.Keyword.Parent, range);
 
 
 
@@ -2033,10 +2033,10 @@ public class Compile : InfraCompile
 
 
 
-        DeriveAccess ret;
+        ParentAccess ret;
 
 
-        ret = new DeriveAccess();
+        ret = new ParentAccess();
 
 
         ret.Init();
