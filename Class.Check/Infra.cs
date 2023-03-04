@@ -200,7 +200,7 @@ class Infra : Object
             ModuleVer ver;
 
 
-            ver = this.VerInfra.GetCurrentVer(a.Refer.Intent);
+            ver = this.VerInfra.GetCurrentVer(a.Refer.Int);
 
 
 
@@ -525,11 +525,11 @@ class Infra : Object
         ModuleIntent intent;
 
 
-        intent = this.CreateModuleIntent(refer.Intent);
+        intent = this.CreateModuleIntent(refer.Int);
 
 
 
-        a.Intent = intent;
+        a.Int = intent;
 
 
 
@@ -639,7 +639,7 @@ class Infra : Object
     {
         bool ba;
         
-        ba = (refer.Intent.Value == this.PortConstantRefer.Intent.Value);
+        ba = (refer.Int.Value == this.PortConstantRefer.Int.Value);
 
 
         bool bb;
