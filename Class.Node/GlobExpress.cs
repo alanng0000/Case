@@ -3,7 +3,7 @@ namespace Class.Node;
 
 
 
-public class GlobalExpress : Express
+public class GlobExpress : Express
 {
     public ClassName Class { get; set; }
 }

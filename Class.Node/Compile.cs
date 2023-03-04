@@ -248,7 +248,7 @@ public class Compile : InfraCompile
         this.AddNodeMethod(nameof(this.NewExpress), this.NewExpress);
 
 
-        this.AddNodeMethod(nameof(this.GlobalExpress), this.GlobalExpress);
+        this.AddNodeMethod(nameof(this.GlobExpress), this.GlobExpress);
 
 
         this.AddNodeMethod(nameof(this.BracketExpress), this.BracketExpress);
@@ -2328,7 +2328,7 @@ public class Compile : InfraCompile
         L(this.NewExpress);
 
 
-        L(this.GlobalExpress);
+        L(this.GlobExpress);
 
 
         L(this.CastExpress);
@@ -2725,7 +2725,7 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual GlobalExpress GlobalExpress(Range range)
+    protected virtual GlobExpress GlobExpress(Range range)
     {
         if (this.Zero(this.Count(range)))
         {
@@ -2735,14 +2735,14 @@ public class Compile : InfraCompile
 
 
 
-        Token globalToken;
+        Token globToken;
 
 
-        globalToken = this.Token(this.Keyword.Glob, this.IndexRange(range.Start));
+        globToken = this.Token(this.Keyword.Glob, this.IndexRange(range.Start));
 
         
 
-        if (this.NullToken(globalToken))
+        if (this.NullToken(globToken))
         {
             return null;
         }
@@ -2753,7 +2753,7 @@ public class Compile : InfraCompile
         ClassName varClass;
         
         
-        varClass = this.ClassName(this.Range(globalToken.Range.End, range.End));
+        varClass = this.ClassName(this.Range(globToken.Range.End, range.End));
             
 
 
@@ -2765,10 +2765,10 @@ public class Compile : InfraCompile
 
 
 
-        GlobalExpress ret;
+        GlobExpress ret;
         
 
-        ret = new GlobalExpress();
+        ret = new GlobExpress();
 
 
         ret.Init();
