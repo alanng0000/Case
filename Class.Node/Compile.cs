@@ -2738,7 +2738,7 @@ public class Compile : InfraCompile
         Token globalToken;
 
 
-        globalToken = this.Token(this.Keyword.Global, this.IndexRange(range.Start));
+        globalToken = this.Token(this.Keyword.Glob, this.IndexRange(range.Start));
 
         
 
