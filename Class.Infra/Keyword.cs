@@ -43,7 +43,7 @@ public class Keyword : Object
     public string While { get; private set; }
     public string Public { get; private set; }
     public string Local { get; private set; }
-    public string Derive { get; private set; }
+    public string Parent { get; private set; }
     public string Private { get; private set; }
 
 
@@ -74,7 +74,7 @@ public class Keyword : Object
         this.While = "while";
         this.Public = "public";
         this.Local = "local";
-        this.Derive = "derive";
+        this.Parent = "parent";
         this.Private = "private";
 
 
@@ -96,7 +96,7 @@ public class Keyword : Object
         this.All.Add(this.While);
         this.All.Add(this.Public);
         this.All.Add(this.Local);
-        this.All.Add(this.Derive);
+        this.All.Add(this.Parent);
         this.All.Add(this.Private);
 
 
@@ -104,7 +104,7 @@ public class Keyword : Object
         this.Access.Init();
         this.Access.Add(this.Public);
         this.Access.Add(this.Local);
-        this.Access.Add(this.Derive);
+        this.Access.Add(this.Parent);
         this.Access.Add(this.Private);
 
 
