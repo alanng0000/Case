@@ -73,6 +73,14 @@ class F : N
 
 
 
+    protect A Bb()
+    {
+
+    }
+
+
+
+
     private Color Color
     {
         get
