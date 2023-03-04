@@ -9,7 +9,7 @@ cast
 nul
 true
 fase
-return
+rest
 if
 while
 ACCESS
