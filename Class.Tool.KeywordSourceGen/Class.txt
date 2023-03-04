@@ -2,19 +2,19 @@ namespace Class.Infra;
 
 
 
-public class Keyword : Object
+public class Keytoken : Object
 {
-    public static Keyword Instance { get; } = CreateGlobal();
+    public static Keytoken Instance { get; } = CreateGlobal();
 
 
 
 
-    private static Keyword CreateGlobal()
+    private static Keytoken CreateGlobal()
     {
-        Keyword global;
+        Keytoken global;
 
 
-        global = new Keyword();
+        global = new Keytoken();
 
 
 
