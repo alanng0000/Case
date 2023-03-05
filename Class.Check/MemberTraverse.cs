@@ -19,7 +19,7 @@ class MemberTraverse : Traverse
 
 
 
-    public override bool ExecuteClass(NodeClass nodeClass)
+    public override bool ExecuteClass(NodeClas nodeClass)
     {
         if (this.Null(nodeClass))
         {

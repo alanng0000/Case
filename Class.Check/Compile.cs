@@ -842,7 +842,7 @@ public class Compile : InfraCompile
 
     private bool BaseMapAdd(Class varClass)
     {
-        NodeClass nodeClass;
+        NodeClas nodeClass;
 
 
 
@@ -1463,11 +1463,11 @@ public class Compile : InfraCompile
 
 
 
-        NodeClass nodeClass;
+        NodeClas nodeClass;
 
 
 
-        nodeClass = (NodeClass)node;
+        nodeClass = (NodeClas)node;
 
 
 

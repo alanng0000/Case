@@ -6,7 +6,7 @@ namespace Class.Check;
 
 class ClassTraverse : Traverse
 {
-    public override bool ExecuteClass(NodeClass nodeClass)
+    public override bool ExecuteClass(NodeClas nodeClass)
     {
         if (this.Null(nodeClass))
         {

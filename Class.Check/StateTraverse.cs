@@ -134,7 +134,7 @@ public class StateTraverse : Traverse
 
 
 
-    public override bool ExecuteClass(NodeClass varClass)
+    public override bool ExecuteClass(NodeClas varClass)
     {
         if (this.Null(varClass))
         {

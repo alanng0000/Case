@@ -25,7 +25,7 @@ public class Class : Object
 
 
 
-    public NodeClass Node { get; set; }
+    public NodeClas Node { get; set; }
 
 
 

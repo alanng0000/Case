@@ -61,7 +61,7 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteClass(NodeClass nodeClass)
+    public virtual bool ExecuteClass(NodeClas nodeClass)
     {
         if (this.Null(nodeClass))
         {
