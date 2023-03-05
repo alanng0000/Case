@@ -6139,16 +6139,16 @@ public class Compile : InfraCompile
 
 
 
-        Token leftBracket;
+        Token getLeftBrace;
 
 
 
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
+        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
 
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToken(getLeftBrace))
         {
             return this.RangeNull;
         }
@@ -6157,26 +6157,16 @@ public class Compile : InfraCompile
 
 
 
-        Token rightBracket;
+        Token getRightBrace;
 
 
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
-
-
-
-
-        if (this.NullToken(rightBracket))
-        {
-            return this.RangeNull;
-        }
+        getRightBrace = this.TokenMatchLeftBrace(this.Range(getLeftBrace.Range.End, range.End));
 
 
 
 
-
-
-        if (this.Zero(this.Count(this.Range(rightBracket.Range.End, range.End))))
+        if (this.NullToken(getRightBrace))
         {
             return this.RangeNull;
         }
@@ -6186,16 +6176,7 @@ public class Compile : InfraCompile
 
 
 
-        Token leftBrace;
-
-
-
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
-
-
-
-
-        if (this.NullToken(leftBrace))
+        if (this.Zero(this.Count(this.Range(getRightBrace.Range.End, range.End))))
         {
             return this.RangeNull;
         }
@@ -6204,16 +6185,35 @@ public class Compile : InfraCompile
 
 
 
-        Token rightBrace;
+
+        Token setLeftBrace;
 
 
 
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getRightBrace.Range.End));
 
 
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToken(setLeftBrace))
+        {
+            return this.RangeNull;
+        }
+
+
+
+
+
+        Token setRightBrace;
+
+
+
+        setRightBrace = this.TokenMatchLeftBrace(this.Range(setLeftBrace.Range.End, range.End));
+
+
+
+
+        if (this.NullToken(setRightBrace))
         {
             return this.RangeNull;
         }
@@ -6226,7 +6226,7 @@ public class Compile : InfraCompile
 
         Range t;
 
-        t = this.Range(range.Start, rightBrace.Range.End);
+        t = this.Range(range.Start, setRightBrace.Range.End);
 
 
 
