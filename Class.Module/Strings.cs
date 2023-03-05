@@ -1,4 +1,4 @@
-namespace Class.Module;
+namespace Case.Module;
 
 
 

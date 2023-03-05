@@ -1,4 +1,4 @@
-namespace Class.Infra;
+namespace Case.Infra;
 
 
 

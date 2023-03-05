@@ -1,11 +1,11 @@
-namespace Class.Test.Module;
+namespace Case.Test.Module;
 
 
 
 
 
 
-class Set : global::Class.Test.Set
+class Set : global::Case.Test.Set
 {
     public override bool Init()
     {

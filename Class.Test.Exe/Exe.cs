@@ -1,4 +1,4 @@
-namespace Class.Test.Exe;
+namespace Case.Test.Exe;
 
 
 

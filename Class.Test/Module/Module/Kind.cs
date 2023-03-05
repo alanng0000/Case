@@ -1,11 +1,11 @@
-namespace Class.Test.Module.Module;
+namespace Case.Test.Module.Module;
 
 
 
 
 
 
-class Kind : global::Class.Test.Kind
+class Kind : global::Case.Test.Kind
 {
     public override bool Init()
     {

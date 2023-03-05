@@ -1,9 +1,9 @@
-namespace Class.Test.Module;
+namespace Case.Test.Module;
 
 
 
 
-class Unit : global::Class.Test.Unit
+class Unit : global::Case.Test.Unit
 {
     public override bool Init()
     {

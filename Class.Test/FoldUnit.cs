@@ -1,4 +1,4 @@
-namespace Class.Test;
+namespace Case.Test;
 
 
 

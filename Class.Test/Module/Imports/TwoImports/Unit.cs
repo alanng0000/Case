@@ -1,11 +1,11 @@
-namespace Class.Test.Module.Imports.TwoImports;
+namespace Case.Test.Module.Imports.TwoImports;
 
 
 
 
 
 
-class Unit : global::Class.Test.Module.Unit
+class Unit : global::Case.Test.Module.Unit
 {
     public override bool Init()
     {

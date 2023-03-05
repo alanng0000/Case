@@ -1,4 +1,4 @@
-namespace Class.Node;
+namespace Case.Node;
 
 
 

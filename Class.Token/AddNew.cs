@@ -1,4 +1,4 @@
-namespace Class.Token;
+namespace Case.Token;
 
 
 

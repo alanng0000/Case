@@ -1,1 +1,1 @@
-global using TestTest = Class.Test.Test;
+global using TestTest = Case.Test.Test;

@@ -1,11 +1,11 @@
-namespace Class.Test.Module.Module.ThreeParts;
+namespace Case.Test.Module.Module.ThreeParts;
 
 
 
 
 
 
-class Unit : global::Class.Test.Module.Unit
+class Unit : global::Case.Test.Module.Unit
 {
     public override bool Init()
     {
