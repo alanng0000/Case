@@ -3,7 +3,7 @@
 
 
 
-cd Class.Test.Exe
+cd Case.Test.Exe
 
 dotnet build
 

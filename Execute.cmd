@@ -3,8 +3,8 @@
 
 
 
-cd Class.Test.Exe/bin/Debug/net7.0
+cd Case.Test.Exe/bin/Debug/net7.0
 
-dotnet Class.Test.Exe.dll
+dotnet Case.Test.Exe.dll
 
 cd ../../../..
