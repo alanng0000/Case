@@ -8,7 +8,7 @@ public class Method : Member
 
 
 
-    public ClasName Class { get; set; }
+    public ClasName Clas { get; set; }
 
 
 

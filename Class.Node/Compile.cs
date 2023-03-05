@@ -1525,7 +1525,7 @@ public class Compile : InfraCompile
         ret.Name = name;
         
 
-        ret.Class = varClass;
+        ret.Clas = varClass;
 
 
         ret.Param = param;

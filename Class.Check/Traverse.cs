@@ -276,7 +276,7 @@ public class Traverse
         this.ExecuteAccess(method.Access);
 
 
-        this.ExecuteClassName(method.Class);
+        this.ExecuteClassName(method.Clas);
 
 
         this.ExecuteMethodName(method.Name);

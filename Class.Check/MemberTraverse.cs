@@ -296,7 +296,7 @@ class MemberTraverse : Traverse
 
         ClasName nodeClass;
 
-        nodeClass = nodeMethod.Class;
+        nodeClass = nodeMethod.Clas;
 
 
 
