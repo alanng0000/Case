@@ -357,14 +357,6 @@ public class Compile : Object
 
 
 
-        this.Check.PortConstantClass = this.Class.ConstantClass;
-
-
-
-        this.Check.PortConstantRefer = this.Class.ConstantModule.Refer;
-
-
-
 
         this.Check.Execute();
 
