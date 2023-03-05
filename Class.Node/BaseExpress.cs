@@ -2,6 +2,6 @@ namespace Class.Node;
 
 
 
-public class BaseExpress : Express
+public class BaseExpress : Expre
 {
 }

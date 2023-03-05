@@ -2,9 +2,9 @@ namespace Class.Node;
 
 
 
-public class CallExpress : Express
+public class CallExpress : Expre
 {
-    public Express This { get; set; }
+    public Expre This { get; set; }
 
 
     public MethodName Method { get; set; }

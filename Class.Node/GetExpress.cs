@@ -3,9 +3,9 @@ namespace Class.Node;
 
 
 
-public class GetExpress : Express
+public class GetExpress : Expre
 {
-    public Express This { get; set; }
+    public Expre This { get; set; }
 
 
 

@@ -2,11 +2,11 @@ namespace Class.Node;
 
 
 
-public class MulExpress : Express
+public class MulExpress : Expre
 {
-    public Express Left { get; set; }
+    public Expre Left { get; set; }
 
 
 
-    public Express Right { get; set; }
+    public Expre Right { get; set; }
 }

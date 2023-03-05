@@ -2,7 +2,7 @@ namespace Class.Node;
 
 
 
-public class VarExpress : Express
+public class VarExpress : Expre
 {
     public VarName Var { get; set; }
 }

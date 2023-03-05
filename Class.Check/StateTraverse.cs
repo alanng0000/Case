@@ -978,7 +978,7 @@ public class StateTraverse : Traverse
             
             
             
-        Express value;
+        Expre value;
             
         value = assignState.Value;
 
@@ -1223,7 +1223,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express express;
+        Expre express;
 
         express = bracketExpress.Express;
 
@@ -1277,13 +1277,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
             
         left = andExpress.Left;
 
 
 
-        Express right;
+        Expre right;
             
         right = andExpress.Right;
 
@@ -1411,13 +1411,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = ornExpress.Left;
 
 
 
-        Express right;
+        Expre right;
 
         right = ornExpress.Right;
 
@@ -1539,7 +1539,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express nodeBool;
+        Expre nodeBool;
 
         nodeBool = notExpress.Bool;
 
@@ -1611,13 +1611,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = addExpress.Left;
 
 
 
-        Express right;
+        Expre right;
 
         right = addExpress.Right;
 
@@ -1741,13 +1741,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = subExpress.Left;
 
 
 
-        Express right;
+        Expre right;
 
         right = subExpress.Right;
 
@@ -1870,13 +1870,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = mulExpress.Left;
 
 
 
-        Express right;
+        Expre right;
 
         right = mulExpress.Right;
 
@@ -1999,13 +1999,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = divExpress.Left;
 
 
 
-        Express right;
+        Expre right;
 
         right = divExpress.Right;
 
@@ -2128,14 +2128,14 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = equalExpress.Left;
 
 
 
 
-        Express right;
+        Expre right;
 
         right = equalExpress.Right;
 
@@ -2231,13 +2231,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = lessExpress.Left;
 
 
 
-        Express right;
+        Expre right;
 
         right = lessExpress.Right;
 
@@ -2361,13 +2361,13 @@ public class StateTraverse : Traverse
 
 
 
-        Express left;
+        Expre left;
 
         left = joinExpress.Left;
 
 
 
-        Express right;
+        Expre right;
 
         right = joinExpress.Right;
 
@@ -2489,7 +2489,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express varThis;
+        Expre varThis;
 
         varThis = getExpress.This;
 
@@ -2618,7 +2618,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express varThis;
+        Expre varThis;
 
         varThis = callExpress.This;
 
@@ -2779,7 +2779,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express nodeObject;
+        Expre nodeObject;
 
         nodeObject = castExpress.Object;
 
@@ -2878,7 +2878,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express cond;
+        Expre cond;
             
         cond = ifState.Cond;
 
@@ -2954,7 +2954,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express cond;
+        Expre cond;
 
         cond = whileState.Cond;
 
@@ -3031,7 +3031,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express result;
+        Expre result;
             
         result = returnState.Result;
 
@@ -3335,7 +3335,7 @@ public class StateTraverse : Traverse
 
 
 
-        Express varThis;
+        Expre varThis;
 
         varThis = setTarget.This;
 

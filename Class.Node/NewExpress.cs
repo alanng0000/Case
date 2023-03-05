@@ -3,7 +3,7 @@ namespace Class.Node;
 
 
 
-public class NewExpress : Express
+public class NewExpress : Expre
 {
     public ClassName Class { get; set; }
 }

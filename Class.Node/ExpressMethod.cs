@@ -2,4 +2,4 @@ namespace Class.Node;
 
 
 
-public delegate Express ExpressMethod(Range range);
+public delegate Expre ExpressMethod(Range range);

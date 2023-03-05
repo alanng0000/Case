@@ -3,7 +3,7 @@ namespace Class.Node;
 
 
 
-public class BracketExpress : Express
+public class BracketExpress : Expre
 {
-    public Express Express { get; set; }
+    public Expre Express { get; set; }
 }

@@ -2126,7 +2126,7 @@ public class Compile : InfraCompile
 
 
 
-        Express express;
+        Expre express;
         
         
 
@@ -2167,9 +2167,9 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Express Express(Range range)
+    protected virtual Expre Express(Range range)
     {
-        Express ret;
+        Expre ret;
 
 
 
@@ -2502,7 +2502,7 @@ public class Compile : InfraCompile
 
 
 
-        Express value;
+        Expre value;
 
 
         value = this.Express(this.Range(colon.Range.End, semicolon.Range.Start));
@@ -2700,7 +2700,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
         
 
 
@@ -2716,7 +2716,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
         
         
 
@@ -2783,7 +2783,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
         
         
 
@@ -2801,7 +2801,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
         
         
 
@@ -2864,7 +2864,7 @@ public class Compile : InfraCompile
 
 
 
-        Express varBool;
+        Expre varBool;
         
         
 
@@ -2924,7 +2924,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
 
 
 
@@ -2942,7 +2942,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
         
         
 
@@ -3009,7 +3009,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
         
         
 
@@ -3028,7 +3028,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
         
 
 
@@ -3094,7 +3094,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
         
 
 
@@ -3113,7 +3113,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
         
 
 
@@ -3176,7 +3176,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
             
         left = this.Express(this.Range(range.Start, op.Range.Start));
             
@@ -3188,7 +3188,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
                         
         right = this.Express(this.Range(op.Range.End, range.End));
             
@@ -3243,7 +3243,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
             
         left = this.Express(this.Range(range.Start, op.Range.Start));
             
@@ -3255,7 +3255,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
             
         right = this.Express(this.Range(op.Range.End, range.End));
             
@@ -3310,7 +3310,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
         
 
         left = this.Express(this.Range(range.Start, op.Range.Start));
@@ -3323,7 +3323,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
         
 
         right = this.Express(this.Range(op.Range.End, range.End));
@@ -3389,7 +3389,7 @@ public class Compile : InfraCompile
 
 
 
-        Express left;
+        Expre left;
             
         left = this.Express(this.Range(range.Start, op.Range.Start));
             
@@ -3401,7 +3401,7 @@ public class Compile : InfraCompile
 
 
 
-        Express right;
+        Expre right;
             
         right = this.Express(this.Range(op.Range.End, range.End));
             
@@ -3451,7 +3451,7 @@ public class Compile : InfraCompile
 
 
 
-        Express varThis;
+        Expre varThis;
 
 
 
@@ -3574,7 +3574,7 @@ public class Compile : InfraCompile
 
 
 
-        Express varThis;
+        Expre varThis;
             
         
         
@@ -3765,7 +3765,7 @@ public class Compile : InfraCompile
             
 
 
-        Express cond;
+        Expre cond;
 
         
         cond = this.Express(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
@@ -3927,7 +3927,7 @@ public class Compile : InfraCompile
 
 
 
-        Express cond;
+        Expre cond;
         
         
         cond = this.Express(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
@@ -4034,7 +4034,7 @@ public class Compile : InfraCompile
 
 
 
-        Express result;
+        Expre result;
 
 
         result = this.Express(this.Range(returnToken.Range.End, semicolon.Range.Start));
@@ -4183,7 +4183,7 @@ public class Compile : InfraCompile
 
 
 
-        Express varObject;
+        Expre varObject;
 
 
         varObject = this.Express(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
@@ -4275,7 +4275,7 @@ public class Compile : InfraCompile
 
 
 
-        Express express;
+        Expre express;
 
 
         express = this.Express(this.Range(leftBracket.Range.End, rightBracket.Range.Start));
@@ -4463,7 +4463,7 @@ public class Compile : InfraCompile
 
     private Argue Argue(Range range)
     {
-        Express express;
+        Expre express;
 
         express = this.Express(range);
             
@@ -4589,7 +4589,7 @@ public class Compile : InfraCompile
 
 
 
-        Express varThis;
+        Expre varThis;
         
         
 

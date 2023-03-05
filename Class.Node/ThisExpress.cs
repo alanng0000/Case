@@ -2,6 +2,6 @@ namespace Class.Node;
 
 
 
-public class ThisExpress : Express
+public class ThisExpress : Expre
 {
 }

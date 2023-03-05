@@ -2,7 +2,7 @@ namespace Class.Node;
 
 
 
-public class NotExpress : Express
+public class NotExpress : Expre
 {
-    public Express Bool { get; set; }
+    public Expre Bool { get; set; }
 }

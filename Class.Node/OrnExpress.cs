@@ -2,10 +2,10 @@ namespace Class.Node;
 
 
 
-public class OrnExpress : Express
+public class OrnExpress : Expre
 {
-    public Express Left { get; set; }
+    public Expre Left { get; set; }
 
 
-    public Express Right { get; set; }
+    public Expre Right { get; set; }
 }

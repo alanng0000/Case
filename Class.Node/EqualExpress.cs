@@ -2,11 +2,11 @@ namespace Class.Node;
 
 
 
-public class EqualExpress : Express
+public class EqualExpress : Expre
 {
-    public Express Left { get; set; }
+    public Expre Left { get; set; }
 
 
 
-    public Express Right { get; set; }
+    public Expre Right { get; set; }
 }
