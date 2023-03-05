@@ -1001,7 +1001,7 @@ public class Compile : InfraCompile
 
 
 
-        nameRange = this.MethodNameRange(this.Range(classRange.End, range.End));
+        nameRange = this.FieldNameRange(this.Range(classRange.End, range.End));
 
 
 
@@ -1231,7 +1231,7 @@ public class Compile : InfraCompile
 
 
         ret.Access = access;
-        
+
 
         ret.Get = varGet;
 
@@ -6067,7 +6067,9 @@ public class Compile : InfraCompile
         Range accessRange;
 
 
+
         accessRange = this.AccessRange(range);
+
 
 
 
@@ -6083,7 +6085,9 @@ public class Compile : InfraCompile
 
 
 
+
         Range classRange;
+
 
 
         classRange = this.ClassNameRange(this.Range(accessRange.End, range.End));
@@ -6103,9 +6107,8 @@ public class Compile : InfraCompile
 
 
 
-
-
         Range nameRange;
+
 
 
         nameRange = this.FieldNameRange(this.Range(classRange.End, range.End));
@@ -6123,11 +6126,57 @@ public class Compile : InfraCompile
 
 
 
-
-
+            
 
 
         if (this.Zero(this.Count(this.Range(nameRange.End, range.End))))
+        {
+            return this.RangeNull;
+        }
+
+
+
+
+
+
+        Token leftBracket;
+
+
+
+        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
+
+
+
+
+        if (this.NullToken(leftBracket))
+        {
+            return this.RangeNull;
+        }
+
+
+
+
+
+        Token rightBracket;
+
+
+
+        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+
+
+
+
+        if (this.NullToken(rightBracket))
+        {
+            return this.RangeNull;
+        }
+
+
+
+
+
+
+        if (this.Zero(this.Count(this.Range(rightBracket.Range.End, range.End))))
         {
             return this.RangeNull;
         }
@@ -6141,8 +6190,7 @@ public class Compile : InfraCompile
 
 
 
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
-
+        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
@@ -6165,173 +6213,11 @@ public class Compile : InfraCompile
 
 
 
-
         if (this.NullToken(rightBrace))
         {
             return this.RangeNull;
         }
 
-
-
-
-
-
-
-        if (this.Zero(this.Count(this.Range(leftBrace.Range.End, rightBrace.Range.Start))))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-
-        Token getToken;
-
-
-
-        getToken = this.Token(this.Keyword.Get, this.IndexRange(leftBrace.Range.End));
-
-
-
-
-        if (this.NullToken(getToken))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        if (this.Zero(this.Count(this.Range(getToken.Range.End, rightBrace.Range.Start))))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        Token getLeftBrace;
-
-
-
-        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getToken.Range.End));
-
-
-
-
-
-        if (this.NullToken(getLeftBrace))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-
-        Token getRightBrace;
-
-
-
-        getRightBrace = this.TokenMatchLeftBrace(this.Range(getLeftBrace.Range.End, rightBrace.Range.Start));
-
-
-
-
-
-        if (this.NullToken(getRightBrace))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        if (this.Zero(this.Count(this.Range(getRightBrace.Range.End, rightBrace.Range.Start))))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        Token setToken;
-
-
-
-        setToken = this.Token(this.Keyword.Set, this.IndexRange(getRightBrace.Range.End));
-
-
-
-
-
-        if (this.NullToken(setToken))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        if (this.Zero(this.Count(this.Range(setToken.Range.End, rightBrace.Range.Start))))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        Token setLeftBrace;
-
-
-
-        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(setToken.Range.End));
-
-
-
-
-
-        if (this.NullToken(setLeftBrace))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        Token setRightBrace;
-
-
-
-        setRightBrace = this.TokenMatchLeftBrace(this.Range(setLeftBrace.Range.End, rightBrace.Range.Start));
-
-
-
-
-
-        if (this.NullToken(setRightBrace))
-        {
-            return this.RangeNull;
-        }
-
-
-
-
-
-        if (!this.Zero(this.Count(this.Range(setRightBrace.Range.End, rightBrace.Range.Start))))
-        {
-            return this.RangeNull;
-        }
 
 
 
