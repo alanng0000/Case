@@ -27,7 +27,7 @@ public class Keytoken : Object
 
 
 
-    public string Casa { get; private set; }
+    public string Case { get; private set; }
     public string This { get; private set; }
     public string Base { get; private set; }
     public string Newa { get; private set; }
@@ -56,7 +56,7 @@ public class Keytoken : Object
         base.Init();
 
 
-        this.Casa = "casa";
+        this.Case = "case";
         this.This = "this";
         this.Base = "base";
         this.Newa = "newa";
@@ -76,7 +76,7 @@ public class Keytoken : Object
 
         this.All = new List();
         this.All.Init();
-        this.All.Add(this.Casa);
+        this.All.Add(this.Case);
         this.All.Add(this.This);
         this.All.Add(this.Base);
         this.All.Add(this.Newa);
