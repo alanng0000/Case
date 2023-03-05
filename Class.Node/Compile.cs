@@ -654,7 +654,7 @@ public class Compile : InfraCompile
         Token classToken;
         
         
-        classToken = this.Token(this.Keyword.Clas, this.IndexRange(range.Start));
+        classToken = this.Token(this.Keyword.Casa, this.IndexRange(range.Start));
 
 
 
@@ -2556,7 +2556,7 @@ public class Compile : InfraCompile
         Token newToken;
 
 
-        newToken = this.Token(this.Keyword.Neon, this.IndexRange(range.Start));
+        newToken = this.Token(this.Keyword.Newa, this.IndexRange(range.Start));
 
         
 
@@ -3988,7 +3988,7 @@ public class Compile : InfraCompile
         Token returnToken;
         
 
-        returnToken = this.Token(this.Keyword.Rest, this.IndexRange(range.Start));
+        returnToken = this.Token(this.Keyword.Retu, this.IndexRange(range.Start));
 
 
 
@@ -5418,7 +5418,7 @@ public class Compile : InfraCompile
         Token returnToken;
         
 
-        returnToken = this.Token(this.Keyword.Rest, this.IndexRange(range.Start));
+        returnToken = this.Token(this.Keyword.Retu, this.IndexRange(range.Start));
 
 
 
