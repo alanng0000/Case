@@ -12,13 +12,13 @@ public class Method : Member
 
 
 
+    public Access Access { get; set; }
+
+
+
     public ParamList Param { get; set; }
 
 
 
     public StateList Call { get; set; }
-
-
-
-    public Access Access { get; set; }
 }
