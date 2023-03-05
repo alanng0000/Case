@@ -1,4 +1,4 @@
-clas F : N
+case F : N
 {
     publi Bool A()
     {
