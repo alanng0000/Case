@@ -3,7 +3,7 @@ namespace Class.Node;
 
 
 
-public class Clas : Node
+public class Casa : Node
 {
     public ClasName Name { get; set; }
 

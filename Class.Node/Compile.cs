@@ -641,7 +641,7 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Clas Class(Range range)
+    protected virtual Casa Class(Range range)
     {
         if (this.Zero(this.Count(range)))
         {
@@ -842,10 +842,10 @@ public class Compile : InfraCompile
 
 
 
-        Clas ret;
+        Casa ret;
 
 
-        ret = new Clas();
+        ret = new Casa();
 
 
         ret.Init();
