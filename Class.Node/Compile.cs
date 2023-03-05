@@ -654,7 +654,7 @@ public class Compile : InfraCompile
         Token classToken;
         
         
-        classToken = this.Token(this.Keyword.Casa, this.IndexRange(range.Start));
+        classToken = this.Token(this.Keyword.Case, this.IndexRange(range.Start));
 
 
 
