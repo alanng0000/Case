@@ -67,7 +67,7 @@ clas F : N
 
 
 
-        rest true;
+        retu true;
     }
 
 
@@ -75,7 +75,7 @@ clas F : N
 
     prope O Tt
     {
-        rest data;
+        retu data;
     }
     {
         data : value;
@@ -104,7 +104,7 @@ clas F : N
 
     publi D D
     {
-        rest data;
+        retu data;
     }
     {
         data : value;
