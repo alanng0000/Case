@@ -641,7 +641,7 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Class Class(Range range)
+    protected virtual Clas Class(Range range)
     {
         if (this.Zero(this.Count(range)))
         {
@@ -842,10 +842,10 @@ public class Compile : InfraCompile
 
 
 
-        Class ret;
+        Clas ret;
 
 
-        ret = new Class();
+        ret = new Clas();
 
 
         ret.Init();
