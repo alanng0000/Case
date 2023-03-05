@@ -1,3 +1,3 @@
-# Class
+# Case
 
 Program Lang.
