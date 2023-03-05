@@ -27,16 +27,16 @@ public class Keytoken : Object
 
 
 
-    public string Clas { get; private set; }
+    public string Casa { get; private set; }
     public string This { get; private set; }
     public string Base { get; private set; }
-    public string Neon { get; private set; }
+    public string Newa { get; private set; }
     public string Glob { get; private set; }
     public string Cast { get; private set; }
     public string Null { get; private set; }
     public string True { get; private set; }
     public string Fase { get; private set; }
-    public string Rest { get; private set; }
+    public string Retu { get; private set; }
     public string Mifa { get; private set; }
     public string Lope { get; private set; }
     public string Publi { get; private set; }
@@ -56,16 +56,16 @@ public class Keytoken : Object
         base.Init();
 
 
-        this.Clas = "clas";
+        this.Casa = "casa";
         this.This = "this";
         this.Base = "base";
-        this.Neon = "neon";
+        this.Newa = "newa";
         this.Glob = "glob";
         this.Cast = "cast";
         this.Null = "null";
         this.True = "true";
         this.Fase = "fase";
-        this.Rest = "rest";
+        this.Retu = "retu";
         this.Mifa = "mifa";
         this.Lope = "lope";
         this.Publi = "publi";
@@ -76,16 +76,16 @@ public class Keytoken : Object
 
         this.All = new List();
         this.All.Init();
-        this.All.Add(this.Clas);
+        this.All.Add(this.Casa);
         this.All.Add(this.This);
         this.All.Add(this.Base);
-        this.All.Add(this.Neon);
+        this.All.Add(this.Newa);
         this.All.Add(this.Glob);
         this.All.Add(this.Cast);
         this.All.Add(this.Null);
         this.All.Add(this.True);
         this.All.Add(this.Fase);
-        this.All.Add(this.Rest);
+        this.All.Add(this.Retu);
         this.All.Add(this.Mifa);
         this.All.Add(this.Lope);
         this.All.Add(this.Publi);
