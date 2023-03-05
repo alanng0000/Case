@@ -173,7 +173,7 @@ public class Compile : InfraCompile
 
 
 
-        this.AddNodeMethod(nameof(this.Class), this.Class);
+        this.AddNodeMethod(nameof(this.Case), this.Case);
 
 
         this.AddNodeMethod(nameof(this.MemberList), this.MemberList);
@@ -641,7 +641,7 @@ public class Compile : InfraCompile
 
 
 
-    protected virtual Case Class(Range range)
+    protected virtual Case Case(Range range)
     {
         if (this.Zero(this.Count(range)))
         {
