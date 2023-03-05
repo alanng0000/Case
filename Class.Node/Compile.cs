@@ -957,7 +957,9 @@ public class Compile : InfraCompile
         Range accessRange;
 
 
+
         accessRange = this.AccessRange(range);
+
 
 
 
@@ -973,7 +975,9 @@ public class Compile : InfraCompile
 
 
 
+
         Range classRange;
+
 
 
         classRange = this.ClassNameRange(this.Range(accessRange.End, range.End));
@@ -993,12 +997,11 @@ public class Compile : InfraCompile
 
 
 
-
-
         Range nameRange;
 
 
-        nameRange = this.FieldNameRange(this.Range(classRange.End, range.End));
+
+        nameRange = this.MethodNameRange(this.Range(classRange.End, range.End));
 
 
 
@@ -1013,8 +1016,7 @@ public class Compile : InfraCompile
 
 
 
-
-
+            
 
 
         if (this.Zero(this.Count(this.Range(nameRange.End, range.End))))
@@ -1027,98 +1029,11 @@ public class Compile : InfraCompile
 
 
 
-        Token leftBrace;
-
-
-
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
-
-
-
-
-
-        if (this.NullToken(leftBrace))
-        {
-            return null;
-        }
-
-
-
-
-
-        Token rightBrace;
-
-
-
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
-
-
-
-
-
-        if (this.NullToken(rightBrace))
-        {
-            return null;
-        }
-
-
-
-
-
-
-        if (!this.Zero(this.Count(this.Range(rightBrace.Range.End, range.End))))
-        {
-            return null;
-        }
-
-
-
-
-
-
-        if (this.Zero(this.Count(this.Range(leftBrace.Range.End, rightBrace.Range.Start))))
-        {
-            return null;
-        }
-
-
-
-
-
-
-        Token getToken;
-
-
-
-        getToken = this.Token(this.Keyword.Get, this.IndexRange(leftBrace.Range.End));
-
-
-
-
-        if (this.NullToken(getToken))
-        {
-            return null;
-        }
-
-
-
-
-
-        if (this.Zero(this.Count(this.Range(getToken.Range.End, rightBrace.Range.Start))))
-        {
-            return null;
-        }
-
-
-
-
-
         Token getLeftBrace;
 
 
 
-        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getToken.Range.End));
-
+        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
 
 
 
@@ -1132,13 +1047,11 @@ public class Compile : InfraCompile
 
 
 
-
         Token getRightBrace;
 
 
 
-        getRightBrace = this.TokenMatchLeftBrace(this.Range(getLeftBrace.Range.End, rightBrace.Range.Start));
-
+        getRightBrace = this.TokenMatchLeftBrace(this.Range(getLeftBrace.Range.End, range.End));
 
 
 
@@ -1152,38 +1065,14 @@ public class Compile : InfraCompile
 
 
 
-        if (this.Zero(this.Count(this.Range(getRightBrace.Range.End, rightBrace.Range.Start))))
+
+
+
+        if (this.Zero(this.Count(this.Range(getRightBrace.Range.End, range.End))))
         {
             return null;
         }
 
-
-
-
-
-        Token setToken;
-
-
-
-        setToken = this.Token(this.Keyword.Set, this.IndexRange(getRightBrace.Range.End));
-
-
-
-
-
-        if (this.NullToken(setToken))
-        {
-            return null;
-        }
-
-
-
-
-
-        if (this.Zero(this.Count(this.Range(setToken.Range.End, rightBrace.Range.Start))))
-        {
-            return null;
-        }
 
 
 
@@ -1193,8 +1082,7 @@ public class Compile : InfraCompile
 
 
 
-        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(setToken.Range.End));
-
+        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getRightBrace.Range.End));
 
 
 
@@ -1212,8 +1100,7 @@ public class Compile : InfraCompile
 
 
 
-        setRightBrace = this.TokenMatchLeftBrace(this.Range(setLeftBrace.Range.End, rightBrace.Range.Start));
-
+        setRightBrace = this.TokenMatchLeftBrace(this.Range(setLeftBrace.Range.End, range.End));
 
 
 
@@ -1227,11 +1114,10 @@ public class Compile : InfraCompile
 
 
 
-        if (!this.Zero(this.Count(this.Range(setRightBrace.Range.End, rightBrace.Range.Start))))
+        if (!this.Zero(this.Count(this.Range(setRightBrace.Range.End, range.End))))
         {
             return null;
         }
-
 
 
 
@@ -1292,12 +1178,11 @@ public class Compile : InfraCompile
 
 
 
+
         StateList varGet;
 
 
-
         varGet = this.StateList(this.Range(getLeftBrace.Range.End, getRightBrace.Range.Start));
-
 
 
 
@@ -1315,9 +1200,7 @@ public class Compile : InfraCompile
         StateList varSet;
 
 
-
         varSet = this.StateList(this.Range(setLeftBrace.Range.End, setRightBrace.Range.Start));
-
 
 
 
@@ -1332,9 +1215,8 @@ public class Compile : InfraCompile
 
 
 
-
         Field ret;
-
+        
 
         ret = new Field();
 
@@ -1346,15 +1228,15 @@ public class Compile : InfraCompile
         
 
         ret.Class = varClass;
+
+
+        ret.Access = access;
         
 
         ret.Get = varGet;
-        
+
 
         ret.Set = varSet;
-        
-
-        ret.Access = access;
 
 
         this.NodeInfo(ret, range);

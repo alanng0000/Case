@@ -12,13 +12,13 @@ public class Field : Member
 
 
 
+    public Access Access { get; set; }
+
+
+
     public StateList Get { get; set; }
 
 
 
     public StateList Set { get; set; }
-
-
-
-    public Access Access { get; set; }
 }
