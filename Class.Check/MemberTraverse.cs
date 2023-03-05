@@ -71,7 +71,7 @@ class MemberTraverse : Traverse
 
 
 
-        NodeClassName nodeClass;
+        ClasName nodeClass;
             
         nodeClass = nodeField.Class;
 
@@ -294,7 +294,7 @@ class MemberTraverse : Traverse
 
 
 
-        NodeClassName nodeClass;
+        ClasName nodeClass;
 
         nodeClass = nodeMethod.Class;
 
@@ -525,7 +525,7 @@ class MemberTraverse : Traverse
 
 
 
-        NodeClassName nodeClass;
+        ClasName nodeClass;
 
         nodeClass = nodeVar.Class;
             

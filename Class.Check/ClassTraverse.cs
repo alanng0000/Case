@@ -16,7 +16,7 @@ class ClassTraverse : Traverse
 
 
 
-        NodeClassName name;
+        ClasName name;
             
 
         name = nodeClass.Name;

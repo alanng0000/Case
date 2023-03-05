@@ -852,7 +852,7 @@ public class Compile : InfraCompile
 
 
 
-        NodeClassName nodeBase;
+        ClasName nodeBase;
 
 
 

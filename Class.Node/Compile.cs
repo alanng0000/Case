@@ -788,7 +788,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName name;
+        ClasName name;
 
 
 
@@ -806,7 +806,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName varBase;
+        ClasName varBase;
 
 
 
@@ -1142,7 +1142,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName varClass;
+        ClasName varClass;
 
 
 
@@ -1440,7 +1440,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName varClass;
+        ClasName varClass;
 
 
 
@@ -1688,7 +1688,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName varClass;
+        ClasName varClass;
 
 
 
@@ -2568,7 +2568,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName varClass;
+        ClasName varClass;
         
         
         varClass = this.ClassName(this.Range(newToken.Range.End, range.End));
@@ -2632,7 +2632,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName varClass;
+        ClasName varClass;
         
         
         varClass = this.ClassName(this.Range(globToken.Range.End, range.End));
@@ -4166,7 +4166,7 @@ public class Compile : InfraCompile
 
 
 
-        ClassName varClass;
+        ClasName varClass;
 
 
         varClass = this.ClassName(classRange);
@@ -4896,7 +4896,7 @@ public class Compile : InfraCompile
 
 
 
-    protected ClassName ClassName(Range range)
+    protected ClasName ClassName(Range range)
     {
         string value;
 
@@ -4909,9 +4909,9 @@ public class Compile : InfraCompile
         }
 
 
-        ClassName ret;
+        ClasName ret;
         
-        ret = new ClassName();
+        ret = new ClasName();
 
         ret.Init();
         

@@ -5,7 +5,7 @@ namespace Class.Node;
 
 public class Var : Node
 {
-    public ClassName Class { get; set; }
+    public ClasName Class { get; set; }
 
 
 
