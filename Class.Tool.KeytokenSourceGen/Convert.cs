@@ -1,4 +1,4 @@
-namespace Class.Tool.KeywordSourceGen;
+namespace Case.Tool.KeywordSourceGen;
 
 
 

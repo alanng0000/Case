@@ -1,4 +1,4 @@
-namespace Class.Tool.DelimiterSourceGen;
+namespace Case.Tool.DelimiterSourceGen;
 
 
 

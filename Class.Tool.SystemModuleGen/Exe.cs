@@ -1,4 +1,4 @@
-namespace Class.Tool.SystemModuleGen;
+namespace Case.Tool.SystemModuleGen;
 
 
 
