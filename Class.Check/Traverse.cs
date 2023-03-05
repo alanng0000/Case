@@ -94,7 +94,7 @@ public class Traverse
 
 
 
-    public virtual bool ExecuteClassName(ClasName className)
+    public virtual bool ExecuteClassName(CaseName className)
     {
         if (this.Null(className))
         {

@@ -8,7 +8,7 @@ public class Field : Member
 
 
 
-    public ClasName Class { get; set; }
+    public CaseName Class { get; set; }
 
 
 

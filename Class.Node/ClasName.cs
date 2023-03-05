@@ -2,7 +2,7 @@ namespace Class.Node;
 
 
 
-public class ClasName : Node
+public class CaseName : Node
 {
     public string Value { get; set; }
 }

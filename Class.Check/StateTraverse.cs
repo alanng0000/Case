@@ -697,7 +697,7 @@ public class StateTraverse : Traverse
 
 
 
-        ClasName nodeClass;
+        CaseName nodeClass;
 
         nodeClass = nodeVar.Class;
             
@@ -1065,7 +1065,7 @@ public class StateTraverse : Traverse
 
 
 
-        ClasName nodeClass;
+        CaseName nodeClass;
         
 
         nodeClass = newExpress.Class;
@@ -1143,7 +1143,7 @@ public class StateTraverse : Traverse
 
 
 
-        ClasName nodeClass;
+        CaseName nodeClass;
         
 
         nodeClass = globExpress.Class;
@@ -2772,7 +2772,7 @@ public class StateTraverse : Traverse
 
 
 
-        ClasName nodeClass;
+        CaseName nodeClass;
 
         nodeClass = castExpress.Class;
 

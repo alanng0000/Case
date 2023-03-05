@@ -5,11 +5,11 @@ namespace Class.Node;
 
 public class Case : Node
 {
-    public ClasName Name { get; set; }
+    public CaseName Name { get; set; }
 
 
 
-    public ClasName Base { get; set; }
+    public CaseName Base { get; set; }
 
 
 
