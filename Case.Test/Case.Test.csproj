@@ -7,10 +7,10 @@
     <ItemGroup>
         <ProjectReference Include="../../System/System.Infra/System.Infra.csproj" />
         <ProjectReference Include="../../System/System.List/System.List.csproj" />
-        <ProjectReference Include="../Class.Infra/Class.Infra.csproj" />
-        <ProjectReference Include="../Class.Port/Class.Port.csproj" />
-        <ProjectReference Include="../Class.Module/Class.Module.csproj" />
-        <ProjectReference Include="../Class/Class.csproj" />
+        <ProjectReference Include="../Case.Infra/Case.Infra.csproj" />
+        <ProjectReference Include="../Case.Port/Case.Port.csproj" />
+        <ProjectReference Include="../Case.Module/Case.Module.csproj" />
+        <ProjectReference Include="../Case/Case.csproj" />
     </ItemGroup>
 
 </Project>

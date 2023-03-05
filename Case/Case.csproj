@@ -9,12 +9,12 @@
         <ProjectReference Include="../../System/System.List/System.List.csproj" />
         <ProjectReference Include="../../System/System.Text/System.Text.csproj" />
         <ProjectReference Include="../../System/System.Module/System.Module.csproj" />
-        <ProjectReference Include="../Class.Infra/Class.Infra.csproj" />
-        <ProjectReference Include="../Class.Port/Class.Port.csproj" />
-        <ProjectReference Include="../Class.Token/Class.Token.csproj" />
-        <ProjectReference Include="../Class.Node/Class.Node.csproj" />
-        <ProjectReference Include="../Class.Check/Class.Check.csproj" />
-        <ProjectReference Include="../Class.Module/Class.Module.csproj" />
+        <ProjectReference Include="../Case.Infra/Case.Infra.csproj" />
+        <ProjectReference Include="../Case.Port/Case.Port.csproj" />
+        <ProjectReference Include="../Case.Token/Case.Token.csproj" />
+        <ProjectReference Include="../Case.Node/Case.Node.csproj" />
+        <ProjectReference Include="../Case.Check/Case.Check.csproj" />
+        <ProjectReference Include="../Case.Module/Case.Module.csproj" />
     </ItemGroup>
 
 </Project>
