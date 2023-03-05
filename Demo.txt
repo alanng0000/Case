@@ -2,7 +2,7 @@ clas F : N
 {
     publi Bool A()
     {
-        this.D : neon D;
+        this.D : newa D;
 
 
         this.D.Init();
@@ -43,7 +43,7 @@ clas F : N
         N n;
 
 
-        n : neon F;
+        n : newa F;
 
 
 
