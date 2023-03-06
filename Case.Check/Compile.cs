@@ -5,7 +5,7 @@ namespace Case.Check;
 
 
 
-public class Compile : InfraCompile
+public class Create : InfraCreate
 {
     public SourceArray SourceList { get; set; }
 
