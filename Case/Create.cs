@@ -30,12 +30,12 @@ public class Create : Object
 
 
 
-    private CheckCompile Check { get; set; }
+    private CheckCreate Check { get; set; }
 
 
 
 
-    private ModuleCompile Module { get; set; }
+    private ModuleCreate Module { get; set; }
 
 
 
@@ -153,14 +153,14 @@ public class Create : Object
 
 
 
-    protected virtual CheckCompile CreateCheck()
+    protected virtual CheckCreate CreateCheck()
     {
-        CheckCompile compile;
+        CheckCreate compile;
 
 
 
 
-        compile = new CheckCompile();
+        compile = new CheckCreate();
 
 
 
@@ -171,7 +171,7 @@ public class Create : Object
 
 
 
-        CheckCompile ret;
+        CheckCreate ret;
 
 
         ret = compile;
@@ -185,14 +185,14 @@ public class Create : Object
 
 
 
-    protected virtual ModuleCompile CreateModule()
+    protected virtual ModuleCreate CreateModule()
     {
-        ModuleCompile compile;
+        ModuleCreate compile;
 
 
 
 
-        compile = new ModuleCompile();
+        compile = new ModuleCreate();
 
 
 
@@ -203,7 +203,7 @@ public class Create : Object
 
 
 
-        ModuleCompile ret;
+        ModuleCreate ret;
 
 
         ret = compile;
