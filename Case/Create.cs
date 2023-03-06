@@ -91,17 +91,17 @@ public class Create : Object
 
     protected virtual TokenCreate CreateToken()
     {
-        TokenCreate compile;
+        TokenCreate create;
 
 
 
 
-        compile = new TokenCreate();
+        create = new TokenCreate();
 
 
 
 
-        compile.Init();
+        create.Init();
 
 
 
@@ -110,7 +110,7 @@ public class Create : Object
         TokenCreate ret;
 
 
-        ret = compile;
+        ret = create;
 
 
 
@@ -123,17 +123,17 @@ public class Create : Object
 
     protected virtual NodeCreate CreateNode()
     {
-        NodeCreate compile;
+        NodeCreate create;
 
 
 
 
-        compile = new NodeCreate();
+        create = new NodeCreate();
 
 
 
 
-        compile.Init();
+        create.Init();
 
 
 
@@ -142,7 +142,7 @@ public class Create : Object
         NodeCreate ret;
 
 
-        ret = compile;
+        ret = create;
 
 
 
@@ -155,17 +155,17 @@ public class Create : Object
 
     protected virtual CheckCreate CreateCheck()
     {
-        CheckCreate compile;
+        CheckCreate create;
 
 
 
 
-        compile = new CheckCreate();
+        create = new CheckCreate();
 
 
 
 
-        compile.Init();
+        create.Init();
 
 
 
@@ -174,7 +174,7 @@ public class Create : Object
         CheckCreate ret;
 
 
-        ret = compile;
+        ret = create;
 
 
 
@@ -187,17 +187,17 @@ public class Create : Object
 
     protected virtual ModuleCreate CreateModule()
     {
-        ModuleCreate compile;
+        ModuleCreate create;
 
 
 
 
-        compile = new ModuleCreate();
+        create = new ModuleCreate();
 
 
 
 
-        compile.Init();
+        create.Init();
 
 
 
@@ -206,7 +206,7 @@ public class Create : Object
         ModuleCreate ret;
 
 
-        ret = compile;
+        ret = create;
 
 
 
