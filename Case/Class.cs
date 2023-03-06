@@ -54,7 +54,7 @@ public class Class : Object
 
 
 
-    public Compile Compile { get; set; }
+    public Create Create { get; set; }
 
 
 
@@ -119,7 +119,7 @@ public class Class : Object
 
 
 
-        this.Compile = this.CreateCompile();
+        this.Create = this.CreateCreate();
 
 
 
@@ -398,7 +398,7 @@ public class Class : Object
                 
             
 
-        this.ExecuteCompile();
+        this.ExecuteCreate();
 
 
 
@@ -568,15 +568,15 @@ public class Class : Object
 
 
 
-    public bool ExecuteCompile()
+    public bool ExecuteCreate()
     {
-        this.Compile.Execute();
+        this.Create.Execute();
 
 
 
 
 
-        this.Result = this.Compile.Result;
+        this.Result = this.Create.Result;
 
 
 
@@ -591,35 +591,35 @@ public class Class : Object
 
 
 
-    protected virtual Compile CreateCompile()
+    protected virtual Create CreateCreate()
     {
-        Compile compile;
+        Create create;
 
 
 
 
-        compile = new Compile();
+        create = new Create();
 
 
 
 
-        compile.Class = this;
+        create.Class = this;
 
 
 
 
-        compile.Init();
+        create.Init();
 
 
 
 
 
 
-        Compile ret;
+        Create ret;
 
 
 
-        ret = compile;
+        ret = create;
 
 
 

@@ -3,7 +3,7 @@ namespace Case;
 
 
 
-public class Compile : Object
+public class Create : Object
 {
     public Class Class { get; set; }
 
