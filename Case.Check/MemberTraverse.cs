@@ -620,7 +620,7 @@ class MemberTraverse : Traverse
 
 
 
-        this.Compile.Infra.VarMapAdd(this.ParamVarMap, varVar);
+        this.Create.Infra.VarMapAdd(this.ParamVarMap, varVar);
         
 
 

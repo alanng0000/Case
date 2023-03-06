@@ -39,7 +39,7 @@ class ClassTraverse : Traverse
 
 
 
-        map = this.Compile.Refer.Class;
+        map = this.Create.Refer.Class;
 
 
 
@@ -95,7 +95,7 @@ class ClassTraverse : Traverse
 
 
 
-        varClass.Module = this.Compile.Refer.Module;
+        varClass.Module = this.Create.Refer.Module;
 
 
 
@@ -107,11 +107,11 @@ class ClassTraverse : Traverse
 
 
 
-        varClass.Index = this.Compile.ClassIndex(this.Source);
+        varClass.Index = this.Create.ClassIndex(this.Source);
 
 
 
-        varClass.Id = this.Compile.NewClassId();
+        varClass.Id = this.Create.NewClassId();
 
 
 
@@ -157,7 +157,7 @@ class ClassTraverse : Traverse
 
 
 
-        this.Compile.Refer.Module.Class.Add(o);
+        this.Create.Refer.Module.Class.Add(o);
         
 
 

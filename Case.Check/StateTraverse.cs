@@ -29,7 +29,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.System = this.Compile.ConstantClass;
+        this.System = this.Create.ConstantClass;
 
 
 
@@ -3530,7 +3530,7 @@ public class StateTraverse : Traverse
 
         if (access == this.Access.Proper)
         {
-            if (this.Compile.Refer.Module == varClass.Module)
+            if (this.Create.Refer.Module == varClass.Module)
             {
                 return true;
             }
@@ -3802,7 +3802,7 @@ public class StateTraverse : Traverse
 
     private bool VarMapAdd(VarMap map, Var varVar)
     {
-        return this.Compile.Infra.VarMapAdd(map, varVar);
+        return this.Create.Infra.VarMapAdd(map, varVar);
     }
 
 
@@ -3811,7 +3811,7 @@ public class StateTraverse : Traverse
 
     private bool VarMapMapAdd(VarMap map, VarMap other)
     {
-        return this.Compile.Infra.VarMapMapAdd(map, other);
+        return this.Create.Infra.VarMapMapAdd(map, other);
     }
 
 

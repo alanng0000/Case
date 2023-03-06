@@ -11,7 +11,7 @@ public class InitTraverse : Traverse
 
 
 
-        check = this.Compile.CreateCheck();
+        check = this.Create.CreateCheck();
 
 
 
@@ -34,7 +34,7 @@ public class InitTraverse : Traverse
 
 
 
-        this.Compile.Check.Add(pair);
+        this.Create.Check.Add(pair);
 
 
 

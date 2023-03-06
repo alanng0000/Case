@@ -8,7 +8,7 @@ public class Traverse
 {
     public virtual bool Init()
     {
-        this.Refer = this.Compile.Refer;
+        this.Refer = this.Create.Refer;
 
 
 
@@ -29,7 +29,7 @@ public class Traverse
 
 
 
-    public virtual Create Compile
+    public virtual Create Create
     {
         get; set;
     }
@@ -2023,7 +2023,7 @@ public class Traverse
 
     protected virtual Check Check(NodeNode node)
     {
-        return (Check)this.Compile.Check.Get(node);
+        return (Check)this.Create.Check.Get(node);
     }
 
 
@@ -2034,7 +2034,7 @@ public class Traverse
         Class ret;
 
 
-        ret = this.Compile.Class(name);
+        ret = this.Create.Class(name);
 
 
         return ret;
@@ -2120,7 +2120,7 @@ public class Traverse
 
     protected bool Error(ErrorKind kind, NodeNode node)
     {
-        this.Compile.Error(kind, node, this.Source);
+        this.Create.Error(kind, node, this.Source);
 
 
 
