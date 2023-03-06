@@ -1,13 +1,13 @@
-namespace Case.Tool.SemaModuleGen;
+namespace Case.Tool.SemaModeGen;
 
 
 
 
 class Create : Object
 {
-    public Module ExecuteSemaModule()
+    public Mode ExecuteSemaMode()
     {
-        ModuleRef varRef;
+        ModeRef varRef;
 
         varRef = this.ExecuteSemaRef();
         
@@ -35,10 +35,10 @@ class Create : Object
 
 
 
-        Module module;
+        Mode module;
 
 
-        module = new Module();
+        module = new Mode();
 
 
         module.Init();
@@ -57,7 +57,7 @@ class Create : Object
 
 
 
-        Module ret;
+        Mode ret;
 
         ret = module;
 
@@ -70,15 +70,15 @@ class Create : Object
 
 
 
-    private ModuleRef ExecuteSemaRef()
+    private ModeRef ExecuteSemaRef()
     {
-        ModuleInt varInt;
+        ModeInt varInt;
 
         varInt = this.ExecuteSemaInt();
 
 
 
-        ModuleVer ver;
+        ModeVer ver;
 
         ver = this.ExecuteSemaVer();
 
@@ -86,9 +86,9 @@ class Create : Object
 
 
 
-        ModuleRef varRef;
+        ModeRef varRef;
 
-        varRef = new ModuleRef();
+        varRef = new ModeRef();
 
         varRef.Init();
 
@@ -99,7 +99,7 @@ class Create : Object
 
 
 
-        ModuleRef ret;
+        ModeRef ret;
 
         ret = varRef;
 
@@ -113,7 +113,7 @@ class Create : Object
 
 
 
-    private ModuleInt ExecuteSemaInt()
+    private ModeInt ExecuteSemaInt()
     {
         CaseConstant constant;
 
@@ -121,9 +121,9 @@ class Create : Object
 
 
 
-        ModuleInt varInt;
+        ModeInt varInt;
 
-        varInt = new ModuleInt();
+        varInt = new ModeInt();
 
         varInt.Init();
 
@@ -132,7 +132,7 @@ class Create : Object
 
 
 
-        ModuleInt ret;
+        ModeInt ret;
 
         ret = varInt;
 
@@ -144,7 +144,7 @@ class Create : Object
 
 
 
-    private ModuleVer ExecuteSemaVer()
+    private ModeVer ExecuteSemaVer()
     {
         CaseConstant constant;
 
@@ -152,9 +152,9 @@ class Create : Object
 
 
 
-        ModuleVer ver;
+        ModeVer ver;
 
-        ver = new ModuleVer();
+        ver = new ModeVer();
 
         ver.Init();
 
@@ -163,7 +163,7 @@ class Create : Object
 
 
 
-        ModuleVer ret;
+        ModeVer ret;
 
         ret = ver;
 
@@ -174,7 +174,7 @@ class Create : Object
 
 
 
-    private ModuleName ExecuteSemaName()
+    private ModeName ExecuteSemaName()
     {
         CaseConstant constant;
 
@@ -183,9 +183,9 @@ class Create : Object
 
 
 
-        ModuleName name;
+        ModeName name;
 
-        name = new ModuleName();
+        name = new ModeName();
 
         name.Init();
 
@@ -193,7 +193,7 @@ class Create : Object
 
 
 
-        ModuleName ret;
+        ModeName ret;
 
         ret = name;
 
@@ -330,7 +330,7 @@ class Create : Object
 
         while (i < count)
         {
-            ModuleExport export;
+            ModeExport export;
 
             export = this.CreateExport(i);
 
@@ -358,11 +358,11 @@ class Create : Object
 
 
 
-    private ModuleExport CreateExport(int index)
+    private ModeExport CreateExport(int index)
     {
-        ModuleExport export;
+        ModeExport export;
 
-        export = new ModuleExport();
+        export = new ModeExport();
 
         export.Init();
 
@@ -371,7 +371,7 @@ class Create : Object
 
 
 
-        ModuleExport ret;
+        ModeExport ret;
 
         ret = export;
 

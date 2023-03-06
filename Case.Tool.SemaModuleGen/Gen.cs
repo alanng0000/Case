@@ -1,17 +1,17 @@
-namespace Case.Tool.SemaModuleGen;
+namespace Case.Tool.SemaModeGen;
 
 
 
 
 class Gen : Object
 {
-    private Module SemaModule { get; set; }
+    private Mode SemaMode { get; set; }
 
 
 
     public int Execute()
     {
-        this.CreateSemaModule();
+        this.CreateSemaMode();
 
 
 
@@ -19,7 +19,7 @@ class Gen : Object
 
 
 
-        this.WriteModule();
+        this.WriteMode();
 
 
 
@@ -34,7 +34,7 @@ class Gen : Object
 
 
 
-    private bool CreateSemaModule()
+    private bool CreateSemaMode()
     {
         Create create;
 
@@ -44,13 +44,13 @@ class Gen : Object
 
 
 
-        Module m;
+        Mode m;
 
-        m = create.ExecuteSemaModule();
+        m = create.ExecuteSemaMode();
 
 
 
-        this.SemaModule = m;
+        this.SemaMode = m;
 
 
 
@@ -61,16 +61,16 @@ class Gen : Object
 
 
 
-    private bool WriteModule()
+    private bool WriteMode()
     {
-        ModuleWrite write;
+        ModeWrite write;
 
-        write = new ModuleWrite();
+        write = new ModeWrite();
 
         write.Init();
 
 
-        write.Mode = this.SemaModule;
+        write.Mode = this.SemaMode;
 
 
 
@@ -94,9 +94,9 @@ class Gen : Object
 
     private bool SetPath()
     {
-        ModulePath modulePath;
+        ModePath modulePath;
 
-        modulePath = ModulePath.This;
+        modulePath = ModePath.This;
 
 
 
@@ -105,7 +105,7 @@ class Gen : Object
         string s;
 
 
-        s = modulePath.Mode(this.SemaModule.Ref);
+        s = modulePath.Mode(this.SemaMode.Ref);
 
 
 

@@ -1,4 +1,4 @@
-namespace Case.Tool.SemaModuleGen;
+namespace Case.Tool.SemaModeGen;
 
 
 
