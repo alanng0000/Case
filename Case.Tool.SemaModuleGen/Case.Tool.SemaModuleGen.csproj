@@ -8,7 +8,7 @@
     <ItemGroup>
         <ProjectReference Include="../../Sema/Sema/Sema.csproj" />
         <ProjectReference Include="../../Sema/Sema.List/Sema.List.csproj" />
-        <ProjectReference Include="../../Sema/Sema.Module/Sema.Module.csproj" />
+        <ProjectReference Include="../../Sema/Sema.Mode/Sema.Mode.csproj" />
         <ProjectReference Include="../Case.Infra/Case.Infra.csproj" />
         <ProjectReference Include="../Case.Check/Case.Check.csproj" />
     </ItemGroup>

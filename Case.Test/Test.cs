@@ -1465,16 +1465,16 @@ public class Test
 
 
 
-        this.AddImport(constant.SystemObjectName);
+        this.AddImport(constant.SemaObjectName);
 
 
-        this.AddImport(constant.SystemBoolName);
+        this.AddImport(constant.SemaBoolName);
 
 
-        this.AddImport(constant.SystemIntName);
+        this.AddImport(constant.SemaIntName);
 
 
-        this.AddImport(constant.SystemStringName);
+        this.AddImport(constant.SemaStringName);
 
 
 
@@ -1573,7 +1573,7 @@ public class Test
 
         PortModuleName module;
 
-        module = this.CreatePortModuleName(constant.SystemName);
+        module = this.CreatePortModuleName(constant.SemaName);
 
 
 
@@ -1584,7 +1584,7 @@ public class Test
 
         ver.Init();
 
-        ver.Value = constant.SystemVer;
+        ver.Value = constant.SemaVer;
 
 
 

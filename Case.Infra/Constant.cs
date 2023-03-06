@@ -40,30 +40,30 @@ public class Constant : Object
 
 
 
-        this.SystemIntent = 0;
+        this.SemaIntent = 0;
 
 
 
-        this.SystemVer = 0;
+        this.SemaVer = 0;
 
 
 
-        this.SystemName = "Sema";
+        this.SemaName = "Sema";
 
 
 
 
 
-        this.SystemObjectName = "Object";
+        this.SemaObjectName = "Object";
 
 
-        this.SystemBoolName = "Bool";
+        this.SemaBoolName = "Bool";
 
 
-        this.SystemIntName = "Int";
+        this.SemaIntName = "Int";
 
 
-        this.SystemStringName = "String";
+        this.SemaStringName = "String";
 
 
 
@@ -103,7 +103,7 @@ public class Constant : Object
 
 
 
-    public ulong SystemIntent
+    public ulong SemaIntent
     {
         get;
         private set;
@@ -111,7 +111,7 @@ public class Constant : Object
 
 
 
-    public ulong SystemVer
+    public ulong SemaVer
     {
         get;
         private set;
@@ -119,16 +119,7 @@ public class Constant : Object
 
 
 
-    public string SystemName
-    {
-        get;
-        private set;
-    }
-
-
-
-
-    public string SystemObjectName
+    public string SemaName
     {
         get;
         private set;
@@ -137,7 +128,7 @@ public class Constant : Object
 
 
 
-    public string SystemBoolName
+    public string SemaObjectName
     {
         get;
         private set;
@@ -145,7 +136,8 @@ public class Constant : Object
 
 
 
-    public string SystemIntName
+
+    public string SemaBoolName
     {
         get;
         private set;
@@ -153,7 +145,15 @@ public class Constant : Object
 
 
 
-    public string SystemStringName
+    public string SemaIntName
+    {
+        get;
+        private set;
+    }
+
+
+
+    public string SemaStringName
     {
         get;
         private set;

@@ -70,7 +70,7 @@ class Gen : Object
         write.Init();
 
 
-        write.Module = this.SemaModule;
+        write.Mode = this.SemaModule;
 
 
 
@@ -105,7 +105,7 @@ class Gen : Object
         string s;
 
 
-        s = modulePath.Module(this.SemaModule.Ref);
+        s = modulePath.Mode(this.SemaModule.Ref);
 
 
 
@@ -113,7 +113,7 @@ class Gen : Object
         string su;
 
 
-        su = modulePath.ModuleDataName;
+        su = modulePath.ModeDataName;
 
 
 
