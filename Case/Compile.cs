@@ -25,7 +25,7 @@ public class Compile : Object
 
 
 
-    private NodeCompile Node { get; set; }
+    private NodeCreate Node { get; set; }
 
 
 
@@ -121,14 +121,14 @@ public class Compile : Object
 
 
 
-    protected virtual NodeCompile CreateNode()
+    protected virtual NodeCreate CreateNode()
     {
-        NodeCompile compile;
+        NodeCreate compile;
 
 
 
 
-        compile = new NodeCompile();
+        compile = new NodeCreate();
 
 
 
@@ -139,7 +139,7 @@ public class Compile : Object
 
 
 
-        NodeCompile ret;
+        NodeCreate ret;
 
 
         ret = compile;

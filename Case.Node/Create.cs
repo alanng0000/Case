@@ -4,7 +4,7 @@ namespace Case.Node;
 
 
 
-public class Compile : InfraCompile
+public class Create : InfraCompile
 {
     public SourceArray SourceList { get; set; }
 
