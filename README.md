@@ -1,3 +1,3 @@
 # Case
 
-Program Lang.
+Prom Lang.
