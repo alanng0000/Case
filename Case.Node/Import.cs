@@ -25,4 +25,5 @@ global using StringInfra = Case.Infra.StringInfra;
 global using Code = Case.Token.Code;
 global using TokenResult = Case.Token.Result;
 global using TokenToken = Case.Token.Token;
-global using Exception = System.Exception;
+global using SystemConsole = System.Console;
+global using SystemEnvironment = System.Environment;

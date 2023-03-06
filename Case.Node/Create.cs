@@ -7036,7 +7036,9 @@ public class Create : InfraCreate
 
         if (this.NewId == ulong.MaxValue)
         {
-            throw new Exception("Compile Node Info New Id Cannot Increment Further");
+            SystemConsole.Write("Error: Class.Node:Create NodeInfo New Id Fail\n");
+
+            SystemEnvironment.Exit(11);
         }
 
 
