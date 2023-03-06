@@ -20,7 +20,7 @@ public class Create : Object
 
 
 
-    private TokenCompile Token { get; set; }
+    private TokenCreate Token { get; set; }
 
 
 
@@ -89,14 +89,14 @@ public class Create : Object
 
 
 
-    protected virtual TokenCompile CreateToken()
+    protected virtual TokenCreate CreateToken()
     {
-        TokenCompile compile;
+        TokenCreate compile;
 
 
 
 
-        compile = new TokenCompile();
+        compile = new TokenCreate();
 
 
 
@@ -107,7 +107,7 @@ public class Create : Object
 
 
 
-        TokenCompile ret;
+        TokenCreate ret;
 
 
         ret = compile;
