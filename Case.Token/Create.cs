@@ -2,7 +2,7 @@ namespace Case.Token;
 
 
 
-public class Create : InfraCompile
+public class Create : InfraCreate
 {
     public SourceArray SourceList { get; set; }
 
