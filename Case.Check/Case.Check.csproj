@@ -5,9 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../../System/System.Infra/System.Infra.csproj" />
-        <ProjectReference Include="../../System/System.List/System.List.csproj" />
-        <ProjectReference Include="../../System/System.Module/System.Module.csproj" />
+        <ProjectReference Include="../../Sema/Sema/Sema.csproj" />
+        <ProjectReference Include="../../Sema/Sema.List/Sema.List.csproj" />
+        <ProjectReference Include="../../Sema/Sema.Module/Sema.Module.csproj" />
         <ProjectReference Include="../Case.Infra/Case.Infra.csproj" />
         <ProjectReference Include="../Case.Port/Case.Port.csproj" />
         <ProjectReference Include="../Case.Node/Case.Node.csproj" />
