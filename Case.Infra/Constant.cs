@@ -96,11 +96,6 @@ public class Constant : Object
 
 
 
-        this.NullClassIndex = 0xffffffffffffffff;
-
-
-
-
 
         return true;
     }
@@ -215,17 +210,6 @@ public class Constant : Object
 
 
     public char Hash
-    {
-        get;
-        private set;
-    }
-
-
-
-
-
-
-    public ulong NullClassIndex
     {
         get;
         private set;

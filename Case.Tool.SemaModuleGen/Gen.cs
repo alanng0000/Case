@@ -1,17 +1,17 @@
-namespace Case.Tool.SystemModuleGen;
+namespace Case.Tool.SemaModuleGen;
 
 
 
 
 class Gen : Object
 {
-    private Module SystemModule { get; set; }
+    private Module SemaModule { get; set; }
 
 
 
     public int Execute()
     {
-        this.CreateSystemModule();
+        this.CreateSemaModule();
 
 
 
@@ -34,7 +34,7 @@ class Gen : Object
 
 
 
-    private bool CreateSystemModule()
+    private bool CreateSemaModule()
     {
         Create create;
 
@@ -46,11 +46,11 @@ class Gen : Object
 
         Module m;
 
-        m = create.ExecuteSystemModule();
+        m = create.ExecuteSemaModule();
 
 
 
-        this.SystemModule = m;
+        this.SemaModule = m;
 
 
 
@@ -70,7 +70,7 @@ class Gen : Object
         write.Init();
 
 
-        write.Module = this.SystemModule;
+        write.Module = this.SemaModule;
 
 
 
@@ -105,7 +105,7 @@ class Gen : Object
         string s;
 
 
-        s = modulePath.Module(this.SystemModule.Ref);
+        s = modulePath.Module(this.SemaModule.Ref);
 
 
 

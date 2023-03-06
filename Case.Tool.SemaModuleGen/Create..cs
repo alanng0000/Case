@@ -1,35 +1,35 @@
-namespace Case.Tool.SystemModuleGen;
+namespace Case.Tool.SemaModuleGen;
 
 
 
 
 class Create : Object
 {
-    public Module ExecuteSystemModule()
+    public Module ExecuteSemaModule()
     {
         ModuleRef varRef;
 
-        varRef = this.ExecuteSystemRef();
+        varRef = this.ExecuteSemaRef();
         
 
 
 
         Array varClass;
 
-        varClass = this.ExecuteSystemClass();
+        varClass = this.ExecuteSemaClass();
 
 
 
 
         Array import;
 
-        import = this.ExecuteSystemImport();
+        import = this.ExecuteSemaImport();
 
 
 
         Array export;
 
-        export = this.ExecuteSystemExport();
+        export = this.ExecuteSemaExport();
 
 
 
@@ -70,17 +70,17 @@ class Create : Object
 
 
 
-    private ModuleRef ExecuteSystemRef()
+    private ModuleRef ExecuteSemaRef()
     {
         ModuleInt varInt;
 
-        varInt = this.ExecuteSystemInt();
+        varInt = this.ExecuteSemaInt();
 
 
 
         ModuleVer ver;
 
-        ver = this.ExecuteSystemVer();
+        ver = this.ExecuteSemaVer();
 
 
 
@@ -113,7 +113,7 @@ class Create : Object
 
 
 
-    private ModuleInt ExecuteSystemInt()
+    private ModuleInt ExecuteSemaInt()
     {
         CaseConstant constant;
 
@@ -127,7 +127,7 @@ class Create : Object
 
         varInt.Init();
 
-        varInt.Value = constant.SystemIntent;
+        varInt.Value = constant.SemaIntent;
 
 
 
@@ -144,7 +144,7 @@ class Create : Object
 
 
 
-    private ModuleVer ExecuteSystemVer()
+    private ModuleVer ExecuteSemaVer()
     {
         CaseConstant constant;
 
@@ -158,7 +158,7 @@ class Create : Object
 
         ver.Init();
 
-        ver.Value = constant.SystemVer;
+        ver.Value = constant.SemaVer;
 
 
 
@@ -174,7 +174,7 @@ class Create : Object
 
 
 
-    private ModuleName ExecuteSystemName()
+    private ModuleName ExecuteSemaName()
     {
         CaseConstant constant;
 
@@ -189,7 +189,7 @@ class Create : Object
 
         name.Init();
 
-        name.Value = constant.SystemName;
+        name.Value = constant.SemaName;
 
 
 
@@ -204,7 +204,7 @@ class Create : Object
 
 
 
-    private Array ExecuteSystemClass()
+    private Array ExecuteSemaClass()
     {
         string objectName;
 
@@ -281,7 +281,7 @@ class Create : Object
 
 
 
-    private Array ExecuteSystemImport()
+    private Array ExecuteSemaImport()
     {
         Array array;
 
@@ -303,7 +303,7 @@ class Create : Object
 
 
 
-    private Array ExecuteSystemExport()
+    private Array ExecuteSemaExport()
     {
         Array array;
 
