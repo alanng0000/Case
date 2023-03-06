@@ -1,4 +1,4 @@
-global using Data = System.Infra.Data;
+global using Data = Sema.Data;
 global using ListIter = System.List.ListIter;
 global using Map = System.List.Map;
 global using MapIter = System.List.MapIter;

@@ -1,5 +1,5 @@
-global using StringCompare = System.Infra.StringCompare;
-global using StringComparer = System.Infra.StringComparer;
+global using StringCompare = Sema.StringCompare;
+global using StringComparer = Sema.StringComparer;
 global using List = System.List.List;
 global using Map = System.List.Map;
 global using Array = System.List.Array;

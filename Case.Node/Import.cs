@@ -1,8 +1,8 @@
-global using Object = System.Infra.Object;
-global using Range = System.Infra.Range;
-global using StringCompare = System.Infra.StringCompare;
-global using RangeInfra = System.Infra.RangeInfra;
-global using ObjectInfra = System.Infra.ObjectInfra;
+global using Object = Sema.Object;
+global using Range = Sema.Range;
+global using StringCompare = Sema.StringCompare;
+global using RangeInfra = Sema.RangeInfra;
+global using ObjectInfra = Sema.ObjectInfra;
 global using List = System.List.List;
 global using Map = System.List.Map;
 global using Array = System.List.Array;

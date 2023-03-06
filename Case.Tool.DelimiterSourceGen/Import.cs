@@ -1,7 +1,7 @@
-global using Object = System.Infra.Object;
-global using Range = System.Infra.Range;
-global using RangeInfra = System.Infra.RangeInfra;
-global using StringCompare = System.Infra.StringCompare;
+global using Object = Sema.Object;
+global using Range = Sema.Range;
+global using RangeInfra = Sema.RangeInfra;
+global using StringCompare = Sema.StringCompare;
 global using List = System.List.List;
 global using ListIter = System.List.ListIter;
 global using Map = System.List.Map;

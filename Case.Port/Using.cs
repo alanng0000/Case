@@ -1,6 +1,6 @@
-global using Object = System.Infra.Object;
-global using Range = System.Infra.Range;
-global using RangeInfra = System.Infra.RangeInfra;
+global using Object = Sema.Object;
+global using Range = Sema.Range;
+global using RangeInfra = Sema.RangeInfra;
 global using List = System.List.List;
 global using Text = System.Text.Text;
 global using Line = System.Text.Line;

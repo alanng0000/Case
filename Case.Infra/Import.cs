@@ -1,9 +1,9 @@
-global using Object = System.Infra.Object;
-global using Range = System.Infra.Range;
-global using RangeInfra = System.Infra.RangeInfra;
-global using Compare = System.Infra.Compare;
-global using InfraConvert = System.Infra.Convert;
-global using InfraConstant = System.Infra.Constant;
+global using Object = Sema.Object;
+global using Range = Sema.Range;
+global using RangeInfra = Sema.RangeInfra;
+global using Compare = Sema.Compare;
+global using InfraConvert = Sema.Convert;
+global using InfraConstant = Sema.Constant;
 global using List = System.List.List;
 global using Array = System.List.Array;
 global using Text = System.Text.Text;

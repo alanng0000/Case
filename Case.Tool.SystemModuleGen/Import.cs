@@ -1,7 +1,7 @@
-global using Object = System.Infra.Object;
-global using Data = System.Infra.Data;
-global using Convert = System.Infra.Convert;
-global using Constant = System.Infra.Constant;
+global using Object = Sema.Object;
+global using Data = Sema.Data;
+global using Convert = Sema.Convert;
+global using Constant = Sema.Constant;
 global using Array = System.List.Array;
 global using Module = System.Module.Module;
 global using ModuleWrite = System.Module.Write;
