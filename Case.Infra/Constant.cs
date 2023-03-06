@@ -48,7 +48,7 @@ public class Constant : Object
 
 
 
-        this.SystemName = "System";
+        this.SystemName = "Sema";
 
 
 

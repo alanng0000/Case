@@ -126,7 +126,7 @@ class Unit : global::Case.Test.Module.Unit
 
 
 
-        bb = (name == "System" & 
+        bb = (name == "Sema" & 
             classIndex == 0
             );
 

@@ -1,8 +1,8 @@
 global using Data = Sema.Data;
-global using ListIter = System.List.ListIter;
-global using Map = System.List.Map;
-global using MapIter = System.List.MapIter;
-global using Pair = System.List.Pair;
+global using ListIter = Sema.List.ListIter;
+global using Map = Sema.List.Map;
+global using MapIter = Sema.List.MapIter;
+global using Pair = Sema.List.Pair;
 global using InfraCreate = Case.Infra.Create;
 global using SourceArray = Case.Infra.SourceArray;
 global using ErrorList = Case.Infra.ErrorList;
@@ -70,4 +70,3 @@ global using CheckModuleMap = Case.Check.ModuleMap;
 global using ClassCompare = Case.Check.ClassCompare;
 global using Traverse = Case.Check.Traverse;
 global using ConstantClass = Case.Check.ConstantClass;
-global using NullableInt64 = System.Nullable<ulong>;

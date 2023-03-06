@@ -1,11 +1,11 @@
 global using StringCompare = Sema.StringCompare;
 global using StringComparer = Sema.StringComparer;
-global using List = System.List.List;
-global using Map = System.List.Map;
-global using Array = System.List.Array;
-global using Pair = System.List.Pair;
-global using ListIter = System.List.ListIter;
-global using MapIter = System.List.MapIter;
+global using List = Sema.List.List;
+global using Map = Sema.List.Map;
+global using Array = Sema.List.Array;
+global using Pair = Sema.List.Pair;
+global using ListIter = Sema.List.ListIter;
+global using MapIter = Sema.List.MapIter;
 global using Constant = Case.Infra.Constant;
 global using PortPort = Case.Port.Port;
 global using PortModuleName = Case.Port.ModuleName;

@@ -29,7 +29,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.System = this.Create.ConstantClass;
+        this.Sema = this.Create.ConstantClass;
 
 
 
@@ -109,7 +109,7 @@ public class StateTraverse : Traverse
 
 
 
-    public ConstantClass System { get; set; }
+    public ConstantClass Sema { get; set; }
 
 
 
@@ -377,7 +377,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.CurrentResultClass = this.System.Bool;
+        this.CurrentResultClass = this.Sema.Bool;
 
 
 
@@ -1359,7 +1359,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (!this.CheckClass(leftClass, this.System.Bool))
+            if (!this.CheckClass(leftClass, this.Sema.Bool))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, andExpress, ref hasOperandUnassignable);
             }
@@ -1379,7 +1379,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (!this.CheckClass(rightClass, this.System.Bool))
+            if (!this.CheckClass(rightClass, this.Sema.Bool))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, andExpress, ref hasOperandUnassignable);
             }
@@ -1388,7 +1388,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(andExpress).ExpressClass = this.System.Bool;
+        this.Check(andExpress).ExpressClass = this.Sema.Bool;
 
 
 
@@ -1487,7 +1487,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (! this.CheckClass(leftClass, this.System.Bool))
+            if (! this.CheckClass(leftClass, this.Sema.Bool))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, ornExpress, ref hasOperandUnassignable);
             }
@@ -1507,7 +1507,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (! this.CheckClass(rightClass, this.System.Bool))
+            if (! this.CheckClass(rightClass, this.Sema.Bool))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, ornExpress, ref hasOperandUnassignable);
             }
@@ -1516,7 +1516,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(ornExpress).ExpressClass = this.System.Bool;
+        this.Check(ornExpress).ExpressClass = this.Sema.Bool;
 
 
 
@@ -1578,7 +1578,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(boolClass))
         {
-            if (! this.CheckClass(boolClass, this.System.Bool))
+            if (! this.CheckClass(boolClass, this.Sema.Bool))
             {
                 this.Error(this.ErrorKind.OperandUnassignable, notExpress);
             }
@@ -1587,7 +1587,7 @@ public class StateTraverse : Traverse
 
             
 
-        this.Check(notExpress).ExpressClass = this.System.Bool;
+        this.Check(notExpress).ExpressClass = this.Sema.Bool;
 
 
 
@@ -1687,7 +1687,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (! this.CheckClass(leftClass, this.System.Int))
+            if (! this.CheckClass(leftClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, addExpress, ref hasOperandUnassignable);
             }
@@ -1707,7 +1707,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (! this.CheckClass(rightClass, this.System.Int))
+            if (! this.CheckClass(rightClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, addExpress, ref hasOperandUnassignable);
             }
@@ -1717,7 +1717,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(addExpress).ExpressClass = this.System.Int;
+        this.Check(addExpress).ExpressClass = this.Sema.Int;
 
 
 
@@ -1817,7 +1817,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (! this.CheckClass(leftClass, this.System.Int))
+            if (! this.CheckClass(leftClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, subExpress, ref hasOperandUnassignable);
             }
@@ -1837,7 +1837,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (! this.CheckClass(rightClass, this.System.Int))
+            if (! this.CheckClass(rightClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, subExpress, ref hasOperandUnassignable);
             }
@@ -1847,7 +1847,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(subExpress).ExpressClass = this.System.Int;
+        this.Check(subExpress).ExpressClass = this.Sema.Int;
 
 
 
@@ -1946,7 +1946,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (! this.CheckClass(leftClass, this.System.Int))
+            if (! this.CheckClass(leftClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, mulExpress, ref hasOperandUnassignable);
             }
@@ -1966,7 +1966,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (! this.CheckClass(rightClass, this.System.Int))
+            if (! this.CheckClass(rightClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, mulExpress, ref hasOperandUnassignable);
             }
@@ -1976,7 +1976,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(mulExpress).ExpressClass = this.System.Int;
+        this.Check(mulExpress).ExpressClass = this.Sema.Int;
 
 
 
@@ -2075,7 +2075,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (! this.CheckClass(leftClass, this.System.Int))
+            if (! this.CheckClass(leftClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, divExpress, ref hasOperandUnassignable);
             }
@@ -2095,7 +2095,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (! this.CheckClass(rightClass, this.System.Int))
+            if (! this.CheckClass(rightClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, divExpress, ref hasOperandUnassignable);
             }
@@ -2105,7 +2105,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(divExpress).ExpressClass = this.System.Int;
+        this.Check(divExpress).ExpressClass = this.Sema.Int;
 
 
 
@@ -2208,7 +2208,7 @@ public class StateTraverse : Traverse
         
 
 
-        this.Check(equalExpress).ExpressClass = this.System.Bool;
+        this.Check(equalExpress).ExpressClass = this.Sema.Bool;
 
 
 
@@ -2308,7 +2308,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (! this.CheckClass(leftClass, this.System.Int))
+            if (! this.CheckClass(leftClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, lessExpress, ref hasOperandUnassignable);
             }
@@ -2328,7 +2328,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (! this.CheckClass(rightClass, this.System.Int))
+            if (! this.CheckClass(rightClass, this.Sema.Int))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, lessExpress, ref hasOperandUnassignable);
             }
@@ -2338,7 +2338,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(lessExpress).ExpressClass = this.System.Bool;
+        this.Check(lessExpress).ExpressClass = this.Sema.Bool;
 
 
 
@@ -2437,7 +2437,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(leftClass))
         {
-            if (! this.CheckClass(leftClass, this.System.String))
+            if (! this.CheckClass(leftClass, this.Sema.String))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, joinExpress, ref hasOperandUnassignable);
             }
@@ -2457,7 +2457,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(rightClass))
         {
-            if (! this.CheckClass(rightClass, this.System.String))
+            if (! this.CheckClass(rightClass, this.Sema.String))
             {
                 this.UniqueError(this.ErrorKind.OperandUnassignable, joinExpress, ref hasOperandUnassignable);
             }
@@ -2467,7 +2467,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.Check(joinExpress).ExpressClass = this.System.String;
+        this.Check(joinExpress).ExpressClass = this.Sema.String;
 
 
 
@@ -2925,7 +2925,7 @@ public class StateTraverse : Traverse
 
         if (!this.Null(condClass))
         {
-            if (!this.CheckClass(condClass, this.System.Bool))
+            if (!this.CheckClass(condClass, this.Sema.Bool))
             {
                 this.Error(this.ErrorKind.CondUnassignable, ifState);
             }
@@ -3001,7 +3001,7 @@ public class StateTraverse : Traverse
 
         if (!this.Null(condClass))
         {
-            if (!this.CheckClass(condClass, this.System.Bool))
+            if (!this.CheckClass(condClass, this.Sema.Bool))
             {
                 this.Error(this.ErrorKind.CondUnassignable, whileState);
             }
@@ -3224,17 +3224,17 @@ public class StateTraverse : Traverse
         {
             if (constant is BoolConstant)
             {
-                constantClass = this.System.Bool;
+                constantClass = this.Sema.Bool;
             }
 
             if (constant is IntConstant)
             {
-                constantClass = this.System.Int;
+                constantClass = this.Sema.Int;
             }
 
             if (constant is StringConstant)
             {
-                constantClass = this.System.String;
+                constantClass = this.Sema.String;
             }
         }
 
