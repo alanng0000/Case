@@ -4,7 +4,7 @@ namespace Case.Module;
 
 
 
-public class Compile : InfraCompile
+public class Create : InfraCreate
 {
     public Result Result { get; set; }
 
