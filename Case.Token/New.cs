@@ -7,7 +7,7 @@ namespace Case.Token;
 
 class New : Object
 {
-    public Create Compile { get; set; }
+    public Create Create { get; set; }
 
 
 

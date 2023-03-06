@@ -39,12 +39,12 @@ class AddNew : New
         token = new Token();
         
 
-        token.Range = this.Compile.Range;
+        token.Range = this.Create.Range;
 
 
 
 
-        this.Compile.Code.Token.Set(this.TokenCount, token);
+        this.Create.Code.Token.Set(this.TokenCount, token);
 
 
 
@@ -68,13 +68,13 @@ class AddNew : New
         comment = new Comment();
 
 
-        comment.Range = this.Compile.Range;
+        comment.Range = this.Create.Range;
 
 
 
         
         
-        this.Compile.Code.Comment.Set(this.CommentCount, comment);
+        this.Create.Code.Comment.Set(this.CommentCount, comment);
 
 
 

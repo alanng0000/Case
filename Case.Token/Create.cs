@@ -49,7 +49,7 @@ public class Create : InfraCompile
         this.CountNew = new CountNew();
 
 
-        this.CountNew.Compile = this;
+        this.CountNew.Create = this;
 
 
         this.CountNew.Init();
@@ -62,7 +62,7 @@ public class Create : InfraCompile
         this.AddNew = new AddNew();
 
 
-        this.AddNew.Compile = this;
+        this.AddNew.Create = this;
 
 
         this.AddNew.Init();
