@@ -1,4 +1,4 @@
-namespace Case.Token;
+namespace Case.Infra;
 
 
 
@@ -20,5 +20,5 @@ public struct TextRange
 
 
 
-    public InfraRange Range;
+    public Range Range;
 }

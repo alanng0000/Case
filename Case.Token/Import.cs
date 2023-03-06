@@ -14,6 +14,7 @@ global using InfraCreate = Case.Infra.Create;
 global using Source = Case.Infra.Source;
 global using SourceArray = Case.Infra.SourceArray;
 global using ErrorList = Case.Infra.ErrorList;
+global using TextRange = Case.Infra.TextRange;
 global using Constant = Case.Infra.Constant;
 global using TokenStructArray = System.List.StructArray<Case.Token.Token>;
 global using CommentStructArray = System.List.StructArray<Case.Token.Comment>;
