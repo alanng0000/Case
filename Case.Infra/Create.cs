@@ -5,7 +5,7 @@ namespace Case.Infra;
 
 
 
-public class Compile : Object
+public class Create : Object
 {
     protected ErrorList ErrorList { get; set; }
 
