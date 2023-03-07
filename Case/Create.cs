@@ -5,7 +5,7 @@ namespace Case;
 
 public class Create : Object
 {
-    public Class Class { get; set; }
+    public Case Class { get; set; }
 
 
 

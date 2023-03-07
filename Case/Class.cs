@@ -4,7 +4,7 @@ namespace Case;
 
 
 
-public class Class : Object
+public class Case : Object
 {
     public SourceArray Source { get; set; }
 

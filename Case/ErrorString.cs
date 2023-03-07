@@ -5,7 +5,7 @@ namespace Case;
 
 class ErrorString : Object
 {
-    public Class Class { get; set; }
+    public Case Class { get; set; }
 
 
 

@@ -312,7 +312,7 @@ public class Test
     private int PassCount { get; set; }
 
 
-    private ClassClass Class { get; set; }
+    private Case Class { get; set; }
 
 
 
@@ -1340,13 +1340,13 @@ public class Test
 
 
 
-    protected virtual ClassClass CreateClass()
+    protected virtual Case CreateClass()
     {
-        ClassClass t;
+        Case t;
 
 
 
-        t = new ClassClass();
+        t = new Case();
 
 
 
@@ -1356,7 +1356,7 @@ public class Test
 
 
 
-        ClassClass ret;
+        Case ret;
 
 
         ret = t;
