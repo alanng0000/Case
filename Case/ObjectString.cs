@@ -382,6 +382,14 @@ class ObjectString : Object
 
 
 
+            
+            if (fieldName == "Int")
+            {
+                continue;
+            }
+
+            
+
 
             bool objectIsNode;
 
