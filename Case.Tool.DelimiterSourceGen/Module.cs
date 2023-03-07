@@ -284,7 +284,7 @@ class Module : Object
 
 
 
-            pair.Value = delimiter;
+            pair.Valu = delimiter;
 
 
 

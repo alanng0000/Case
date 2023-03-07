@@ -47,7 +47,7 @@ class Create : Object
         module.Ref = varRef;
 
 
-        module.Class = varClass;
+        module.Case = varClass;
 
 
         module.Import = import;
@@ -127,7 +127,7 @@ class Create : Object
 
         varInt.Init();
 
-        varInt.Value = constant.SemaIntent;
+        varInt.Valu = constant.SemaIntent;
 
 
 
@@ -158,7 +158,7 @@ class Create : Object
 
         ver.Init();
 
-        ver.Value = constant.SemaVer;
+        ver.Valu = constant.SemaVer;
 
 
 
@@ -189,7 +189,7 @@ class Create : Object
 
         name.Init();
 
-        name.Value = constant.SemaName;
+        name.Valu = constant.SemaName;
 
 
 
@@ -366,7 +366,7 @@ class Create : Object
 
         export.Init();
 
-        export.Class = index;
+        export.Case = index;
 
 
 

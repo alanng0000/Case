@@ -148,7 +148,7 @@ class Gen : Object
 
     private bool WriteFile()
     {
-        File.WriteAllBytes(this.DataPath, this.Data.Value);
+        File.WriteAllBytes(this.DataPath, this.Data.Valu);
         
         
 
