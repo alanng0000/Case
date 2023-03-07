@@ -13,7 +13,7 @@ class New : Object
 
 
 
-    public virtual bool Token()
+    public virtual bool Toke()
     {
         return true;
     }

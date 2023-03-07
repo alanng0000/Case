@@ -32,7 +32,7 @@ class CountNew : New
 
 
 
-    public override bool Token()
+    public override bool Toke()
     {
         this.TokenCount = this.TokenCount + 1;
 

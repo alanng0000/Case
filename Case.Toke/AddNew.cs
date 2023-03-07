@@ -31,7 +31,7 @@ class AddNew : New
 
 
 
-    public override bool Token()
+    public override bool Toke()
     {
         Toke token;
         
