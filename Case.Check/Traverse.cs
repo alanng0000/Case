@@ -140,7 +140,7 @@ public class Traverse
             Member member;
 
 
-            member = (Member)iter.Value;
+            member = (Member)iter.Valu;
 
 
 
@@ -347,7 +347,7 @@ public class Traverse
             Param param;
 
 
-            param = (Param)iter.Value;
+            param = (Param)iter.Valu;
 
 
 
@@ -556,7 +556,7 @@ public class Traverse
             State state;
 
 
-            state = (State)iter.Value;
+            state = (State)iter.Valu;
 
 
 
@@ -1682,7 +1682,7 @@ public class Traverse
             Argue argue;
 
 
-            argue = (Argue)iter.Value;
+            argue = (Argue)iter.Valu;
 
 
 

@@ -465,7 +465,7 @@ public class Create : InfraCreate
         {
             Module module;
 
-            module = (Module)moduleIter.Value;
+            module = (Module)moduleIter.Valu;
 
 
 
@@ -485,7 +485,7 @@ public class Create : InfraCreate
 
                 Class varClass;
 
-                varClass = (Class)classIter.Value;
+                varClass = (Class)classIter.Valu;
 
 
 
@@ -703,7 +703,7 @@ public class Create : InfraCreate
 
 
 
-            varClass = (Class)iter.Value;
+            varClass = (Class)iter.Valu;
 
 
 
@@ -1026,7 +1026,7 @@ public class Create : InfraCreate
 
             if (b)
             {
-                t = (Class)iter.Value;
+                t = (Class)iter.Valu;
             }
 
 
@@ -1418,7 +1418,7 @@ public class Create : InfraCreate
             Tree tree;
 
 
-            tree = (Tree)treeIter.Value;
+            tree = (Tree)treeIter.Valu;
 
 
 
@@ -1426,7 +1426,7 @@ public class Create : InfraCreate
             Source source;
 
 
-            source = (Source)sourceIter.Value;
+            source = (Source)sourceIter.Valu;
 
 
 

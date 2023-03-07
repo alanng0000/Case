@@ -3736,7 +3736,7 @@ public class StateTraverse : Traverse
             Argue argue;
 
 
-            argue = (Argue)argueIter.Value;
+            argue = (Argue)argueIter.Valu;
 
 
 
@@ -3753,7 +3753,7 @@ public class StateTraverse : Traverse
             Var varVar;
 
 
-            varVar = (Var)varIter.Value;
+            varVar = (Var)varIter.Valu;
 
 
 
@@ -3834,7 +3834,7 @@ public class StateTraverse : Traverse
             VarMap varVars;
 
 
-            varVars = (VarMap)iter.Value;
+            varVars = (VarMap)iter.Valu;
 
 
 

@@ -121,7 +121,7 @@ class Infra : Object
         {
             Module module;
 
-            module = (Module)iter.Value;
+            module = (Module)iter.Valu;
 
 
 
@@ -298,7 +298,7 @@ class Infra : Object
 
             Class varClass;
 
-            varClass = (Class)iter.Value;
+            varClass = (Class)iter.Valu;
 
 
 
@@ -711,7 +711,7 @@ class Infra : Object
             Var varVar;
 
 
-            varVar = (Var)iter.Value;
+            varVar = (Var)iter.Valu;
 
 
 
