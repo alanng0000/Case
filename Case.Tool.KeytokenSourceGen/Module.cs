@@ -319,17 +319,17 @@ class Module : Object
 
 
 
-        string classTextFilePath;
+        string caseTextFilePath;
 
 
-        classTextFilePath = "Class.txt";
+        caseTextFilePath = "Case.txt";
 
 
 
         string s;
         
         
-        s = File.ReadAllText(classTextFilePath);
+        s = File.ReadAllText(caseTextFilePath);
 
 
 
@@ -345,7 +345,7 @@ class Module : Object
         string outputFilePath;
         
         
-        outputFilePath = "../../../../Class.Infra/Keytoken.cs";
+        outputFilePath = "../../../../Case.Infra/Keytoken.cs";
             
 
 
