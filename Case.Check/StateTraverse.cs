@@ -448,19 +448,19 @@ public class StateTraverse : Traverse
 
 
 
-        Var valueVar;
+        Var valuVar;
 
 
-        valueVar = new Var();
+        valuVar = new Var();
 
 
-        valueVar.Init();
+        valuVar.Init();
 
 
-        valueVar.Name = "value";
+        valuVar.Name = "valu";
 
 
-        valueVar.Class = field.Class;
+        valuVar.Class = field.Class;
 
 
 
@@ -471,7 +471,7 @@ public class StateTraverse : Traverse
 
 
 
-        this.VarMapAdd(o, valueVar);
+        this.VarMapAdd(o, valuVar);
 
 
 
