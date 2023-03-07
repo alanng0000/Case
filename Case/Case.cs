@@ -657,9 +657,9 @@ public class Case : Object
 
         if (kindModule | this.Kind(k.Token))
         {
-            if (!this.Null(this.Result.Token))
+            if (!this.Null(this.Result.Toke))
             {
-                this.WriteErrors(this.Result.Token.Error);
+                this.WriteErrors(this.Result.Toke.Error);
             }
         }
 
@@ -965,7 +965,7 @@ public class Case : Object
         ArrayIter codeIter;
 
 
-        codeIter = this.Result.Token.Code.Iter();
+        codeIter = this.Result.Toke.Code.Iter();
 
 
 

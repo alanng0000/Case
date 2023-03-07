@@ -5,7 +5,7 @@ namespace Case;
 
 public class Result : Object
 {
-    public TokenResult Token { get; set; }
+    public TokeResult Toke { get; set; }
 
 
 

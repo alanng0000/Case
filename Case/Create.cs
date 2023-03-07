@@ -20,7 +20,7 @@ public class Create : Object
 
 
 
-    private TokenCreate Token { get; set; }
+    private TokeCreate Toke { get; set; }
 
 
 
@@ -53,7 +53,7 @@ public class Create : Object
 
 
 
-        this.Token = this.CreateToken();
+        this.Toke = this.CreateToke();
 
 
 
@@ -89,14 +89,14 @@ public class Create : Object
 
 
 
-    protected virtual TokenCreate CreateToken()
+    protected virtual TokeCreate CreateToke()
     {
-        TokenCreate create;
+        TokeCreate create;
 
 
 
 
-        create = new TokenCreate();
+        create = new TokeCreate();
 
 
 
@@ -107,7 +107,7 @@ public class Create : Object
 
 
 
-        TokenCreate ret;
+        TokeCreate ret;
 
 
         ret = create;
@@ -254,7 +254,7 @@ public class Create : Object
             kind == kindList.Token
         )
         {
-            this.ExecuteToken();
+            this.ExecuteToke();
         }
 
 
@@ -294,17 +294,17 @@ public class Create : Object
 
 
 
-    public bool ExecuteToken()
+    public bool ExecuteToke()
     {
-        this.Token.SourceList = this.Source;
+        this.Toke.SourceList = this.Source;
 
         
 
-        this.Token.Execute();
+        this.Toke.Execute();
 
 
 
-        this.Result.Token = this.Token.Result;
+        this.Result.Toke = this.Toke.Result;
 
 
 
@@ -324,7 +324,7 @@ public class Create : Object
 
 
 
-        this.Node.TokenResult = this.Result.Token;
+        this.Node.TokenResult = this.Result.Toke;
 
 
 

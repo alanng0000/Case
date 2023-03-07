@@ -111,7 +111,7 @@ class ObjectString : Object
 
 
 
-        this.TokenType = typeof(TokenToken);
+        this.TokenType = typeof(TokeToke);
 
 
 
