@@ -708,7 +708,7 @@ public class StateTraverse : Traverse
         string varName;
 
 
-        varName = name.Value;
+        varName = name.Valu;
         
 
 
@@ -723,7 +723,7 @@ public class StateTraverse : Traverse
 
         if (!this.Null(nodeClass))
         {
-            className = nodeClass.Value;
+            className = nodeClass.Valu;
         }
 
 
@@ -1084,7 +1084,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(nodeClass))
         {
-            className = nodeClass.Value;
+            className = nodeClass.Valu;
         }
 
 
@@ -1162,7 +1162,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(nodeClass))
         {
-            className = nodeClass.Value;
+            className = nodeClass.Valu;
         }
 
 
@@ -2534,7 +2534,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(nodeField))
         {
-            fieldName = nodeField.Value;
+            fieldName = nodeField.Valu;
         }
 
 
@@ -2670,7 +2670,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(nodeMethod))
         {
-            methodName = nodeMethod.Value;
+            methodName = nodeMethod.Valu;
         }
 
 
@@ -2825,7 +2825,7 @@ public class StateTraverse : Traverse
 
         if (!this.Null(nodeClass))
         {
-            className = nodeClass.Value;
+            className = nodeClass.Valu;
         }
 
 
@@ -3137,7 +3137,7 @@ public class StateTraverse : Traverse
         string varName;
 
 
-        varName = name.Value;
+        varName = name.Valu;
 
 
 
@@ -3274,7 +3274,7 @@ public class StateTraverse : Traverse
         string varName;
 
 
-        varName = name.Value;
+        varName = name.Valu;
 
 
 
@@ -3380,7 +3380,7 @@ public class StateTraverse : Traverse
 
         if (! this.Null(nodeField))
         {
-            fieldName = nodeField.Value;
+            fieldName = nodeField.Valu;
         }
 
 

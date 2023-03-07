@@ -104,7 +104,7 @@ class MemberTraverse : Traverse
         string fieldName;
 
 
-        fieldName = name.Value;
+        fieldName = name.Valu;
 
 
 
@@ -113,7 +113,7 @@ class MemberTraverse : Traverse
         string className;
 
         
-        className = nodeClass.Value;
+        className = nodeClass.Valu;
                
 
 
@@ -328,7 +328,7 @@ class MemberTraverse : Traverse
 
 
 
-        methodName = name.Value;
+        methodName = name.Valu;
 
 
 
@@ -338,7 +338,7 @@ class MemberTraverse : Traverse
 
 
         
-        className = nodeClass.Value;
+        className = nodeClass.Valu;
         
 
 
@@ -536,7 +536,7 @@ class MemberTraverse : Traverse
         string varName;
 
 
-        varName = name.Value;
+        varName = name.Valu;
             
 
 
@@ -551,7 +551,7 @@ class MemberTraverse : Traverse
 
         if (!this.Null(nodeClass))
         {
-            className = nodeClass.Value;
+            className = nodeClass.Valu;
         }
 
 

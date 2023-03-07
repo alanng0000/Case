@@ -27,7 +27,7 @@ class ClassTraverse : Traverse
         string className;
 
 
-        className = name.Value;
+        className = name.Valu;
 
 
 

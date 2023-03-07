@@ -4915,7 +4915,7 @@ public class Create : InfraCreate
 
         ret.Init();
         
-        ret.Value = value;
+        ret.Valu = value;
         
         this.NodeInfo(ret, range);
 
@@ -4945,7 +4945,7 @@ public class Create : InfraCreate
 
         ret.Init();
         
-        ret.Value = value;
+        ret.Valu = value;
         
         this.NodeInfo(ret, range);
 
@@ -4975,7 +4975,7 @@ public class Create : InfraCreate
 
         ret.Init();
         
-        ret.Value = value;
+        ret.Valu = value;
         
         this.NodeInfo(ret, range);
             
@@ -5005,7 +5005,7 @@ public class Create : InfraCreate
 
         ret.Init();
         
-        ret.Value = value;
+        ret.Valu = value;
         
         this.NodeInfo(ret, range);
 

@@ -4,5 +4,5 @@ namespace Case.Node;
 
 public class CaseName : Node
 {
-    public string Value { get; set; }
+    public string Valu { get; set; }
 }

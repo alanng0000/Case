@@ -868,7 +868,7 @@ public class Create : InfraCreate
 
         
 
-        baseName = nodeBase.Value;
+        baseName = nodeBase.Valu;
         
 
 
