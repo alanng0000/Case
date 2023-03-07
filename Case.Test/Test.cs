@@ -7,7 +7,7 @@ public class Test
 {
     public virtual bool Init()
     {
-        this.LangName = this.LanguageName();
+        this.LangName = this.GetLangName();
 
 
 
@@ -883,9 +883,9 @@ public class Test
 
 
 
-    protected virtual string LanguageName()
+    protected virtual string GetLangName()
     {
-        return "Class";
+        return "Case";
     }
 
 
