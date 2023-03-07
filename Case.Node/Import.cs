@@ -24,6 +24,6 @@ global using TextRange = Case.Infra.TextRange;
 global using StringInfra = Case.Infra.StringInfra;
 global using Code = Case.Toke.Code;
 global using TokenResult = Case.Toke.Result;
-global using TokenToken = Case.Toke.Token;
+global using TokenToken = Case.Toke.Toke;
 global using SystemConsole = System.Console;
 global using SystemEnvironment = System.Environment;
