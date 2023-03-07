@@ -185,7 +185,7 @@ public class Create : InfraCreate
 
 
 
-            this.CountNew.Reset();
+            this.CountNew.Set();
 
 
 
@@ -241,7 +241,7 @@ public class Create : InfraCreate
 
 
 
-            this.AddNew.Reset();
+            this.AddNew.Set();
 
 
 

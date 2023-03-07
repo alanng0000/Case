@@ -7,7 +7,7 @@ namespace Case.Toke;
 
 class AddNew : New
 {
-    public bool Reset()
+    public bool Set()
     {
         this.TokenCount = 0;
 
