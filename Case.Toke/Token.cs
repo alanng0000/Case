@@ -2,7 +2,7 @@ namespace Case.Toke;
 
 
 
-public struct Token
+public struct Toke
 {
     public TextRange Range;
 }

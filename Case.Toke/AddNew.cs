@@ -33,10 +33,10 @@ class AddNew : New
 
     public override bool Token()
     {
-        Token token;
+        Toke token;
         
 
-        token = new Token();
+        token = new Toke();
         
 
         token.Range = this.Create.Range;
