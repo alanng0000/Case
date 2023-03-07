@@ -134,7 +134,7 @@ public class Test
 
     protected virtual string CurrentDirectory()
     {
-        return "../../../../Class.Test";
+        return "../../../../Case.Test";
     }
 
 
