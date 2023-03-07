@@ -9,7 +9,7 @@
         <ProjectReference Include="../../Sema/Sema.List/Sema.List.csproj" />
         <ProjectReference Include="../../Sema/Sema.Text/Sema.Text.csproj" />
         <ProjectReference Include="../Case.Infra/Case.Infra.csproj" />
-        <ProjectReference Include="../Case.Token/Case.Token.csproj" />
+        <ProjectReference Include="../Case.Toke/Case.Toke.csproj" />
     </ItemGroup>
 
 </Project>
