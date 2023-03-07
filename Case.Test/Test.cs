@@ -1115,7 +1115,7 @@ public class Test
     {
         get
         {
-            return this.Class.Result.Module;
+            return this.Class.Result.Mode;
         }
 
         set
