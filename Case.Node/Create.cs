@@ -510,13 +510,13 @@ public class Create : InfraCreate
         
         while (codeIter.Next() & sourceIter.Next())
         {
-            this.Code = (Code)codeIter.Value;
+            this.Code = (Code)codeIter.Valu;
 
 
 
 
 
-            this.Source = (Source)sourceIter.Value;
+            this.Source = (Source)sourceIter.Valu;
 
 
 
@@ -7004,7 +7004,7 @@ public class Create : InfraCreate
             string s;
 
 
-            s = (string)iter.Value;
+            s = (string)iter.Valu;
 
 
 
