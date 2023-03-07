@@ -1,11 +1,11 @@
-namespace Case.Module;
+namespace Case.Mode;
 
 
 
 
 public class Result
 {
-    public Data Module { get; set; }
+    public Data Mode { get; set; }
 
 
 

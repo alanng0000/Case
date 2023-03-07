@@ -1,4 +1,4 @@
-namespace Case.Module;
+namespace Case.Mode;
 
 
 
@@ -44,7 +44,7 @@ public class Create : InfraCreate
 
 
 
-    public CheckModule Module { get; set; }
+    public CheckMode Mode { get; set; }
 
 
 
@@ -104,7 +104,7 @@ public class Create : InfraCreate
 
 
 
-        this.Result.Module = data;
+        this.Result.Mode = data;
 
 
 
@@ -131,7 +131,7 @@ public class Create : InfraCreate
 
         if (!this.CheckErrors())
         {
-            this.Result.Module.Value = new byte[0];
+            this.Result.Mode.Value = new byte[0];
             
 
 
@@ -149,7 +149,7 @@ public class Create : InfraCreate
 
 
 
-        this.Module = this.CheckResult.Refer.Module;
+        this.Mode = this.CheckResult.Refer.Mode;
 
 
 
