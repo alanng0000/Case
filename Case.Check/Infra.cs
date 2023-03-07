@@ -140,7 +140,7 @@ class Infra : Object
 
             h.Key = u.Refer;
 
-            h.Value = u;
+            h.Valu = u;
 
 
 
@@ -354,7 +354,7 @@ class Infra : Object
 
             h.Key = o;
 
-            h.Value = u;
+            h.Valu = u;
 
 
 
@@ -581,7 +581,7 @@ class Infra : Object
 
         a.Init();
 
-        a.Value = ver.Value;
+        a.Valu = ver.Valu;
 
 
 
@@ -604,7 +604,7 @@ class Infra : Object
 
         a.Init();
 
-        a.Value = intent.Value;
+        a.Valu = intent.Valu;
 
 
         return a;
@@ -621,7 +621,7 @@ class Infra : Object
 
         a.Init();
 
-        a.Value = name.Value;
+        a.Valu = name.Valu;
 
 
         return a;
@@ -639,12 +639,12 @@ class Infra : Object
     {
         bool ba;
         
-        ba = (refer.Int.Value == this.PortConstantRefer.Int.Value);
+        ba = (refer.Int.Valu == this.PortConstantRefer.Int.Valu);
 
 
         bool bb;
 
-        bb = (refer.Ver.Value == this.PortConstantRefer.Ver.Value);
+        bb = (refer.Ver.Valu == this.PortConstantRefer.Ver.Valu);
 
 
 
@@ -681,7 +681,7 @@ class Infra : Object
         pair.Key = varVar.Name;
 
 
-        pair.Value = varVar;
+        pair.Valu = varVar;
 
 
 

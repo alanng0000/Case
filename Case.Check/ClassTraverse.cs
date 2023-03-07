@@ -130,7 +130,7 @@ class ClassTraverse : Traverse
         pair.Key = className;
 
 
-        pair.Value = varClass;
+        pair.Valu = varClass;
 
 
 
@@ -152,7 +152,7 @@ class ClassTraverse : Traverse
         o.Key = className;
 
 
-        o.Value = varClass;
+        o.Valu = varClass;
 
 
 

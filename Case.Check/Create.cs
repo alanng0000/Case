@@ -502,7 +502,7 @@ public class Create : InfraCreate
 
                 pair.Key = name;
 
-                pair.Value = varClass;
+                pair.Valu = varClass;
 
 
 
@@ -822,7 +822,7 @@ public class Create : InfraCreate
         basePair.Key = varClass;
 
 
-        basePair.Value = varClass.Base;
+        basePair.Valu = varClass.Base;
 
 
 
@@ -951,7 +951,7 @@ public class Create : InfraCreate
         basePair.Key = varClass;
 
 
-        basePair.Value = t;
+        basePair.Valu = t;
 
 
 
@@ -1091,7 +1091,7 @@ public class Create : InfraCreate
 
 
 
-        t.Value = null;
+        t.Valu = null;
 
 
 
@@ -1153,7 +1153,7 @@ public class Create : InfraCreate
 
 
 
-            pair.Value = null;
+            pair.Valu = null;
 
 
 
