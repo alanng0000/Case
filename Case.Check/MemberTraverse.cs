@@ -254,7 +254,7 @@ class MemberTraverse : Traverse
         pair.Key = fieldName;
 
 
-        pair.Value = field;
+        pair.Valu = field;
 
 
 
@@ -485,7 +485,7 @@ class MemberTraverse : Traverse
         pair.Key = methodName;
 
 
-        pair.Value = method;
+        pair.Valu = method;
 
 
 

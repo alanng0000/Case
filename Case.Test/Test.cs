@@ -262,7 +262,7 @@ public class Test
         pair.Key = set.Name;
 
 
-        pair.Value = set;
+        pair.Valu = set;
 
 
 

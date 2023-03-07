@@ -29,7 +29,7 @@ public class InitTraverse : Traverse
         pair.Key = node;
 
 
-        pair.Value = check;
+        pair.Valu = check;
 
 
 

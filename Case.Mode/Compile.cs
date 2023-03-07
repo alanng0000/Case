@@ -131,7 +131,7 @@ public class Create : InfraCreate
 
         if (!this.CheckErrors())
         {
-            this.Result.Mode.Value = new byte[0];
+            this.Result.Mode.Valu = new byte[0];
             
 
 
