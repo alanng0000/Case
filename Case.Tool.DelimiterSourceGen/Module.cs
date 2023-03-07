@@ -143,7 +143,7 @@ class Module : Object
         {
             string line;
 
-            line = (string)iter.Value;
+            line = (string)iter.Valu;
             
 
 
@@ -468,7 +468,7 @@ class Module : Object
             string name;
 
 
-            name = (string)iter.Value;
+            name = (string)iter.Valu;
 
 
 
@@ -612,7 +612,7 @@ class Module : Object
         while (iter.Next())
         {
             string word;
-            word = (string)iter.Value;
+            word = (string)iter.Valu;
 
 
             this.AppendIndents(2)

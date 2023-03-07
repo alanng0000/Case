@@ -109,7 +109,7 @@ class Module : Object
             string line;
 
             
-            line = (string)iter.Value;
+            line = (string)iter.Valu;
                 
 
             if (line == null)
@@ -376,7 +376,7 @@ class Module : Object
         {
             string name;
 
-            name = (string)iter.Value;
+            name = (string)iter.Valu;
 
 
 
@@ -446,7 +446,7 @@ class Module : Object
             string word;
 
 
-            word = (string)iter.Value;
+            word = (string)iter.Valu;
 
 
 
