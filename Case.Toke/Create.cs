@@ -202,10 +202,10 @@ public class Create : InfraCreate
 
 
 
-            TokenArray tokenArray;
+            TokeArray tokenArray;
 
 
-            tokenArray = new TokenArray();
+            tokenArray = new TokeArray();
 
 
             tokenArray.Count = this.CountNew.TokenCount;

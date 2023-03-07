@@ -2,6 +2,6 @@ namespace Case.Toke;
 
 
 
-public class TokenArray : TokeStructArray
+public class TokeArray : TokeStructArray
 {
 }
