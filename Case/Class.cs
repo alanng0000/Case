@@ -464,7 +464,7 @@ public class Class : Object
 
     private bool CheckModuleVer(ModuleIntent intent, ModuleVer ver)
     {
-        if (!(ver.Value == 0))
+        if (!(ver.Valu == 0))
         {
             return false;
         }

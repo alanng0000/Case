@@ -64,7 +64,7 @@ class ModuleString : Object
 
 
 
-        u = data.Value;
+        u = data.Valu;
 
 
 
