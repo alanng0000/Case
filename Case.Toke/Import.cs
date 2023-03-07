@@ -16,5 +16,5 @@ global using SourceArray = Case.Infra.SourceArray;
 global using ErrorList = Case.Infra.ErrorList;
 global using TextRange = Case.Infra.TextRange;
 global using Constant = Case.Infra.Constant;
-global using TokenStructArray = Sema.List.StructArray<Case.Token.Token>;
-global using CommentStructArray = Sema.List.StructArray<Case.Token.Comment>;
+global using TokenStructArray = Sema.List.StructArray<Case.Toke.Token>;
+global using CommentStructArray = Sema.List.StructArray<Case.Toke.Comment>;
