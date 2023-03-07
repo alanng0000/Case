@@ -3,14 +3,14 @@ namespace Case;
 
 
 
-class ModuleString : Object
+class ModeString : Object
 {
     private StringBuilder Builder { get; set; }
 
 
 
 
-    public bool Execute(ModuleResult result)
+    public bool Execute(ModeResult result)
     {
         this.Builder = new StringBuilder();
 

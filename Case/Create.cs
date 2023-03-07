@@ -35,7 +35,7 @@ public class Create : Object
 
 
 
-    private ModuleCreate Module { get; set; }
+    private ModeCreate Mode { get; set; }
 
 
 
@@ -77,7 +77,7 @@ public class Create : Object
 
 
 
-        this.Module = this.CreateModule();
+        this.Mode = this.CreateMode();
 
 
 
@@ -185,14 +185,14 @@ public class Create : Object
 
 
 
-    protected virtual ModuleCreate CreateModule()
+    protected virtual ModeCreate CreateMode()
     {
-        ModuleCreate create;
+        ModeCreate create;
 
 
 
 
-        create = new ModuleCreate();
+        create = new ModeCreate();
 
 
 
@@ -203,7 +203,7 @@ public class Create : Object
 
 
 
-        ModuleCreate ret;
+        ModeCreate ret;
 
 
         ret = create;
@@ -375,22 +375,22 @@ public class Create : Object
 
     public bool ExecuteModule()
     {
-        this.Module.NodeResult = this.Result.Node;
+        this.Mode.NodeResult = this.Result.Node;
 
 
 
 
-        this.Module.CheckResult = this.Result.Check;
+        this.Mode.CheckResult = this.Result.Check;
 
 
 
 
-        this.Module.Execute();
+        this.Mode.Execute();
 
 
 
 
-        this.Result.Module = this.Module.Result;
+        this.Result.Mode = this.Mode.Result;
 
 
 

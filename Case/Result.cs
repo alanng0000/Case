@@ -20,5 +20,5 @@ public class Result : Object
 
 
 
-    public ModuleResult Module { get; set; }
+    public ModeResult Mode { get; set; }
 }

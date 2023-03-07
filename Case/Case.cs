@@ -752,11 +752,11 @@ public class Case : Object
 
     private bool PrintModuleResult()
     {
-        ModuleString moduleString;
+        ModeString moduleString;
 
 
 
-        moduleString = new ModuleString();
+        moduleString = new ModeString();
 
 
 
@@ -766,7 +766,7 @@ public class Case : Object
 
 
 
-        moduleString.Execute(this.Result.Module);
+        moduleString.Execute(this.Result.Mode);
 
 
 
