@@ -78,7 +78,7 @@ case F : N
         retu data;
     }
     {
-        data : value;
+        data : valu;
     }
 
 
@@ -107,6 +107,6 @@ case F : N
         retu data;
     }
     {
-        data : value;
+        data : valu;
     }
 }
