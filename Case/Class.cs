@@ -712,12 +712,10 @@ public class Class : Object
 
         while (iter.Next())
         {
-
-
             Error error;
 
 
-            error = (Error)iter.Value;
+            error = (Error)iter.Valu;
 
 
 
@@ -874,7 +872,7 @@ public class Class : Object
             Source source;
 
 
-            source = (Source)sourceIter.Value;
+            source = (Source)sourceIter.Valu;
 
 
 
@@ -883,7 +881,7 @@ public class Class : Object
             Tree tree;
 
 
-            tree = (Tree)treeIter.Value;
+            tree = (Tree)treeIter.Valu;
 
 
 
@@ -977,7 +975,7 @@ public class Class : Object
             Source source;
 
 
-            source = (Source)sourceIter.Value;
+            source = (Source)sourceIter.Valu;
 
 
 
@@ -985,7 +983,7 @@ public class Class : Object
 
 
 
-            code = (Code)codeIter.Value;
+            code = (Code)codeIter.Valu;
 
 
 
@@ -1336,7 +1334,7 @@ public class Class : Object
             string fileName;
 
 
-            fileName = (string)iter.Value;
+            fileName = (string)iter.Valu;
 
 
 
@@ -1396,7 +1394,7 @@ public class Class : Object
             Source source;
 
 
-            source = (Source)iter.Value;
+            source = (Source)iter.Valu;
 
 
 

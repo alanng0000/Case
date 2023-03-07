@@ -591,7 +591,7 @@ class ObjectString : Object
             {
                 object o;
 
-                o = iter.Value;
+                o = iter.Valu;
 
 
 

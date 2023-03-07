@@ -174,7 +174,7 @@ public class CheckString : Object
         Tree tree;
 
 
-        tree = (Tree)iter.Value;
+        tree = (Tree)iter.Valu;
 
 
 
@@ -869,7 +869,7 @@ public class CheckString : Object
         NodeNode node;
 
 
-        node = (NodeNode)iter.Value;
+        node = (NodeNode)iter.Valu;
 
 
         
