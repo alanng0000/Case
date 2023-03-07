@@ -149,7 +149,7 @@ public class Create : InfraCreate
 
 
 
-        this.Mode = this.CheckResult.Refer.Mode;
+        this.Mode = this.CheckResult.Refer.Module;
 
 
 

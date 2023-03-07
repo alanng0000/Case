@@ -55,7 +55,7 @@ class ModuleString : Object
         
         
 
-        data = result.Module;
+        data = result.Mode;
 
 
 
