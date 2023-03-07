@@ -601,7 +601,7 @@ public class Create : InfraCreate
         int rangeEnd;
 
 
-        rangeEnd = this.Code.Token.Count;
+        rangeEnd = this.Code.Toke.Count;
 
 
 
@@ -6797,7 +6797,7 @@ public class Create : InfraCreate
         TokenToken token;
 
 
-        token = this.Code.Token.Get(index);
+        token = this.Code.Toke.Get(index);
             
 
         return token.Range;
