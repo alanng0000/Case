@@ -248,10 +248,10 @@ public class Create : Object
         
 
 
-        if (kind == kindList.Module |
+        if (kind == kindList.Mode |
             kind == kindList.Check |
             kind == kindList.Node |
-            kind == kindList.Token
+            kind == kindList.Toke
         )
         {
             this.ExecuteToke();
@@ -260,7 +260,7 @@ public class Create : Object
 
 
 
-        if (kind == kindList.Module |
+        if (kind == kindList.Mode |
             kind == kindList.Check |
             kind == kindList.Node
         )
@@ -271,7 +271,7 @@ public class Create : Object
         
 
 
-        if (kind == kindList.Module |
+        if (kind == kindList.Mode |
             kind == kindList.Check
         )
         {
@@ -281,7 +281,7 @@ public class Create : Object
 
 
 
-        if (kind == kindList.Module)
+        if (kind == kindList.Mode)
         {
             this.ExecuteModule();
         }

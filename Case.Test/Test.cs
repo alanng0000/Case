@@ -163,7 +163,7 @@ public class Test
 
 
 
-        this.AddFoldSet("Token", k.Token, false, false, false);
+        this.AddFoldSet("Token", k.Toke, false, false, false);
 
 
 
@@ -1214,7 +1214,7 @@ public class Test
         TaskKind kind;
 
 
-        kind = k.Module;
+        kind = k.Mode;
 
 
 
@@ -1251,7 +1251,7 @@ public class Test
 
             if (!ba)
             {
-                if (!(task.Kind == k.Token))
+                if (!(task.Kind == k.Toke))
                 {
                     task.Node = "Class";
                 }

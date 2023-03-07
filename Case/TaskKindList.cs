@@ -32,7 +32,7 @@ public class TaskKindList : Object
 
 
 
-    public TaskKind Module { get; private set; }
+    public TaskKind Mode { get; private set; }
 
 
 
@@ -44,7 +44,7 @@ public class TaskKindList : Object
 
 
 
-    public TaskKind Token { get; private set; }
+    public TaskKind Toke { get; private set; }
 
 
 
@@ -61,7 +61,7 @@ public class TaskKindList : Object
 
 
 
-        this.Module = this.CreateTaskKind();
+        this.Mode = this.CreateTaskKind();
 
 
 
@@ -73,7 +73,7 @@ public class TaskKindList : Object
 
 
 
-        this.Token = this.CreateTaskKind();
+        this.Toke = this.CreateTaskKind();
 
 
 

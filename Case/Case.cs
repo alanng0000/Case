@@ -214,7 +214,7 @@ public class Case : Object
 
 
 
-        taskModule = (t == k.Module);
+        taskModule = (t == k.Mode);
 
 
 
@@ -410,7 +410,7 @@ public class Case : Object
 
         if (this.Task.Print)
         {
-            if (t == k.Token)
+            if (t == k.Toke)
             {
                 this.PrintTokenResult();
             }
@@ -431,7 +431,7 @@ public class Case : Object
 
 
 
-            if (t == k.Module)
+            if (t == k.Mode)
             {
                 this.PrintModuleResult();
             }
@@ -651,11 +651,11 @@ public class Case : Object
         bool kindModule;
 
 
-        kindModule = this.Kind(k.Module);
+        kindModule = this.Kind(k.Mode);
 
 
 
-        if (kindModule | this.Kind(k.Token))
+        if (kindModule | this.Kind(k.Toke))
         {
             if (!this.Null(this.Result.Toke))
             {
