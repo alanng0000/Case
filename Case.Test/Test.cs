@@ -64,14 +64,6 @@ public class Test
 
 
 
-        this.Strings = new ModuleStrings();
-
-
-
-        this.Strings.Init();
-
-
-
 
 
         string newCurrentDirectory = this.CurrentDirectory();
@@ -372,10 +364,6 @@ public class Test
     private bool UnitPass { get; set; }
 
 
-
-
-
-    public ModuleStrings Strings { get; set; }
 
 
 

@@ -9,7 +9,7 @@
         <ProjectReference Include="../../Sema/Sema.List/Sema.List.csproj" />
         <ProjectReference Include="../Case.Infra/Case.Infra.csproj" />
         <ProjectReference Include="../Case.Port/Case.Port.csproj" />
-        <ProjectReference Include="../Case.Module/Case.Module.csproj" />
+        <ProjectReference Include="../Case.Mode/Case.Mode.csproj" />
         <ProjectReference Include="../Case/Case.csproj" />
     </ItemGroup>
 
