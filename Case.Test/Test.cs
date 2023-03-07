@@ -403,7 +403,7 @@ public class Test
 
 
 
-            set = (Set)setIter.Value;
+            set = (Set)setIter.Valu;
 
 
             this.Set = set;
@@ -457,7 +457,7 @@ public class Test
 
 
 
-            kind = (Kind)kindIter.Value;
+            kind = (Kind)kindIter.Valu;
 
 
 
@@ -476,7 +476,7 @@ public class Test
                 Unit unit;
 
 
-                unit = (Unit)unitIter.Value;
+                unit = (Unit)unitIter.Valu;
 
 
 
@@ -522,7 +522,7 @@ public class Test
 
         while (iter.Next())
         {
-            this.FoldSet = (FoldSet)iter.Value;
+            this.FoldSet = (FoldSet)iter.Valu;
 
 
 
@@ -740,7 +740,7 @@ public class Test
 
         while (iter.Next())
         {
-            this.FoldUnit = (FoldUnit)iter.Value;
+            this.FoldUnit = (FoldUnit)iter.Valu;
 
 
 
