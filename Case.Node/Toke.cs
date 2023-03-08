@@ -3,7 +3,7 @@ namespace Case.Node;
 
 
 
-public struct Token
+public struct Toke
 {
     public bool Init()
     {

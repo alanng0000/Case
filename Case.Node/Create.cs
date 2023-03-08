@@ -56,7 +56,7 @@ public class Create : InfraCreate
 
 
 
-    private Token TokenNull;
+    private Toke TokeNull;
 
 
 
@@ -119,13 +119,13 @@ public class Create : InfraCreate
 
 
 
-        this.TokenNull = new Token();
+        this.TokeNull = new Toke();
 
 
-        this.TokenNull.Init();
+        this.TokeNull.Init();
 
 
-        this.TokenNull.Range = this.RangeNull;
+        this.TokeNull.Range = this.RangeNull;
 
 
 
@@ -651,15 +651,15 @@ public class Create : InfraCreate
 
 
 
-        Token classToken;
+        Toke classToken;
         
         
-        classToken = this.Token(this.Keyword.Case, this.IndexRange(range.Start));
+        classToken = this.Toke(this.Keyword.Case, this.IndexRange(range.Start));
 
 
 
 
-        if (this.NullToken(classToken))
+        if (this.NullToke(classToken))
         {
             return null;
         }
@@ -701,15 +701,15 @@ public class Create : InfraCreate
 
 
 
-        Token colon;
+        Toke colon;
 
 
-        colon = this.Token(this.Delimiter.BaseSign, this.IndexRange(nameRange.End));
+        colon = this.Toke(this.Delimiter.BaseSign, this.IndexRange(nameRange.End));
 
 
 
 
-        if (this.NullToken(colon))
+        if (this.NullToke(colon))
         {
             return null;
         }
@@ -747,14 +747,14 @@ public class Create : InfraCreate
 
 
 
-        Token leftBrace;
+        Toke leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(baseRange.End));
+        leftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(baseRange.End));
 
 
 
-        if (this.NullToken(leftBrace))
+        if (this.NullToke(leftBrace))
         {
             return null;
         }
@@ -763,14 +763,14 @@ public class Create : InfraCreate
 
 
 
-        Token rightBrace;
+        Toke rightBrace;
 
 
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        rightBrace = this.TokeMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
 
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToke(rightBrace))
         {
             return null;
         }
@@ -1029,16 +1029,16 @@ public class Create : InfraCreate
 
 
 
-        Token getLeftBrace;
+        Toke getLeftBrace;
 
 
 
-        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
+        getLeftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
 
 
 
 
-        if (this.NullToken(getLeftBrace))
+        if (this.NullToke(getLeftBrace))
         {
             return null;
         }
@@ -1047,16 +1047,16 @@ public class Create : InfraCreate
 
 
 
-        Token getRightBrace;
+        Toke getRightBrace;
 
 
 
-        getRightBrace = this.TokenMatchLeftBrace(this.Range(getLeftBrace.Range.End, range.End));
+        getRightBrace = this.TokeMatchLeftBrace(this.Range(getLeftBrace.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(getRightBrace))
+        if (this.NullToke(getRightBrace))
         {
             return null;
         }
@@ -1078,16 +1078,16 @@ public class Create : InfraCreate
 
 
 
-        Token setLeftBrace;
+        Toke setLeftBrace;
 
 
 
-        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getRightBrace.Range.End));
+        setLeftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(getRightBrace.Range.End));
 
 
 
 
-        if (this.NullToken(setLeftBrace))
+        if (this.NullToke(setLeftBrace))
         {
             return null;
         }
@@ -1096,16 +1096,16 @@ public class Create : InfraCreate
 
 
 
-        Token setRightBrace;
+        Toke setRightBrace;
 
 
 
-        setRightBrace = this.TokenMatchLeftBrace(this.Range(setLeftBrace.Range.End, range.End));
+        setRightBrace = this.TokeMatchLeftBrace(this.Range(setLeftBrace.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(setRightBrace))
+        if (this.NullToke(setRightBrace))
         {
             return null;
         }
@@ -1329,16 +1329,16 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
 
 
 
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
 
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return null;
         }
@@ -1347,16 +1347,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
 
 
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return null;
         }
@@ -1376,16 +1376,16 @@ public class Create : InfraCreate
 
 
 
-        Token leftBrace;
+        Toke leftBrace;
 
 
 
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
 
-        if (this.NullToken(leftBrace))
+        if (this.NullToke(leftBrace))
         {
             return null;
         }
@@ -1394,16 +1394,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBrace;
+        Toke rightBrace;
 
 
 
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        rightBrace = this.TokeMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToke(rightBrace))
         {
             return null;
         }
@@ -1818,16 +1818,16 @@ public class Create : InfraCreate
 
     protected virtual PublicAccess PublicAccess(Range range)
     {
-        Token publicToken;
+        Toke publicToken;
 
 
 
-        publicToken = this.Token(this.Keyword.Publi, range);
+        publicToken = this.Toke(this.Keyword.Publi, range);
 
 
 
 
-        if (this.NullToken(publicToken))
+        if (this.NullToke(publicToken))
         {
             return null;
         }
@@ -1857,16 +1857,16 @@ public class Create : InfraCreate
 
     protected virtual ProperAccess ProperAccess(Range range)
     {
-        Token properToken;
+        Toke properToken;
 
 
 
-        properToken = this.Token(this.Keyword.Prope, range);
+        properToken = this.Toke(this.Keyword.Prope, range);
 
 
 
 
-        if (this.NullToken(properToken))
+        if (this.NullToke(properToken))
         {
             return null;
         }
@@ -1897,16 +1897,16 @@ public class Create : InfraCreate
 
     protected virtual ParentAccess ParentAccess(Range range)
     {
-        Token parentToken;
+        Toke parentToken;
 
 
 
-        parentToken = this.Token(this.Keyword.Paren, range);
+        parentToken = this.Toke(this.Keyword.Paren, range);
 
 
 
 
-        if (this.NullToken(parentToken))
+        if (this.NullToke(parentToken))
         {
             return null;
         }
@@ -1939,16 +1939,16 @@ public class Create : InfraCreate
 
     protected virtual PrivatAccess PrivatAccess(Range range)
     {
-        Token privatToken;
+        Toke privatToken;
 
 
 
-        privatToken = this.Token(this.Keyword.Priva, range);
+        privatToken = this.Toke(this.Keyword.Priva, range);
 
 
 
 
-        if (this.NullToken(privatToken))
+        if (this.NullToke(privatToken))
         {
             return null;
         }
@@ -2111,14 +2111,14 @@ public class Create : InfraCreate
 
 
 
-        Token semicolon;
+        Toke semicolon;
 
 
-        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Toke(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return null;
         }
@@ -2276,18 +2276,18 @@ public class Create : InfraCreate
 
     protected virtual ThisExpress ThisExpress(Range range)
     {
-        Token thisToken;
+        Toke thisToken;
 
 
 
 
-        thisToken = this.Token(this.Keyword.This, range);
+        thisToken = this.Toke(this.Keyword.This, range);
 
 
 
 
 
-        if (this.NullToken(thisToken))
+        if (this.NullToke(thisToken))
         {
             return null;
         }
@@ -2318,16 +2318,16 @@ public class Create : InfraCreate
 
     protected virtual BaseExpress BaseExpress(Range range)
     {
-        Token baseToken;
+        Toke baseToken;
 
 
 
-        baseToken = this.Token(this.Keyword.Base, range);
+        baseToken = this.Toke(this.Keyword.Base, range);
 
 
 
 
-        if (this.NullToken(baseToken))
+        if (this.NullToke(baseToken))
         {
             return null;
         }
@@ -2374,14 +2374,14 @@ public class Create : InfraCreate
 
 
 
-        Token semicolon;
+        Toke semicolon;
 
 
-        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Toke(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return null;
         }
@@ -2451,14 +2451,14 @@ public class Create : InfraCreate
 
 
 
-        Token semicolon;
+        Toke semicolon;
 
 
-        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Toke(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return null;
         }
@@ -2468,16 +2468,16 @@ public class Create : InfraCreate
 
 
 
-        Token colon;
+        Toke colon;
 
 
 
-        colon = this.TokenForward(this.Delimiter.BaseSign, this.Range(range.Start, semicolon.Range.Start));
+        colon = this.TokeForward(this.Delimiter.BaseSign, this.Range(range.Start, semicolon.Range.Start));
 
 
 
 
-        if (this.NullToken(colon))
+        if (this.NullToke(colon))
         {
             return null;
         }
@@ -2553,14 +2553,14 @@ public class Create : InfraCreate
 
 
 
-        Token newToken;
+        Toke newToken;
 
 
-        newToken = this.Token(this.Keyword.Newa, this.IndexRange(range.Start));
+        newToken = this.Toke(this.Keyword.Newa, this.IndexRange(range.Start));
 
         
 
-        if (this.NullToken(newToken))
+        if (this.NullToke(newToken))
         {
             return null;
         }
@@ -2617,14 +2617,14 @@ public class Create : InfraCreate
 
 
 
-        Token globToken;
+        Toke globToken;
 
 
-        globToken = this.Token(this.Keyword.Glob, this.IndexRange(range.Start));
+        globToken = this.Toke(this.Keyword.Glob, this.IndexRange(range.Start));
 
         
 
-        if (this.NullToken(globToken))
+        if (this.NullToke(globToken))
         {
             return null;
         }
@@ -2673,16 +2673,16 @@ public class Create : InfraCreate
 
     private AndExpress AndExpress(Range range)
     {
-        Token op;
+        Toke op;
 
 
 
-        op = this.TokenBackward(this.Delimiter.AndSign, range);
+        op = this.TokeBackward(this.Delimiter.AndSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -2755,16 +2755,16 @@ public class Create : InfraCreate
 
     private OrnExpress OrnExpress(Range range)
     {
-        Token op;
+        Toke op;
 
 
 
-        op = this.TokenBackward(this.Delimiter.OrnSign, range);
+        op = this.TokeBackward(this.Delimiter.OrnSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -2847,16 +2847,16 @@ public class Create : InfraCreate
 
 
 
-        Token op;
+        Toke op;
 
 
 
-        op = this.Token(this.Delimiter.NotSign, this.IndexRange(range.Start));
+        op = this.Toke(this.Delimiter.NotSign, this.IndexRange(range.Start));
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -2898,16 +2898,16 @@ public class Create : InfraCreate
 
     private AddExpress AddExpress(Range range)
     {
-        Token op;
+        Toke op;
         
 
 
-        op = this.TokenBackward(this.Delimiter.AddSign, range);
+        op = this.TokeBackward(this.Delimiter.AddSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -2980,18 +2980,18 @@ public class Create : InfraCreate
 
     private SubExpress SubExpress(Range range)
     {
-        Token op;
+        Toke op;
 
 
 
 
-        op = this.TokenBackward(this.Delimiter.SubSign, range);
+        op = this.TokeBackward(this.Delimiter.SubSign, range);
 
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -3066,16 +3066,16 @@ public class Create : InfraCreate
 
     private MulExpress MulExpress(Range range)
     {
-        Token op;
+        Toke op;
 
 
 
-        op = this.TokenBackward(this.Delimiter.MulSign, range);
+        op = this.TokeBackward(this.Delimiter.MulSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -3151,17 +3151,17 @@ public class Create : InfraCreate
 
     private DivExpress DivExpress(Range range)
     {
-        Token op;
+        Toke op;
 
 
 
 
-        op = this.TokenBackward(this.Delimiter.DivSign, range);
+        op = this.TokeBackward(this.Delimiter.DivSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -3219,16 +3219,16 @@ public class Create : InfraCreate
 
     private EqualExpress EqualExpress(Range range)
     {
-        Token op;
+        Toke op;
 
 
 
-        op = this.TokenBackward(this.Delimiter.EqualSign, range);
+        op = this.TokeBackward(this.Delimiter.EqualSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -3287,15 +3287,15 @@ public class Create : InfraCreate
 
     private LessExpress LessExpress(Range range)
     {
-        Token op;
+        Toke op;
         
 
-        op = this.TokenBackward(this.Delimiter.LessSign, range);
+        op = this.TokeBackward(this.Delimiter.LessSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -3364,17 +3364,17 @@ public class Create : InfraCreate
 
     protected virtual JoinExpress JoinExpress(Range range)
     {
-        Token op;
+        Toke op;
         
 
 
 
-        op = this.TokenBackward(this.Delimiter.JoinSign, range);
+        op = this.TokeBackward(this.Delimiter.JoinSign, range);
 
 
 
 
-        if (this.NullToken(op))
+        if (this.NullToke(op))
         {
             return null;
         }
@@ -3434,16 +3434,16 @@ public class Create : InfraCreate
 
     private GetExpress GetExpress(Range range)
     {
-        Token dot;
+        Toke dot;
         
 
 
-        dot = this.TokenBackward(this.Delimiter.StopSign, range);
+        dot = this.TokeBackward(this.Delimiter.StopSign, range);
 
 
 
 
-        if (this.NullToken(dot))
+        if (this.NullToke(dot))
         {
             return null;
         }
@@ -3521,16 +3521,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
         
 
 
-        rightBracket = this.Token(this.Delimiter.RightBracket, this.IndexRange(range.End - 1));
+        rightBracket = this.Toke(this.Delimiter.RightBracket, this.IndexRange(range.End - 1));
 
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return null;
         }
@@ -3538,16 +3538,16 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
         
         
 
-        leftBracket = this.TokenMatchRightBracket(this.Range(range.Start, rightBracket.Range.Start));
+        leftBracket = this.TokeMatchRightBracket(this.Range(range.Start, rightBracket.Range.Start));
 
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return null;
         }
@@ -3556,16 +3556,16 @@ public class Create : InfraCreate
 
 
 
-        Token dot;
+        Toke dot;
         
 
 
-        dot = this.TokenBackward(this.Delimiter.StopSign, this.Range(range.Start, leftBracket.Range.Start));
+        dot = this.TokeBackward(this.Delimiter.StopSign, this.Range(range.Start, leftBracket.Range.Start));
             
 
 
 
-        if (this.NullToken(dot))
+        if (this.NullToke(dot))
         {
             return null;
         }
@@ -3660,14 +3660,14 @@ public class Create : InfraCreate
 
 
 
-        Token ifToken;
+        Toke ifToken;
         
         
-        ifToken = this.Token(this.Keyword.Mifa, this.IndexRange(range.Start));
+        ifToken = this.Toke(this.Keyword.Mifa, this.IndexRange(range.Start));
 
 
 
-        if (this.NullToken(ifToken))
+        if (this.NullToke(ifToken))
         {
             return null;
         }
@@ -3683,15 +3683,15 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
         
         
 
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(ifToken.Range.End));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(ifToken.Range.End));
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return null;
         }
@@ -3700,16 +3700,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
         
         
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return null;
         }
@@ -3726,14 +3726,14 @@ public class Create : InfraCreate
 
 
 
-        Token leftBrace;
+        Toke leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
-        if (this.NullToken(leftBrace))
+        if (this.NullToke(leftBrace))
         {
             return null;
         }
@@ -3741,14 +3741,14 @@ public class Create : InfraCreate
 
 
 
-        Token rightBrace;
+        Toke rightBrace;
         
         
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        rightBrace = this.TokeMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
 
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToke(rightBrace))
         {
             return null;
         }
@@ -3831,14 +3831,14 @@ public class Create : InfraCreate
 
 
 
-        Token whileToken;
+        Toke whileToken;
         
 
-        whileToken = this.Token(this.Keyword.Lope, this.IndexRange(range.Start));
+        whileToken = this.Toke(this.Keyword.Lope, this.IndexRange(range.Start));
 
 
 
-        if (this.NullToken(whileToken))
+        if (this.NullToke(whileToken))
         {
             return null;
         }
@@ -3854,28 +3854,28 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
         
         
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(whileToken.Range.End));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(whileToken.Range.End));
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return null;
         }
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
         
         
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return null;
         }
@@ -3890,28 +3890,28 @@ public class Create : InfraCreate
 
 
 
-        Token leftBrace;
+        Toke leftBrace;
         
         
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
-        if (this.NullToken(leftBrace))
+        if (this.NullToke(leftBrace))
         {
             return null;
         }
 
 
 
-        Token rightBrace;
+        Toke rightBrace;
         
         
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        rightBrace = this.TokeMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
             
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToke(rightBrace))
         {
             return null;
         }
@@ -3985,14 +3985,14 @@ public class Create : InfraCreate
 
 
 
-        Token returnToken;
+        Toke returnToken;
         
 
-        returnToken = this.Token(this.Keyword.Retu, this.IndexRange(range.Start));
+        returnToken = this.Toke(this.Keyword.Retu, this.IndexRange(range.Start));
 
 
 
-        if (this.NullToken(returnToken))
+        if (this.NullToke(returnToken))
         {
             return null;
         }
@@ -4017,14 +4017,14 @@ public class Create : InfraCreate
 
 
 
-        Token semicolon;
+        Toke semicolon;
 
 
-        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(lastIndex));
+        semicolon = this.Toke(this.Delimiter.StateSign, this.IndexRange(lastIndex));
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return null;
         }
@@ -4078,15 +4078,15 @@ public class Create : InfraCreate
 
 
 
-        Token castToken;
+        Toke castToken;
 
 
-        castToken = this.Token(this.Keyword.Cast, this.IndexRange(range.Start));
+        castToken = this.Toke(this.Keyword.Cast, this.IndexRange(range.Start));
 
 
 
 
-        if (this.NullToken(castToken))
+        if (this.NullToke(castToken))
         {
             return null;
         }
@@ -4122,15 +4122,15 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
 
 
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(classRange.End));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(classRange.End));
 
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return null;
         }
@@ -4139,14 +4139,14 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
 
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return null;
         }
@@ -4234,15 +4234,15 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
         
         
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(range.Start));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(range.Start));
 
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return null;
         }
@@ -4251,14 +4251,14 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
 
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return null;
         }
@@ -4382,16 +4382,16 @@ public class Create : InfraCreate
 
     private NullExpress NullExpress(Range range)
     {
-        Token nullToken;
+        Toke nullToken;
         
 
 
-        nullToken = this.Token(this.Keyword.Null, range);
+        nullToken = this.Toke(this.Keyword.Null, range);
 
 
 
 
-        if (this.NullToken(nullToken))
+        if (this.NullToke(nullToken))
         {
             return null;
         }
@@ -4572,16 +4572,16 @@ public class Create : InfraCreate
 
     private SetTarget SetTarget(Range range)
     {
-        Token dot;
+        Toke dot;
         
 
 
-        dot = this.TokenBackward(this.Delimiter.StopSign, range);
+        dot = this.TokeBackward(this.Delimiter.StopSign, range);
 
 
 
 
-        if (this.NullToken(dot))
+        if (this.NullToke(dot))
         {
             return null;
         }
@@ -5126,14 +5126,14 @@ public class Create : InfraCreate
             {
                 if (!(delimiter == null))
                 {
-                    Token delimiterToken;
+                    Toke delimiterToken;
 
 
-                    delimiterToken = this.Token(delimiter, this.IndexRange(currentRange.Start));
+                    delimiterToken = this.Toke(delimiter, this.IndexRange(currentRange.Start));
 
 
 
-                    if (this.NullToken(delimiterToken))
+                    if (this.NullToke(delimiterToken))
                     {
                         this.UniqueError(this.ErrorKind.Invalid, range, ref hasInvalid);
 
@@ -5415,14 +5415,14 @@ public class Create : InfraCreate
 
 
 
-        Token returnToken;
+        Toke returnToken;
         
 
-        returnToken = this.Token(this.Keyword.Retu, this.IndexRange(range.Start));
+        returnToken = this.Toke(this.Keyword.Retu, this.IndexRange(range.Start));
 
 
 
-        if (this.NullToken(returnToken))
+        if (this.NullToke(returnToken))
         {
             return this.RangeNull;
         }
@@ -5431,15 +5431,15 @@ public class Create : InfraCreate
 
 
 
-        Token semicolon;
+        Toke semicolon;
 
 
 
-        semicolon = this.TokenForward(this.Delimiter.StateSign, this.Range(returnToken.Range.End, range.End));
+        semicolon = this.TokeForward(this.Delimiter.StateSign, this.Range(returnToken.Range.End, range.End));
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return this.RangeNull;
         }
@@ -5483,14 +5483,14 @@ public class Create : InfraCreate
 
 
 
-        Token ifToken;
+        Toke ifToken;
         
         
-        ifToken = this.Token(this.Keyword.Mifa, this.IndexRange(range.Start));
+        ifToken = this.Toke(this.Keyword.Mifa, this.IndexRange(range.Start));
 
 
 
-        if (this.NullToken(ifToken))
+        if (this.NullToke(ifToken))
         {
             return this.RangeNull;
         }
@@ -5506,15 +5506,15 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
         
         
 
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(ifToken.Range.End));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(ifToken.Range.End));
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return this.RangeNull;
         }
@@ -5523,16 +5523,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
         
         
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return this.RangeNull;
         }
@@ -5549,14 +5549,14 @@ public class Create : InfraCreate
 
 
 
-        Token leftBrace;
+        Toke leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
-        if (this.NullToken(leftBrace))
+        if (this.NullToke(leftBrace))
         {
             return this.RangeNull;
         }
@@ -5564,14 +5564,14 @@ public class Create : InfraCreate
 
 
 
-        Token rightBrace;
+        Toke rightBrace;
         
         
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        rightBrace = this.TokeMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
 
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToke(rightBrace))
         {
             return this.RangeNull;
         }
@@ -5610,14 +5610,14 @@ public class Create : InfraCreate
 
 
 
-        Token whileToken;
+        Toke whileToken;
         
         
-        whileToken = this.Token(this.Keyword.Lope, this.IndexRange(range.Start));
+        whileToken = this.Toke(this.Keyword.Lope, this.IndexRange(range.Start));
 
 
 
-        if (this.NullToken(whileToken))
+        if (this.NullToke(whileToken))
         {
             return this.RangeNull;
         }
@@ -5633,15 +5633,15 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
         
         
 
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(whileToken.Range.End));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(whileToken.Range.End));
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return this.RangeNull;
         }
@@ -5650,16 +5650,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
         
         
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return this.RangeNull;
         }
@@ -5676,14 +5676,14 @@ public class Create : InfraCreate
 
 
 
-        Token leftBrace;
+        Toke leftBrace;
 
 
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
-        if (this.NullToken(leftBrace))
+        if (this.NullToke(leftBrace))
         {
             return this.RangeNull;
         }
@@ -5691,14 +5691,14 @@ public class Create : InfraCreate
 
 
 
-        Token rightBrace;
+        Toke rightBrace;
         
         
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        rightBrace = this.TokeMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
 
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToke(rightBrace))
         {
             return this.RangeNull;
         }
@@ -5754,14 +5754,14 @@ public class Create : InfraCreate
 
 
 
-        Token semicolon;
+        Toke semicolon;
 
 
-        semicolon = this.Token(this.Delimiter.StateSign, this.IndexRange(varRange.End));
+        semicolon = this.Toke(this.Delimiter.StateSign, this.IndexRange(varRange.End));
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return this.RangeNull;
         }
@@ -5795,16 +5795,16 @@ public class Create : InfraCreate
 
     private Range AssignStateRange(Range range)
     {
-        Token semicolon;
+        Toke semicolon;
 
 
 
-        semicolon = this.TokenForward(this.Delimiter.StateSign, range);
+        semicolon = this.TokeForward(this.Delimiter.StateSign, range);
 
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return this.RangeNull;
         }
@@ -5813,16 +5813,16 @@ public class Create : InfraCreate
 
 
 
-        Token colon;
+        Toke colon;
 
 
 
-        colon = this.TokenForward(this.Delimiter.BaseSign, this.Range(range.Start, semicolon.Range.Start));
+        colon = this.TokeForward(this.Delimiter.BaseSign, this.Range(range.Start, semicolon.Range.Start));
 
 
 
 
-        if (this.NullToken(colon))
+        if (this.NullToke(colon))
         {
             return this.RangeNull;
         }
@@ -5855,15 +5855,15 @@ public class Create : InfraCreate
 
     private Range ExpressStateRange(Range range)
     {
-        Token semicolon;
+        Toke semicolon;
         
 
-        semicolon = this.TokenForward(this.Delimiter.StateSign, range);
+        semicolon = this.TokeForward(this.Delimiter.StateSign, range);
         
 
 
 
-        if (this.NullToken(semicolon))
+        if (this.NullToke(semicolon))
         {
             return this.RangeNull;
         }
@@ -5949,15 +5949,15 @@ public class Create : InfraCreate
 
     protected Range EndAtCommaRange(Range range)
     {
-        Token comma;
+        Toke comma;
             
 
-        comma = this.TokenForward(this.Delimiter.PauseSign, range);
+        comma = this.TokeForward(this.Delimiter.PauseSign, range);
         
         
 
 
-        if (this.NullToken(comma))
+        if (this.NullToke(comma))
         {
             return range;
         }
@@ -6139,16 +6139,16 @@ public class Create : InfraCreate
 
 
 
-        Token getLeftBrace;
+        Toke getLeftBrace;
 
 
 
-        getLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
+        getLeftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(nameRange.End));
 
 
 
 
-        if (this.NullToken(getLeftBrace))
+        if (this.NullToke(getLeftBrace))
         {
             return this.RangeNull;
         }
@@ -6157,16 +6157,16 @@ public class Create : InfraCreate
 
 
 
-        Token getRightBrace;
+        Toke getRightBrace;
 
 
 
-        getRightBrace = this.TokenMatchLeftBrace(this.Range(getLeftBrace.Range.End, range.End));
+        getRightBrace = this.TokeMatchLeftBrace(this.Range(getLeftBrace.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(getRightBrace))
+        if (this.NullToke(getRightBrace))
         {
             return this.RangeNull;
         }
@@ -6186,16 +6186,16 @@ public class Create : InfraCreate
 
 
 
-        Token setLeftBrace;
+        Toke setLeftBrace;
 
 
 
-        setLeftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(getRightBrace.Range.End));
+        setLeftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(getRightBrace.Range.End));
 
 
 
 
-        if (this.NullToken(setLeftBrace))
+        if (this.NullToke(setLeftBrace))
         {
             return this.RangeNull;
         }
@@ -6204,16 +6204,16 @@ public class Create : InfraCreate
 
 
 
-        Token setRightBrace;
+        Toke setRightBrace;
 
 
 
-        setRightBrace = this.TokenMatchLeftBrace(this.Range(setLeftBrace.Range.End, range.End));
+        setRightBrace = this.TokeMatchLeftBrace(this.Range(setLeftBrace.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(setRightBrace))
+        if (this.NullToke(setRightBrace))
         {
             return this.RangeNull;
         }
@@ -6321,16 +6321,16 @@ public class Create : InfraCreate
 
 
 
-        Token leftBracket;
+        Toke leftBracket;
 
 
 
-        leftBracket = this.Token(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
+        leftBracket = this.Toke(this.Delimiter.LeftBracket, this.IndexRange(nameRange.End));
 
 
 
 
-        if (this.NullToken(leftBracket))
+        if (this.NullToke(leftBracket))
         {
             return this.RangeNull;
         }
@@ -6339,16 +6339,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBracket;
+        Toke rightBracket;
 
 
 
-        rightBracket = this.TokenMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
+        rightBracket = this.TokeMatchLeftBracket(this.Range(leftBracket.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(rightBracket))
+        if (this.NullToke(rightBracket))
         {
             return this.RangeNull;
         }
@@ -6368,16 +6368,16 @@ public class Create : InfraCreate
 
 
 
-        Token leftBrace;
+        Toke leftBrace;
 
 
 
-        leftBrace = this.Token(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
+        leftBrace = this.Toke(this.Delimiter.LeftBrace, this.IndexRange(rightBracket.Range.End));
 
 
 
 
-        if (this.NullToken(leftBrace))
+        if (this.NullToke(leftBrace))
         {
             return this.RangeNull;
         }
@@ -6386,16 +6386,16 @@ public class Create : InfraCreate
 
 
 
-        Token rightBrace;
+        Toke rightBrace;
 
 
 
-        rightBrace = this.TokenMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
+        rightBrace = this.TokeMatchLeftBrace(this.Range(leftBrace.Range.End, range.End));
 
 
 
 
-        if (this.NullToken(rightBrace))
+        if (this.NullToke(rightBrace))
         {
             return this.RangeNull;
         }
@@ -7058,7 +7058,7 @@ public class Create : InfraCreate
 
 
 
-    private bool IsToken(string value, int index)
+    private bool IsToke(string value, int index)
     {
         TextRange t;
 
@@ -7110,9 +7110,9 @@ public class Create : InfraCreate
 
 
 
-    protected bool NullToken(Token token)
+    protected bool NullToke(Toke toke)
     {
-        return this.NullRange(token.Range);
+        return this.NullRange(toke.Range);
     }
 
 
@@ -7134,7 +7134,13 @@ public class Create : InfraCreate
 
     protected bool Null(object o)
     {
-        return ObjectInfra.This.Null(o);
+        ObjectInfra infra;
+
+        infra = ObjectInfra.This;
+
+
+
+        return infra.Null(o);
     }
 
 
@@ -7210,27 +7216,27 @@ public class Create : InfraCreate
 
 
 
-    protected Token Token(string value, Range range)
+    protected Toke Toke(string value, Range range)
     {
         if (!(this.Count(range) == 1))
         {
-            return this.TokenNull;
+            return this.TokeNull;
         }
 
 
 
-        if (!this.IsToken(value, range.Start))
+        if (!this.IsToke(value, range.Start))
         {
-            return this.TokenNull;
+            return this.TokeNull;
         }
 
 
 
 
-        Token ret;
+        Toke ret;
         
         
-        ret = new Token();
+        ret = new Toke();
         
         
         ret.Range = range;
@@ -7243,7 +7249,7 @@ public class Create : InfraCreate
 
 
 
-    protected Token TokenBackward(string value, Range range)
+    protected Toke TokeBackward(string value, Range range)
     {
         int i;
         i = range.End;
@@ -7274,7 +7280,7 @@ public class Create : InfraCreate
                 j = i - 1;
 
 
-                if (this.IsToken(value, j))
+                if (this.IsToke(value, j))
                 {
                     index = j;
 
@@ -7296,15 +7302,15 @@ public class Create : InfraCreate
 
         if (index == IntNull)
         {
-            return this.TokenNull;
+            return this.TokeNull;
         }
 
 
 
 
-        Token ret;
+        Toke ret;
 
-        ret = new Token();
+        ret = new Toke();
 
         ret.Range = this.IndexRange(index);
 
@@ -7315,7 +7321,7 @@ public class Create : InfraCreate
 
 
 
-    protected Token TokenForward(string value, Range range)
+    protected Toke TokeForward(string value, Range range)
     {
         int i;
             
@@ -7345,7 +7351,7 @@ public class Create : InfraCreate
             }
             else
             {
-                if (this.IsToken(value, i))
+                if (this.IsToke(value, i))
                 {
                     index = i;
 
@@ -7369,15 +7375,15 @@ public class Create : InfraCreate
 
         if (index == IntNull)
         {
-            return this.TokenNull;
+            return this.TokeNull;
         }
 
 
 
 
-        Token ret;
+        Toke ret;
             
-        ret = new Token();
+        ret = new Toke();
 
         ret.Range = this.IndexRange(index);
 
@@ -7400,12 +7406,12 @@ public class Create : InfraCreate
 
         if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.LeftBracket))
         {
-            Token rightBracket;
+            Toke rightBracket;
 
-            rightBracket = this.TokenMatchLeftBracket(this.Range(index + 1, range.End));
+            rightBracket = this.TokeMatchLeftBracket(this.Range(index + 1, range.End));
                 
 
-            if (this.NullToken(rightBracket))
+            if (this.NullToke(rightBracket))
             {
                 return ret;
             }
@@ -7415,12 +7421,12 @@ public class Create : InfraCreate
         }
         else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.LeftBrace))
         {
-            Token rightBrace;
+            Toke rightBrace;
 
-            rightBrace = this.TokenMatchLeftBrace(this.Range(index + 1, range.End));
+            rightBrace = this.TokeMatchLeftBrace(this.Range(index + 1, range.End));
 
 
-            if (this.NullToken(rightBrace))
+            if (this.NullToke(rightBrace))
             {
                 return ret;
             }
@@ -7457,12 +7463,12 @@ public class Create : InfraCreate
 
         if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.RightBracket))
         {
-            Token leftBracket;
+            Toke leftBracket;
 
-            leftBracket = this.TokenMatchRightBracket(this.Range(range.Start, t));
+            leftBracket = this.TokeMatchRightBracket(this.Range(range.Start, t));
 
 
-            if (this.NullToken(leftBracket))
+            if (this.NullToke(leftBracket))
             {
                 return ret;
             }
@@ -7472,12 +7478,12 @@ public class Create : InfraCreate
         }
         else if (this.TextInfra.Equal(s.Row, s.Range, this.Delimiter.RightBrace))
         {
-            Token leftBrace;
+            Toke leftBrace;
 
-            leftBrace = this.TokenMatchRightBrace(this.Range(range.Start, t));
+            leftBrace = this.TokeMatchRightBrace(this.Range(range.Start, t));
 
 
-            if (this.NullToken(leftBrace))
+            if (this.NullToke(leftBrace))
             {
                 return ret;
             }
@@ -7493,32 +7499,32 @@ public class Create : InfraCreate
 
 
 
-    protected Token TokenMatchLeftBrace(Range range)
+    protected Toke TokeMatchLeftBrace(Range range)
     {   
-        return this.TokenMatchLeftToken(this.Delimiter.LeftBrace, this.Delimiter.RightBrace, range);
+        return this.TokeMatchLeftToken(this.Delimiter.LeftBrace, this.Delimiter.RightBrace, range);
     }
 
 
-    protected Token TokenMatchRightBrace(Range range)
+    protected Toke TokeMatchRightBrace(Range range)
     {
-        return this.TokenMatchRightToken(this.Delimiter.LeftBrace, this.Delimiter.RightBrace, range);
+        return this.TokeMatchRightToken(this.Delimiter.LeftBrace, this.Delimiter.RightBrace, range);
     }
 
 
-    protected Token TokenMatchLeftBracket(Range range)
+    protected Toke TokeMatchLeftBracket(Range range)
     {
-        return this.TokenMatchLeftToken(this.Delimiter.LeftBracket, this.Delimiter.RightBracket, range);
+        return this.TokeMatchLeftToken(this.Delimiter.LeftBracket, this.Delimiter.RightBracket, range);
     }
 
 
-    protected Token TokenMatchRightBracket(Range range)
+    protected Toke TokeMatchRightBracket(Range range)
     {
-        return this.TokenMatchRightToken(this.Delimiter.LeftBracket, this.Delimiter.RightBracket, range);
+        return this.TokeMatchRightToken(this.Delimiter.LeftBracket, this.Delimiter.RightBracket, range);
     }
 
 
 
-    private Token TokenMatchLeftToken(string leftToken, string rightToken, Range range)
+    private Toke TokeMatchLeftToken(string leftToken, string rightToken, Range range)
     {
         int openCount;
         openCount = 1;
@@ -7573,14 +7579,14 @@ public class Create : InfraCreate
 
         if (index == IntNull)
         {
-            return this.TokenNull;
+            return this.TokeNull;
         }
 
 
 
-        Token ret;
+        Toke ret;
 
-        ret = new Token();
+        ret = new Toke();
 
         ret.Init();
 
@@ -7592,7 +7598,7 @@ public class Create : InfraCreate
 
 
 
-    private Token TokenMatchRightToken(string leftToken, string rightToken, Range range)
+    private Toke TokeMatchRightToken(string leftToken, string rightToken, Range range)
     {
         int openCount;
         openCount = 1;
@@ -7651,14 +7657,14 @@ public class Create : InfraCreate
 
         if (index == IntNull)
         {
-            return this.TokenNull;
+            return this.TokeNull;
         }
 
 
 
-        Token ret;
+        Toke ret;
             
-        ret = new Token();
+        ret = new Toke();
 
         ret.Init();
 
