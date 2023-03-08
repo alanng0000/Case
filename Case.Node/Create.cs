@@ -329,7 +329,7 @@ public class Create : InfraCreate
         this.AddNodeMethod(nameof(this.StringConstant), this.StringConstant);
 
 
-        this.AddNodeMethod(nameof(this.ClassName), this.ClassName);
+        this.AddNodeMethod(nameof(this.CaseName), this.CaseName);
 
 
         this.AddNodeMethod(nameof(this.FieldName), this.FieldName);
@@ -792,7 +792,7 @@ public class Create : InfraCreate
 
 
 
-        name = this.ClassName(nameRange);
+        name = this.CaseName(nameRange);
 
 
 
@@ -810,7 +810,7 @@ public class Create : InfraCreate
 
 
 
-        varBase = this.ClassName(baseRange);
+        varBase = this.CaseName(baseRange);
 
 
 
@@ -1146,7 +1146,7 @@ public class Create : InfraCreate
 
 
 
-        varClass = this.ClassName(classRange);
+        varClass = this.CaseName(classRange);
 
 
 
@@ -1444,7 +1444,7 @@ public class Create : InfraCreate
 
 
 
-        varClass = this.ClassName(classRange);
+        varClass = this.CaseName(classRange);
 
 
 
@@ -1692,7 +1692,7 @@ public class Create : InfraCreate
 
 
 
-        varClass = this.ClassName(classRange);
+        varClass = this.CaseName(classRange);
 
 
 
@@ -2571,7 +2571,7 @@ public class Create : InfraCreate
         CaseName varClass;
         
         
-        varClass = this.ClassName(this.Range(newToken.Range.End, range.End));
+        varClass = this.CaseName(this.Range(newToken.Range.End, range.End));
             
 
 
@@ -2635,7 +2635,7 @@ public class Create : InfraCreate
         CaseName varClass;
         
         
-        varClass = this.ClassName(this.Range(globToken.Range.End, range.End));
+        varClass = this.CaseName(this.Range(globToken.Range.End, range.End));
             
 
 
@@ -4169,7 +4169,7 @@ public class Create : InfraCreate
         CaseName varClass;
 
 
-        varClass = this.ClassName(classRange);
+        varClass = this.CaseName(classRange);
 
 
 
@@ -4896,7 +4896,7 @@ public class Create : InfraCreate
 
 
 
-    protected CaseName ClassName(Range range)
+    protected CaseName CaseName(Range range)
     {
         string value;
 
