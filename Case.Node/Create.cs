@@ -1227,7 +1227,7 @@ public class Create : InfraCreate
         ret.Name = name;
         
 
-        ret.Class = varClass;
+        ret.Case = varClass;
 
 
         ret.Access = access;

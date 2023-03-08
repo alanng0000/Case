@@ -209,7 +209,7 @@ public class Traverse
 
 
 
-        this.ExecuteClassName(field.Class);
+        this.ExecuteClassName(field.Case);
 
 
 

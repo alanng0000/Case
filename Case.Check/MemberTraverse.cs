@@ -73,7 +73,7 @@ class MemberTraverse : Traverse
 
         CaseName nodeClass;
             
-        nodeClass = nodeField.Class;
+        nodeClass = nodeField.Case;
 
 
 
