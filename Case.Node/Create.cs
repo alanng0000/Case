@@ -4989,7 +4989,7 @@ public class Create : InfraCreate
     protected VarName VarName(Range range)
     {
         string value;
-            
+
         value = this.NameValue(range);
 
 
